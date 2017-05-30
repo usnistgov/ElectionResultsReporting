@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default navbar-fixed-left" role="navigation">
+  <ul class="nav navbar-nav">
+    {% comment %}
+    {% for link in site.navigation %}
+      {% assign current = '' %}
+      {% if page.url == link.url %}
+        {% assign current = 'active' %}
+      {% endif %}
+      <li class="{{ current }}">
+        <a href="{{ link.url }}">{{ link.text }}</a>
+      </li>
+    {% endfor %}
+    {% endcomment %}
+
+    <li><a href="{{ site.baseurl }}/">Home</a></li>
+    <li>
+      <a href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/issues/" class="icon">Comment</a>
+    </li>
+  </ul>
+</nav>
