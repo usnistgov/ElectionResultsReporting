@@ -8,7 +8,7 @@ description: "Work in progress for SP 1500-102"
 
 # Cast Vote Records Home
 
-This is a placeholder for a MarkDown version of the NIST SP 1500-100 specification.  Thus far, Section 2 on geopolitical georgraphy has been created from the Word version.
+This is a placeholder for a MarkDown version of the NIST SP 1500-100 specification.  Thus far, Section 2 on geopolitical geography has been created from the Word version.
 
 </section>
 
