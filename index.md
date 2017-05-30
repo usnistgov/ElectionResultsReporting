@@ -6,7 +6,7 @@ description: "Work in progress for SP 1500-102"
 
 <section class="home home-title" markdown="1">
 
-# Cast Vote Records Home
+# Election Results Reporting Home
 
 This is a placeholder for a MarkDown version of the NIST SP 1500-100 specification.  Thus far, Section 2 on geopolitical geography has been created from the Word version.
 
