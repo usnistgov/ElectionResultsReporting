@@ -1,0 +1,29 @@
+The 2.0 version of the Election Results Reporting XML Schema includes the following important changes from the 1.0 XML Schema:
+
+- usage of ShortString has been replaced by xsd:string and the type has been removed
+- Removed various 'collection' elements
+  - VoteCounts
+  - BallotStyleCollection
+  - CandidateCollection
+  - ContestCollection
+  - GpUnitCollection
+  - OfficeCollection
+  - PartyCollection
+  - PersonCollection
+  - all occurrences of ExternalIdentifiers
+- Removed BallotStyle->objectId attribute
+- Capitalized all lower case attributes:
+  - all label attributes are now "Label"
+  - all objectId attributes are now "ObjectId"
+  - AnnotatedString->annotation attribute is now "Annotation"
+  - LanguageString->language attribute is now "Language"
+- ElectionReport->Signature element is now ordered alphabetically instead of at end of sequence
+- Counts->Type attribute is now required (applies to SummaryCounts and VoteCounts types)
+- Added CandidateContest->NumberRunoff
+- Added 'country' ReportingUnitType
+- Added Person->ExternalIdentifier
+- Added Candidate->ContactInformation
+- Added Party->IsWriteIn
+- Added Office->Description
+- Added AnnotatedUri type
+- Changed ContactInformation->Uri to be of type AnnotatedUri

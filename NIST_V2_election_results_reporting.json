@@ -1,0 +1,1665 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "ElectionResults.AnnotatedString": {
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "ElectionResults.AnnotatedString"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.AnnotatedUri": {
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "ElectionResults.AnnotatedUri"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.BallotMeasureContest": {
+      "required": [
+        "ElectoralDistrictId",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ConStatement": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "EffectOfAbstain": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "FullText": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "PassageThreshold": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ProStatement": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "SummaryText": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.BallotMeasureType"
+        },
+        "BallotSubTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "BallotTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "CountStatus": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.CountStatus"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ElectoralDistrictId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "SummaryCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.SummaryCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "VoteVariation": {
+          "$ref": "#/definitions/ElectionResults.VoteVariation"
+        },
+        "BallotSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.BallotMeasureContest"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.BallotMeasureSelection": {
+      "required": [
+        "Selection",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Selection": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "VoteCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.VoteCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.BallotMeasureSelection"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.BallotStyle": {
+      "required": [
+        "GpUnitIds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "PartyIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Party",
+              "ElectionResults.Coalition"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "GpUnitIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.ReportingDevice",
+              "ElectionResults.ReportingUnit"
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "OrderedContest": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.OrderedContest"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.BallotStyle"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Candidate": {
+      "required": [
+        "BallotName",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "BallotName": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "PartyId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.Party",
+            "ElectionResults.Coalition"
+          ]
+        },
+        "PersonId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.Person"
+          ]
+        },
+        "PostElectionStatus": {
+          "$ref": "#/definitions/ElectionResults.CandidatePostElectionStatus"
+        },
+        "PreElectionStatus": {
+          "$ref": "#/definitions/ElectionResults.CandidatePreElectionStatus"
+        },
+        "ContactInformationId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ContactInformation"
+          ]
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Candidate"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.CandidateContest": {
+      "required": [
+        "ElectoralDistrictId",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "OfficeIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Office"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "PrimaryPartyIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Party",
+              "ElectionResults.Coalition"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "BallotSubTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "BallotTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "CountStatus": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.CountStatus"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ElectoralDistrictId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "SummaryCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.SummaryCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "VoteVariation": {
+          "$ref": "#/definitions/ElectionResults.VoteVariation"
+        },
+        "BallotSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.CandidateContest"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.CandidateSelection": {
+      "required": [
+        "CandidateIds",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "CandidateIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Candidate"
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "EndorsementPartyIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Party",
+              "ElectionResults.Coalition"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "VoteCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.VoteCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.CandidateSelection"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Coalition": {
+      "required": [
+        "Name",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ContestIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.PartyContest",
+              "ElectionResults.BallotMeasureContest",
+              "ElectionResults.CandidateContest",
+              "ElectionResults.RetentionContest"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "PartyIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Party",
+              "ElectionResults.Coalition"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Name": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Coalition"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.ContactInformation": {
+      "required": [
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Directions": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "Email": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.AnnotatedString"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Fax": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.AnnotatedString"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Phone": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.AnnotatedString"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Uri": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.AnnotatedUri"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "LatLng": {
+          "$ref": "#/definitions/ElectionResults.LatLng"
+        },
+        "Schedule": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.Schedule"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.ContactInformation"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.CountStatus": {
+      "required": [
+        "Status",
+        "Type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Status": {
+          "$ref": "#/definitions/ElectionResults.CountItemStatus"
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.CountItemType"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.CountStatus"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Device": {
+      "additionalProperties": false,
+      "properties": {
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.DeviceType"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Device"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Election": {
+      "required": [
+        "ElectionScopeId",
+        "Name",
+        "Type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ContactInformation": {
+          "$ref": "#/definitions/ElectionResults.ContactInformation"
+        },
+        "CountStatus": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.CountStatus"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ElectionScopeId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Name": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.ElectionType"
+        },
+        "BallotStyle": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.BallotStyle"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Candidate": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.Candidate"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Contest": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.PartyContest"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureContest"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateContest"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.RetentionContest"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Election"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.ElectionAdministration": {
+      "additionalProperties": false,
+      "properties": {
+        "ElectionOfficialPersonIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Person"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ContactInformation": {
+          "$ref": "#/definitions/ElectionResults.ContactInformation"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.ElectionAdministration"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.ElectionReport": {
+      "required": [
+        "Format",
+        "Status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Format": {
+          "$ref": "#/definitions/ElectionResults.ReportDetailLevel"
+        },
+        "Person": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.Person"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Signature": {
+          "$ref": "#/definitions/Xmldsig.Signature"
+        },
+        "Status": {
+          "$ref": "#/definitions/ElectionResults.ResultsStatus"
+        },
+        "Election": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.Election"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "GpUnit": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.ReportingDevice"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.ReportingUnit"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Office": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.Office"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "OfficeGroup": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.OfficeGroup"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Party": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.Party"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.Coalition"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.ElectionReport"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.ExternalIdentifier": {
+      "required": [
+        "Type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.IdentifierType"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.ExternalIdentifier"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Hours": {
+      "additionalProperties": false,
+      "properties": {
+        "Day": {
+          "$ref": "#/definitions/ElectionResults.DayType"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Hours"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.InternationalizedText": {
+      "required": [
+        "Text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Text": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.LanguageString"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.InternationalizedText"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.LanguageString": {
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "ElectionResults.LanguageString"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.LatLng": {
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "ElectionResults.LatLng"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Office": {
+      "required": [
+        "Name",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ContactInformation": {
+          "$ref": "#/definitions/ElectionResults.ContactInformation"
+        },
+        "Description": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ElectoralDistrictId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Name": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "OfficeHolderPersonIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Person"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Term": {
+          "$ref": "#/definitions/ElectionResults.Term"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Office"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.OfficeGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "SubOfficeGroup": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.OfficeGroup"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "OfficeIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Office"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.OfficeGroup"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.OrderedContest": {
+      "required": [
+        "ContestId"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ContestId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.PartyContest",
+            "ElectionResults.BallotMeasureContest",
+            "ElectionResults.CandidateContest",
+            "ElectionResults.RetentionContest"
+          ]
+        },
+        "OrderedBallotSelectionIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.CandidateSelection",
+              "ElectionResults.PartySelection",
+              "ElectionResults.BallotMeasureSelection"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.OrderedContest"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Party": {
+      "required": [
+        "Name",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Name": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Party"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.PartyContest": {
+      "required": [
+        "ElectoralDistrictId",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "BallotSubTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "BallotTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "CountStatus": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.CountStatus"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ElectoralDistrictId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "SummaryCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.SummaryCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "VoteVariation": {
+          "$ref": "#/definitions/ElectionResults.VoteVariation"
+        },
+        "BallotSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.PartyContest"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.PartyRegistration": {
+      "required": [
+        "PartyId"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "PartyId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.Party",
+            "ElectionResults.Coalition"
+          ]
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.PartyRegistration"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.PartySelection": {
+      "required": [
+        "PartyIds",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "PartyIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Party",
+              "ElectionResults.Coalition"
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "VoteCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.VoteCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.PartySelection"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Person": {
+      "required": [
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "FullName": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "PartyId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.Party",
+            "ElectionResults.Coalition"
+          ]
+        },
+        "Profession": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "Title": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ContactInformation": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ContactInformation"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Person"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.ReportingDevice": {
+      "required": [
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Device": {
+          "$ref": "#/definitions/ElectionResults.Device"
+        },
+        "ComposingGpUnitIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.ReportingDevice",
+              "ElectionResults.ReportingUnit"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "SummaryCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.SummaryCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.ReportingDevice"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.ReportingUnit": {
+      "required": [
+        "Type",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "AuthorityIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Person"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ContactInformation": {
+          "$ref": "#/definitions/ElectionResults.ContactInformation"
+        },
+        "CountStatus": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.CountStatus"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.ReportingUnitType"
+        },
+        "ElectionAdministration": {
+          "$ref": "#/definitions/ElectionResults.ElectionAdministration"
+        },
+        "PartyRegistration": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.PartyRegistration"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "SpatialDimension": {
+          "$ref": "#/definitions/ElectionResults.SpatialDimension"
+        },
+        "ComposingGpUnitIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.ReportingDevice",
+              "ElectionResults.ReportingUnit"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "SummaryCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.SummaryCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.ReportingUnit"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.RetentionContest": {
+      "required": [
+        "ElectoralDistrictId",
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "CandidateId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.Candidate"
+          ]
+        },
+        "OfficeId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.Office"
+          ]
+        },
+        "ConStatement": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "EffectOfAbstain": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "FullText": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "PassageThreshold": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ProStatement": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "SummaryText": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.BallotMeasureType"
+        },
+        "BallotSubTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "BallotTitle": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "CountStatus": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.CountStatus"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ElectoralDistrictId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "SummaryCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.SummaryCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "VoteVariation": {
+          "$ref": "#/definitions/ElectionResults.VoteVariation"
+        },
+        "BallotSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.RetentionContest"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Schedule": {
+      "additionalProperties": false,
+      "properties": {
+        "Hours": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.Hours"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Schedule"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.SpatialDimension": {
+      "additionalProperties": false,
+      "properties": {
+        "SpatialExtent": {
+          "$ref": "#/definitions/ElectionResults.SpatialExtent"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.SpatialDimension"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.SpatialExtent": {
+      "required": [
+        "Format"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Format": {
+          "$ref": "#/definitions/ElectionResults.GeoSpatialFormat"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.SpatialExtent"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.SummaryCounts": {
+      "required": [
+        "Type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Device": {
+          "$ref": "#/definitions/ElectionResults.Device"
+        },
+        "GpUnitId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingDevice",
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.CountItemType"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.SummaryCounts"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.Term": {
+      "additionalProperties": false,
+      "properties": {
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.OfficeTermType"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.Term"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.VoteCounts": {
+      "required": [
+        "Type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Device": {
+          "$ref": "#/definitions/ElectionResults.Device"
+        },
+        "GpUnitId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingDevice",
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.CountItemType"
+        },
+        "@type": {
+          "enum": [
+            "ElectionResults.VoteCounts"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.BallotMeasureType": {
+      "enum": [
+        "ballot-measure",
+        "initiative",
+        "other",
+        "referendum"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.CandidatePostElectionStatus": {
+      "enum": [
+        "advanced-to-runoff",
+        "projected-winner",
+        "winner",
+        "withdrawn"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.CandidatePreElectionStatus": {
+      "enum": [
+        "filed",
+        "qualified",
+        "withdrawn",
+        "write-in"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.CountItemStatus": {
+      "enum": [
+        "completed",
+        "in-process",
+        "not-processed",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.CountItemType": {
+      "enum": [
+        "absentee",
+        "absentee-fwab",
+        "absentee-in-person",
+        "absentee-mail",
+        "early",
+        "election-day",
+        "other",
+        "provisional",
+        "total",
+        "uocava",
+        "write-in"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.DayType": {
+      "enum": [
+        "all",
+        "friday",
+        "monday",
+        "saturday",
+        "sunday",
+        "thursday",
+        "tuesday",
+        "wednesday",
+        "weekday",
+        "weekend"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.DeviceType": {
+      "enum": [
+        "electronic",
+        "lever",
+        "manual-count",
+        "mixed-systems",
+        "opscan-central",
+        "opscan-precinct",
+        "other",
+        "punch-card",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.ElectionType": {
+      "enum": [
+        "general",
+        "other",
+        "partisan-primary-closed",
+        "partisan-primary-open",
+        "primary",
+        "runoff",
+        "special"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.GeoSpatialFormat": {
+      "enum": [
+        "geo-json",
+        "gml",
+        "kml",
+        "shp",
+        "wkt"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.IdentifierType": {
+      "enum": [
+        "fips",
+        "local-level",
+        "national-level",
+        "ocd-id",
+        "other",
+        "state-level"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.OfficeTermType": {
+      "enum": [
+        "full-term",
+        "unexpired-term"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.ReportDetailLevel": {
+      "enum": [
+        "precinct-level",
+        "summary-contest"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.ReportingUnitType": {
+      "enum": [
+        "ballot-batch",
+        "ballot-style-area",
+        "borough",
+        "city",
+        "city-council",
+        "combined-precinct",
+        "congressional",
+        "country",
+        "county",
+        "county-council",
+        "drop-box",
+        "judicial",
+        "municipality",
+        "other",
+        "polling-place",
+        "precinct",
+        "school",
+        "special",
+        "split-precinct",
+        "state",
+        "state-house",
+        "state-senate",
+        "town",
+        "township",
+        "utility",
+        "village",
+        "vote-center",
+        "ward",
+        "water"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.ResultsStatus": {
+      "enum": [
+        "certified",
+        "correction",
+        "pre-election",
+        "recount",
+        "unofficial-complete",
+        "unofficial-partial"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.VoteVariation": {
+      "enum": [
+        "1-of-m",
+        "approval",
+        "borda",
+        "cumulative",
+        "majority",
+        "n-of-m",
+        "other",
+        "plurality",
+        "proportional",
+        "range",
+        "rcv",
+        "super-majority"
+      ],
+      "type": "string"
+    },
+    "Xmldsig.Signature": {
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "Xmldsig.Signature"
+          ]
+        }
+      },
+      "type": "object"
+    }
+  },
+  "oneOf": [
+
+  ]
+}
