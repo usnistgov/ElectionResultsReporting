@@ -252,7 +252,7 @@
   <xsd:complexType name="Candidate">
     <xsd:sequence>
       <xsd:element name="BallotName" type="InternationalizedText"/>
-      <xsd:element name="ContactInformationId" type="xsd:IDREF" minOccurs="0"/>
+      <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="FileDate" type="xsd:date" minOccurs="0"/>
       <xsd:element name="IsIncumbent" type="xsd:boolean" minOccurs="0"/>
@@ -311,7 +311,6 @@
       <xsd:element name="Schedule" type="Schedule" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Uri" type="AnnotatedUri" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="Contest" abstract="true">
     <xsd:sequence>

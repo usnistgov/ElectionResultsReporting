@@ -229,11 +229,8 @@
         "PreElectionStatus": {
           "$ref": "#/definitions/ElectionResults.CandidatePreElectionStatus"
         },
-        "ContactInformationId": {
-          "type": "string",
-          "refTypes": [
-            "ElectionResults.ContactInformation"
-          ]
+        "ContactInformation": {
+          "$ref": "#/definitions/ElectionResults.ContactInformation"
         },
         "@id": {
           "type": "string"
@@ -437,9 +434,6 @@
       "type": "object"
     },
     "ElectionResults.ContactInformation": {
-      "required": [
-        "@id"
-      ],
       "additionalProperties": false,
       "properties": {
         "Directions": {
@@ -482,9 +476,6 @@
           },
           "minItems": 0,
           "type": "array"
-        },
-        "@id": {
-          "type": "string"
         },
         "@type": {
           "enum": [
