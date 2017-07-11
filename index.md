@@ -1,7 +1,7 @@
 ---
 layout: cover
-title: "Draft NIST SP 1500-102 CDF Specification for Cast Vote Records"
-description: "Work in progress for SP 1500-102"
+title: "NIST SP 1500-100 Election Results Reporting CDF Specification"
+description: "SP 1500-100”
 ---
 
 <section class="home home-title" markdown="1">
