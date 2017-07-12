@@ -1,9 +1,19 @@
 {
+  "$ref": "#/definitions/ElectionResults.ElectionReport",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "ElectionResults.AnnotatedString": {
+      "required": [
+        "Content"
+      ],
       "additionalProperties": false,
       "properties": {
+        "Annotation": {
+          "$ref": "#/definitions/ElectionResults.ShortString"
+        },
+        "Content": {
+          "type": "string"
+        },
         "@type": {
           "enum": [
             "ElectionResults.AnnotatedString"
@@ -13,8 +23,18 @@
       "type": "object"
     },
     "ElectionResults.AnnotatedUri": {
+      "required": [
+        "Content"
+      ],
       "additionalProperties": false,
       "properties": {
+        "Annotation": {
+          "$ref": "#/definitions/ElectionResults.ShortString"
+        },
+        "Content": {
+          "type": "string",
+          "format": "uri"
+        },
         "@type": {
           "enum": [
             "ElectionResults.AnnotatedUri"
@@ -26,6 +46,7 @@
     "ElectionResults.BallotMeasureContest": {
       "required": [
         "ElectoralDistrictId",
+        "Name",
         "@id"
       ],
       "additionalProperties": false,
@@ -39,6 +60,13 @@
         "FullText": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
+        "InfoUri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "OtherType": {
+          "type": "string"
+        },
         "PassageThreshold": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -50,6 +78,9 @@
         },
         "Type": {
           "$ref": "#/definitions/ElectionResults.BallotMeasureType"
+        },
+        "Abbreviation": {
+          "type": "string"
         },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -77,12 +108,30 @@
           "minItems": 0,
           "type": "array"
         },
+        "HasRotation": {
+          "type": "boolean"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "OtherVoteVariation": {
+          "type": "string"
+        },
+        "SequenceOrder": {
+          "type": "integer"
+        },
+        "SubUnitsReported": {
+          "type": "integer"
+        },
         "SummaryCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.SummaryCounts"
           },
           "minItems": 0,
           "type": "array"
+        },
+        "TotalSubUnits": {
+          "type": "integer"
         },
         "VoteVariation": {
           "$ref": "#/definitions/ElectionResults.VoteVariation"
@@ -125,6 +174,9 @@
         "Selection": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
+        "SequenceOrder": {
+          "type": "integer"
+        },
         "VoteCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.VoteCounts"
@@ -152,6 +204,14 @@
         "ExternalIdentifier": {
           "items": {
             "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "ImageUri": {
+          "items": {
+            "type": "string",
+            "format": "uri"
           },
           "minItems": 0,
           "type": "array"
@@ -210,6 +270,16 @@
           "minItems": 0,
           "type": "array"
         },
+        "FileDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "IsIncumbent": {
+          "type": "boolean"
+        },
+        "IsTopTicket": {
+          "type": "boolean"
+        },
         "PartyId": {
           "type": "string",
           "refTypes": [
@@ -245,11 +315,19 @@
     },
     "ElectionResults.CandidateContest": {
       "required": [
+        "VotesAllowed",
         "ElectoralDistrictId",
+        "Name",
         "@id"
       ],
       "additionalProperties": false,
       "properties": {
+        "NumberElected": {
+          "type": "integer"
+        },
+        "NumberRunoff": {
+          "type": "integer"
+        },
         "OfficeIds": {
           "items": {
             "type": "string",
@@ -270,6 +348,12 @@
           },
           "minItems": 0,
           "type": "array"
+        },
+        "VotesAllowed": {
+          "type": "integer"
+        },
+        "Abbreviation": {
+          "type": "string"
         },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -297,12 +381,30 @@
           "minItems": 0,
           "type": "array"
         },
+        "HasRotation": {
+          "type": "boolean"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "OtherVoteVariation": {
+          "type": "string"
+        },
+        "SequenceOrder": {
+          "type": "integer"
+        },
+        "SubUnitsReported": {
+          "type": "integer"
+        },
         "SummaryCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.SummaryCounts"
           },
           "minItems": 0,
           "type": "array"
+        },
+        "TotalSubUnits": {
+          "type": "integer"
         },
         "VoteVariation": {
           "$ref": "#/definitions/ElectionResults.VoteVariation"
@@ -363,6 +465,12 @@
           "minItems": 0,
           "type": "array"
         },
+        "IsWriteIn": {
+          "type": "boolean"
+        },
+        "SequenceOrder": {
+          "type": "integer"
+        },
         "VoteCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.VoteCounts"
@@ -412,12 +520,25 @@
           "minItems": 0,
           "type": "array"
         },
+        "Abbreviation": {
+          "type": "string"
+        },
+        "Color": {
+          "$ref": "#/definitions/ElectionResults.HtmlColorString"
+        },
         "ExternalIdentifier": {
           "items": {
             "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
           },
           "minItems": 0,
           "type": "array"
+        },
+        "IsWriteIn": {
+          "type": "boolean"
+        },
+        "LogoUri": {
+          "type": "string",
+          "format": "uri"
         },
         "Name": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -436,6 +557,13 @@
     "ElectionResults.ContactInformation": {
       "additionalProperties": false,
       "properties": {
+        "AddressLine": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "Directions": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -452,6 +580,12 @@
           },
           "minItems": 0,
           "type": "array"
+        },
+        "Label": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
         },
         "Phone": {
           "items": {
@@ -492,6 +626,9 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "OtherType": {
+          "type": "string"
+        },
         "Status": {
           "$ref": "#/definitions/ElectionResults.CountItemStatus"
         },
@@ -509,6 +646,15 @@
     "ElectionResults.Device": {
       "additionalProperties": false,
       "properties": {
+        "Manufacturer": {
+          "type": "string"
+        },
+        "Model": {
+          "type": "string"
+        },
+        "OtherType": {
+          "type": "string"
+        },
         "Type": {
           "$ref": "#/definitions/ElectionResults.DeviceType"
         },
@@ -523,7 +669,9 @@
     "ElectionResults.Election": {
       "required": [
         "ElectionScopeId",
+        "EndDate",
         "Name",
+        "StartDate",
         "Type"
       ],
       "additionalProperties": false,
@@ -544,6 +692,10 @@
             "ElectionResults.ReportingUnit"
           ]
         },
+        "EndDate": {
+          "type": "string",
+          "format": "date"
+        },
         "ExternalIdentifier": {
           "items": {
             "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
@@ -553,6 +705,13 @@
         },
         "Name": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "OtherType": {
+          "type": "string"
+        },
+        "StartDate": {
+          "type": "string",
+          "format": "date"
         },
         "Type": {
           "$ref": "#/definitions/ElectionResults.ElectionType"
@@ -612,6 +771,9 @@
           "minItems": 0,
           "type": "array"
         },
+        "Name": {
+          "type": "string"
+        },
         "ContactInformation": {
           "$ref": "#/definitions/ElectionResults.ContactInformation"
         },
@@ -626,7 +788,13 @@
     "ElectionResults.ElectionReport": {
       "required": [
         "Format",
-        "Status"
+        "GeneratedDate",
+        "Issuer",
+        "IssuerAbbreviation",
+        "SequenceEnd",
+        "SequenceStart",
+        "Status",
+        "VendorApplicationId"
       ],
       "additionalProperties": false,
       "properties": {
@@ -640,6 +808,22 @@
         "Format": {
           "$ref": "#/definitions/ElectionResults.ReportDetailLevel"
         },
+        "GeneratedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "IsTest": {
+          "type": "boolean"
+        },
+        "Issuer": {
+          "type": "string"
+        },
+        "IssuerAbbreviation": {
+          "type": "string"
+        },
+        "Notes": {
+          "type": "string"
+        },
         "Person": {
           "items": {
             "$ref": "#/definitions/ElectionResults.Person"
@@ -647,11 +831,23 @@
           "minItems": 0,
           "type": "array"
         },
+        "SequenceEnd": {
+          "type": "integer"
+        },
+        "SequenceStart": {
+          "type": "integer"
+        },
         "Signature": {
           "$ref": "#/definitions/Xmldsig.Signature"
         },
         "Status": {
           "$ref": "#/definitions/ElectionResults.ResultsStatus"
+        },
+        "TestType": {
+          "type": "string"
+        },
+        "VendorApplicationId": {
+          "type": "string"
         },
         "Election": {
           "items": {
@@ -712,12 +908,22 @@
     },
     "ElectionResults.ExternalIdentifier": {
       "required": [
-        "Type"
+        "Type",
+        "Value"
       ],
       "additionalProperties": false,
       "properties": {
+        "Label": {
+          "type": "string"
+        },
+        "OtherType": {
+          "type": "string"
+        },
         "Type": {
           "$ref": "#/definitions/ElectionResults.IdentifierType"
+        },
+        "Value": {
+          "type": "string"
         },
         "@type": {
           "enum": [
@@ -728,10 +934,23 @@
       "type": "object"
     },
     "ElectionResults.Hours": {
+      "required": [
+        "EndTime",
+        "StartTime"
+      ],
       "additionalProperties": false,
       "properties": {
         "Day": {
           "$ref": "#/definitions/ElectionResults.DayType"
+        },
+        "EndTime": {
+          "$ref": "#/definitions/ElectionResults.TimeWithZone"
+        },
+        "Label": {
+          "type": "string"
+        },
+        "StartTime": {
+          "$ref": "#/definitions/ElectionResults.TimeWithZone"
         },
         "@type": {
           "enum": [
@@ -747,6 +966,9 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "Label": {
+          "type": "string"
+        },
         "Text": {
           "items": {
             "$ref": "#/definitions/ElectionResults.LanguageString"
@@ -763,8 +985,18 @@
       "type": "object"
     },
     "ElectionResults.LanguageString": {
+      "required": [
+        "Content",
+        "Language"
+      ],
       "additionalProperties": false,
       "properties": {
+        "Content": {
+          "type": "string"
+        },
+        "Language": {
+          "type": "string"
+        },
         "@type": {
           "enum": [
             "ElectionResults.LanguageString"
@@ -774,8 +1006,24 @@
       "type": "object"
     },
     "ElectionResults.LatLng": {
+      "required": [
+        "Latitude",
+        "Longitude"
+      ],
       "additionalProperties": false,
       "properties": {
+        "Label": {
+          "type": "string"
+        },
+        "Latitude": {
+          "type": "number"
+        },
+        "Longitude": {
+          "type": "number"
+        },
+        "Source": {
+          "type": "string"
+        },
         "@type": {
           "enum": [
             "ElectionResults.LatLng"
@@ -810,6 +1058,13 @@
           "minItems": 0,
           "type": "array"
         },
+        "FilingDeadline": {
+          "type": "string",
+          "format": "date"
+        },
+        "IsPartisan": {
+          "type": "boolean"
+        },
         "Name": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -838,8 +1093,17 @@
       "type": "object"
     },
     "ElectionResults.OfficeGroup": {
+      "required": [
+        "Name"
+      ],
       "additionalProperties": false,
       "properties": {
+        "Label": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
         "SubOfficeGroup": {
           "items": {
             "$ref": "#/definitions/ElectionResults.OfficeGroup"
@@ -907,12 +1171,25 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "Abbreviation": {
+          "type": "string"
+        },
+        "Color": {
+          "$ref": "#/definitions/ElectionResults.HtmlColorString"
+        },
         "ExternalIdentifier": {
           "items": {
             "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
           },
           "minItems": 0,
           "type": "array"
+        },
+        "IsWriteIn": {
+          "type": "boolean"
+        },
+        "LogoUri": {
+          "type": "string",
+          "format": "uri"
         },
         "Name": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -931,10 +1208,14 @@
     "ElectionResults.PartyContest": {
       "required": [
         "ElectoralDistrictId",
+        "Name",
         "@id"
       ],
       "additionalProperties": false,
       "properties": {
+        "Abbreviation": {
+          "type": "string"
+        },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -961,12 +1242,30 @@
           "minItems": 0,
           "type": "array"
         },
+        "HasRotation": {
+          "type": "boolean"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "OtherVoteVariation": {
+          "type": "string"
+        },
+        "SequenceOrder": {
+          "type": "integer"
+        },
+        "SubUnitsReported": {
+          "type": "integer"
+        },
         "SummaryCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.SummaryCounts"
           },
           "minItems": 0,
           "type": "array"
+        },
+        "TotalSubUnits": {
+          "type": "integer"
         },
         "VoteVariation": {
           "$ref": "#/definitions/ElectionResults.VoteVariation"
@@ -1001,10 +1300,14 @@
     },
     "ElectionResults.PartyRegistration": {
       "required": [
+        "Count",
         "PartyId"
       ],
       "additionalProperties": false,
       "properties": {
+        "Count": {
+          "type": "integer"
+        },
         "PartyId": {
           "type": "string",
           "refTypes": [
@@ -1038,6 +1341,9 @@
           "minItems": 1,
           "type": "array"
         },
+        "SequenceOrder": {
+          "type": "integer"
+        },
         "VoteCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.VoteCounts"
@@ -1062,6 +1368,10 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "DateOfBirth": {
+          "type": "string",
+          "format": "date"
+        },
         "ExternalIdentifier": {
           "items": {
             "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
@@ -1069,8 +1379,27 @@
           "minItems": 0,
           "type": "array"
         },
+        "FirstName": {
+          "type": "string"
+        },
         "FullName": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "Gender": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "MiddleName": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Nickname": {
+          "type": "string"
         },
         "PartyId": {
           "type": "string",
@@ -1079,8 +1408,14 @@
             "ElectionResults.Coalition"
           ]
         },
+        "Prefix": {
+          "type": "string"
+        },
         "Profession": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "Suffix": {
+          "type": "string"
         },
         "Title": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -1112,6 +1447,9 @@
         "Device": {
           "$ref": "#/definitions/ElectionResults.Device"
         },
+        "SerialNumber": {
+          "type": "string"
+        },
         "ComposingGpUnitIds": {
           "items": {
             "type": "string",
@@ -1129,6 +1467,9 @@
           },
           "minItems": 0,
           "type": "array"
+        },
+        "Name": {
+          "type": "string"
         },
         "SummaryCounts": {
           "items": {
@@ -1175,8 +1516,32 @@
           "minItems": 0,
           "type": "array"
         },
+        "IsDistricted": {
+          "type": "boolean"
+        },
+        "IsMailOnly": {
+          "type": "boolean"
+        },
+        "Number": {
+          "type": "string"
+        },
+        "OtherType": {
+          "type": "string"
+        },
+        "SubUnitsReported": {
+          "type": "integer"
+        },
+        "TotalSubUnits": {
+          "type": "integer"
+        },
         "Type": {
           "$ref": "#/definitions/ElectionResults.ReportingUnitType"
+        },
+        "VotersParticipated": {
+          "type": "integer"
+        },
+        "VotersRegistered": {
+          "type": "integer"
         },
         "ElectionAdministration": {
           "$ref": "#/definitions/ElectionResults.ElectionAdministration"
@@ -1209,6 +1574,9 @@
           "minItems": 0,
           "type": "array"
         },
+        "Name": {
+          "type": "string"
+        },
         "SummaryCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.SummaryCounts"
@@ -1230,6 +1598,7 @@
     "ElectionResults.RetentionContest": {
       "required": [
         "ElectoralDistrictId",
+        "Name",
         "@id"
       ],
       "additionalProperties": false,
@@ -1255,6 +1624,13 @@
         "FullText": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
+        "InfoUri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "OtherType": {
+          "type": "string"
+        },
         "PassageThreshold": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -1266,6 +1642,9 @@
         },
         "Type": {
           "$ref": "#/definitions/ElectionResults.BallotMeasureType"
+        },
+        "Abbreviation": {
+          "type": "string"
         },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -1293,12 +1672,30 @@
           "minItems": 0,
           "type": "array"
         },
+        "HasRotation": {
+          "type": "boolean"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "OtherVoteVariation": {
+          "type": "string"
+        },
+        "SequenceOrder": {
+          "type": "integer"
+        },
+        "SubUnitsReported": {
+          "type": "integer"
+        },
         "SummaryCounts": {
           "items": {
             "$ref": "#/definitions/ElectionResults.SummaryCounts"
           },
           "minItems": 0,
           "type": "array"
+        },
+        "TotalSubUnits": {
+          "type": "integer"
         },
         "VoteVariation": {
           "$ref": "#/definitions/ElectionResults.VoteVariation"
@@ -1334,6 +1731,26 @@
     "ElectionResults.Schedule": {
       "additionalProperties": false,
       "properties": {
+        "EndDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "IsOnlyByAppointment": {
+          "type": "boolean"
+        },
+        "IsOrByAppointment": {
+          "type": "boolean"
+        },
+        "IsSubjectToChange": {
+          "type": "boolean"
+        },
+        "Label": {
+          "type": "string"
+        },
+        "StartDate": {
+          "type": "string",
+          "format": "date"
+        },
         "Hours": {
           "items": {
             "$ref": "#/definitions/ElectionResults.Hours"
@@ -1352,6 +1769,10 @@
     "ElectionResults.SpatialDimension": {
       "additionalProperties": false,
       "properties": {
+        "MapUri": {
+          "type": "string",
+          "format": "uri"
+        },
         "SpatialExtent": {
           "$ref": "#/definitions/ElectionResults.SpatialExtent"
         },
@@ -1365,10 +1786,14 @@
     },
     "ElectionResults.SpatialExtent": {
       "required": [
+        "Coordinates",
         "Format"
       ],
       "additionalProperties": false,
       "properties": {
+        "Coordinates": {
+          "type": "string"
+        },
         "Format": {
           "$ref": "#/definitions/ElectionResults.GeoSpatialFormat"
         },
@@ -1386,6 +1811,24 @@
       ],
       "additionalProperties": false,
       "properties": {
+        "BallotsCast": {
+          "type": "integer"
+        },
+        "BallotsOutstanding": {
+          "type": "integer"
+        },
+        "BallotsRejected": {
+          "type": "integer"
+        },
+        "Overvotes": {
+          "type": "integer"
+        },
+        "Undervotes": {
+          "type": "integer"
+        },
+        "WriteIns": {
+          "type": "integer"
+        },
         "Device": {
           "$ref": "#/definitions/ElectionResults.Device"
         },
@@ -1395,6 +1838,12 @@
             "ElectionResults.ReportingDevice",
             "ElectionResults.ReportingUnit"
           ]
+        },
+        "IsSuppressedForPrivacy": {
+          "type": "boolean"
+        },
+        "OtherType": {
+          "type": "string"
         },
         "Type": {
           "$ref": "#/definitions/ElectionResults.CountItemType"
@@ -1410,6 +1859,14 @@
     "ElectionResults.Term": {
       "additionalProperties": false,
       "properties": {
+        "EndDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "StartDate": {
+          "type": "string",
+          "format": "date"
+        },
         "Type": {
           "$ref": "#/definitions/ElectionResults.OfficeTermType"
         },
@@ -1423,10 +1880,14 @@
     },
     "ElectionResults.VoteCounts": {
       "required": [
+        "Count",
         "Type"
       ],
       "additionalProperties": false,
       "properties": {
+        "Count": {
+          "type": "number"
+        },
         "Device": {
           "$ref": "#/definitions/ElectionResults.Device"
         },
@@ -1436,6 +1897,12 @@
             "ElectionResults.ReportingDevice",
             "ElectionResults.ReportingUnit"
           ]
+        },
+        "IsSuppressedForPrivacy": {
+          "type": "boolean"
+        },
+        "OtherType": {
+          "type": "string"
         },
         "Type": {
           "$ref": "#/definitions/ElectionResults.CountItemType"
@@ -1638,6 +2105,19 @@
       ],
       "type": "string"
     },
+    "ElectionResults.HtmlColorString": {
+      "pattern": "[0-9a-f]{6}",
+      "type": "string"
+    },
+    "ElectionResults.ShortString": {
+      "maxLength": 16,
+      "type": "string"
+    },
+    "ElectionResults.TimeWithZone": {
+      "pattern": "(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]|(24:00:00))(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00))",
+      "type": "string",
+      "format": "time"
+    },
     "Xmldsig.Signature": {
       "additionalProperties": false,
       "properties": {
@@ -1649,8 +2129,5 @@
       },
       "type": "object"
     }
-  },
-  "oneOf": [
-
-  ]
+  }
 }
