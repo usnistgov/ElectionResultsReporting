@@ -3,7 +3,7 @@
 
 ### **February 2016**
 
-*Note: This is a partial GitHub pages version of the NIST SP 1500-100 specification. Thus far, the first several sections have been converted from the Word version. The specification in PDF is located at [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
+*Note: This is a partial GitHub pages version of the NIST SP 1500-100 specification that is currently in process of being converted from the Word/PDF version. The specification in PDF is located at [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
 
 **Kim Brace<br>
 Sam Dana<br>
