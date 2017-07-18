@@ -344,18 +344,18 @@ The pre-election use case enables election officials to report on a variety of e
 The data for the pre-election use case includes the following:
 
 *	Pre-election reports in a variety of formats, including:
-  * As one complete file or a sequence of files;
-  * As additions to previous reports; and
-  * As corrections to previous reports;
+  - As one complete file or a sequence of files;
+  - As additions to previous reports; and
+  - As corrections to previous reports;
 *	Jurisdictions, districts, offices, precincts and voting locations within the scope of the reporting jurisdiction and how they are organized;
 *	Political party information;
 *	Offices associated with contests and districts;
 *	Information about persons relevant to the jurisdiction such as authorities, candidates, office holders, etc.;
 *	Election type, date, place, jurisdiction, authority information, registered voters. The type of election could include:
-  * Open and closed partisan primaries;
-  * Runoffs;
-  * Special elections; and
-  * General elections;
+  - Open and closed partisan primaries;
+  - Runoffs;
+  - Special elections; and
+  - General elections;
 *	Ballot measures and contests, including retention contests;
 *	Candidates on the ballot and their associated party affiliations and contact information;
 *	Offices associated with the contests and electoral districts;
