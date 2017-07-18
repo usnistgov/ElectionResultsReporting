@@ -1,6 +1,6 @@
 # **NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
 
-This is a placeholder for a GitHub pages version of the NIST SP 1500-100 specification for an interoperable common data format for election results reporting. Thus far, Section 2 on geopolitical geography has been created from the Word version. The specification documentation in Word and PDF is currently located at the GitHub repository (https://github.com/usnistgov/ElectionResultsReporting).
+This is a placeholder for a GitHub pages version of the NIST SP 1500-100 specification for an interoperable common data format for election results reporting. Thus far, Section 2 on geopolitical geography has been created from the Word version. The specification documentation in Word and PDF is currently located at the GitHub repository [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
