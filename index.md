@@ -1,6 +1,59 @@
+<title>NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0</title>
 # **NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
 
-This is a placeholder for a GitHub pages version of the NIST SP 1500-100 specification for an interoperable common data format for election results reporting. Thus far, Section 2 on geopolitical geography has been created from the Word version. The specification documentation in Word and PDF is currently located at the GitHub repository [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).
+This is a placeholder for a GitHub pages version of the NIST SP 1500-100 specification for an interoperable common data format for election results reporting. Thus far, the first several sections have been converted from the Word version. The specification documentation in Word and PDF is currently located at the GitHub repository [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).
+
+**Kim Brace<br>
+Sam Dana<br>
+Herb Deutsch<br>
+John Dziurlaj<br>
+Ian Piper<br>
+Don Rehill<br>
+Richard Rivello<br>
+John P. Wack<br>
+Sarah Whitt**
+
+February 2016
+
+This publication is available free of charge from:<br>
+[http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100)
+
+
+  National Institute of Standards and Technology<br>
+  Willie May, Under Secretary of Commerce for Standards and Technology and DirectorNational Institute of Standards and Technology
+	(NIST) Special Publication 1500-100<br>
+  150 pages (February 2016)
+
+	NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and
+	testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are
+	intended to document external perspectives and do not necessarily represent official NIST positions.
+
+	Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental
+	procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by NIST, nor is it
+	intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.
+
+	There may be references in this publication to other publications currently under development by NIST in accordance with its
+	assigned statutory responsibilities. The information in this publication, including concepts and methodologies, may be used by
+	federal agencies even before the completion of such companion publications. Thus, until each publication is completed, current
+	requirements, guidelines, and procedures, where they exist, remain operative. For planning and transition purposes, federal
+	agencies may wish to closely follow the development of these new publications by NIST.
+
+	Organizations are encouraged to review all draft publications during public comment periods and provide feedback to NIST.
+	All NIST publications are available at http://www.nist.gov/publication-portal.cfm.
+
+	National Institute of Standards and Technology
+	Attn: Software and Systems Division, Information Technology Laboratory
+	100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
+	Email: voting@nist.gov
+
+## Reports on Computer Systems Technology
+The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology (NIST) promotes the U.S. economy and public welfare by providing technical leadership for the Nation’s measurement and standards infrastructure. ITL develops tests, test methods, reference data, proof of concept implementations, and technical analyses to advance the development and productive use of information technology. This document reports on ITL’s research, guidance, and outreach efforts in Information Technology and its collaborative activities with industry, government, and academic organizations.
+
+## Abstract
+This publication describes an election results common data format specification for pre-election setup information and post-election results reporting.  It contains a UML model of the election data and an XML format derived from the UML model.  It also contains background information regarding how geopolitical geography is structured and used in the model and schema.  The XML format is comprehensive and at the same time very flexible, able to accommodate election scenarios used throughout the U.S. It is part of a series of planned common data format specifications for voting equipment.
+
+## Keywords
+Ballot; common data format; contest; district; election results; jurisdiction; overvote; political office; political party; precinct; referendum; undervote, voting.
 
 ## Table of Contents
 
@@ -23,34 +76,38 @@ This is a placeholder for a GitHub pages version of the NIST SP 1500-100 specifi
 
 <!-- /TOC -->
 
+<br>
+
 ## Acknowledgements
 The authors wish to thank their colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who
 reviewed drafts of this document and contributed to its technical content.  The authors gratefully acknowledge and appreciate the following
 contributors for their keen and insightful assistance with developing this specification:
 
 * Kenneth Bennett, Office of Registrar-Recorder /County Clerk, Los Angeles
-* Lauren Massa-Lochridge, Independent Researcher
-* Benjamin Rice, Dominion Voting
 * Thomas Connolly, New York State Board of Elections
-* Neal McBurnett, ElectionAudits
-* John Sebes, OSET Foundation
 * Art Greisser, Prometheus Computing
-* John McCarthy, Verified Voting
-* Paul Stenbjorn, Election Information Services
 * Chris Jerdonek, Elections Commission, City and County of San Francisco
-* Janet Modrow, Florida Division of Elections
-* Beth Ann Surber, Office of the Secretary of State, West Virginia
 * Arthur Keller, University of California
-* Justin Moore, Google
-* David Tarrent, Bureau of Elections, Michigan
 * Jared Marcotte, The Turnout
+* Lauren Massa-Lochridge, Independent Researcher
+* Neal McBurnett, ElectionAudits
+* John McCarthy, Verified Voting
+* Janet Modrow, Florida Division of Elections
+* Justin Moore, Google
 * Tammy Patrick, Bipartisan Policy Institute
+* Benjamin Rice, Dominion Voting
+* John Sebes, OSET Foundation
+* Paul Stenbjorn, Election Information Services
+* Beth Ann Surber, Office of the Secretary of State, West Virginia
+* David Tarrent, Bureau of Elections, Michigan
 * David Webber, Horizon Industries
 
 In addition to the above acknowledgments, the authors also gratefully acknowledge and appreciate the National Institute of Standards and Technology's
 Mary Brady, James Foti, and Joshua Franklin, for their exceptional contributions in helping to improve the content of the publication.  
 And finally, the authors also gratefully acknowledge and appreciate the significant contributions from individuals and organizations in the
 public and private sectors, whose thoughtful and constructive comments improved the overall quality, thoroughness, and usefulness of this publication.
+
+<br>
 
 ## Executive Summary
 This publication is a specification for a common data format (CDF) for pre-election setup information and post-election results reporting.  The format, known as the Election Results Common Data Format Specification, is comprehensive and detailed in its coverage of election results-related data and at the same time very flexible, able to accommodate election scenarios used throughout the United States.  This publication contains a UML (Unified Modeling Language) model, a derived XML (eXtensible Markup Language) schema, usage information and guidance, and background information.
