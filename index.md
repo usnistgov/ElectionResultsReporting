@@ -1,7 +1,7 @@
 <title>NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0</title>
 # **NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
 
-**February 2016**
+### **February 2016**
 
 *Note: This is a partial GitHub pages version of the NIST SP 1500-100 specification. Thus far, the first several sections have been converted from the Word version. The specification in PDF is located at [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
 
