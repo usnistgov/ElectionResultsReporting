@@ -4,6 +4,7 @@
 *This is a partial GitHub pages version of the NIST SP 1500-100 specification. Thus far, the first several sections have been converted from the Word version. The specification documentation in Word and PDF is currently located at the GitHub repository [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
 
 <div class="text-left" markdown="1">
+
 **Kim Brace<br>
 Sam Dana<br>
 Herb Deutsch<br>
@@ -14,10 +15,15 @@ Richard Rivello<br>
 John P. Wack<br>
 Sarah Whitt**
 </div>
+
 <br>
+
 **February 2016**
+
 <br>
+
 This publication is available free of charge from: [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100)
+
 <br>
 
   National Institute of Standards and Technology
@@ -47,8 +53,9 @@ This publication is available free of charge from: [http://dx.doi.org/10.6028/NI
 	100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
 	Email: voting@nist.gov
 
-  Reports on Computer Systems Technology<
+  Reports on Computer Systems Technology
   The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology (NIST) promotes the U.S. economy and public welfare by providing technical leadership for the Nation’s measurement and standards infrastructure. ITL develops tests, test methods, reference data, proof of concept implementations, and technical analyses to advance the development and productive use of information technology. This document reports on ITL’s research, guidance, and outreach efforts in Information Technology and its collaborative activities with industry, government, and academic organizations.
+
 
 ## Abstract
 This publication describes an election results common data format specification for pre-election setup information and post-election results reporting.  It contains a UML model of the election data and an XML format derived from the UML model.  It also contains background information regarding how geopolitical geography is structured and used in the model and schema.  The XML format is comprehensive and at the same time very flexible, able to accommodate election scenarios used throughout the U.S. It is part of a series of planned common data format specifications for voting equipment.
