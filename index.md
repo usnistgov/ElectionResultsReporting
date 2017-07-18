@@ -1,9 +1,7 @@
 <title>NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0</title>
 # **NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
 
-*This is a partial GitHub pages version of the NIST SP 1500-100 specification. Thus far, the first several sections have been converted from the Word version. The specification documentation in Word and PDF is currently located at the GitHub repository [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
-
-<div class="text-left" markdown="1">
+*This is a partial GitHub pages version of the NIST SP 1500-100 specification. Thus far, the first several sections have been converted from the Word version. The specification in PDF is located at [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
 
 **Kim Brace<br>
 Sam Dana<br>
@@ -14,7 +12,6 @@ Don Rehill<br>
 Richard Rivello<br>
 John P. Wack<br>
 Sarah Whitt**
-</div>
 
 <br>
 
@@ -25,11 +22,6 @@ Sarah Whitt**
 This publication is available free of charge from: [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100)
 
 <br>
-
-  National Institute of Standards and Technology
-  Willie May, Under Secretary of Commerce for Standards and Technology and DirectorNational Institute of Standards and Technology
-  (NIST) Special Publication 1500-100
-  150 pages (February 2016)
 
 	NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and
 	testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are
@@ -53,10 +45,6 @@ This publication is available free of charge from: [http://dx.doi.org/10.6028/NI
 	100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
 	Email: voting@nist.gov
 
-  Reports on Computer Systems Technology
-  The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology (NIST) promotes the U.S. economy and public welfare by providing technical leadership for the Nation’s measurement and standards infrastructure. ITL develops tests, test methods, reference data, proof of concept implementations, and technical analyses to advance the development and productive use of information technology. This document reports on ITL’s research, guidance, and outreach efforts in Information Technology and its collaborative activities with industry, government, and academic organizations.
-
-
 ## Abstract
 This publication describes an election results common data format specification for pre-election setup information and post-election results reporting.  It contains a UML model of the election data and an XML format derived from the UML model.  It also contains background information regarding how geopolitical geography is structured and used in the model and schema.  The XML format is comprehensive and at the same time very flexible, able to accommodate election scenarios used throughout the U.S. It is part of a series of planned common data format specifications for voting equipment.
 
@@ -68,7 +56,7 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Acknowledgements](#acknowledgements)
-	- [Executive Summary](#executive-summary)
+- [Executive Summary](#executive-summary)
 - [1 Introduction](#1-introduction)
 	- [1.1	Purpose](#11-purpose)
 	- [1.2	Audience](#12-audience)
@@ -111,8 +99,7 @@ contributors for their keen and insightful assistance with developing this speci
 * David Webber, Horizon Industries
 
 In addition to the above acknowledgments, the authors also gratefully acknowledge and appreciate the National Institute of Standards and Technology's
-Mary Brady, James Foti, and Joshua Franklin, for their exceptional contributions in helping to improve the content of the publication.  
-And finally, the authors also gratefully acknowledge and appreciate the significant contributions from individuals and organizations in the
+Mary Brady, James Foti, and Joshua Franklin, for their exceptional contributions in helping to improve the content of the publication.  The authors also gratefully acknowledge and appreciate the significant contributions from individuals and organizations in the
 public and private sectors, whose thoughtful and constructive comments improved the overall quality, thoroughness, and usefulness of this publication.
 
 <br>
