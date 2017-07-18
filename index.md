@@ -327,3 +327,136 @@ District GpUnits need to be linked to the precinct and/or split precinct GpUnits
 
 **Figure 7 - GpUnit Structural Hierarchies**
 </div>
+
+# 3 Use Cases and UML Model
+This section describes the three use cases for pre-election setup and post-election results reporting included in this specification, and then describes the UML model that implements the use cases and was used to generate the XML schema.  This section is provided for background and to assist in understanding how the model and schema are structured and used.
+
+## 3.1	Use Cases
+This section describes the three use cases for the following phases of pre-election setup and post-election results reporting:
+
+1. **Pre-election** – for reporting of election data about offices, political parties, and the geopolitical geographies associated with the reporting jurisdiction, as well as any election-specific information such as the contests, candidates, or ballot measures;
+2. **Election night** – for reporting of election results to the public during the election or on election night and for internal state rolls-ups of election results between and among election management systems; and
+3. **Post-election** – for reporting the final results compiled during the post-election canvass, that is, when all results are re-examined and re-tabulated to ensure correctness.
+
+### 3.1.1	Pre-Election Use Case
+The pre-election use case enables election officials to report on a variety of election-related data; the data could include information about a specific upcoming election or it could provide more general information about the reporting jurisdiction so as to determine whether the election data is accurate and organized correctly or to convey information to the general public about contests and ballot information in an upcoming election.  Pre-election information may come from any of the databases or devices that an election jurisdiction uses to manage elections, including voter registration databases, ballot programming systems, candidate filing systems, EMSs, campaign finance systems, etc.  
+
+The data for the pre-election use case includes the following:
+
+*	Pre-election reports in a variety of formats, including:
+  *	As one complete file or a sequence of files;
+  *	As additions to previous reports; and
+  *	As corrections to previous reports;
+*	Jurisdictions, districts, offices, precincts and voting locations within the scope of the reporting jurisdiction and how they are organized;
+*	Political party information;
+*	Offices associated with contests and districts;
+*	Information about persons relevant to the jurisdiction such as authorities, candidates, office holders, etc.;
+*	Election type, date, place, jurisdiction, authority information, registered voters. The type of election could include:
+  *	Open and closed partisan primaries;
+  *	Runoffs;
+  * Special elections; and
+  *	General elections;
+*	Ballot measures and contests, including retention contests;
+*	Candidates on the ballot and their associated party affiliations and contact information;
+*	Offices associated with the contests and electoral districts;
+*	Vote-capture device types or the specific devices associated with polling places; and
+*	Ballot styles containing contest and candidate information in the order as they appear on the ballot at specific precincts or split precincts.
+
+### 3.1.2	Election Night Reporting Use Case
+The election night reporting use case addresses aggregated, contest-level reporting of election results.  Depending on a jurisdiction’s capabilities, it could include further details such as precinct-level vote and ballot counts and breakdowns of counts by device type and ballot type.
+
+The election night reporting use case involves election reporting managed in two primary ways:
+
+1.	By the counties (or cities, etc.) reporting directly to the public/media and, possibly, also reporting upward to the state, or
+2.	By the counties reporting upward to the state and the state reporting directly to the public/media.
+
+When reporting upward to the state, election results are reported from local jurisdictions to the city or county or state level, where the results continue to be aggregated in a process referred to as rolling up the votes and creating state or county roll-ups.  As part of this process, internal, intermediate reports from different EMSs or databases need to be combined.  The roll-ups are then formatted and released to the media and public during election night until all results from the local jurisdictions are accounted for.  The results are, at this stage, considered as unofficial.
+
+The data for election night reporting includes the following:
+
+*	Any information from the pre-election use case;
+*	Aggregated contest results for offices and ballot measures, including:
+  *	Votes reported in the contest;
+  *	Votes reported for each candidate(s) or selection(s) in the contest;
+  *	Overvotes reported for the contest; and
+  *	Undervotes reported for the contest;
+*	Further vote details as possible to report, including:
+  *	Breakdowns of votes by various reporting units such as precinct or split precinct;
+  *	Vote counts and ballot counts broken down by ballot type (absentee, early, etc.) and type of device (electronic, optical scan, etc.); and
+  *	Additional counts as available, e.g., the number of votes cast by party or the number of straight party selections.
+
+### 3.1.3	Post-Election Reporting Use Case
+The post-election reporting use case addresses the updates to the election night unofficial results. Post-election results contain greater detail than election night results, including results by reporting unit, by counts of different types of ballots (early, absentee, provisional, etc.), and by the type of vote-capture device used by voters to cast their ballots. They may also include results that were not available for election night reporting, such as absentee ballots received too close to the election day, or provisional ballots. This use case is of interest especially by analysts and media performing detailed analysis of election results and other items of interest such as the methods people are choosing to vote (e.g., favoring absentee over in-person) or provisional voting rejection rates.
+
+The data for post-election night reporting includes:
+
+*	Any information from the pre-election and election night reporting use cases;
+*	Ballot measure and contest vote counts, including:
+  *	By geopolitical units of geography (e.g., county, township, city, precinct, etc.);
+  *	By type of ballot/voting (e.g., absentee, early, in-person, provisional);
+  *	By type of voting equipment used (e.g., electronic, optical scan, etc.); and
+  *	By overvotes and undervotes for each contest;
+*	Ballot measure and contest summaries broken down as per the vote counts, but also including the number of ballots on which the ballot measure or contest appeared; and
+*	Precinct summaries broken down as per the vote counts.
+
+## 3.2	UML Model
+This section presents the UML model that was structured to implement the use cases.  It includes a class diagram that shows a picture of the model and an overview of how to read the relationships between the classes so as to understand how the model and XML schema are structured.
+
+The UML model represents a format-independent description of the data required by the three use cases of the specification.  Its primary benefit is that it unambiguously defines and describes the data elements and how they are related without requiring readers to know the technical details of any particular data format implementation such as XML.  By using a model-based approach, the resultant data format is more likely to be well-structured and more tolerant to modifications.  The data format can be generated from the model using commercial tools, thus if changes need to be made to a format, the model can be changed and the format can be re-generated.  
+
+Figure 8 shows a high-level view of the class diagram, minus its attributes and certain ancillary classes (the complete diagram is available for download, see Appendix C—References).
+
+<div class="text-center" markdown="1">
+<img src="Figures/SimpliedUMLClassDiagram.png" height="450"/>
+
+**Figure 8: Simplified UML Class Diagram**
+</div>
+
+### 3.2.1	Major Classes
+Each class represents a major data element, e.g., Contest, Candidate, or Party, and classes that are highly related to each other are shown in the same color.  When XML is generated from the UML model, the classes in the model get generated as major XML elements, e.g., the UML Candidate class results in the XML <Candidate> element.  The major classes shown in Figure 8 are:
+
+•	ElectionReport – the root class, includes attributes describing the type of report, when generated, etc.;
+•	Election – for a specific election, includes attributes describing the type of election, date, etc.;
+•	GpUnit – short for “Geopolitical Unit,” for describing units of geopolitical geography so that they can be associated with contests, offices, ballot styles, and election results.  There are two major types of GpUnits:
+1.	ReportingUnit – for jurisdictions, districts, precincts, and other units for which election results can be associated; and
+2.	ReportingDevice – for types of voting devices or specific voting devices for which election results can be associated (not shown in Figure 8);
+•	Office – for political offices that are associated with contests and electoral districts and current office holders;
+•	Party – for political parties associated with the reporting jurisdiction and for associating the parties with candidates and contests;
+•	Person – for address and contact information for persons associated with the reporting jurisdiction, including boards of authorities, candidates, current office holders, or other election-related officials;
+•	Contest – for contests and for linking together the major elements needed for contests such as candidates and ballot selections and election results. There are four types of Contests:
+1.	CandidateContest – for contests involving candidates;
+2.	BallotMeasureContest – for contests involving ballot measures (not shown in Figure 8);
+3.	PartyContest – for straight-party selection (not shown in Figure 8); and
+4.	RetentionContest – for judicial or other types of retention contests (not shown in Figure 8);
+•	Candidate – for describing candidates so that they can be associated with contests;
+•	BallotSelection – for describing the types of ballot selections in a contest and associating them with election results:
+1.	BallotMeasureSelection – used if the ballot selection is for a ballot measure (not shown in Figure 8);
+2.	CandidateSelection – used if the ballot selection is for a candidate; and
+3.	PartySelection – used if the ballot selection is for a party as in straight party selections (not shown in Figure 8);
+•	VoteCounts – used for the vote counts associated with a ballot selection;
+•	SummaryCounts – for describing summary counts of overvotes and undervotes, write-ins, and ballot counts associated with (a) a contest or (b) geopolitical units such as precincts; and
+•	BallotStyle – for describing the contests and ballot selections on a ballot and linking them to geopolitical units such as precincts.
+
+The attributes associated with the UML classes correspond closely to the XML schema’s attributes and sub-elements associated with the major elements, described in Section 4.
+
+### 3.2.2	Relationships between Classes
+
+The major classes in the UML model result in major elements in the XML schema, and the different types of relationships between the UML classes determine how the XML elements are structured (linked) in the schema.  There are three types of relationships between the classes:
+Directed Composition: see Figure 9, ElectionReport and Election, read as, “An election report is composed of elections.”  In the XML schema, the <Election> element will be generated as a sub-element of the <ElectionReport> element. A directed composition relationship has a closed diamond at one end and an arrow pointing to the composing class:
+
+Figure 9 – Directed Composition Example
+
+Is a Type of or Instance of: see Figure 10, Contest and CandidateContest, read as, “A candidate contest is a type of contest.”  Contest is an abstract class; it is “implemented” by its concrete classes such as CandidateContest.  In the XML schema, Contest will be generated as an abstract XML element and serve as an extension base to the <CandidateContest> element. An instance relationship has an open triangle at one end, pointing from the concrete class to the abstract class:
+
+Figure 10 – “Is a Type of” Example
+
+Directed Association: see Figure 11, Candidate and Party, read as, “A candidate is associated with or linked to a party.”  In the XML schema, the <Candidate> element will include a <PartyId> element, which will contain an identifier associated with a <Party> element.  A directed association has an arrow at one end, goes in one direction, and serves to link the class to another associated class, e.g., the party linked to the candidate:
+
+Figure 11 – Directed Association Example
+
+The generation of XML elements from the UML model is discussed more specifically in section 5.1.2.
+For the directed composition associations in Figure 8, one can see that ElectionReport is composed of Election, GpUnit, Office, Party, and Person.  Election is composed of BallotStyle, Candidate, and Contest.  Contest is composed of BallotSelection and SummaryCounts. BallotSelection is composed of VoteCounts.  GpUnit is also composed of SummaryCounts.
+
+For the “is a type of” relationships in Figure 8, one can see that CandidateContest is a type of Contest.  ReportingUnit is a type of GpUnit.  CandidateSelection is a type of BallotSelection.
+
+Lastly, for the directed associations in Figure 8, one can see that many of the classes are associated with each other, as one would expect.  For example, Party is associated with (or linked to) Candidate just as a political party would be associated with or linked to a candidate.  Candidate is associated or linked to CandidateSelection, just as a selection on the ballot in a candidate contest would be for a specific candidate.  The XML generation is more complicated for directed associations and is discussed in greater detail in section 5.1.3.
