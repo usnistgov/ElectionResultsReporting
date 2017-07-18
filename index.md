@@ -3,6 +3,7 @@
 
 This is a placeholder for a GitHub pages version of the NIST SP 1500-100 specification for an interoperable common data format for election results reporting. Thus far, the first several sections have been converted from the Word version. The specification documentation in Word and PDF is currently located at the GitHub repository [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).
 
+<div class="text-right" markdown="1">
 **Kim Brace<br>
 Sam Dana<br>
 Herb Deutsch<br>
@@ -12,16 +13,17 @@ Don Rehill<br>
 Richard Rivello<br>
 John P. Wack<br>
 Sarah Whitt**
+</div>
 
-February 2016
+**February 2016**
 
 This publication is available free of charge from:<br>
 [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100)
 
 
-  National Institute of Standards and Technology<br>
+	National Institute of Standards and Technology
   Willie May, Under Secretary of Commerce for Standards and Technology and DirectorNational Institute of Standards and Technology
-	(NIST) Special Publication 1500-100<br>
+	(NIST) Special Publication 1500-100
   150 pages (February 2016)
 
 	NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and
