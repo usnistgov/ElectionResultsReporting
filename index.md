@@ -1,8 +1,21 @@
-# **NIST Sp 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
+# **NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
 
 This is a placeholder for a MarkDown version of the NIST SP 1500-100 specification.  Thus far, Section 2 on geopolitical geography has been created from the Word version.
 
-## Background: Geopolitical Geography
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [**NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**](#nist-sp-1500-100-election-results-reporting-common-data-format-specification-version-10)
+- [Background: Geopolitical Geography](#background-geopolitical-geography)
+	- [The Primary Types of Geopolitical Geography](#the-primary-types-of-geopolitical-geography)
+		- [Governmental-based Geography](#governmental-based-geography)
+		- [Political-based Geography](#political-based-geography)
+		- [Administrative-based Geography](#administrative-based-geography)
+	- [Linking the Geopolitical Geographies Together](#linking-the-geopolitical-geographies-together)
+	- [Geopolitical Geography in the UML Model and XML Schema](#geopolitical-geography-in-the-uml-model-and-xml-schema)
+
+<!-- /TOC -->
+
+# Background: Geopolitical Geography
 
 This section provides an overview of the geopolitical geography in the United States as it relates to elections and election results reporting, and serves to provide background for how geopolitical geography is implemented in the UML model and XML schema that are described in sections 3 through 5.  Knowledge of what constitutes geopolitical geography and how it is interrelated and used in elections provides the underpinning for understanding the complexities of election results reporting.  
 
