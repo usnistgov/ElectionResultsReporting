@@ -344,18 +344,18 @@ The pre-election use case enables election officials to report on a variety of e
 The data for the pre-election use case includes the following:
 
 *	Pre-election reports in a variety of formats, including:
-  *	As one complete file or a sequence of files;
-  *	As additions to previous reports; and
-  *	As corrections to previous reports;
+   * As one complete file or a sequence of files;
+   * As additions to previous reports; and
+   * As corrections to previous reports;
 *	Jurisdictions, districts, offices, precincts and voting locations within the scope of the reporting jurisdiction and how they are organized;
 *	Political party information;
 *	Offices associated with contests and districts;
 *	Information about persons relevant to the jurisdiction such as authorities, candidates, office holders, etc.;
 *	Election type, date, place, jurisdiction, authority information, registered voters. The type of election could include:
-  *	Open and closed partisan primaries;
-  *	Runoffs;
-  * Special elections; and
-  *	General elections;
+   * Open and closed partisan primaries;
+   * Runoffs;
+   * Special elections; and
+   * General elections;
 *	Ballot measures and contests, including retention contests;
 *	Candidates on the ballot and their associated party affiliations and contact information;
 *	Offices associated with the contests and electoral districts;
@@ -367,8 +367,8 @@ The election night reporting use case addresses aggregated, contest-level report
 
 The election night reporting use case involves election reporting managed in two primary ways:
 
-1.	By the counties (or cities, etc.) reporting directly to the public/media and, possibly, also reporting upward to the state, or
-2.	By the counties reporting upward to the state and the state reporting directly to the public/media.
+1. By the counties (or cities, etc.) reporting directly to the public/media and, possibly, also reporting upward to the state, or
+2. By the counties reporting upward to the state and the state reporting directly to the public/media.
 
 When reporting upward to the state, election results are reported from local jurisdictions to the city or county or state level, where the results continue to be aggregated in a process referred to as rolling up the votes and creating state or county roll-ups.  As part of this process, internal, intermediate reports from different EMSs or databases need to be combined.  The roll-ups are then formatted and released to the media and public during election night until all results from the local jurisdictions are accounted for.  The results are, at this stage, considered as unofficial.
 
@@ -376,14 +376,14 @@ The data for election night reporting includes the following:
 
 *	Any information from the pre-election use case;
 *	Aggregated contest results for offices and ballot measures, including:
-  *	Votes reported in the contest;
-  *	Votes reported for each candidate(s) or selection(s) in the contest;
-  *	Overvotes reported for the contest; and
-  *	Undervotes reported for the contest;
+   * Votes reported in the contest;
+   * Votes reported for each candidate(s) or selection(s) in the contest;
+   * Overvotes reported for the contest; and
+   * Undervotes reported for the contest;
 *	Further vote details as possible to report, including:
-  *	Breakdowns of votes by various reporting units such as precinct or split precinct;
-  *	Vote counts and ballot counts broken down by ballot type (absentee, early, etc.) and type of device (electronic, optical scan, etc.); and
-  *	Additional counts as available, e.g., the number of votes cast by party or the number of straight party selections.
+   * Breakdowns of votes by various reporting units such as precinct or split precinct;
+   * Vote counts and ballot counts broken down by ballot type (absentee, early, etc.) and type of device (electronic, optical scan, etc.); and
+   * Additional counts as available, e.g., the number of votes cast by party or the number of straight party selections.
 
 ### 3.1.3	Post-Election Reporting Use Case
 The post-election reporting use case addresses the updates to the election night unofficial results. Post-election results contain greater detail than election night results, including results by reporting unit, by counts of different types of ballots (early, absentee, provisional, etc.), and by the type of vote-capture device used by voters to cast their ballots. They may also include results that were not available for election night reporting, such as absentee ballots received too close to the election day, or provisional ballots. This use case is of interest especially by analysts and media performing detailed analysis of election results and other items of interest such as the methods people are choosing to vote (e.g., favoring absentee over in-person) or provisional voting rejection rates.
@@ -392,10 +392,10 @@ The data for post-election night reporting includes:
 
 *	Any information from the pre-election and election night reporting use cases;
 *	Ballot measure and contest vote counts, including:
-  *	By geopolitical units of geography (e.g., county, township, city, precinct, etc.);
-  *	By type of ballot/voting (e.g., absentee, early, in-person, provisional);
-  *	By type of voting equipment used (e.g., electronic, optical scan, etc.); and
-  *	By overvotes and undervotes for each contest;
+   *	By geopolitical units of geography (e.g., county, township, city, precinct, etc.);
+   *	By type of ballot/voting (e.g., absentee, early, in-person, provisional);
+   *	By type of voting equipment used (e.g., electronic, optical scan, etc.); and
+   *	By overvotes and undervotes for each contest;
 *	Ballot measure and contest summaries broken down as per the vote counts, but also including the number of ballots on which the ballot measure or contest appeared; and
 *	Precinct summaries broken down as per the vote counts.
 
@@ -407,7 +407,7 @@ The UML model represents a format-independent description of the data required b
 Figure 8 shows a high-level view of the class diagram, minus its attributes and certain ancillary classes (the complete diagram is available for download, see Appendix C—References).
 
 <div class="text-center" markdown="1">
-<img src="Figures/SimpliedUMLClassDiagram.png" height="450"/>
+<img src="Figures/SimplifiedUMLClassDiagram.png" height="450"/>
 
 **Figure 8: Simplified UML Class Diagram**
 </div>
