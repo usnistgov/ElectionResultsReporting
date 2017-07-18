@@ -1,6 +1,6 @@
 # Site settings
-title: SP 1500-100 CDF for Election Results Reporting
-description: "Initial MarkDown version of NIST Special Publication: SP 1500-100"
+title: NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0
+description: "NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0"
 baseurl: "/ElectionResultsReporting" # the subpath of your site, e.g. /blog
 url: "https://pages.nist.gov/" # the base hostname & protocol for your site
 
