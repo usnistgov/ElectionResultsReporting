@@ -1,21 +1,6 @@
----
-layout: cover
-title: "NIST SP 1500-100 Election Results Reporting CDF Specification"
-description: "SP 1500-100”
----
-
-<section class="home home-title" markdown="1">
-
-# Election Results Reporting Home
+# **NIST Sp 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
 
 This is a placeholder for a MarkDown version of the NIST SP 1500-100 specification.  Thus far, Section 2 on geopolitical geography has been created from the Word version.
-
-</section>
-
-<section class="home home-about" markdown="1">
-<div class="section-container" markdown="1">
-<div class="section-content" markdown="1">
-
 
 ## Background: Geopolitical Geography
 
@@ -67,8 +52,6 @@ Political-based geographies are those that tend to be population-based and there
 
 **Figure 2: Political-based Geographies**
 </div>
-
-
 
 Figure 2 shows the most common political-based geographies as they interrelate with the governmental-based geographies.  Political-based geographies can be categorized as follows:
 
