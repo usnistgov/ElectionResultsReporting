@@ -374,13 +374,13 @@ When reporting upward to the state, election results are reported from local jur
 
 The data for election night reporting includes the following:
 
-*	Any information from the pre-election use case;
-*	Aggregated contest results for offices and ballot measures, including:
+1.	Any information from the pre-election use case;
+2.	Aggregated contest results for offices and ballot measures, including:
    * Votes reported in the contest;
    * Votes reported for each candidate(s) or selection(s) in the contest;
    * Overvotes reported for the contest; and
    * Undervotes reported for the contest;
-*	Further vote details as possible to report, including:
+3.	Further vote details as possible to report, including:
    * Breakdowns of votes by various reporting units such as precinct or split precinct;
    * Vote counts and ballot counts broken down by ballot type (absentee, early, etc.) and type of device (electronic, optical scan, etc.); and
    * Additional counts as available, e.g., the number of votes cast by party or the number of straight party selections.
@@ -390,13 +390,13 @@ The post-election reporting use case addresses the updates to the election night
 
 The data for post-election night reporting includes:
 
-*	Any information from the pre-election and election night reporting use cases;
-*	Ballot measure and contest vote counts, including:
+1.	Any information from the pre-election and election night reporting use cases;
+2.	Ballot measure and contest vote counts, including:
    *	By geopolitical units of geography (e.g., county, township, city, precinct, etc.);
    *	By type of ballot/voting (e.g., absentee, early, in-person, provisional);
    *	By type of voting equipment used (e.g., electronic, optical scan, etc.); and
    *	By overvotes and undervotes for each contest;
-*	Ballot measure and contest summaries broken down as per the vote counts, but also including the number of ballots on which the ballot measure or contest appeared; and
+3.	Ballot measure and contest summaries broken down as per the vote counts, but also including the number of ballots on which the ballot measure or contest appeared; and
 *	Precinct summaries broken down as per the vote counts.
 
 ## 3.2	UML Model
@@ -407,35 +407,35 @@ The UML model represents a format-independent description of the data required b
 Figure 8 shows a high-level view of the class diagram, minus its attributes and certain ancillary classes (the complete diagram is available for download, see Appendix C—References).
 
 <div class="text-center" markdown="1">
-<img src="Figures/SimplifiedUMLClassDiagram.png" height="450"/>
+<img src="Figures/SimplifiedUMLClassDiagram.png" height="550"/>
 
 **Figure 8: Simplified UML Class Diagram**
 </div>
 
 ### 3.2.1	Major Classes
-Each class represents a major data element, e.g., Contest, Candidate, or Party, and classes that are highly related to each other are shown in the same color.  When XML is generated from the UML model, the classes in the model get generated as major XML elements, e.g., the UML Candidate class results in the XML <Candidate> element.  The major classes shown in Figure 8 are:
+Each class represents a major data element, e.g., Contest, Candidate, or Party, and classes that are highly related to each other are shown in the same color.  When XML is generated from the UML model, the classes in the model get generated as major XML elements, e.g., the UML Candidate class results in the XML `<Candidate>` element.  The major classes shown in Figure 8 are:
 
-•	ElectionReport – the root class, includes attributes describing the type of report, when generated, etc.;
-•	Election – for a specific election, includes attributes describing the type of election, date, etc.;
-•	GpUnit – short for “Geopolitical Unit,” for describing units of geopolitical geography so that they can be associated with contests, offices, ballot styles, and election results.  There are two major types of GpUnits:
-1.	ReportingUnit – for jurisdictions, districts, precincts, and other units for which election results can be associated; and
-2.	ReportingDevice – for types of voting devices or specific voting devices for which election results can be associated (not shown in Figure 8);
-•	Office – for political offices that are associated with contests and electoral districts and current office holders;
-•	Party – for political parties associated with the reporting jurisdiction and for associating the parties with candidates and contests;
-•	Person – for address and contact information for persons associated with the reporting jurisdiction, including boards of authorities, candidates, current office holders, or other election-related officials;
-•	Contest – for contests and for linking together the major elements needed for contests such as candidates and ballot selections and election results. There are four types of Contests:
-1.	CandidateContest – for contests involving candidates;
-2.	BallotMeasureContest – for contests involving ballot measures (not shown in Figure 8);
-3.	PartyContest – for straight-party selection (not shown in Figure 8); and
-4.	RetentionContest – for judicial or other types of retention contests (not shown in Figure 8);
-•	Candidate – for describing candidates so that they can be associated with contests;
-•	BallotSelection – for describing the types of ballot selections in a contest and associating them with election results:
-1.	BallotMeasureSelection – used if the ballot selection is for a ballot measure (not shown in Figure 8);
-2.	CandidateSelection – used if the ballot selection is for a candidate; and
-3.	PartySelection – used if the ballot selection is for a party as in straight party selections (not shown in Figure 8);
-•	VoteCounts – used for the vote counts associated with a ballot selection;
-•	SummaryCounts – for describing summary counts of overvotes and undervotes, write-ins, and ballot counts associated with (a) a contest or (b) geopolitical units such as precincts; and
-•	BallotStyle – for describing the contests and ballot selections on a ballot and linking them to geopolitical units such as precincts.
+*	ElectionReport – the root class, includes attributes describing the type of report, when generated, etc.;
+*	Election – for a specific election, includes attributes describing the type of election, date, etc.;
+*	GpUnit – short for “Geopolitical Unit,” for describing units of geopolitical geography so that they can be associated with contests, offices, ballot styles, and election results.  There are two major types of GpUnits:
+  1.	ReportingUnit – for jurisdictions, districts, precincts, and other units for which election results can be associated; and
+  2.	ReportingDevice – for types of voting devices or specific voting devices for which election results can be associated (not shown in Figure 8);
+*	Office – for political offices that are associated with contests and electoral districts and current office holders;
+*	Party – for political parties associated with the reporting jurisdiction and for associating the parties with candidates and contests;
+*	Person – for address and contact information for persons associated with the reporting jurisdiction, including boards of authorities, candidates, current office holders, or other election-related officials;
+*	Contest – for contests and for linking together the major elements needed for contests such as candidates and ballot selections and election results. There are four types of Contests:
+  1.	CandidateContest – for contests involving candidates;
+  2.	BallotMeasureContest – for contests involving ballot measures (not shown in Figure 8);
+  3.	PartyContest – for straight-party selection (not shown in Figure 8); and
+  4.	RetentionContest – for judicial or other types of retention contests (not shown in Figure 8);
+*	Candidate – for describing candidates so that they can be associated with contests;
+*	BallotSelection – for describing the types of ballot selections in a contest and associating them with election results:
+  1.	BallotMeasureSelection – used if the ballot selection is for a ballot measure (not shown in Figure 8);
+  2.	CandidateSelection – used if the ballot selection is for a candidate; and
+  3.	PartySelection – used if the ballot selection is for a party as in straight party selections (not shown in Figure 8);
+*	VoteCounts – used for the vote counts associated with a ballot selection;
+*	SummaryCounts – for describing summary counts of overvotes and undervotes, write-ins, and ballot counts associated with (a) a contest or (b) geopolitical units such as precincts; and
+*	BallotStyle – for describing the contests and ballot selections on a ballot and linking them to geopolitical units such as precincts.
 
 The attributes associated with the UML classes correspond closely to the XML schema’s attributes and sub-elements associated with the major elements, described in Section 4.
 
