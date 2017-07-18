@@ -343,24 +343,24 @@ The pre-election use case enables election officials to report on a variety of e
 
 The data for the pre-election use case includes the following:
 
-*	Pre-election reports in a variety of formats, including:
+1. Pre-election reports in a variety of formats, including:
   * As one complete file or a sequence of files;
   * As additions to previous reports; and
   * As corrections to previous reports;
-* Jurisdictions, districts, offices, precincts and voting locations within the scope of the reporting jurisdiction and how they are organized;
-*	Political party information;
-*	Offices associated with contests and districts;
-*	Information about persons relevant to the jurisdiction such as authorities, candidates, office holders, etc.;
-*	Election type, date, place, jurisdiction, authority information, registered voters. The type of election could include:
+2. Jurisdictions, districts, offices, precincts and voting locations within the scope of the reporting jurisdiction and how they are organized;
+3. Political party information;
+4. Offices associated with contests and districts;
+5. Information about persons relevant to the jurisdiction such as authorities, candidates, office holders, etc.;
+6. Election type, date, place, jurisdiction, authority information, registered voters. The type of election could include:
   - Open and closed partisan primaries;
   - Runoffs;
   - Special elections; and
   - General elections;
-*	Ballot measures and contests, including retention contests;
-*	Candidates on the ballot and their associated party affiliations and contact information;
-*	Offices associated with the contests and electoral districts;
-*	Vote-capture device types or the specific devices associated with polling places; and
-*	Ballot styles containing contest and candidate information in the order as they appear on the ballot at specific precincts or split precincts.
+7. Ballot measures and contests, including retention contests;
+8. Candidates on the ballot and their associated party affiliations and contact information;
+9. Offices associated with the contests and electoral districts;
+10. Vote-capture device types or the specific devices associated with polling places; and
+11. Ballot styles containing contest and candidate information in the order as they appear on the ballot at specific precincts or split precincts.
 
 ### 3.1.2	Election Night Reporting Use Case
 The election night reporting use case addresses aggregated, contest-level reporting of election results.  Depending on a jurisdiction’s capabilities, it could include further details such as precinct-level vote and ballot counts and breakdowns of counts by device type and ballot type.
