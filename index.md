@@ -1418,5 +1418,5 @@ Other files or updates to the files may be added.  The repository can be found v
 This appendix contains a detailed image of the UML class diagram that when viewed electronically can be expanded to show attributes and other details not shown in the simplified image of the class diagram shown in Figure 8.  This image can also be downloaded using the instructions in Appendix D—File Download Locations.
 
 <div class="text-center" markdown="1">
-<img src="Figures/DetailedUMLClassDiagram.png" height="550"/>
+<img src="Figures/DetailedUMLClassDiagram.png" height="950"/>
 </div>
