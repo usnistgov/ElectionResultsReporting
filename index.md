@@ -238,7 +238,7 @@ Nearly all states have counties, although some use different words to describe t
 <div class="text-center" markdown="1">
 <img src="Figures/Governmental-based-geographies.png" height="400"/>
 
-**Figure 1: Governmental-based Geographies**
+**Figure 1 - Governmental-based Geographies**
 </div>
 
 Governmental-based geographies are associated with offices that are elected jurisdiction-wide (such as for Governor, County Clerk, Supervisor, Treasurer, Assessor, Highway Commissioner, etc.) and thus do not require different ballot style areas within the geography for those offices, i.e., all voters in the jurisdiction vote for the office.  
@@ -252,7 +252,7 @@ Political-based geographies are those that tend to be population-based and there
 <div class="text-center" markdown="1">
 <img src="Figures/Political-based-geographies.png" height="450"/>
 
-**Figure 2: Political-based Geographies**
+**Figure 2 - Political-based Geographies**
 </div>
 
 Figure 2 shows the most common political-based geographies as they interrelate with the governmental-based geographies.  Political-based geographies can be categorized as follows:
@@ -281,7 +281,7 @@ Administrative-based geographies are called thus because their boundaries are de
 <div class="text-center" markdown="1">
 <img src="Figures/Administrative-based-geographies.png" height="500"/>
 
-**Figure 3: Administrative-based Geographies**
+**Figure 3 - Administrative-based Geographies**
 </div>
 
 <br>
@@ -292,13 +292,13 @@ As an example of administrative-based geographies and their relationship to poli
 <div class="text-center" markdown="1">
 <img src="Figures/2013_WardsPrecincts-v2.png" height="500"/>
 
-**Figure 4: Ward and Precincts in Cambridge, MA.**
+**Figure 4 - Ward and Precincts in Cambridge, MA.**
 </div>
 
 <div class="text-center" markdown="1">
 <img src="Figures/2014_CongressDistricts-v2.png" height="500"/>
 
-**Figure 5: Districts Overlaying Wards and Precincts in Cambridge, MA.**
+**Figure 5 - Districts Overlaying Wards and Precincts in Cambridge, MA.**
 </div>
 
 In many states, the boundaries of electoral districts may crisscross the precinct boundaries, creating one or more split precincts, with a distinct ballot style per split precinct.  Depending on the number of districts and how often they cross the precinct boundaries, the resultant number of ballot styles created may grow substantially beyond the number of whole precincts.  It is possible sometimes that, despite best efforts, very low numbers of voters or even just one voter will require a district ballot style.
@@ -306,7 +306,7 @@ In many states, the boundaries of electoral districts may crisscross the precinc
 <div class="text-center" markdown="1">
 <img src="Figures/Split-Precinct.png" height="450"/>
 
-**Figure 6: Overlapping Non-hierarchical Electoral Districts**
+**Figure 6 - Overlapping Non-hierarchical Electoral Districts**
 </div>
 
 As an example, Figure 6 shows two electoral districts that overlay a series of precincts.  Every time a precinct is not wholly contained within either of the districts, the precinct is split into however many pieces are necessary.  Figure 6 shows that a number of the precincts are split in different ways, e.g., Precinct 6 is split into two pieces.
