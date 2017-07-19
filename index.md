@@ -442,17 +442,30 @@ The attributes associated with the UML classes correspond closely to the XML sch
 ### 3.2.2	Relationships between Classes
 
 The major classes in the UML model result in major elements in the XML schema, and the different types of relationships between the UML classes determine how the XML elements are structured (linked) in the schema.  There are three types of relationships between the classes:
-Directed Composition: see Figure 9, ElectionReport and Election, read as, “An election report is composed of elections.”  In the XML schema, the <Election> element will be generated as a sub-element of the <ElectionReport> element. A directed composition relationship has a closed diamond at one end and an arrow pointing to the composing class:
 
-Figure 9 – Directed Composition Example
+**Directed Composition**: see Figure 9, ElectionReport and Election, read as, “An election report is composed of elections.”  In the XML schema, the `<Election>` element will be generated as a sub-element of the `<ElectionReport>` element. A directed composition relationship has a closed diamond at one end and an arrow pointing to the composing class:
 
-Is a Type of or Instance of: see Figure 10, Contest and CandidateContest, read as, “A candidate contest is a type of contest.”  Contest is an abstract class; it is “implemented” by its concrete classes such as CandidateContest.  In the XML schema, Contest will be generated as an abstract XML element and serve as an extension base to the <CandidateContest> element. An instance relationship has an open triangle at one end, pointing from the concrete class to the abstract class:
+<div class="text-center" markdown="1">
+<img src="Figures/DirectedComposition.png"/>
 
-Figure 10 – “Is a Type of” Example
+**Figure 9 – Directed Composition Example**
+</div>
 
-Directed Association: see Figure 11, Candidate and Party, read as, “A candidate is associated with or linked to a party.”  In the XML schema, the <Candidate> element will include a <PartyId> element, which will contain an identifier associated with a <Party> element.  A directed association has an arrow at one end, goes in one direction, and serves to link the class to another associated class, e.g., the party linked to the candidate:
+**Is a Type of or Instance of**: see Figure 10, Contest and CandidateContest, read as, “A candidate contest is a type of contest.”  Contest is an abstract class; it is “implemented” by its concrete classes such as CandidateContest.  In the XML schema, Contest will be generated as an abstract XML element and serve as an extension base to the `<CandidateContest>` element. An instance relationship has an open triangle at one end, pointing from the concrete class to the abstract class:
 
-Figure 11 – Directed Association Example
+<div class="text-center" markdown="1">
+<img src="Figures/IsA.png"/>
+
+**Figure 10 – “Is a Type of” Example**
+</div>
+
+**Directed Association**: see Figure 11, Candidate and Party, read as, “A candidate is associated with or linked to a party.”  In the XML schema, the `<Candidate>` element will include a `<PartyId>` element, which will contain an identifier associated with a `<Party>` element.  A directed association has an arrow at one end, goes in one direction, and serves to link the class to another associated class, e.g., the party linked to the candidate:
+
+<div class="text-center" markdown="1">
+<img src="Figures/DirectedAssociation.png"/>
+
+**Figure 11 – Directed Association Example**
+</div>
 
 The generation of XML elements from the UML model is discussed more specifically in section 5.1.2.
 For the directed composition associations in Figure 8, one can see that ElectionReport is composed of Election, GpUnit, Office, Party, and Person.  Election is composed of BallotStyle, Candidate, and Contest.  Contest is composed of BallotSelection and SummaryCounts. BallotSelection is composed of VoteCounts.  GpUnit is also composed of SummaryCounts.
