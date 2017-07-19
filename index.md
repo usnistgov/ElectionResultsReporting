@@ -5,19 +5,19 @@
 
 *Note: This is a partial GitHub pages version of the NIST SP 1500-100 specification that is currently in process of being converted from the Word/PDF version. The specification in PDF is located at [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
 
-**Kim Brace<br>
-Sam Dana<br>
-Herb Deutsch<br>
-John Dziurlaj<br>
-Ian Piper<br>
-Don Rehill<br>
-Richard Rivello<br>
-John P. Wack<br>
-Sarah Whitt**
+**Kim Brace**, EDS<br>
+**Sam Dana**, Prometheus Computing<br>
+**Herb Deutsch**, ES&S<br>
+**John Dziurlaj**, Ohio SoS Office<br>
+**Ian Piper**, Dominion Voting<br>
+**Don Rehill**, AP<br>
+**Richard Rivello**, NIST<br>
+**John P. Wack**, NIST<br>
+**Sarah Whitt**, Wisconsin GAB
 
 <br>
 
-This publication is available free of charge from: [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100)
+This publication is available free of charge from: [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100).
 
 	NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and
 	testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are
@@ -73,14 +73,15 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 	- [3.2	UML Model](#32-uml-model)
 		- [3.2.1	Major Classes](#321-major-classes)
 		- [3.2.2	Relationships between Classes](#322-relationships-between-classes)
-- [4 XML Schema documentation](#4-xml-schema-documentation)
-- [5 XML usage](#5-xml-usage)
+- [4 XML Schema](#4-xml-schema)
+- [5 XML Schema Aspects and Usage](#5-xml-schema-aspects-and-usage)
 - [Appendices](#appendices)
-	- [Acronyms](#acronyms)
-	- [Glossary](#glossary)
-	- [References](#references)
-	- [File Download locations](#file-download-locations)
-	- [XML Schema](#xml-schema)
+	- [Appendix A - Acronyms](#appendix-a-acronyms)
+	- [Appendix B - Glossary](#appendix-b-glossary)
+	- [Appendix C - References](#appendix-c-references)
+	- [Appendix D - File Download locations](#appendix-d-file-download-locations)
+	- [Appendix E - XML Schema](#appendix-e-xml-schema)
+	- [Appendix F - UML Class Diagram - Detailed](#appendix-f-uml-class-diagram-detailed)
 
 <!-- /TOC -->
 
@@ -508,16 +509,40 @@ Lastly, for the directed associations in Figure 8, one can see that many of the 
 
 <br>
 
-# 4 XML Schema documentation
+# 4 XML Schema
 
-# 5 XML usage
+# 5 XML Schema Aspects and Usage
 
 # Appendices
 
-## Acronyms
+## Appendix A - Acronyms
 
-## Glossary
-Selected terms used throughout this document are defined below. In some of the definitions, there is ancillary information that is not part of the definition but helpful in understanding the definition; this ancillary information is preceded with �Note:�.  Synonyms are preceded with �Syn:�.
+Selected acronyms and abbreviations used in this document are defined below.
+
+Acronym | Meaning
+--- | ---
+CDF | Common Data Format
+DRE | Direct Record Electronic
+EAC | Election Assistance Commission
+EAVS | EAC Election Administration and Voting Survey
+EMS | Election Management System
+FIPS | Federal Information Processing Standard
+FWAB | Federal Write-in Absentee Ballot
+JSON | JavaScript Object Notation
+NIST | National Institute of Standards and Technology
+OCD-ID | Open Civic Data Identifiers
+OASIS | Organization for the Advancement of Structured Information Standards
+SP | Special Publication
+UML | Unified Modeling Language
+UOCAVA | Uniform and Overseas Citizens Assistance in Voting Act
+VIP | Voting Information Project
+VVSG | Voluntary Voting Systems Guidelines
+XML  | eXtensible Markup Language
+
+<b>
+
+## Appendix B - Glossary
+Selected terms used throughout this document are defined below. In some of the definitions, there is ancillary information that is not part of the definition but helpful in understanding the definition; this ancillary information is preceded with "Note:".  Synonyms are preceded with "Syn:".
 
 **Absentee ballot:**
 Ballot resulting from absentee voting.
@@ -535,7 +560,7 @@ Contest in which the choices are typically Yes and No.  Syn: referendum.
 The process of varying the order of the contest choices within a given contest.
 
 **Ballot style:**
-The list of contests and candidates associated with a particular ballot and its associated precinct or split precinct (and party, for some primaries), including language used and the ordering of contests and candidates. Note: In closed primaries, the same collection of ballot style layouts are used within the same ballot style geography, with the specific ballot style layout depending on the voter�s affiliation.
+The list of contests and candidates associated with a particular ballot and its associated precinct or split precinct (and party, for some primaries), including language used and the ordering of contests and candidates. Note: In closed primaries, the same collection of ballot style layouts are used within the same ballot style geography, with the specific ballot style layout depending on the voter's affiliation.
 
 **Borough:**
 Term to signify a subdivision generally smaller than cities in terms of both geographic area and population and administered through a borough code in states such as CN, NJ, PA, and other states.  Used to mean a county in AK. Used in New York City to subdivide the city much as counties subdivide a state.
@@ -553,7 +578,7 @@ A single decision being put before the voters (e.g., the selection of candidates
 Endorsement of a given contest choice by two or more political parties.
 
 **Direct record electronic (DRE):**
-An electronic vote-capture device that provides choices visible to the voter on a front panel of the machine in which voters directly enter choices into electronic storage with the use of a touch-screen, push-buttons, or similar device.  Note: An alphabetic keyboard is often provided with the entry device to allow for the possibility of write-in votes. The voter�s choices are stored in these machines and added to the choices of all other voters.
+An electronic vote-capture device that provides choices visible to the voter on a front panel of the machine in which voters directly enter choices into electronic storage with the use of a touch-screen, push-buttons, or similar device.  Note: An alphabetic keyboard is often provided with the entry device to allow for the possibility of write-in votes. The voter's choices are stored in these machines and added to the choices of all other voters.
 
 **Early voting:**
 Voting that occurs prior to election day at a polling location under the supervision of poll workers or election administrative staff.  See also: in-person voting.  Note: some jurisdictions, early voting is referred to as in-person absentee voting.
@@ -580,7 +605,7 @@ As used in elections, administrative divisions in which voters are entitled to v
 Approval by a political party (e.g., as the candidate that the party elects to field in a particular contest and/or as the candidate that should receive straight party votes).  See also: affiliation.  Note: In some states, more than one party may endorse a contest selection.  
 
 **General election:**
-Election in which the candidates for contests and offices have generally been chosen during a primary election.  Note: In presidential systems, the term refers to a regularly scheduled election where the president, and either �a class� of or all members of the national legislature are elected at the same time. A general election day may also include elections for local officials.
+Election in which the candidates for contests and offices have generally been chosen during a primary election.  Note: In presidential systems, the term refers to a regularly scheduled election where the president, and either a class of or all members of the national legislature are elected at the same time. A general election day may also include elections for local officials.
 
 **In-person voting:**
 Voting that occurs at a polling place under the supervision of poll workers on election day.  See also: early voting. Syn: polling place voting.
@@ -598,8 +623,7 @@ Voting variation in which the voter is entitled to allocate a fixed number of vo
 Election held to narrow the field of candidates in non-party-specific contests prior to the general election.  Note: A primary election may be comprised of a nonpartisan primary for some contests or measures and a partisan and/or open primary for others.
 
 **Open primary:**
-Primary held in a state where voters do not register as a party member.  Note: There are two variations.  In one, the voter declares a choice of party ballot to the pollworker and is issued a ballot containing only contests for that party (and nonpartisan contests).  In the other, the ballot issued contains all eligible contest from all parties and the voter selects the party of choice, privately, by only selecting candidates in contests of the desired party.  Selections in more than one party
-void the partisan section of the ballot.
+Primary held in a state where voters do not register as a party member.  Note: There are two variations.  In one, the voter declares a choice of party ballot to the pollworker and is issued a ballot containing only contests for that party (and nonpartisan contests).  In the other, the ballot issued contains all eligible contest from all parties and the voter selects the party of choice, privately, by only selecting candidates in contests of the desired party.  Selections in more than one party void the partisan section of the ballot.
 
 **Overvote:**  
 Occurs when a voter selects more than one candidate in a 1-of-M contest or more than N candidates in an N-of-M contest. The vote for that contest is considered an overvote and not counted towards any candidate in that contest (unless approval voting applies for that contest). Note: Usually the rest of a properly marked ballot is counted. Large numbers of overvotes can be indicative of confusing ballot layout or confusing instructions.
@@ -644,7 +668,7 @@ An urban area that has a name, defined boundaries, and local government, and tha
 A subdivision of a county in most northeast and Midwest U.S. states, having the status of a unit of local government with varying governmental powers.  Syn: civil township.
 
 **UOCAVA voter:**
-From the Uniform and Overseas Citizens Assistance in Voting Act (UOCAVA); A U.S. citizen who is an active member of the Uniformed Services and the Merchant Marine, or the commissioned corps of the Public Health Service or the National Oceanic and Atmospheric Administration, their eligible family members, and U.S. citizens residing outside the United States.�
+From the Uniform and Overseas Citizens Assistance in Voting Act (UOCAVA); A U.S. citizen who is an active member of the Uniformed Services and the Merchant Marine, or the commissioned corps of the Public Health Service or the National Oceanic and Atmospheric Administration, their eligible family members, and U.S. citizens residing outside the United States.
 
 **Undervote:**  
 Occurs when the voter does not select a candidate in a 1-of-M contest or selects fewer than N candidates in an N-of-M contest.  Note: can indicate a conscious choice of the voter to not vote in the contest. As with overvotes, large numbers of undervotes can be indicative of confusing ballot layout or confusing instructions.
@@ -666,34 +690,34 @@ Vote for a candidate who is explicitly named by the voter in lieu of choosing a 
 
 <br>
 
-## References
-[1] W3C, Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C Recommendation, November 26, 2008, http://www.w3.org/TR/xml/ [accessed 2/1/2016].
+## Appendix C - References
+[1] W3C, Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C Recommendation, November 26, 2008, [http://www.w3.org/TR/xml/](http://www.w3.org/TR/xml/) [accessed 2/1/2016].
 
-[2] Object Management Group (OMG), UML Specification version 1.1 (OMG document ad/97-08-11) September 22, 2011, http://omg.org/ [accessed 2/1/2016].
+[2] Object Management Group (OMG), UML Specification version 1.1 (OMG document ad/97-08-11) September 22, 2011, [http://omg.org/](http://omg.org/) [accessed 2/1/2016].
 
-[3] Election Assistance Commission, Election Administration and Voting Survey [Web site], http://www.eac.gov/research/election_administration_and_voting_survey.aspx [accessed 2/1/2016].
+[3] Election Assistance Commission, Election Administration and Voting Survey [Web site], [http://www.eac.gov/research/election_administration_and_voting_survey.aspx](http://www.eac.gov/research/election_administration_and_voting_survey.aspx) [accessed 2/1/2016].
 
-[4] Florida Department of State, Division of Election, Florida Election Results Summary XML Schema Reference, Version 3.0-S, July 2015, http://dos.myflorida.com/media/695297/ds-de-137-summary.pdf [accessed 2/1/2016].
+[4] Florida Department of State, Division of Election, Florida Election Results Summary XML Schema Reference, Version 3.0-S, July 2015, [http://dos.myflorida.com/media/695297/ds-de-137-summary.pdf](http://dos.myflorida.com/media/695297/ds-de-137-summary.pdf) [accessed 2/1/2016].
 
-[5] Voting Information Project (VIP) [Web site], http://votinginfoproject.github.io/vip-specification/ [accessed 2/1/2016].
+[5] Voting Information Project (VIP) [Web site], [http://votinginfoproject.github.io/vip-specification/](http://votinginfoproject.github.io/vip-specification/) [accessed 2/1/2016].
 
-[6] OASIS, Election Markup Language (EML) Specification Version 7.0, Committee Specification 01, October 27, 2011. Available at: https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=election [accessed 2/1/2016].
+[6] OASIS, Election Markup Language (EML) Specification Version 7.0, Committee Specification 01, October 27, 2011. Available at: [https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=election](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=election) [accessed 2/1/2016].
 
-[7] City of Cambridge, Massachusetts, Geographic Information Systems:** Map Gallery [Web site], https://www.cambridgema.gov/GIS/mapgallery [accessed 2/1/2016].
+[7] City of Cambridge, Massachusetts, Geographic Information Systems:** Map Gallery [Web site], [https://www.cambridgema.gov/GIS/mapgallery](https://www.cambridgema.gov/GIS/mapgallery) [accessed 2/1/2016].
 
-[8] Hilkert, Scott, Application of Lessons Learned in the Illinois EDC Project Toward Emerging Election Data Standards and System Guidelines, submitted to Workshop for a Common Data Format for Electronic Voting Systems, National Institute of Standards and Technology, Gaithersburg, Maryland, October 29-30, 2009, http://grouper.ieee.org/groups/1622/WorkingDocuments/workshop-2009-10-NIST/hilkert-Lessons-Learned-in-Illinois-EDC-1-1.pdf [accessed 2/1/2016].
+[8] Hilkert, Scott, Application of Lessons Learned in the Illinois EDC Project Toward Emerging Election Data Standards and System Guidelines, submitted to Workshop for a Common Data Format for Electronic Voting Systems, National Institute of Standards and Technology, Gaithersburg, Maryland, October 29-30, 2009, [http://grouper.ieee.org/groups/1622/WorkingDocuments/workshop-2009-10-NIST/hilkert-Lessons-Learned-in-Illinois-EDC-1-1.pdf](http://grouper.ieee.org/groups/1622/WorkingDocuments/workshop-2009-10-NIST/hilkert-Lessons-Learned-in-Illinois-EDC-1-1.pdf) [accessed 2/1/2016].
 
-[9] W3C, XML Signature Syntax and Processing (Second Edition), W3C Recommendation, June 10, 2008, http://www.w3.org/TR/xmldsig-core/ [accessed 2/1/2016].
+[9] W3C, XML Signature Syntax and Processing (Second Edition), W3C Recommendation, June 10, 2008, [http://www.w3.org/TR/xmldsig-core/](http://www.w3.org/TR/xmldsig-core/) [accessed 2/1/2016].
 
-[10] United States Census Bureau, American National Standards Institute (ANSI) Codes [Web page], https://www.census.gov/geo/reference/ansi.html [accessed 2/1/2016].
+[10] United States Census Bureau, American National Standards Institute (ANSI) Codes [Web page], [https://www.census.gov/geo/reference/ansi.html(https://www.census.gov/geo/reference/ansi.html)] [accessed 2/1/2016].
 
-[11] Open Civic Data, OCD Identifiers [Web page], http://opencivicdata.readthedocs.org/en/latest/ocdids.html [accessed 2/1/2016].
+[11] Open Civic Data, OCD Identifiers [Web page], [http://opencivicdata.readthedocs.org/en/latest/ocdids.html](http://opencivicdata.readthedocs.org/en/latest/ocdids.html) [accessed 2/1/2016].
 
-[12] Wikipedia, ISO 639 [Web page], https://en.wikipedia.org/wiki/ISO_639 [accessed 2/1/2016].
+[12] Wikipedia, ISO 639 [Web page], [https://en.wikipedia.org/wiki/ISO_639](https://en.wikipedia.org/wiki/ISO_639) [accessed 2/1/2016].
 
 <br>
 
-## File Download locations
+## Appendix D - File Download locations
 The files associated with this specification are available for download from a NIST repository.  
 
 These files are:
@@ -710,7 +734,7 @@ Other files or updates to the files may be added.  The repository can be found v
 
 <br>
 
-## XML Schema
+## Appendix E - XML Schema
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- Version 1.0-50, January 11, 2016, NIST Election Results CDF Specification -->
     <xsd:schema xmlns="NIST_V1_election_results_cdf.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="NIST_V1_election_results_cdf.xsd" elementFormDefault="qualified" version="1.0">
@@ -1387,3 +1411,12 @@ Other files or updates to the files may be added.  The repository can be found v
        </xsd:complexContent>
     </xsd:complexType>
     </xsd:schema>
+
+<br>
+
+## Appendix F - UML Class Diagram - Detailed
+This appendix contains a detailed image of the UML class diagram that when viewed electronically can be expanded to show attributes and other details not shown in the simplified image of the class diagram shown in Figure 8.  This image can also be downloaded using the instructions in Appendix D—File Download Locations.
+
+<div class="text-center" markdown="1">
+<img src="Figures/DetailedUMLClassDiagram.png"/>
+</div>
