@@ -49,11 +49,11 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 
 ## Table of Contents
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
 
 - [Acknowledgements](#acknowledgements)
 - [Executive Summary](#executive-summary)
-- [1 Introduction](#1-introduction)
+- [1	Introduction](#1-introduction)
 	- [1.1	Purpose](#11-purpose)
 	- [1.2	Audience](#12-audience)
 	- [1.3	Motivation and methodology](#13-motivation-and-methodology)
@@ -65,13 +65,21 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 		- [2.1.3 Administrative-based Geography](#213-administrative-based-geography)
 	- [2.2 Linking the Geopolitical Geographies Together](#22-linking-the-geopolitical-geographies-together)
 	- [2.3 Geopolitical Geography in the UML Model and XML Schema](#23-geopolitical-geography-in-the-uml-model-and-xml-schema)
+- [3 Use Cases and UML Model](#3-use-cases-and-uml-model)
+	- [3.1	Use Cases](#31-use-cases)
+		- [3.1.1	Pre-Election Use Case](#311-pre-election-use-case)
+		- [3.1.2	Election Night Reporting Use Case](#312-election-night-reporting-use-case)
+		- [3.1.3	Post-Election Reporting Use Case](#313-post-election-reporting-use-case)
+	- [3.2	UML Model](#32-uml-model)
+		- [3.2.1	Major Classes](#321-major-classes)
+		- [3.2.2	Relationships between Classes](#322-relationships-between-classes)
 
 <!-- /TOC -->
 
 <br>
 
 ## Acknowledgements
-The authors wish to thank their colleagues of the National Institute of Standards and Technology VVSG-Interoperability Public Working Group, who
+The authors wish to thank their colleagues of the National Institute of Standards and Technology Interoperability Public Working Group, who
 reviewed drafts of this document and contributed to its technical content.  The authors gratefully acknowledge and appreciate the following
 contributors for their keen and insightful assistance with developing this specification:
 
