@@ -76,12 +76,12 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 - [4 XML Schema](#4-xml-schema)
 - [5 XML Schema Aspects and Usage](#5-xml-schema-aspects-and-usage)
 - [Appendices](#appendices)
-	- [Appendix A - Acronyms](#appendix-a-acronyms)
-	- [Appendix B - Glossary](#appendix-b-glossary)
-	- [Appendix C - References](#appendix-c-references)
-	- [Appendix D - File Download locations](#appendix-d-file-download-locations)
-	- [Appendix E - XML Schema](#appendix-e-xml-schema)
-	- [Appendix F - UML Class Diagram - Detailed](#appendix-f-uml-class-diagram-detailed)
+	- [A Acronyms](#a-acronyms)
+	- [B Glossary](#b-glossary)
+	- [C References](#c-references)
+	- [D File Download locations](#d-file-download-locations)
+	- [E XML Schema](#e-xml-schema)
+	- [F Detailed UML Class Diagram](#f-detailed-uml-class-diagram)
 
 <!-- /TOC -->
 
@@ -515,7 +515,7 @@ Lastly, for the directed associations in Figure 8, one can see that many of the 
 
 # Appendices
 
-## Appendix A - Acronyms
+## A Acronyms
 
 Selected acronyms and abbreviations used in this document are defined below.
 
@@ -541,7 +541,7 @@ XML  | eXtensible Markup Language
 
 <b>
 
-## Appendix B - Glossary
+## B Glossary
 Selected terms used throughout this document are defined below. In some of the definitions, there is ancillary information that is not part of the definition but helpful in understanding the definition; this ancillary information is preceded with "Note:".  Synonyms are preceded with "Syn:".
 
 **Absentee ballot:**
@@ -690,7 +690,7 @@ Vote for a candidate who is explicitly named by the voter in lieu of choosing a 
 
 <br>
 
-## Appendix C - References
+## C References
 [1] W3C, Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C Recommendation, November 26, 2008, [http://www.w3.org/TR/xml/](http://www.w3.org/TR/xml/) [accessed 2/1/2016].
 
 [2] Object Management Group (OMG), UML Specification version 1.1 (OMG document ad/97-08-11) September 22, 2011, [http://omg.org/](http://omg.org/) [accessed 2/1/2016].
@@ -717,7 +717,7 @@ Vote for a candidate who is explicitly named by the voter in lieu of choosing a 
 
 <br>
 
-## Appendix D - File Download locations
+## D File Download locations
 The files associated with this specification are available for download from a NIST repository.  
 
 These files are:
@@ -734,7 +734,7 @@ Other files or updates to the files may be added.  The repository can be found v
 
 <br>
 
-## Appendix E - XML Schema
+## E XML Schema
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- Version 1.0-50, January 11, 2016, NIST Election Results CDF Specification -->
     <xsd:schema xmlns="NIST_V1_election_results_cdf.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="NIST_V1_election_results_cdf.xsd" elementFormDefault="qualified" version="1.0">
@@ -1414,7 +1414,7 @@ Other files or updates to the files may be added.  The repository can be found v
 
 <br>
 
-## Appendix F - UML Class Diagram - Detailed
+## F Detailed UML Class Diagram
 This appendix contains a detailed image of the UML class diagram that when viewed electronically can be expanded to show attributes and other details not shown in the simplified image of the class diagram shown in Figure 8.  This image can also be downloaded using the instructions in Appendix D—File Download Locations.
 
 <div class="text-center" markdown="1">
