@@ -17,7 +17,7 @@
 
 <br>
 
-This publication is available free of charge from: [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100)
+This publication is available free of charge from: [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100).
 
 	NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and
 	testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are
@@ -73,14 +73,15 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 	- [3.2	UML Model](#32-uml-model)
 		- [3.2.1	Major Classes](#321-major-classes)
 		- [3.2.2	Relationships between Classes](#322-relationships-between-classes)
-- [4 XML Schema documentation](#4-xml-schema-documentation)
-- [5 XML usage](#5-xml-usage)
+- [4 XML Schema](#4-xml-schema)
+- [5 XML Schema Aspects and Usage](#5-xml-schema-aspects-and-usage)
 - [Appendices](#appendices)
-	- [Acronyms](#acronyms)
-	- [Glossary](#glossary)
-	- [References](#references)
-	- [File Download locations](#file-download-locations)
-	- [XML Schema](#xml-schema)
+	- [Appendix A - Acronyms](#appendix-a-acronyms)
+	- [Appendix B - Glossary](#appendix-b-glossary)
+	- [Appendix C - References](#appendix-c-references)
+	- [Appendix D - File Download locations](#appendix-d-file-download-locations)
+	- [Appendix E - XML Schema](#appendix-e-xml-schema)
+	- [Appendix F - UML Class Diagram - Detailed](#appendix-f-uml-class-diagram-detailed)
 
 <!-- /TOC -->
 
