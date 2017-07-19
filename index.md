@@ -328,8 +328,12 @@ District GpUnits need to be linked to the precinct and/or split precinct GpUnits
 **Figure 7 - GpUnit Structural Hierarchies**
 </div>
 
+<br>
+
 # 3 Use Cases and UML Model
 This section describes the three use cases for pre-election setup and post-election results reporting included in this specification, and then describes the UML model that implements the use cases and was used to generate the XML schema.  This section is provided for background and to assist in understanding how the model and schema are structured and used.
+
+<br>
 
 ## 3.1	Use Cases
 This section describes the three use cases for the following phases of pre-election setup and post-election results reporting:
@@ -337,6 +341,8 @@ This section describes the three use cases for the following phases of pre-elect
 1. **Pre-election** – for reporting of election data about offices, political parties, and the geopolitical geographies associated with the reporting jurisdiction, as well as any election-specific information such as the contests, candidates, or ballot measures;
 2. **Election night** – for reporting of election results to the public during the election or on election night and for internal state rolls-ups of election results between and among election management systems; and
 3. **Post-election** – for reporting the final results compiled during the post-election canvass, that is, when all results are re-examined and re-tabulated to ensure correctness.
+
+<br>
 
 ### 3.1.1	Pre-Election Use Case
 The pre-election use case enables election officials to report on a variety of election-related data; the data could include information about a specific upcoming election or it could provide more general information about the reporting jurisdiction so as to determine whether the election data is accurate and organized correctly or to convey information to the general public about contests and ballot information in an upcoming election.  Pre-election information may come from any of the databases or devices that an election jurisdiction uses to manage elections, including voter registration databases, ballot programming systems, candidate filing systems, EMSs, campaign finance systems, etc.  
@@ -362,6 +368,8 @@ The data for the pre-election use case includes the following:
 10. Vote-capture device types or the specific devices associated with polling places; and
 11. Ballot styles containing contest and candidate information in the order as they appear on the ballot at specific precincts or split precincts.
 
+<br>
+
 ### 3.1.2	Election Night Reporting Use Case
 The election night reporting use case addresses aggregated, contest-level reporting of election results.  Depending on a jurisdiction’s capabilities, it could include further details such as precinct-level vote and ballot counts and breakdowns of counts by device type and ballot type.
 
@@ -385,6 +393,8 @@ The data for election night reporting includes the following:
    * Vote counts and ballot counts broken down by ballot type (absentee, early, etc.) and type of device (electronic, optical scan, etc.); and
    * Additional counts as available, e.g., the number of votes cast by party or the number of straight party selections.
 
+<br>
+
 ### 3.1.3	Post-Election Reporting Use Case
 The post-election reporting use case addresses the updates to the election night unofficial results. Post-election results contain greater detail than election night results, including results by reporting unit, by counts of different types of ballots (early, absentee, provisional, etc.), and by the type of vote-capture device used by voters to cast their ballots. They may also include results that were not available for election night reporting, such as absentee ballots received too close to the election day, or provisional ballots. This use case is of interest especially by analysts and media performing detailed analysis of election results and other items of interest such as the methods people are choosing to vote (e.g., favoring absentee over in-person) or provisional voting rejection rates.
 
@@ -399,6 +409,8 @@ The data for post-election night reporting includes:
 3.	Ballot measure and contest summaries broken down as per the vote counts, but also including the number of ballots on which the ballot measure or contest appeared; and
 *	Precinct summaries broken down as per the vote counts.
 
+<br>
+
 ## 3.2	UML Model
 This section presents the UML model that was structured to implement the use cases.  It includes a class diagram that shows a picture of the model and an overview of how to read the relationships between the classes so as to understand how the model and XML schema are structured.
 
@@ -411,6 +423,8 @@ Figure 8 shows a high-level view of the class diagram, minus its attributes and 
 
 **Figure 8: Simplified UML Class Diagram**
 </div>
+
+<br>
 
 ### 3.2.1	Major Classes
 Each class represents a major data element, e.g., Contest, Candidate, or Party, and classes that are highly related to each other are shown in the same color.  When XML is generated from the UML model, the classes in the model get generated as major XML elements, e.g., the UML Candidate class results in the XML `<Candidate>` element.  The major classes shown in Figure 8 are:
@@ -438,6 +452,8 @@ Each class represents a major data element, e.g., Contest, Candidate, or Party, 
 * **BallotStyle** – for describing the contests and ballot selections on a ballot and linking them to geopolitical units such as precincts.
 
 The attributes associated with the UML classes correspond closely to the XML schema’s attributes and sub-elements associated with the major elements, described in Section 4.
+
+<br>
 
 ### 3.2.2	Relationships between Classes
 
