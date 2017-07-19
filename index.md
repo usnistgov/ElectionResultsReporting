@@ -51,7 +51,6 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
 
-
 - [Acknowledgements](#acknowledgements)
 - [Executive Summary](#executive-summary)
 - [1	Introduction](#1-introduction)
@@ -74,6 +73,9 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 	- [3.2	UML Model](#32-uml-model)
 		- [3.2.1	Major Classes](#321-major-classes)
 		- [3.2.2	Relationships between Classes](#322-relationships-between-classes)
+- [Glossary](#glossary)
+- [References](#references)
+- [File Download locations](#file-download-locations)
 - [XML Schema](#xml-schema)
 
 <!-- /TOC -->
@@ -502,8 +504,201 @@ Lastly, for the directed associations in Figure 8, one can see that many of the 
 
 <br>
 
-# XML Schema
+# Glossary
+Selected terms used throughout this document are defined below. In some of the definitions, there is ancillary information that is not part of the definition but helpful in understanding the definition; this ancillary information is preceded with �Note:�.  Synonyms are preceded with �Syn:�.
 
+**Absentee ballot:**
+Ballot resulting from absentee voting.
+
+**Absentee voting:**
+Voting that can occur unsupervised at a location chosen by the voter and usually done ahead of election day.  Note: In some jurisdictions, absentee voting is also called early voting and vote by mail.  
+
+**Affiliation:**
+Association with a political party.  See also: endorsement.  Note: Affiliation with a political party does not imply endorsement by that political party; endorsement does not imply affiliation.
+
+**Ballot measure:**
+Contest in which the choices are typically Yes and No.  Syn: referendum.
+
+**Ballot rotation:**
+The process of varying the order of the contest choices within a given contest.
+
+**Ballot style:**
+The list of contests and candidates associated with a particular ballot and its associated precinct or split precinct (and party, for some primaries), including language used and the ordering of contests and candidates. Note: In closed primaries, the same collection of ballot style layouts are used within the same ballot style geography, with the specific ballot style layout depending on the voter�s affiliation.
+
+**Borough:**
+Term to signify a subdivision generally smaller than cities in terms of both geographic area and population and administered through a borough code in states such as CN, NJ, PA, and other states.  Used to mean a county in AK. Used in New York City to subdivide the city much as counties subdivide a state.
+
+**Closed primary:**
+Primary election in which only voters registered with a political party may vote in those party-specific contests associated with that party.
+
+**Combined precinct:**
+Two or more precincts assigned the same polling place.  Syn: consolidated precinct.
+
+**Contest:**
+A single decision being put before the voters (e.g., the selection of candidates to fill a particular public office or the approval or disapproval of a constitutional amendment).
+
+**Cross-party endorsement:**
+Endorsement of a given contest choice by two or more political parties.
+
+**Direct record electronic (DRE):**
+An electronic vote-capture device that provides choices visible to the voter on a front panel of the machine in which voters directly enter choices into electronic storage with the use of a touch-screen, push-buttons, or similar device.  Note: An alphabetic keyboard is often provided with the entry device to allow for the possibility of write-in votes. The voter�s choices are stored in these machines and added to the choices of all other voters.
+
+**Early voting:**
+Voting that occurs prior to election day at a polling location under the supervision of poll workers or election administrative staff.  See also: in-person voting.  Note: some jurisdictions, early voting is referred to as in-person absentee voting.
+
+**Election certification:**
+The process of certifying the results of an election, including absentee or early votes, votes cast on election day, and valid provisional ballots.
+
+**Election day:**
+The date on which the election is considered held.  Absentee votes and early votes may be cast in advance of election day.  Note: Some jurisdictions have an election period of several days or weeks for in-person or remote voting, and there is no one day that is election day.
+
+**Election night:**
+The period of time starting when the polls close in a jurisdiction in which results may first begin to be reported and ending when all precincts have reported.
+
+**Election management system (EMS):**
+Computer systems used to perform such tasks as preparing ballots, setting up tally systems, maintaining voter registration information, generating reports, and to consolidate, report, and display election results.  Note: This device receives results data from the vote-capture devices or by manual input, accumulates the results, and reports the accumulated results.
+
+**Election official:**
+Any county clerk and recorder, election judge, member of a canvassing board, member of a board of county commissioners, member or secretary of a board of directors authorized to conduct public elections, representative of a governing body, or other person contracting for or engaged in the performance of election duties as required by the election code.
+
+**Electoral District:**
+As used in elections, administrative divisions in which voters are entitled to vote in contests that are specific to that division, such as those for state senators and delegates.
+
+**Endorsement:**  
+Approval by a political party (e.g., as the candidate that the party elects to field in a particular contest and/or as the candidate that should receive straight party votes).  See also: affiliation.  Note: In some states, more than one party may endorse a contest selection.  
+
+**General election:**
+Election in which the candidates for contests and offices have generally been chosen during a primary election.  Note: In presidential systems, the term refers to a regularly scheduled election where the president, and either �a class� of or all members of the national legislature are elected at the same time. A general election day may also include elections for local officials.
+
+**In-person voting:**
+Voting that occurs at a polling place under the supervision of poll workers on election day.  See also: early voting. Syn: polling place voting.
+
+**Jurisdiction:**  
+Term as used in election contexts to signify a geographical area to which a practical authority has been granted to administer elections for political offices.  Areas of jurisdiction apply to local, state, and federal levels.  Note: States, counties, cities, towns and townships are all examples of jurisdictions.
+
+**Municipality:**
+Term as used in election contexts to signify a jurisdiction such as city or town or village that has some form of local government for which elections are generally conducted.
+
+**N-of-M:**  
+Voting variation in which the voter is entitled to allocate a fixed number of votes (N) over a list of M contest choices or write-ins, with the constraint that at most 1 vote may be allocated to a given contest choice. Note: This usually occurs when multiple seats are concurrently being filled in a governing body such as a city council or school board where candidates run at-large.  The voter is not obliged to allocate all N votes.  1-of-M is N-of-M voting where N = 1.
+
+**Nonpartisan primary:**
+Election held to narrow the field of candidates in non-party-specific contests prior to the general election.  Note: A primary election may be comprised of a nonpartisan primary for some contests or measures and a partisan and/or open primary for others.
+
+**Open primary:**
+Primary held in a state where voters do not register as a party member.  Note: There are two variations.  In one, the voter declares a choice of party ballot to the pollworker and is issued a ballot containing only contests for that party (and nonpartisan contests).  In the other, the ballot issued contains all eligible contest from all parties and the voter selects the party of choice, privately, by only selecting candidates in contests of the desired party.  Selections in more than one party
+void the partisan section of the ballot.
+
+**Overvote:**  
+Occurs when a voter selects more than one candidate in a 1-of-M contest or more than N candidates in an N-of-M contest. The vote for that contest is considered an overvote and not counted towards any candidate in that contest (unless approval voting applies for that contest). Note: Usually the rest of a properly marked ballot is counted. Large numbers of overvotes can be indicative of confusing ballot layout or confusing instructions.
+
+**Partisan primary:**
+Election held to determine which candidate(s) would represent a political party for particular offices in the general election.
+
+**Polling place:**
+Location at which voters cast ballots in-person on vote-capture devices (e.g., DRE) under the supervision of poll workers usually on election day.  Syn: polling station or poll.  Note: A polling place is typically in 1-to-1 correspondence with a precinct except for combined precincts and vote centers.
+
+**Post-election canvass:**
+A review of all election results and re-tabulation, resulting in the certification of the results. Generally, the canvass is conducted according to established laws and time frames.
+
+**Precinct:**
+An election administration division corresponding to a contiguous geographic area that is the basis for determining the contests and measures on which the voters legally residing in that area are eligible to vote.  Syn: a beat, box, polling district, ward.  See also: combined precinct, electoral district, split precinct.
+
+**Primary election:**
+Election generally held to determine which candidate(s) will represent a political party for particular offices in the general election and/or to narrow the field of candidates in non-party-specific contests prior to the general election. In some cases, such as for local and state central committee members for a particular party, certain contests serve as the sole election as opposed to a primary followed by a general election.  Note: From the functional viewpoint of the voting system, the defining features of a primary election are the presence of party-specific contests and a requirement to report separate totals for the different political parties.
+
+**Provisional ballot:**
+Ballot cast by a voter whose eligibility to vote is disputed by an election official.  Syn: a challenged ballot.
+
+**Reporting unit:**
+An administrative division that reports votes or to which votes are associated, e.g., state, county, city, precinct, etc.
+
+**Schema:**
+A file containing definitions of data elements and attributes with rules for usage, e.g., for XML.
+
+**Split precinct:**
+Precinct serving voters from two or more administrative divisions, such as election districts, that may require different ballot styles, other than for primaries. Syn: split.
+
+**Straight party voting:**
+Voting variation in a general election in which a vote in a designated, special contest (in which the choices are political parties) implies votes in accordance with the endorsements of the selected party in all other contests on the ballot in which straight party voting is allowed.  Note: There are different tabulation rules for processing paper ballots containing a straight party selection and direct selections of one or more candidates in individual contests that are state specific.
+
+**Tabulator:**
+A programmed device that counts votes.
+
+**Town:**  
+An urban area that has a name, defined boundaries, and local government, and that is generally larger than a village and smaller than a city.
+
+**Township:**  
+A subdivision of a county in most northeast and Midwest U.S. states, having the status of a unit of local government with varying governmental powers.  Syn: civil township.
+
+**UOCAVA voter:**
+From the Uniform and Overseas Citizens Assistance in Voting Act (UOCAVA); A U.S. citizen who is an active member of the Uniformed Services and the Merchant Marine, or the commissioned corps of the Public Health Service or the National Oceanic and Atmospheric Administration, their eligible family members, and U.S. citizens residing outside the United States.�
+
+**Undervote:**  
+Occurs when the voter does not select a candidate in a 1-of-M contest or selects fewer than N candidates in an N-of-M contest.  Note: can indicate a conscious choice of the voter to not vote in the contest. As with overvotes, large numbers of undervotes can be indicative of confusing ballot layout or confusing instructions.
+
+**Vote-capture device:**
+An automated device that is used directly by a voter to cast a ballot. See also: direct record electronic (DRE).
+
+**Vote center:**
+A polling place where voters from multiple precincts may cast their ballots.  Syn: a super precinct.  See also: combined precinct.
+
+**Voter turnout:**
+The number of voters who have cast ballots as a percentage of the total number of voters who can cast ballots.  Note: Various states calculate this differently, sometimes using the total number of potentially eligible voters whether registered or not.
+
+**Voting variation:**
+A contest option or feature, e.g., approval voting, cumulative voting.
+
+**Write-in:**  
+Vote for a candidate who is explicitly named by the voter in lieu of choosing a candidate who is already listed on the ballot.  Note: In some states, this does not preclude writing in the name of a candidate who is already listed on the ballot. Some states require write-in candidates to be registered prior to the elections to be considered a valid write-in selection.
+
+<br>
+
+# References
+[1] W3C, Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C Recommendation, November 26, 2008, http://www.w3.org/TR/xml/ [accessed 2/1/2016].
+
+[2] Object Management Group (OMG), UML Specification version 1.1 (OMG document ad/97-08-11) September 22, 2011, http://omg.org/ [accessed 2/1/2016].
+
+[3] Election Assistance Commission, Election Administration and Voting Survey [Web site], http://www.eac.gov/research/election_administration_and_voting_survey.aspx [accessed 2/1/2016].
+
+[4] Florida Department of State, Division of Election, Florida Election Results Summary XML Schema Reference, Version 3.0-S, July 2015, http://dos.myflorida.com/media/695297/ds-de-137-summary.pdf [accessed 2/1/2016].
+
+[5] Voting Information Project (VIP) [Web site], http://votinginfoproject.github.io/vip-specification/ [accessed 2/1/2016].
+
+[6] OASIS, Election Markup Language (EML) Specification Version 7.0, Committee Specification 01, October 27, 2011. Available at: https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=election [accessed 2/1/2016].
+
+[7] City of Cambridge, Massachusetts, Geographic Information Systems:** Map Gallery [Web site], https://www.cambridgema.gov/GIS/mapgallery [accessed 2/1/2016].
+
+[8] Hilkert, Scott, Application of Lessons Learned in the Illinois EDC Project Toward Emerging Election Data Standards and System Guidelines, submitted to Workshop for a Common Data Format for Electronic Voting Systems, National Institute of Standards and Technology, Gaithersburg, Maryland, October 29-30, 2009, http://grouper.ieee.org/groups/1622/WorkingDocuments/workshop-2009-10-NIST/hilkert-Lessons-Learned-in-Illinois-EDC-1-1.pdf [accessed 2/1/2016].
+
+[9] W3C, XML Signature Syntax and Processing (Second Edition), W3C Recommendation, June 10, 2008, http://www.w3.org/TR/xmldsig-core/ [accessed 2/1/2016].
+
+[10] United States Census Bureau, American National Standards Institute (ANSI) Codes [Web page], https://www.census.gov/geo/reference/ansi.html [accessed 2/1/2016].
+
+[11] Open Civic Data, OCD Identifiers [Web page], http://opencivicdata.readthedocs.org/en/latest/ocdids.html [accessed 2/1/2016].
+
+[12] Wikipedia, ISO 639 [Web page], https://en.wikipedia.org/wiki/ISO_639 [accessed 2/1/2016].
+
+<br>
+
+# File Download locations
+The files associated with this specification are available for download from a NIST repository.  
+
+These files are:
+
+*	This specification,
+*	XML schema,
+*	Example XML files,
+*	Validation tools, and
+*	UML model.
+
+Other files or updates to the files may be added.  The repository can be found via the following URL:
+
+[http://vote.nist.gov](http://vote.nist.gov)
+
+<br>
+
+# XML Schema
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- Version 1.0-50, January 11, 2016, NIST Election Results CDF Specification -->
     <xsd:schema xmlns="NIST_V1_election_results_cdf.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="NIST_V1_election_results_cdf.xsd" elementFormDefault="qualified" version="1.0">
