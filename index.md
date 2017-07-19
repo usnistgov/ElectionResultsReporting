@@ -73,10 +73,14 @@ Ballot; common data format; contest; district; election results; jurisdiction; o
 	- [3.2	UML Model](#32-uml-model)
 		- [3.2.1	Major Classes](#321-major-classes)
 		- [3.2.2	Relationships between Classes](#322-relationships-between-classes)
-- [Glossary](#glossary)
-- [References](#references)
-- [File Download locations](#file-download-locations)
-- [XML Schema](#xml-schema)
+- [4 XML Schema documentation](#4-xml-schema-documentation)
+- [5 XML usage](#5-xml-usage)
+- [Appendices](#appendices)
+	- [Acronyms](#acronyms)
+	- [Glossary](#glossary)
+	- [References](#references)
+	- [File Download locations](#file-download-locations)
+	- [XML Schema](#xml-schema)
 
 <!-- /TOC -->
 
@@ -504,7 +508,15 @@ Lastly, for the directed associations in Figure 8, one can see that many of the 
 
 <br>
 
-# Glossary
+# 4 XML Schema documentation
+
+# 5 XML usage
+
+# Appendices
+
+## Acronyms
+
+## Glossary
 Selected terms used throughout this document are defined below. In some of the definitions, there is ancillary information that is not part of the definition but helpful in understanding the definition; this ancillary information is preceded with �Note:�.  Synonyms are preceded with �Syn:�.
 
 **Absentee ballot:**
@@ -654,7 +666,7 @@ Vote for a candidate who is explicitly named by the voter in lieu of choosing a 
 
 <br>
 
-# References
+## References
 [1] W3C, Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C Recommendation, November 26, 2008, http://www.w3.org/TR/xml/ [accessed 2/1/2016].
 
 [2] Object Management Group (OMG), UML Specification version 1.1 (OMG document ad/97-08-11) September 22, 2011, http://omg.org/ [accessed 2/1/2016].
@@ -681,7 +693,7 @@ Vote for a candidate who is explicitly named by the voter in lieu of choosing a 
 
 <br>
 
-# File Download locations
+## File Download locations
 The files associated with this specification are available for download from a NIST repository.  
 
 These files are:
@@ -698,7 +710,7 @@ Other files or updates to the files may be added.  The repository can be found v
 
 <br>
 
-# XML Schema
+## XML Schema
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- Version 1.0-50, January 11, 2016, NIST Election Results CDF Specification -->
     <xsd:schema xmlns="NIST_V1_election_results_cdf.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="NIST_V1_election_results_cdf.xsd" elementFormDefault="qualified" version="1.0">
