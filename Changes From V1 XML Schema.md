@@ -1,6 +1,5 @@
 The 2.0 version of the Election Results Reporting XML Schema includes the following important changes from the 1.0 XML Schema:
 
-- usage of ShortString has been replaced by xsd:string and the type has been removed
 - Removed various 'collection' elements
   - VoteCounts
   - BallotStyleCollection
