@@ -4,22 +4,27 @@ Hi there! We're thrilled that you'd like to contribute to this project. Your hel
 
 Please note that this project is released with a [Contributor Code of Conduct][code-of-conduct]. By participating in this project you agree to abide by its terms.
 
-## Submitting a pull request
+## Creating Issues
 
-0. [Fork][fork] and clone the repository
-0. Configure and install the dependencies: `script/bootstrap`
-0. Make sure the tests pass on your machine: `script/cibuild`
-0. Create a new branch: `git checkout -b my-branch-name`
-0. Make your change, add tests, and make sure the tests still pass
-0. Push to your fork and [submit a pull request][pr]
-0. Pat your self on the back and wait for your pull request to be reviewed and merged.
+- Like many open source projects, we strongly urge you to search through the existing issues before creating a new one.
+- Please include as many details as possible.
+  - Consider the target audience when filling out an issue or enhancement.
+  - If you can include a use case of how you think a new model should work, all the
+better.
+- All issues should be filed under the milestone "Up for Discussion" until the team moves it under a particular release or other related issue  management action.
 
-Here are a few things you can do that will increase the likelihood of your pull request being accepted:
+## Pull Requests
 
-- Follow the [style guide][style].
-- Write tests.
-- Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
-- Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+1. Create a branch to work on a fix/feature (a fix/feature should have a companion bug/enhancement issue). Start the branch with either "feature/..." or "bug/...".
+   - If you're not a member of the repository team, fork the repository and follow the same process.
+2. Before sending out a pull request, please make sure that:
+   - If working on a schema bug/feature, the resulting code passes all tests and, ifworking on a new feature, it has an accompanying function or unit test (NB: the granularity of the testing suite is team/project dependent).
+   - If working on a documentation bug/feature, the documentation must build with no errors, if using an automated system.
+3. Once it's done and tested, create a pull request to move it into the current working branch.
+   - If working with a continuous integration/deployment environment (e.g. Travis CI, BuildKite, or  Drone)  with a direct connection to the GitHub repo, all tests must pass in the pull request.
+4. At that point, some discussion might happen. In order to get approval for the pull request, you will need approval from two people on the development team.
+5. When it's reviewed and accepted by the team within a reasonable timeframe (TBD), it's merged into the current working branch by the developer who created the pull request, if the developer has write permissions. If not, one of the core developers will be responsible for the merge after approval.
+6. Delete the feature/bug branch.
 
 ## Resources
 
