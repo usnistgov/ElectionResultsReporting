@@ -1,14 +1,14 @@
 The 2.0 version of the Election Results Reporting XML Schema includes the following important changes from the 1.0 XML Schema:
 
 - Removed various 'collection' elements
-  - VoteCounts
-  - BallotStyleCollection
-  - CandidateCollection
-  - ContestCollection
-  - GpUnitCollection
-  - OfficeCollection
-  - PartyCollection
-  - PersonCollection
+  - BallotSelection->VoteCountsCollection
+  - Election->BallotStyleCollection
+  - Election->CandidateCollection
+  - Election->ContestCollection
+  - ElectionReport->GpUnitCollection
+  - ElectionReport->OfficeCollection
+  - ElectionReport->PartyCollection
+  - ElectionReport->PersonCollection
   - all occurrences of ExternalIdentifiers
 - Removed BallotStyle->objectId attribute
 - Capitalized all lower case attributes:
