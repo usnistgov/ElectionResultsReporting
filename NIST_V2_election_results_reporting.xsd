@@ -309,13 +309,13 @@
       <xsd:element name="Directions" type="InternationalizedText" minOccurs="0"/>
       <xsd:element name="Email" type="AnnotatedString" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Fax" type="AnnotatedString" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
       <xsd:element name="LatLng" type="LatLng" minOccurs="0"/>
       <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
       <xsd:element name="Phone" type="AnnotatedString" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Schedule" type="Schedule" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Uri" type="AnnotatedUri" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="Contest" abstract="true">
     <xsd:sequence>
@@ -409,11 +409,11 @@
   </xsd:complexType>
   <xsd:complexType name="ExternalIdentifier">
     <xsd:sequence>
-      <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
       <xsd:element name="Type" type="IdentifierType"/>
       <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
       <xsd:element name="Value" type="xsd:string"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="GpUnit" abstract="true">
     <xsd:sequence>
@@ -427,16 +427,16 @@
   <xsd:complexType name="Hours">
     <xsd:sequence>
       <xsd:element name="Day" type="DayType" minOccurs="0"/>
-      <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
       <xsd:element name="StartTime" type="TimeWithZone"/>
       <xsd:element name="EndTime" type="TimeWithZone"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="InternationalizedText">
     <xsd:sequence>
-      <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
       <xsd:element name="Text" type="LanguageString" maxOccurs="unbounded"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="LanguageString">
     <xsd:simpleContent>
@@ -447,11 +447,11 @@
   </xsd:complexType>
   <xsd:complexType name="LatLng">
     <xsd:sequence>
-      <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
       <xsd:element name="Latitude" type="xsd:float"/>
       <xsd:element name="Longitude" type="xsd:float"/>
       <xsd:element name="Source" type="xsd:string" minOccurs="0"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="Office">
     <xsd:sequence>
@@ -469,11 +469,11 @@
   </xsd:complexType>
   <xsd:complexType name="OfficeGroup">
     <xsd:sequence>
-      <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
       <xsd:element name="Name" type="xsd:string"/>
       <xsd:element name="OfficeIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="SubOfficeGroup" type="OfficeGroup" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="OrderedContest">
     <xsd:sequence>
@@ -581,10 +581,10 @@
       <xsd:element name="IsOnlyByAppointment" type="xsd:boolean" minOccurs="0"/>
       <xsd:element name="IsOrByAppointment" type="xsd:boolean" minOccurs="0"/>
       <xsd:element name="IsSubjectToChange" type="xsd:boolean" minOccurs="0"/>
-      <xsd:element name="Label" type="xsd:string" minOccurs="0"/>
       <xsd:element name="StartDate" type="xsd:date" minOccurs="0"/>
       <xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="SpatialDimension">
     <xsd:sequence>
