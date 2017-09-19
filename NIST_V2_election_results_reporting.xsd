@@ -618,6 +618,7 @@
       <xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
       <xsd:element name="Type" type="OfficeTermType" minOccurs="0"/>
     </xsd:sequence>
+    <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
   <xsd:complexType name="VoteCounts">
     <xsd:complexContent>
