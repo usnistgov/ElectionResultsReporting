@@ -551,7 +551,7 @@
         "IsWriteIn": {
           "type": "boolean"
         },
-        "LeaderIds": {
+        "LeaderPersonIds": {
           "items": {
             "type": "string",
             "refTypes": [
@@ -1259,7 +1259,7 @@
         "IsWriteIn": {
           "type": "boolean"
         },
-        "LeaderIds": {
+        "LeaderPersonIds": {
           "items": {
             "type": "string",
             "refTypes": [
