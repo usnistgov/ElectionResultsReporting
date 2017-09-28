@@ -551,6 +551,16 @@
         "IsWriteIn": {
           "type": "boolean"
         },
+        "LeaderIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Person"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "LogoUri": {
           "type": "string",
           "format": "uri"
@@ -1249,6 +1259,16 @@
         "IsWriteIn": {
           "type": "boolean"
         },
+        "LeaderIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.Person"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "LogoUri": {
           "type": "string",
           "format": "uri"
@@ -1908,6 +1928,13 @@
         "Device": {
           "$ref": "#/definitions/ElectionResults.Device"
         },
+        "GpUnitId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingDevice",
+            "ElectionResults.ReportingUnit"
+          ]
+        },
         "IsSuppressedForPrivacy": {
           "type": "boolean"
         },
@@ -1944,6 +1971,9 @@
         "EndDate": {
           "type": "string",
           "format": "date"
+        },
+        "Label": {
+          "type": "string"
         },
         "StartDate": {
           "type": "string",
