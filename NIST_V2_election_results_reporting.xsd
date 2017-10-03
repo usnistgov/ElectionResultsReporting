@@ -212,6 +212,17 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
+  <xsd:complexType name="BallotCounts">
+    <xsd:complexContent>
+      <xsd:extension base="Counts">
+        <xsd:sequence>
+          <xsd:element name="BallotsCast" type="xsd:integer" minOccurs="0"/>
+          <xsd:element name="BallotsOutstanding" type="xsd:integer" minOccurs="0"/>
+          <xsd:element name="BallotsRejected" type="xsd:integer" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
   <xsd:complexType name="BallotMeasureContest">
     <xsd:complexContent>
       <xsd:extension base="Contest">
@@ -330,7 +341,7 @@
       <xsd:element name="Name" type="xsd:string"/>
       <xsd:element name="SequenceOrder" type="xsd:integer" minOccurs="0"/>
       <xsd:element name="SubUnitsReported" type="xsd:integer" minOccurs="0"/>
-      <xsd:element name="SummaryCounts" type="SummaryCounts" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="ErrorCounts" type="ErrorCounts" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="TotalSubUnits" type="xsd:integer" minOccurs="0"/>
       <xsd:element name="VoteVariation" type="VoteVariation" minOccurs="0"/>
       <xsd:element name="OtherVoteVariation" type="xsd:string" minOccurs="0"/>
@@ -347,7 +358,7 @@
   <xsd:complexType name="Counts" abstract="true">
     <xsd:sequence>
       <xsd:element name="Device" type="Device" minOccurs="0"/>
-      <xsd:element name="GpUnitId" type="xsd:IDREF" minOccurs="0"/>
+      <xsd:element name="GpUnitId" type="xsd:IDREF"/>
       <xsd:element name="IsSuppressedForPrivacy" type="xsd:boolean" minOccurs="0"/>
       <xsd:element name="Type" type="CountItemType"/>
       <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
@@ -363,6 +374,7 @@
   </xsd:complexType>
   <xsd:complexType name="Election">
     <xsd:sequence>
+      <xsd:element name="BallotCounts" type="BallotCounts" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="BallotStyle" type="BallotStyle" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Candidate" type="Candidate" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
@@ -407,6 +419,17 @@
       <xsd:element name="VendorApplicationId" type="xsd:string"/>
     </xsd:sequence>
   </xsd:complexType>
+  <xsd:complexType name="ErrorCounts">
+    <xsd:complexContent>
+      <xsd:extension base="Counts">
+        <xsd:sequence>
+          <xsd:element name="Overvotes" type="xsd:integer" minOccurs="0"/>
+          <xsd:element name="Undervotes" type="xsd:integer" minOccurs="0"/>
+          <xsd:element name="WriteIns" type="xsd:integer" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
   <xsd:complexType name="ExternalIdentifier">
     <xsd:sequence>
       <xsd:element name="Type" type="IdentifierType"/>
@@ -420,7 +443,6 @@
       <xsd:element name="ComposingGpUnitIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
-      <xsd:element name="SummaryCounts" type="SummaryCounts" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
   </xsd:complexType>
@@ -598,20 +620,6 @@
       <xsd:element name="Coordinates" type="xsd:string"/>
       <xsd:element name="Format" type="GeoSpatialFormat"/>
     </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="SummaryCounts">
-    <xsd:complexContent>
-      <xsd:extension base="Counts">
-        <xsd:sequence>
-          <xsd:element name="BallotsCast" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="BallotsOutstanding" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="BallotsRejected" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="Overvotes" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="Undervotes" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="WriteIns" type="xsd:integer" minOccurs="0"/>
-        </xsd:sequence>
-      </xsd:extension>
-    </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="Term">
     <xsd:sequence>
