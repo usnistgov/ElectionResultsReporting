@@ -6,7 +6,7 @@ A PDF of the version 1.0 specification is available in this repository.  An HTML
 
 [https://developers.google.com/elections-data/reference/](https://developers.google.com/elections-data/reference/)
 
-The SP 1500-100 version 1.0 specification is comprehensive and detailed in its coverage of election results-related data and at the same time very flexible, able to accommodate election scenarios used throughout the United States.  It contains a UML (Unified Modeling Language) model, a derived XML (eXtensible Markup Language) schema, usage information and guidance, and background information.
+The SP 1500-100 version 1.0 specification is comprehensive and detailed in its coverage of election results-related data and at the same time very flexible, able to accommodate election scenarios used throughout the United States.  It contains a UML (Unified Modeling Language) model, a derived XML (eXtensible Markup Language) schema, usage information and guidance, and background information.  Version 2.0 of this specification will expand on this by including support for JSON (JavaScript Object Notation).
 
 The specification supports three different election scenarios:
 
