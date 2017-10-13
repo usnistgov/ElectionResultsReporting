@@ -1,4 +1,4 @@
-# Voting - Election Results Reporting CDF Specification
+# Voting - Election Results Reporting CDF Version 1.0 Specification
 
 This directory holds NIST SP 1500-100 Version 1.0 election results reporting specification common data format and related information and files that are being created by NIST and collaborators. Version 2 of the specification is underway; see the files on the version2 branch.
 
