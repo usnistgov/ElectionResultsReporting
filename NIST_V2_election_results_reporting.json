@@ -47,6 +47,51 @@
       },
       "type": "object"
     },
+    "ElectionResults.BallotCounts": {
+      "required": [
+        "@type",
+        "GpUnitId",
+        "Type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "ElectionResults.BallotCounts"
+          ],
+          "type": "string"
+        },
+        "BallotsCast": {
+          "type": "integer"
+        },
+        "BallotsOutstanding": {
+          "type": "integer"
+        },
+        "BallotsRejected": {
+          "type": "integer"
+        },
+        "DeviceClass": {
+          "$ref": "#/definitions/ElectionResults.DeviceClass"
+        },
+        "GpUnitId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingDevice",
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "IsSuppressedForPrivacy": {
+          "type": "boolean"
+        },
+        "OtherType": {
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/definitions/ElectionResults.CountItemType"
+        }
+      },
+      "type": "object"
+    },
     "ElectionResults.BallotMeasureContest": {
       "required": [
         "@id",
@@ -130,6 +175,13 @@
         "Name": {
           "type": "string"
         },
+        "OtherCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.OtherCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "OtherType": {
           "type": "string"
         },
@@ -147,13 +199,6 @@
         },
         "SubUnitsReported": {
           "type": "integer"
-        },
-        "SummaryCounts": {
-          "items": {
-            "$ref": "#/definitions/ElectionResults.SummaryCounts"
-          },
-          "minItems": 0,
-          "type": "array"
         },
         "SummaryText": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -202,6 +247,15 @@
         }
       },
       "type": "object"
+    },
+    "ElectionResults.BallotMeasureType": {
+      "enum": [
+        "ballot-measure",
+        "initiative",
+        "other",
+        "referendum"
+      ],
+      "type": "string"
     },
     "ElectionResults.BallotStyle": {
       "required": [
@@ -412,6 +466,13 @@
           "minItems": 0,
           "type": "array"
         },
+        "OtherCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.OtherCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "OtherVoteVariation": {
           "type": "string"
         },
@@ -432,13 +493,6 @@
         "SubUnitsReported": {
           "type": "integer"
         },
-        "SummaryCounts": {
-          "items": {
-            "$ref": "#/definitions/ElectionResults.SummaryCounts"
-          },
-          "minItems": 0,
-          "type": "array"
-        },
         "TotalSubUnits": {
           "type": "integer"
         },
@@ -451,11 +505,27 @@
       },
       "type": "object"
     },
+    "ElectionResults.CandidatePostElectionStatus": {
+      "enum": [
+        "advanced-to-runoff",
+        "projected-winner",
+        "winner",
+        "withdrawn"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.CandidatePreElectionStatus": {
+      "enum": [
+        "filed",
+        "qualified",
+        "withdrawn"
+      ],
+      "type": "string"
+    },
     "ElectionResults.CandidateSelection": {
       "required": [
         "@id",
-        "@type",
-        "CandidateIds"
+        "@type"
       ],
       "additionalProperties": false,
       "properties": {
@@ -475,7 +545,7 @@
               "ElectionResults.Candidate"
             ]
           },
-          "minItems": 1,
+          "minItems": 0,
           "type": "array"
         },
         "EndorsementPartyIds": {
@@ -651,6 +721,31 @@
       },
       "type": "object"
     },
+    "ElectionResults.CountItemStatus": {
+      "enum": [
+        "completed",
+        "in-process",
+        "not-processed",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.CountItemType": {
+      "enum": [
+        "absentee",
+        "absentee-fwab",
+        "absentee-in-person",
+        "absentee-mail",
+        "early",
+        "election-day",
+        "other",
+        "provisional",
+        "total",
+        "uocava",
+        "write-in"
+      ],
+      "type": "string"
+    },
     "ElectionResults.CountStatus": {
       "required": [
         "@type",
@@ -677,7 +772,22 @@
       },
       "type": "object"
     },
-    "ElectionResults.Device": {
+    "ElectionResults.DayType": {
+      "enum": [
+        "all",
+        "friday",
+        "monday",
+        "saturday",
+        "sunday",
+        "thursday",
+        "tuesday",
+        "wednesday",
+        "weekday",
+        "weekend"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.DeviceClass": {
       "required": [
         "@type"
       ],
@@ -685,7 +795,7 @@
       "properties": {
         "@type": {
           "enum": [
-            "ElectionResults.Device"
+            "ElectionResults.DeviceClass"
           ],
           "type": "string"
         },
@@ -704,6 +814,20 @@
       },
       "type": "object"
     },
+    "ElectionResults.DeviceType": {
+      "enum": [
+        "electronic",
+        "lever",
+        "manual-count",
+        "mixed-systems",
+        "opscan-central",
+        "opscan-precinct",
+        "other",
+        "punch-card",
+        "unknown"
+      ],
+      "type": "string"
+    },
     "ElectionResults.Election": {
       "required": [
         "@type",
@@ -720,6 +844,13 @@
             "ElectionResults.Election"
           ],
           "type": "string"
+        },
+        "BallotCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.BallotCounts"
+          },
+          "minItems": 0,
+          "type": "array"
         },
         "BallotStyle": {
           "items": {
@@ -952,6 +1083,18 @@
       },
       "type": "object"
     },
+    "ElectionResults.ElectionType": {
+      "enum": [
+        "general",
+        "other",
+        "partisan-primary-closed",
+        "partisan-primary-open",
+        "primary",
+        "runoff",
+        "special"
+      ],
+      "type": "string"
+    },
     "ElectionResults.ExternalIdentifier": {
       "required": [
         "@type",
@@ -981,6 +1124,16 @@
       },
       "type": "object"
     },
+    "ElectionResults.GeoSpatialFormat": {
+      "enum": [
+        "geo-json",
+        "gml",
+        "kml",
+        "shp",
+        "wkt"
+      ],
+      "type": "string"
+    },
     "ElectionResults.Hours": {
       "required": [
         "@type",
@@ -1009,6 +1162,21 @@
         }
       },
       "type": "object"
+    },
+    "ElectionResults.HtmlColorString": {
+      "pattern": "[0-9a-f]{6}",
+      "type": "string"
+    },
+    "ElectionResults.IdentifierType": {
+      "enum": [
+        "fips",
+        "local-level",
+        "national-level",
+        "ocd-id",
+        "other",
+        "state-level"
+      ],
+      "type": "string"
     },
     "ElectionResults.InternationalizedText": {
       "required": [
@@ -1189,6 +1357,13 @@
       },
       "type": "object"
     },
+    "ElectionResults.OfficeTermType": {
+      "enum": [
+        "full-term",
+        "unexpired-term"
+      ],
+      "type": "string"
+    },
     "ElectionResults.OrderedContest": {
       "required": [
         "@type",
@@ -1222,6 +1397,41 @@
           },
           "minItems": 0,
           "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "ElectionResults.OtherCounts": {
+      "required": [
+        "@type",
+        "GpUnitId"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "enum": [
+            "ElectionResults.OtherCounts"
+          ],
+          "type": "string"
+        },
+        "DeviceClass": {
+          "$ref": "#/definitions/ElectionResults.DeviceClass"
+        },
+        "GpUnitId": {
+          "type": "string",
+          "refTypes": [
+            "ElectionResults.ReportingDevice",
+            "ElectionResults.ReportingUnit"
+          ]
+        },
+        "Overvotes": {
+          "type": "integer"
+        },
+        "Undervotes": {
+          "type": "integer"
+        },
+        "WriteIns": {
+          "type": "integer"
         }
       },
       "type": "object"
@@ -1349,6 +1559,13 @@
         "Name": {
           "type": "string"
         },
+        "OtherCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.OtherCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "OtherVoteVariation": {
           "type": "string"
         },
@@ -1357,13 +1574,6 @@
         },
         "SubUnitsReported": {
           "type": "integer"
-        },
-        "SummaryCounts": {
-          "items": {
-            "$ref": "#/definitions/ElectionResults.SummaryCounts"
-          },
-          "minItems": 0,
-          "type": "array"
         },
         "TotalSubUnits": {
           "type": "integer"
@@ -1520,6 +1730,13 @@
       },
       "type": "object"
     },
+    "ElectionResults.ReportDetailLevel": {
+      "enum": [
+        "precinct-level",
+        "summary-contest"
+      ],
+      "type": "string"
+    },
     "ElectionResults.ReportingDevice": {
       "required": [
         "@id",
@@ -1547,8 +1764,8 @@
           "minItems": 0,
           "type": "array"
         },
-        "Device": {
-          "$ref": "#/definitions/ElectionResults.Device"
+        "DeviceClass": {
+          "$ref": "#/definitions/ElectionResults.DeviceClass"
         },
         "ExternalIdentifier": {
           "items": {
@@ -1562,13 +1779,6 @@
         },
         "SerialNumber": {
           "type": "string"
-        },
-        "SummaryCounts": {
-          "items": {
-            "$ref": "#/definitions/ElectionResults.SummaryCounts"
-          },
-          "minItems": 0,
-          "type": "array"
         }
       },
       "type": "object"
@@ -1659,13 +1869,6 @@
         "SubUnitsReported": {
           "type": "integer"
         },
-        "SummaryCounts": {
-          "items": {
-            "$ref": "#/definitions/ElectionResults.SummaryCounts"
-          },
-          "minItems": 0,
-          "type": "array"
-        },
         "TotalSubUnits": {
           "type": "integer"
         },
@@ -1680,6 +1883,51 @@
         }
       },
       "type": "object"
+    },
+    "ElectionResults.ReportingUnitType": {
+      "enum": [
+        "ballot-batch",
+        "ballot-style-area",
+        "borough",
+        "city",
+        "city-council",
+        "combined-precinct",
+        "congressional",
+        "country",
+        "county",
+        "county-council",
+        "drop-box",
+        "judicial",
+        "municipality",
+        "other",
+        "polling-place",
+        "precinct",
+        "school",
+        "special",
+        "split-precinct",
+        "state",
+        "state-house",
+        "state-senate",
+        "town",
+        "township",
+        "utility",
+        "village",
+        "vote-center",
+        "ward",
+        "water"
+      ],
+      "type": "string"
+    },
+    "ElectionResults.ResultsStatus": {
+      "enum": [
+        "certified",
+        "correction",
+        "pre-election",
+        "recount",
+        "unofficial-complete",
+        "unofficial-partial"
+      ],
+      "type": "string"
     },
     "ElectionResults.RetentionContest": {
       "required": [
@@ -1776,6 +2024,13 @@
             "ElectionResults.Office"
           ]
         },
+        "OtherCounts": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.OtherCounts"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "OtherType": {
           "type": "string"
         },
@@ -1793,13 +2048,6 @@
         },
         "SubUnitsReported": {
           "type": "integer"
-        },
-        "SummaryCounts": {
-          "items": {
-            "$ref": "#/definitions/ElectionResults.SummaryCounts"
-          },
-          "minItems": 0,
-          "type": "array"
         },
         "SummaryText": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
@@ -1858,6 +2106,10 @@
       },
       "type": "object"
     },
+    "ElectionResults.ShortString": {
+      "maxLength": 16,
+      "type": "string"
+    },
     "ElectionResults.SpatialDimension": {
       "required": [
         "@type"
@@ -1903,59 +2155,6 @@
       },
       "type": "object"
     },
-    "ElectionResults.SummaryCounts": {
-      "required": [
-        "@type",
-        "Type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "@type": {
-          "enum": [
-            "ElectionResults.SummaryCounts"
-          ],
-          "type": "string"
-        },
-        "BallotsCast": {
-          "type": "integer"
-        },
-        "BallotsOutstanding": {
-          "type": "integer"
-        },
-        "BallotsRejected": {
-          "type": "integer"
-        },
-        "Device": {
-          "$ref": "#/definitions/ElectionResults.Device"
-        },
-        "GpUnitId": {
-          "type": "string",
-          "refTypes": [
-            "ElectionResults.ReportingDevice",
-            "ElectionResults.ReportingUnit"
-          ]
-        },
-        "IsSuppressedForPrivacy": {
-          "type": "boolean"
-        },
-        "OtherType": {
-          "type": "string"
-        },
-        "Overvotes": {
-          "type": "integer"
-        },
-        "Type": {
-          "$ref": "#/definitions/ElectionResults.CountItemType"
-        },
-        "Undervotes": {
-          "type": "integer"
-        },
-        "WriteIns": {
-          "type": "integer"
-        }
-      },
-      "type": "object"
-    },
     "ElectionResults.Term": {
       "required": [
         "@type"
@@ -1985,10 +2184,16 @@
       },
       "type": "object"
     },
+    "ElectionResults.TimeWithZone": {
+      "pattern": "(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]|(24:00:00))(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00))",
+      "type": "string",
+      "format": "time"
+    },
     "ElectionResults.VoteCounts": {
       "required": [
         "@type",
         "Count",
+        "GpUnitId",
         "Type"
       ],
       "additionalProperties": false,
@@ -2002,8 +2207,8 @@
         "Count": {
           "type": "number"
         },
-        "Device": {
-          "$ref": "#/definitions/ElectionResults.Device"
+        "DeviceClass": {
+          "$ref": "#/definitions/ElectionResults.DeviceClass"
         },
         "GpUnitId": {
           "type": "string",
@@ -2024,179 +2229,6 @@
       },
       "type": "object"
     },
-    "ElectionResults.BallotMeasureType": {
-      "enum": [
-        "ballot-measure",
-        "initiative",
-        "other",
-        "referendum"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.CandidatePostElectionStatus": {
-      "enum": [
-        "advanced-to-runoff",
-        "projected-winner",
-        "winner",
-        "withdrawn"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.CandidatePreElectionStatus": {
-      "enum": [
-        "filed",
-        "qualified",
-        "withdrawn",
-        "write-in"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.CountItemStatus": {
-      "enum": [
-        "completed",
-        "in-process",
-        "not-processed",
-        "unknown"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.CountItemType": {
-      "enum": [
-        "absentee",
-        "absentee-fwab",
-        "absentee-in-person",
-        "absentee-mail",
-        "early",
-        "election-day",
-        "other",
-        "provisional",
-        "total",
-        "uocava",
-        "write-in"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.DayType": {
-      "enum": [
-        "all",
-        "friday",
-        "monday",
-        "saturday",
-        "sunday",
-        "thursday",
-        "tuesday",
-        "wednesday",
-        "weekday",
-        "weekend"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.DeviceType": {
-      "enum": [
-        "electronic",
-        "lever",
-        "manual-count",
-        "mixed-systems",
-        "opscan-central",
-        "opscan-precinct",
-        "other",
-        "punch-card",
-        "unknown"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.ElectionType": {
-      "enum": [
-        "general",
-        "other",
-        "partisan-primary-closed",
-        "partisan-primary-open",
-        "primary",
-        "runoff",
-        "special"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.GeoSpatialFormat": {
-      "enum": [
-        "geo-json",
-        "gml",
-        "kml",
-        "shp",
-        "wkt"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.IdentifierType": {
-      "enum": [
-        "fips",
-        "local-level",
-        "national-level",
-        "ocd-id",
-        "other",
-        "state-level"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.OfficeTermType": {
-      "enum": [
-        "full-term",
-        "unexpired-term"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.ReportDetailLevel": {
-      "enum": [
-        "precinct-level",
-        "summary-contest"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.ReportingUnitType": {
-      "enum": [
-        "ballot-batch",
-        "ballot-style-area",
-        "borough",
-        "city",
-        "city-council",
-        "combined-precinct",
-        "congressional",
-        "country",
-        "county",
-        "county-council",
-        "drop-box",
-        "judicial",
-        "municipality",
-        "other",
-        "polling-place",
-        "precinct",
-        "school",
-        "special",
-        "split-precinct",
-        "state",
-        "state-house",
-        "state-senate",
-        "town",
-        "township",
-        "utility",
-        "village",
-        "vote-center",
-        "ward",
-        "water"
-      ],
-      "type": "string"
-    },
-    "ElectionResults.ResultsStatus": {
-      "enum": [
-        "certified",
-        "correction",
-        "pre-election",
-        "recount",
-        "unofficial-complete",
-        "unofficial-partial"
-      ],
-      "type": "string"
-    },
     "ElectionResults.VoteVariation": {
       "enum": [
         "1-of-m",
@@ -2213,19 +2245,6 @@
         "super-majority"
       ],
       "type": "string"
-    },
-    "ElectionResults.HtmlColorString": {
-      "pattern": "[0-9a-f]{6}",
-      "type": "string"
-    },
-    "ElectionResults.ShortString": {
-      "maxLength": 16,
-      "type": "string"
-    },
-    "ElectionResults.TimeWithZone": {
-      "pattern": "(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]|(24:00:00))(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00))",
-      "type": "string",
-      "format": "time"
     },
     "Xmldsig.Signature": {
       "required": [
