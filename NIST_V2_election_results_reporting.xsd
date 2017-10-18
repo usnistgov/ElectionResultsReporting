@@ -13,7 +13,7 @@
   </xsd:simpleType>
   <xsd:simpleType name="ShortString">
     <xsd:restriction base="xsd:string">
-      <xsd:maxLength value="16"/>
+      <xsd:maxLength value="32"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="TimeWithZone">
@@ -26,6 +26,7 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="ballot-measure"/>
       <xsd:enumeration value="initiative"/>
+      <xsd:enumeration value="recall"/>
       <xsd:enumeration value="referendum"/>
       <xsd:enumeration value="other"/>
     </xsd:restriction>
@@ -412,7 +413,6 @@
       <xsd:element name="Person" type="Person" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="SequenceStart" type="xsd:integer"/>
       <xsd:element name="SequenceEnd" type="xsd:integer"/>
-      <xsd:element minOccurs="0" ref="ds:Signature"/>
       <xsd:element name="Status" type="ResultsStatus"/>
       <xsd:element name="TestType" type="xsd:string" minOccurs="0"/>
       <xsd:element name="VendorApplicationId" type="xsd:string"/>
@@ -631,6 +631,7 @@
       <xsd:extension base="Counts">
         <xsd:sequence>
           <xsd:element name="Count" type="xsd:float"/>
+          <xsd:element name="Round" type="xsd:integer" minOccurs="0"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
