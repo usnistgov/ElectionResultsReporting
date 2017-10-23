@@ -253,6 +253,7 @@
         "ballot-measure",
         "initiative",
         "other",
+        "recall",
         "referendum"
       ],
       "type": "string"
@@ -1067,9 +1068,6 @@
         },
         "SequenceStart": {
           "type": "integer"
-        },
-        "Signature": {
-          "$ref": "#/definitions/Xmldsig.Signature"
         },
         "Status": {
           "$ref": "#/definitions/ElectionResults.ResultsStatus"
@@ -2107,7 +2105,7 @@
       "type": "object"
     },
     "ElectionResults.ShortString": {
-      "maxLength": 16,
+      "maxLength": 32,
       "type": "string"
     },
     "ElectionResults.SpatialDimension": {
@@ -2223,6 +2221,9 @@
         "OtherType": {
           "type": "string"
         },
+        "Round": {
+          "type": "integer"
+        },
         "Type": {
           "$ref": "#/definitions/ElectionResults.CountItemType"
         }
@@ -2245,21 +2246,6 @@
         "super-majority"
       ],
       "type": "string"
-    },
-    "Xmldsig.Signature": {
-      "required": [
-        "@type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "@type": {
-          "enum": [
-            "Xmldsig.Signature"
-          ],
-          "type": "string"
-        }
-      },
-      "type": "object"
     }
   }
 }
