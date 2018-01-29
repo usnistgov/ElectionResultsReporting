@@ -16,13 +16,19 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
   - all objectId attributes are now "ObjectId"
   - AnnotatedString->annotation attribute is now "Annotation"
   - LanguageString->language attribute is now "Language"
-- ElectionReport->Signature element is now ordered alphabetically instead of at end of sequence
-- Counts->Type attribute is now required (applies to SummaryCounts and VoteCounts types)
-- Added CandidateContest->NumberRunoff
-- Added 'country' ReportingUnitType
-- Added Person->ExternalIdentifier
-- Added Candidate->ContactInformation
-- Added Party->IsWriteIn
-- Added Office->Description
+- Removed ElectionReport->Signature element
+- Changes to reporting of other counts besides vote counts:
+  - Changed name of SummaryCounts to BallotCounts
+  - Added Election->BallotCOunts
+  - Added Contest->OtherCounts for contest-related summary counts
+    - Overvotes, Undervotes, WriteIns moved from BallotCounts
+  - Counts->Type attribute is now required (applies to SummaryCounts and VoteCounts types)
 - Added AnnotatedUri type
+- Added various new associations and attributes:
+  - Added CandidateContest->NumberRunoff
+  - Added Person->ExternalIdentifier
+  - Added Candidate->ContactInformation
+  - Added Party->IsWriteIn
+  - Added Office->Description
+- Added 'country' ReportingUnitType
 - Changed ContactInformation->Uri to be of type AnnotatedUri
