@@ -384,9 +384,9 @@
       "required": [
         "@id",
         "@type",
-        "VotesAllowed",
         "ElectoralDistrictId",
-        "Name"
+        "Name",
+        "VotesAllowed"
       ],
       "additionalProperties": false,
       "properties": {
