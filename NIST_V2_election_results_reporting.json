@@ -741,6 +741,7 @@
         "election-day",
         "other",
         "provisional",
+        "seats",
         "total",
         "uocava",
         "write-in"

@@ -61,6 +61,7 @@
       <xsd:enumeration value="early"/>
       <xsd:enumeration value="election-day"/>
       <xsd:enumeration value="provisional"/>
+      <xsd:enumeration value="seats"/>
       <xsd:enumeration value="total"/>
       <xsd:enumeration value="uocava"/>
       <xsd:enumeration value="write-in"/>
