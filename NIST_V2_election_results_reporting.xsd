@@ -4,6 +4,11 @@
   <!-- ========== Roots ========== -->
   <xsd:element name="ElectionReport" type="ElectionReport"/>
   <!-- ========== Primitives ========== -->
+  <xsd:simpleType name="DateTimeWithZone">
+    <xsd:restriction base="xsd:dateTime">
+      <xsd:pattern value="[0-9]{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]|(24:00:00))(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00))"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:simpleType name="HtmlColorString">
     <xsd:restriction base="xsd:string">
       <xsd:pattern value="[0-9a-f]{6}"/>
@@ -32,6 +37,7 @@
   <xsd:simpleType name="CandidatePostElectionStatus">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="advanced-to-runoff"/>
+      <xsd:enumeration value="defeated"/>
       <xsd:enumeration value="projected-winner"/>
       <xsd:enumeration value="winner"/>
       <xsd:enumeration value="withdrawn"/>
@@ -359,6 +365,7 @@
       <xsd:element name="DeviceClass" type="DeviceClass" minOccurs="0"/>
       <xsd:element name="GpUnitId" type="xsd:IDREF"/>
       <xsd:element name="IsSuppressedForPrivacy" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="Round" type="xsd:integer" minOccurs="0"/>
       <xsd:element name="Type" type="CountItemType"/>
       <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
     </xsd:sequence>
@@ -400,7 +407,7 @@
       <xsd:element name="Election" type="Election" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Format" type="ReportDetailLevel"/>
-      <xsd:element name="GeneratedDate" type="xsd:dateTime"/>
+      <xsd:element name="GeneratedDate" type="DateTimeWithZone"/>
       <xsd:element name="GpUnit" type="GpUnit" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Issuer" type="xsd:string"/>
       <xsd:element name="IssuerAbbreviation" type="xsd:string"/>
@@ -494,8 +501,8 @@
     <xsd:sequence>
       <xsd:element name="DeviceClass" type="DeviceClass" minOccurs="0"/>
       <xsd:element name="GpUnitId" type="xsd:IDREF"/>
-      <xsd:element name="Overvotes" type="xsd:integer" minOccurs="0"/>
-      <xsd:element name="Undervotes" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="Overvotes" type="xsd:float" minOccurs="0"/>
+      <xsd:element name="Undervotes" type="xsd:float" minOccurs="0"/>
       <xsd:element name="WriteIns" type="xsd:integer" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -630,7 +637,6 @@
       <xsd:extension base="Counts">
         <xsd:sequence>
           <xsd:element name="Count" type="xsd:float"/>
-          <xsd:element name="Round" type="xsd:integer" minOccurs="0"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>

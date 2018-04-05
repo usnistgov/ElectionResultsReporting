@@ -19,9 +19,10 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
 - Removed ElectionReport->Signature element
 - Changes to reporting of other counts besides vote counts:
   - Changed name of SummaryCounts to BallotCounts
-  - Added Election->BallotCOunts
+  - Added Election->BallotCounts
   - Added Contest->OtherCounts for contest-related summary counts
     - Overvotes, Undervotes, WriteIns moved from BallotCounts
+    - Changed Overvotes, Undervotes to be float types
   - Counts->Type attribute is now required (applies to SummaryCounts and VoteCounts types)
 - Added AnnotatedUri type
 - Added various new associations and attributes:
@@ -30,5 +31,10 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
   - Added Candidate->ContactInformation
   - Added Party->IsWriteIn
   - Added Office->Description
+  - Added Counts->Round
 - Added 'country' ReportingUnitType
 - Changed ContactInformation->Uri to be of type AnnotatedUri
+- Changed OtherCounts->overvotes, undervotes to float
+- Added 'defeated' to CandidatePostElectionStatus
+- Added DateTimeWithZone type to enforce timezone requirement
+- Changed ElectionReport->GeneratedDate to be of type DateTimeWithZone
