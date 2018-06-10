@@ -266,7 +266,7 @@
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="GpUnitIds" type="xsd:IDREFS"/>
       <xsd:element name="ImageUri" type="xsd:anyURI" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="OrderedContest" type="OrderedContest" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="OrderedContent" type="OrderedContent" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="PartyIds" type="xsd:IDREFS" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -409,6 +409,7 @@
       <xsd:element name="Format" type="ReportDetailLevel"/>
       <xsd:element name="GeneratedDate" type="DateTimeWithZone"/>
       <xsd:element name="GpUnit" type="GpUnit" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Header" type="Header" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Issuer" type="xsd:string"/>
       <xsd:element name="IssuerAbbreviation" type="xsd:string"/>
       <xsd:element name="IsTest" type="xsd:boolean" minOccurs="0"/>
@@ -437,6 +438,13 @@
       <xsd:element name="ComposingGpUnitIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="Header">
+    <xsd:sequence>
+      <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Name" type="InternationalizedText"/>
     </xsd:sequence>
     <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
   </xsd:complexType>
@@ -491,11 +499,27 @@
     </xsd:sequence>
     <xsd:attribute name="Label" type="xsd:string"/>
   </xsd:complexType>
+  <xsd:complexType name="OrderedContent" abstract="true">
+  </xsd:complexType>
   <xsd:complexType name="OrderedContest">
-    <xsd:sequence>
-      <xsd:element name="ContestId" type="xsd:IDREF"/>
-      <xsd:element name="OrderedBallotSelectionIds" type="xsd:IDREFS" minOccurs="0"/>
-    </xsd:sequence>
+    <xsd:complexContent>
+      <xsd:extension base="OrderedContent">
+        <xsd:sequence>
+          <xsd:element name="ContestId" type="xsd:IDREF"/>
+          <xsd:element name="HeaderIds" type="xsd:IDREFS" minOccurs="0"/>
+          <xsd:element name="OrderedBallotSelectionIds" type="xsd:IDREFS" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OrderedHeader">
+    <xsd:complexContent>
+      <xsd:extension base="OrderedContent">
+        <xsd:sequence>
+          <xsd:element name="HeaderId" type="xsd:IDREF"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="OtherCounts">
     <xsd:sequence>
@@ -510,8 +534,9 @@
     <xsd:sequence>
       <xsd:element name="Abbreviation" type="xsd:string" minOccurs="0"/>
       <xsd:element name="Color" type="HtmlColorString" minOccurs="0"/>
+      <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="IsWriteIn" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="IsRecognizedParty" type="xsd:boolean" minOccurs="0"/>
       <xsd:element name="LeaderPersonIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="LogoUri" type="xsd:anyURI" minOccurs="0"/>
       <xsd:element name="Name" type="InternationalizedText"/>
