@@ -116,23 +116,6 @@
         "Abbreviation": {
           "type": "string"
         },
-        "BallotSelection": {
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/ElectionResults.CandidateSelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.PartySelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
-              }
-            ]
-          },
-          "minItems": 0,
-          "type": "array"
-        },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -141,6 +124,23 @@
         },
         "ConStatement": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ContestSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
         },
         "CountStatus": {
           "items": {
@@ -412,28 +412,28 @@
         "Abbreviation": {
           "type": "string"
         },
-        "BallotSelection": {
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/ElectionResults.CandidateSelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.PartySelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
-              }
-            ]
-          },
-          "minItems": 0,
-          "type": "array"
-        },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
         "BallotTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ContestSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
         },
         "CountStatus": {
           "items": {
@@ -1454,9 +1454,9 @@
           "items": {
             "type": "string",
             "refTypes": [
-              "ElectionResults.CandidateSelection",
               "ElectionResults.PartySelection",
-              "ElectionResults.BallotMeasureSelection"
+              "ElectionResults.BallotMeasureSelection",
+              "ElectionResults.CandidateSelection"
             ]
           },
           "minItems": 0,
@@ -1599,28 +1599,28 @@
         "Abbreviation": {
           "type": "string"
         },
-        "BallotSelection": {
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/ElectionResults.CandidateSelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.PartySelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
-              }
-            ]
-          },
-          "minItems": 0,
-          "type": "array"
-        },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
         "BallotTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ContestSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
         },
         "CountStatus": {
           "items": {
@@ -2039,23 +2039,6 @@
         "Abbreviation": {
           "type": "string"
         },
-        "BallotSelection": {
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/ElectionResults.CandidateSelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.PartySelection"
-              },
-              {
-                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
-              }
-            ]
-          },
-          "minItems": 0,
-          "type": "array"
-        },
         "BallotSubTitle": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -2070,6 +2053,23 @@
         },
         "ConStatement": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "ContestSelection": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ElectionResults.PartySelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.BallotMeasureSelection"
+              },
+              {
+                "$ref": "#/definitions/ElectionResults.CandidateSelection"
+              }
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
         },
         "CountStatus": {
           "items": {
