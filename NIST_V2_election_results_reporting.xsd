@@ -247,19 +247,12 @@
   </xsd:complexType>
   <xsd:complexType name="BallotMeasureSelection">
     <xsd:complexContent>
-      <xsd:extension base="BallotSelection">
+      <xsd:extension base="ContestSelection">
         <xsd:sequence>
           <xsd:element name="Selection" type="InternationalizedText"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:complexType name="BallotSelection" abstract="true">
-    <xsd:sequence>
-      <xsd:element name="SequenceOrder" type="xsd:integer" minOccurs="0"/>
-      <xsd:element name="VoteCounts" type="VoteCounts" minOccurs="0" maxOccurs="unbounded"/>
-    </xsd:sequence>
-    <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="BallotStyle">
     <xsd:sequence>
@@ -300,7 +293,7 @@
   </xsd:complexType>
   <xsd:complexType name="CandidateSelection">
     <xsd:complexContent>
-      <xsd:extension base="BallotSelection">
+      <xsd:extension base="ContestSelection">
         <xsd:sequence>
           <xsd:element name="CandidateIds" type="xsd:IDREFS" minOccurs="0"/>
           <xsd:element name="EndorsementPartyIds" type="xsd:IDREFS" minOccurs="0"/>
@@ -336,9 +329,9 @@
   <xsd:complexType name="Contest" abstract="true">
     <xsd:sequence>
       <xsd:element name="Abbreviation" type="xsd:string" minOccurs="0"/>
-      <xsd:element name="BallotSelection" type="BallotSelection" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="BallotSubTitle" type="InternationalizedText" minOccurs="0"/>
       <xsd:element name="BallotTitle" type="InternationalizedText" minOccurs="0"/>
+      <xsd:element name="ContestSelection" type="ContestSelection" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="CountStatus" type="CountStatus" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="ElectoralDistrictId" type="xsd:IDREF"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
@@ -350,6 +343,13 @@
       <xsd:element name="TotalSubUnits" type="xsd:integer" minOccurs="0"/>
       <xsd:element name="VoteVariation" type="VoteVariation" minOccurs="0"/>
       <xsd:element name="OtherVoteVariation" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="ContestSelection" abstract="true">
+    <xsd:sequence>
+      <xsd:element name="SequenceOrder" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="VoteCounts" type="VoteCounts" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
   </xsd:complexType>
@@ -557,7 +557,7 @@
   </xsd:complexType>
   <xsd:complexType name="PartySelection">
     <xsd:complexContent>
-      <xsd:extension base="BallotSelection">
+      <xsd:extension base="ContestSelection">
         <xsd:sequence>
           <xsd:element name="PartyIds" type="xsd:IDREFS"/>
         </xsd:sequence>
