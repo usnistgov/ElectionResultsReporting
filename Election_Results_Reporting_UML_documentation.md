@@ -268,16 +268,16 @@ Used as a type for character strings; it adds a 16-character annotation to a cha
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `Annotation`|0..1|`ShortString`|An annotation of up to 16 characters associated with a character string.
-`Content`|1|`string`|
+`Content`|1|`string`|The string to be annotated.
 ### <a name="_18_0_2_6340208_1498658436378_308208_4565"></a>*The **AnnotatedUri** Class*
 ![Image of AnnotatedUri](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1498658436383_253730_4566.png)
 
-
+Used as a type for character strings; it adds a 16-character annotation to a character string.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`Annotation`|0..1|`ShortString`|
-`Content`|1|`anyURI`|
+`Annotation`|0..1|`ShortString`|An annotation of up to 16 characters associated with a character string.
+`Content`|1|`anyURI`|The uri to be annotated.
 ### <a name="_17_0_2_4_78e0236_1397156576157_466818_2461"></a>*The **BallotCounts** Class*
 ![Image of BallotCounts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1397156576165_50958_2462.png)
 
@@ -285,9 +285,9 @@ Attribute | Multiplicity | Type | Attribute Description
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`BallotsCast`|0..1|`integer`|
-`BallotsOutstanding`|0..1|`integer`|
-`BallotsRejected`|0..1|`integer`|
+`BallotsCast`|0..1|`integer`|Number of ballots cast.
+`BallotsOutstanding`|0..1|`integer`|Number of ballots not yet counted.
+`BallotsRejected`|0..1|`integer`|Number of ballots rejected.
 ### <a name="_17_0_2_4_78e0236_1389366932057_929676_2783"></a>*The **BallotMeasureContest** Class*
 ![Image of BallotMeasureContest](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_80297_5351.png)
 
@@ -482,22 +482,24 @@ class/element for reporting on contest vote counts. Contains attributes to categ
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`DeviceClass`|0..1|`DeviceClass`|
+`DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
 `GpUnit`|1|`GpUnit`|
-`IsSuppressedForPrivacy`|0..1|`boolean`|
-`OtherType`|0..1|`string`|
+`IsSuppressedForPrivacy`|0..1|`boolean`|Boolean to indicate if votes are suppressed for voter privacy, e.g., true or false. Assumed to be false if not present.
+`OtherType`|0..1|`string`|Used when   is other.
 `Round`|0..1|`integer`|
-`Type`|1|`CountItemType`|
+`Type`|1|`CountItemType`|The type of count being used as a filter on the vote counts, e.g., election day, early voting, etc.
 ### <a name="_17_0_2_4_f71035d_1430412663878_61362_2269"></a>*The **CountStatus** Class*
 ![Image of CountStatus](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1430412663882_602578_2270.png)
 
-
+For reporting on the counting status for various items such as ballot types or write-ins, e.g., whether for a certain type of ballot, the counts are in progress, not yet started, complete, etc. [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400), [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209), and [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) include CountStatus.
+ 
+If the type of count item is not listed in enumeration <CountItemType>, use other and include the type (that is not listed in the enumeration) in <OtherType>.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`OtherType`|0..1|`string`|
-`Status`|1|`CountItemStatus`|
-`Type`|1|`CountItemType`|
+`OtherType`|0..1|`string`|Used when Type is other.
+`Status`|1|`CountItemStatus`|The status of the count, from the [CountItemStatus](#_17_0_2_4_78e0236_1389797161173_369293_4078) enumeration.
+`Type`|1|`CountItemType`|The type of item, from the [CountItemType](#_17_0_2_4_78e0236_1389798097477_664878_4228) enumeration.
 ### <a name="_18_0_2_6340208_1519999692422_172889_4576"></a>*The **DateTimeWithZone** Class*
 ![Image of DateTimeWithZone](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1519999692425_740254_4577.png)
 
@@ -509,14 +511,14 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_18_0_2_6340208_1425911626288_420556_4530"></a>*The **DeviceClass** Class*
 ![Image of DeviceClass](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1425911626300_559547_4531.png)
 
-
+For a string containing a 6-digit Red-Green-Blue (RGB) code that can be displayed using HTML. Used in [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) to associate a web-displayable color with the party. The RGB code is specified in hexadecimal, such that the RGB code for the color green is “00FF00” (“#00” + “#FF” + “#00”).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`Manufacturer`|0..1|`string`|
-`Model`|0..1|`string`|
-`OtherType`|0..1|`string`|
-`Type`|0..1|`DeviceType`|
+`Manufacturer`|0..1|`string`|Manufacturer of the device.
+`Model`|0..1|`string`|Manufacturer’s device model, used to filter on, e.g., a specific model of DRE or other device type.
+`OtherType`|0..1|`string`|Used when Type is other.
+`Type`|0..1|`DeviceType`|Enumerated type of device, e.g., DRE, opscan-precinct, etc.
 ### <a name="_17_0_2_4_f71035d_1426101822599_430942_2209"></a>*The **Election** Class*
 ![Image of Election](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1426101822601_995748_2210.png)
 
@@ -663,7 +665,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`Content`|1|`string`|
+`Content`|1|`string`|The string in the specified language.
 `Language`|1|`language`|A string of text, i.e., possibly non-English.
 ### <a name="_17_0_2_4_f71035d_1443104838926_393729_2222"></a>*The **LatLng** Class*
 ![Image of LatLng](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1443104838931_652630_2223.png)
@@ -746,9 +748,9 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `{GpUnit}`|1|`GpUnit`|
 `DeviceClass`|0..1|`DeviceClass`|
-`Overvotes`|0..1|`float`|
-`Undervotes`|0..1|`float`|
-`WriteIns`|0..1|`integer`|
+`Overvotes`|0..1|`float`|Number of overvotes.
+`Undervotes`|0..1|`float`|Number of undervotes.
+`WriteIns`|0..1|`integer`|Number of write-ins.
 ### <a name="_17_0_2_4_78e0236_1389366278128_412819_2460"></a>*The **Party** Class*
 ![Image of Party](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_989674_5350.png)
 
@@ -764,7 +766,7 @@ Attribute | Multiplicity | Type | Attribute Description
 `Abbreviation`|0..1|`string`|Short name for the party, e.g., “DEM”.
 `Color`|0..1|`HtmlColorString`|For associating an HTML RGB color coding with the party.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the party.
-`IsRecognizedParty`|0..1|`boolean`|
+`IsRecognizedParty`|0..1|`boolean`|For indicating whether the party is recognized by the election authority.
 `LeaderPerson`|*|`Person`|
 `LogoUri`|0..1|`anyURI`|A URI to the party’s graphical logo.
 `Name`|1|`InternationalizedText`|Official full name of the party, e.g., “Republican”; can appear on the ballot.
@@ -882,7 +884,7 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_18_0_2_6340208_1499878618645_537953_4560"></a>*The **ShortString** Class*
 ![Image of ShortString](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1499878618648_579134_4561.png)
 
-
+For defining a 16-character annotation, used with character strings in [AnnotatedString](#_18_0_2_6340208_1497553224568_429892_4565).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -912,10 +914,10 @@ Enumeration for the status of the election results in the [ElectionReport](#_17_
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`EndDate`|0..1|`date`|
-`Label`|0..1|`string`|
-`StartDate`|0..1|`date`|
-`Type`|0..1|`OfficeTermType`|
+`EndDate`|0..1|`date`|End date for the current term of the office.
+`Label`|0..1|`string`|For use as needed and compatibility with the VIP schema.
+`StartDate`|0..1|`date`|Start date for the current term of the office.
+`Type`|0..1|`OfficeTermType`|Enumerated type of term, e.g., full-term, unexpired-term, etc.
 ### <a name="_18_0_2_6340208_1427385616970_86952_4407"></a>*The **TimeWithZone** Class*
 ![Image of TimeWithZone](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1427385616977_352513_4414.png)
 
@@ -927,7 +929,7 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_17_0_2_4_78e0236_1397156604549_15838_2489"></a>*The **VoteCounts** Class*
 ![Image of VoteCounts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1397156604556_583070_2490.png)
 
-
+ For reporting on vote counts for ballot selections in a contest. VoteCounts includes [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835) as an extension base and therefore inherits the elements from [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835), but it is included directly by <BallotSelection>.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
