@@ -571,7 +571,7 @@ Attribute | Multiplicity | Type | Attribute Description
 `{Party}`|*|`Party`|For associating parties with the report.
 `{GpUnit}`|*|`GpUnit`|For associating geopolitical units with the report.
 `{OfficeGroup}`|*|`OfficeGroup`|For associating a name for a grouping of offices with the report.
-`{Header}`|0..*|`Header`|
+`{Header}`|0..*|`Header`|For associating headers with parts of a ballot style.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the report.
 `Format`|1|`ReportDetailLevel`|Detail level of the report, e.g., contest summary, precinct level results, etc.
 `GeneratedDate`|1|`DateTimeWithZone`|Identifies the date and time that the election report was generated.
@@ -805,7 +805,7 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `{ContactInformation}`|*|`ContactInformation`|For associating contact information with the person.
 `DateOfBirth`|0..1|`date`|Person’s date of birth.
-`ExternalIdentifier`|0..*|`ExternalIdentifier`|
+`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the person.
 `FirstName`|0..1|`RichText`|Person’s first (given) name.
 `FullName`|0..1|`InternationalizedText`|Person’s full name.
 `Gender`|0..1|`RichText`|Person’s gender.
