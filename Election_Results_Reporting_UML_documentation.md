@@ -616,7 +616,7 @@ For defining a reusable set of headers.
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot style.
-`Name`|1|`InternationalizedText`|
+`Name`|1|`InternationalizedText`|Name of the header, as it is to appear on a ballot style.
 ### <a name="_18_0_2_6340208_1427122205989_885563_4602"></a>*The **Hours** Class*
 ![Image of Hours](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1427122205998_606908_4603.png)
 
@@ -712,10 +712,10 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_18_5_3_43701b0_1527684342715_643544_6146"></a>*The **OrderedContent** Class*
 ![Image of OrderedContent](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342791_594538_6176.png)
 
-An abstract base class for content that can appear on a particular ballot style.
+An abstract base class for content that can appear under a particular ballot style.
  
 OrderedContent is an abstract class with two subclasses that get used according to the type of content:
-OrderedHeader, used for the appearance of a contest independent header
+OrderedHeader, used for the appearance of a contest independent header.
 OrderedContent, used for the appearance of a contest, optionally with the inclusion of contest headers.
  
 
@@ -724,21 +724,21 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_17_0_3_43401a7_1394476416139_808596_3142"></a>*The **OrderedContest** Class*
 ![Image of OrderedContest](Election_Results_Reporting_UML_documentation_files/_17_0_3_43401a7_1394476416143_213625_3143.png)
 
-
+For the appearance of a contest on a particular ballot style.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `Contest`|1|`Contest`|
-`Header`|0..*|`Header`|
+`Header`|0..*|`Header`|Association to the header to be used.
 `OrderedBallotSelection`|*|`ContestSelection`|
 ### <a name="_18_5_3_43701b0_1527684342714_129907_6145"></a>*The **OrderedHeader** Class*
 ![Image of OrderedHeader](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342790_575094_6175.png)
 
-For the appearance of a header on a particular ballot style
+For the appearance of a header on a particular ballot style.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`Header`|1|`Header`|
+`Header`|1|`Header`|Association to the header to be used.
 ### <a name="_18_0_2_6340208_1508176198256_527421_4561"></a>*The **OtherCounts** Class*
 ![Image of OtherCounts](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1508176198261_91260_4562.png)
 
