@@ -15,8 +15,8 @@
 					<ownedDiagram xmi:type='uml:Diagram' xmi:id='_17_0_2_4_78e0236_1389366179320_546130_2278' name='ElectionResultsReporting' visibility='public' ownerOfDiagram='_17_0_2_4_78e0236_1389366160416_780968_2277'>
 						<xmi:Extension extender='MagicDraw UML 18.5'>
 							<diagramRepresentation>
-								<diagram:DiagramRepresentationObject ID='_17_0_2_4_78e0236_1389366179347_114010_2298' diagramProperties='3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 27 31 2e 30 27 20 65 6e 63 6f 64 69 6e 67 3d 27 55 54 46 2d 38 27 3f 3e a a 3c 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e a 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 50 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 27 3e a 9 9 3c 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e 5f 31 38 5f 35 5f 33 5f 34 33 37 30 31 62 30 5f 31 35 33 32 33 35 35 36 36 39 33 35 31 5f 37 38 32 38 34 32 5f 36 33 35 37 3c 2f 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e a 9 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 43 6f 6c 6f 72 50 72 6f 70 65 72 74 79 27 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 49 44 3e 50 45 4e 5f 43 4f 4c 4f 52 3c 2f 70 72 6f 70 65 72 74 79 49 44 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e 50 45 4e 5f 43 4f 4c 4f 52 5f 44 45 53 43 52 49 50 54 49 4f 4e 3c 2f 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e a 9 9 9 3c 76 61 6c 75 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 2d 31 36 37 37 37 32 31 36 27 2f 3e a 9 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 9 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 46 6f 6e 74 50 72 6f 70 65 72 74 79 27 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 49 44 3e 46 4f 4e 54 3c 2f 70 72 6f 70 65 72 74 79 49 44 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e 46 4f 4e 54 5f 44 45 53 43 52 49 50 54 49 4f 4e 3c 2f 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e a 9 9 9 3c 66 6f 6e 74 4e 61 6d 65 3e 41 72 69 61 6c 3c 2f 66 6f 6e 74 4e 61 6d 65 3e a 9 9 9 3c 73 69 7a 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 31 38 27 2f 3e a 9 9 9 3c 73 74 79 6c 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 30 27 2f 3e a 9 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 3c 2f 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e ' diagramStyleID='_18_5_3_43701b0_1532349003755_714505_6208' initialFrameSizeSet='true' requiredFeature=';UML_Standard_Profile.mdzip^UML_FEATURE' type='Class Diagram' umlType='Class Diagram' xmi:id='_S1WtQHoIEeOrMIuLMIvipg' xmi:version='2.0' xmlns:binary='http://www.nomagic.com/ns/cameo/client/binary/1.0' xmlns:diagram='http://www.nomagic.com/ns/magicdraw/core/diagram/1.0' xmlns:xmi='http://www.omg.org/XMI' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
-									<diagramContents contentHash='2e6897eb-4e28-4b31-a141-86d07ccc5fb0' exporterName='MagicDraw UML' exporterVersion='18.5' xmi:id='_S1WtQXoIEeOrMIuLMIvipg'>
+								<diagram:DiagramRepresentationObject ID='_17_0_2_4_78e0236_1389366179347_114010_2298' diagramProperties='3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 27 31 2e 30 27 20 65 6e 63 6f 64 69 6e 67 3d 27 55 54 46 2d 38 27 3f 3e a a 3c 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e a 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 50 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 27 3e a 9 9 3c 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e 5f 31 38 5f 35 5f 33 5f 34 33 37 30 31 62 30 5f 31 35 33 32 33 35 38 35 32 38 35 32 36 5f 35 36 33 39 32 38 5f 36 34 38 32 3c 2f 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e a 9 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 43 6f 6c 6f 72 50 72 6f 70 65 72 74 79 27 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 49 44 3e 50 45 4e 5f 43 4f 4c 4f 52 3c 2f 70 72 6f 70 65 72 74 79 49 44 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e 50 45 4e 5f 43 4f 4c 4f 52 5f 44 45 53 43 52 49 50 54 49 4f 4e 3c 2f 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e a 9 9 9 3c 76 61 6c 75 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 2d 31 36 37 37 37 32 31 36 27 2f 3e a 9 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 9 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 46 6f 6e 74 50 72 6f 70 65 72 74 79 27 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 49 44 3e 46 4f 4e 54 3c 2f 70 72 6f 70 65 72 74 79 49 44 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e 46 4f 4e 54 5f 44 45 53 43 52 49 50 54 49 4f 4e 3c 2f 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e a 9 9 9 3c 66 6f 6e 74 4e 61 6d 65 3e 41 72 69 61 6c 3c 2f 66 6f 6e 74 4e 61 6d 65 3e a 9 9 9 3c 73 69 7a 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 31 38 27 2f 3e a 9 9 9 3c 73 74 79 6c 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 30 27 2f 3e a 9 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 3c 2f 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e ' diagramStyleID='_18_5_3_43701b0_1532349003755_714505_6208' initialFrameSizeSet='true' requiredFeature=';UML_Standard_Profile.mdzip^UML_FEATURE' type='Class Diagram' umlType='Class Diagram' xmi:id='_S1WtQHoIEeOrMIuLMIvipg' xmi:version='2.0' xmlns:binary='http://www.nomagic.com/ns/cameo/client/binary/1.0' xmlns:diagram='http://www.nomagic.com/ns/magicdraw/core/diagram/1.0' xmlns:xmi='http://www.omg.org/XMI' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+									<diagramContents contentHash='8c5a6300-4266-4277-825e-0258e2a8a159' exporterName='MagicDraw UML' exporterVersion='18.5' xmi:id='_S1WtQXoIEeOrMIuLMIvipg'>
 										<binaryObject streamContentID='BINARY-c05899df-d555-4085-a02b-dc87d368ca35' xmi:id='_S1WtQnoIEeOrMIuLMIvipg' xsi:type='binary:StreamIdentityBinaryObject'/>
 										<usedObjects href='#_17_0_2_4_78e0236_1389366233346_42391_2380'/>
 										<usedObjects href='#_17_0_2_4_f71035d_1426788714136_242693_2615'/>
@@ -1537,24 +1537,76 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208518_27583_4794' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for the status of the election results in the &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366195564_913164_2300&quot;&gt;ElectionReport&lt;/a&gt; class.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734128637_37089_3895'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393512696499_784557_3103' name='certified'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734159285_636213_3921' name='correction'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734135976_457148_3913' name='pre-election'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393512693149_270724_3101' name='recount'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734149424_623797_3917' name='unofficial-complete'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734142410_446530_3915' name='unofficial-partial'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393512696499_784557_3103' name='certified'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356784273_709299_6412' body='For results that have been certified by the election authority.'>
+						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393512696499_784557_3103'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734159285_636213_3921' name='correction'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356789708_438365_6413' body='For results that are a correction to an earlier report.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734159285_636213_3921'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734135976_457148_3913' name='pre-election'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356796933_750110_6414' body='For a pre-election data. '>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734135976_457148_3913'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393512693149_270724_3101' name='recount'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356809138_571920_6415' body='For results that are a recount of an earlier election.'>
+						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393512693149_270724_3101'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734149424_623797_3917' name='unofficial-complete'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356814144_309597_6416' body='For results that are unofficial and complete, e.g., the complete election night results.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734149424_623797_3917'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734142410_446530_3915' name='unofficial-partial'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356819243_51883_6417' body='For results that are unofficial and partial, e.g., partial election night results.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734142410_446530_3915'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Enumeration' xmi:id='_17_0_2_4_78e0236_1389734457182_720347_3938' name='ElectionType'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208516_779699_4788' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for the type of election in the &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366195564_913164_2300&quot;&gt;ElectionReport&lt;/a&gt; class.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734457182_720347_3938'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734485163_78530_3962' name='general'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734467766_324825_3956' name='partisan-primary-closed'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734474376_633780_3958' name='partisan-primary-open'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1400604260784_726426_2505' name='primary'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734488059_492169_3964' name='runoff'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734479743_454576_3960' name='special'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_5_1_43401a7_1395052937250_824092_3516' name='other'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734485163_78530_3962' name='general'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358333537_227618_6456' body='For the election held typically on the national day for elections (e.g., the Tuesday after the 1st Monday in November).'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734485163_78530_3962'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734467766_324825_3956' name='partisan-primary-closed'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358338008_102338_6457' body='For a primary election that is for a specific party where voter eligibility is based on registration.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734467766_324825_3956'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734474376_633780_3958' name='partisan-primary-open'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358343407_878496_6458' body='For a primary election that is for a specific party where voter declares desired party or chooses in private.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734474376_633780_3958'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1400604260784_726426_2505' name='primary'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358353008_281341_6459' body='For a primary election, type not specified such as nonpartisan.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1400604260784_726426_2505'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734488059_492169_3964' name='runoff'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358358311_363726_6460' body='For an election to decide a prior contest that ended with no candidate receiving a majority of the votes.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734488059_492169_3964'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389734479743_454576_3960' name='special'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358366882_67902_6461' body='For an election held out of sequence for special circumstances, e.g., to fill a vacated office.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389734479743_454576_3960'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_5_1_43401a7_1395052937250_824092_3516' name='other'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358372795_414522_6462' body='Used when the election type is not listed in this enumeration.'>
+						<annotatedElement xmi:idref='_17_0_5_1_43401a7_1395052937250_824092_3516'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Association' xmi:id='_17_0_2_4_78e0236_1389735000217_463954_4015'>
 				<memberEnd xmi:idref='_17_0_2_4_78e0236_1389735000217_728769_4016'/>
@@ -1565,24 +1617,52 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208515_390340_4786' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for various counting-related statuses for types of ballots or write-ins, used in the &lt;a href=&quot;mdel://_17_0_2_4_f71035d_1430412663878_61362_2269&quot;&gt;CountStatus&lt;/a&gt; class.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389797161173_369293_4078'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797202891_585067_4096' name='completed'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797215251_433372_4098' name='in-process'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797220705_357480_4100' name='not-processed'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393511725903_432125_3094' name='unknown'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797202891_585067_4096' name='completed'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357854740_474947_6424' body='For counts that are complete.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389797202891_585067_4096'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797215251_433372_4098' name='in-process'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357861517_289473_6425' body='For counts that are in process'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389797215251_433372_4098'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797220705_357480_4100' name='not-processed'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357866594_859893_6426' body='When the counting has not started or is not underway.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389797220705_357480_4100'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393511725903_432125_3094' name='unknown'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357873426_551688_6427' body='When the status of the counting is unknown.'>
+						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393511725903_432125_3094'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Enumeration' xmi:id='_17_0_2_4_78e0236_1389797791548_146399_4136' name='CandidatePostElectionStatus'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393856385247_727283_3986' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for various post-election statuses applicable to a candidate in the &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366272694_544359_2440&quot;&gt;Candidate&lt;/a&gt; element.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389797791548_146399_4136'/>
 				</ownedComment>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1390498103083_612885_2204' name='advanced-to-runoff'>
-					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393856443880_195580_3987' body='For ranked order voting.'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393856443880_195580_3987' body='For candidates who have advanced to a runoff.'>
 						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1390498103083_612885_2204'/>
 					</ownedComment>
 				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1522862436551_713511_4555' name='defeated'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426779343856_684313_2527' name='projected-winner'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1390498122756_845764_2207' name='winner'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797808039_882240_4158' name='withdrawn'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426779343856_684313_2527' name='projected-winner'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357909220_457815_6428' body='For a projected contest winner.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426779343856_684313_2527'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1390498122756_845764_2207' name='winner'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357914389_233943_6429' body='For the official contest winner or one of “n” contest winners for n-of-m voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1390498122756_845764_2207'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389797808039_882240_4158' name='withdrawn'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357920479_351590_6430' body='For candidates who have withdrawn from the contest.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389797808039_882240_4158'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Class' xmi:id='_17_0_2_4_78e0236_1389798013459_389380_4178' name='ReportingDevice'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_4_1_43401a7_1393540400701_609658_3743' body='Class/element describing a specific vote-capture device.'>
@@ -1618,19 +1698,51 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393727021745_123934_3928' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      Enumeration for the type of device in the &lt;a href=&quot;mdel://_18_0_2_6340208_1425911626288_420556_4530&quot;&gt;DevicClass&lt;/a&gt; &#10;      class.&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
 					<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798087342_91702_4210'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798119806_329053_4250' name='electronic'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798130868_631503_4254' name='lever'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798119806_329053_4250' name='electronic'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357988179_158282_6433' body='For DRE (Direct Record Electronic) and touchscreen devices such as tablets.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798119806_329053_4250'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798130868_631503_4254' name='lever'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532357992830_902811_6434' body='For lever machines.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798130868_631503_4254'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798122729_51972_4252' name='manual-count'>
-					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393855004471_617586_3961' body='For hand-counted paper ballots or other ballots manually counted.'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393855004471_617586_3961' body='For hand-counted paper ballots.'>
 						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798122729_51972_4252'/>
 					</ownedComment>
 				</ownedLiteral>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_43401a7_1395676480784_72892_3144' name='mixed-systems'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798116792_251263_4248' name='opscan-central'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798109626_261027_4246' name='opscan-precinct'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798140096_817289_4256' name='punch-card'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393443777699_888607_2638' name='unknown'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426078465747_611474_2669' name='other'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_43401a7_1395676480784_72892_3144' name='mixed-systems'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358012409_629723_6435' body='For devices, e.g., that print voter choices on an optical scan ballot (hybrid of a DRE and an optical scan system)'>
+						<annotatedElement xmi:idref='_17_0_3_43401a7_1395676480784_72892_3144'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798116792_251263_4248' name='opscan-central'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358018356_438063_6436' body='For an optical scanner used at a central office with no opportunity for voter correction of mistakes.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798116792_251263_4248'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798109626_261027_4246' name='opscan-precinct'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358024392_839195_6437' body='For an optical scanner used at a precinct or other location where voter correction of mistakes such as overvotes is possible.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798109626_261027_4246'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798140096_817289_4256' name='punch-card'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358029332_366_6438' body='For punch card devices.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798140096_817289_4256'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393443777699_888607_2638' name='unknown'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358034643_590592_6439' body='Used when the type of device is unknown.'>
+						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393443777699_888607_2638'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426078465747_611474_2669' name='other'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358041471_849709_6440' body='Used when the device type is not listed in this enumeration.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426078465747_611474_2669'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Enumeration' xmi:id='_17_0_2_4_78e0236_1389798097477_664878_4228' name='CountItemType'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393727250220_672125_3965' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for the items that are counted during the course of an election and for which the status of the counts are of interest. Used in the &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389367291663_284973_2835&quot;&gt;Counts&lt;/a&gt; and &lt;a href=&quot;mdel://_17_0_2_4_f71035d_1430412663878_61362_2269&quot;&gt;CountStatus&lt;/a&gt; classes.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
@@ -1641,7 +1753,11 @@
 						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798158958_823976_4262'/>
 					</ownedComment>
 				</ownedLiteral>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1403260880887_328465_2190' name='absentee-fwab'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1403260880887_328465_2190' name='absentee-fwab'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356014326_376331_6367' body='A type of absentee; for Federal Write-in Absentee Ballots.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1403260880887_328465_2190'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393444752746_777145_2663' name='absentee-in-person'>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393855871013_910757_3965' body='A class of absentee; for absentee ballots cast in-person, e.g., at a county office.'>
 						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393444752746_777145_2663'/>
@@ -1652,9 +1768,21 @@
 						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393444686544_829364_2661'/>
 					</ownedComment>
 				</ownedLiteral>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798152548_861275_4260' name='early'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798146104_554367_4258' name='election-day'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798164517_576839_4264' name='provisional'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798152548_861275_4260' name='early'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356019086_75676_6368' body='For ballots cast during early voting periods.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798152548_861275_4260'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798146104_554367_4258' name='election-day'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356025237_387707_6369' body='election-day&#9;For ballots cast on election day.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798146104_554367_4258'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798164517_576839_4264' name='provisional'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356031024_750505_6370' body='For challenged ballots.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798164517_576839_4264'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1518035681133_157938_4554' name='seats'>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1518035693224_677289_4556' body='for legislative balance-of-power results information'>
 						<annotatedElement xmi:idref='_18_0_2_6340208_1518035681133_157938_4554'/>
@@ -1670,37 +1798,81 @@
 						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393442606355_440980_2634'/>
 					</ownedComment>
 				</ownedLiteral>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426542406558_659527_2207' name='write-in'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798167680_247144_4266' name='other'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426542406558_659527_2207' name='write-in'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356037604_717483_6371' body='For write-ins on ballots.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426542406558_659527_2207'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798167680_247144_4266' name='other'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356042464_511018_6372' body='Used when the type of counting item is not included in this enumeration.'>
+						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798167680_247144_4266'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Enumeration' xmi:id='_17_0_2_4_78e0236_1389798224990_11192_4272' name='VoteVariation'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393860803248_120606_4062' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for contest algorithm or rules in the &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366251994_876831_2400&quot;&gt;Contest&lt;/a&gt; element.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798224990_11192_4272'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674724266_523557_2207' name='1-of-m'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674724266_523557_2207' name='1-of-m'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355920963_74015_6358' body='For 1 of M voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426674724266_523557_2207'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393442101326_72012_2610' name='approval'>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393861072927_107240_4065' body='When voter can select as many candidates as desired in a contest up to a max number.'>
 						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393442101326_72012_2610'/>
 					</ownedComment>
 				</ownedLiteral>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426690480498_149754_2207' name='borda'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426690480498_149754_2207' name='borda'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355926725_754633_6359' body='borda&#9;For the Borda count voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426690480498_149754_2207'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1393442106110_778526_2612' name='cumulative'>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393861064067_927785_4064' body='When voter can allocate more than one vote to a given candidate.'>
 						<annotatedElement xmi:idref='_17_0_2_4_d420315_1393442106110_778526_2612'/>
 					</ownedComment>
 				</ownedLiteral>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426705831174_143716_2207' name='majority'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426705831174_143716_2207' name='majority'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355932210_392080_6360' body='For majority voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426705831174_143716_2207'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_78e0236_1389798239748_249291_4292' name='n-of-m'>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_5_1_43401a7_1393860903947_421685_4063' body='Includes vote for 1, i.e., 1-of-m.'>
 						<annotatedElement xmi:idref='_17_0_2_4_78e0236_1389798239748_249291_4292'/>
 					</ownedComment>
 				</ownedLiteral>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674800911_595890_2211' name='plurality'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674783966_416832_2209' name='proportional'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674991054_592562_2213' name='range'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674997905_245495_2215' name='rcv'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426705841212_816376_2209' name='super-majority'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426537393798_302890_2801' name='other'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674800911_595890_2211' name='plurality'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355937600_560377_6361' body='For plurality voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426674800911_595890_2211'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674783966_416832_2209' name='proportional'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355944494_170941_6362' body='For proportional voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426674783966_416832_2209'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674991054_592562_2213' name='range'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355949382_185749_6363' body='For range voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426674991054_592562_2213'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426674997905_245495_2215' name='rcv'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355954992_108029_6364' body='For ranked choice voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426674997905_245495_2215'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426705841212_816376_2209' name='super-majority'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355960362_612224_6365' body='For super majority voting.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426705841212_816376_2209'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426537393798_302890_2801' name='other'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532355974061_477239_6366' body='Used when the vote variation type is not included in this enumeration'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426537393798_302890_2801'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Association' xmi:id='_17_0_2_4_d420315_1391370669921_833502_2558'>
 				<memberEnd xmi:idref='_17_0_2_4_d420315_1391370669921_519404_2559'/>
@@ -1747,8 +1919,16 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208517_948328_4792' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for the detail level of the election results report in the &lt;a href=&quot;mdel://_17_0_2_4_f71035d_1426101822599_430942_2209&quot;&gt;Election&lt;/a&gt; class.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_d420315_1392318380928_311473_2471'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1392318883141_144733_2499' name='precinct-level'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1392318478070_728065_2491' name='summary-contest'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1392318883141_144733_2499' name='precinct-level'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358440418_57627_6472' body='For reports that contain counts from precincts in the reporting jurisdiction'>
+						<annotatedElement xmi:idref='_17_0_2_4_d420315_1392318883141_144733_2499'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_d420315_1392318478070_728065_2491' name='summary-contest'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358455971_862655_6473' body='For reports that contain only aggregated counts.'>
+						<annotatedElement xmi:idref='_17_0_2_4_d420315_1392318478070_728065_2491'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Class' xmi:id='_17_0_2_4_d420315_1393514218965_55008_3144' name='PartyContest'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_43401a7_1393531907473_946085_3289' body='For a contest that involves choosing a party, typically for a straight party selection on the ballot.'>
@@ -2549,29 +2729,81 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208517_805224_4790' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for election data-related codes in the &lt;a href=&quot;mdel://_17_0_2_4_f71035d_1430405712653_451634_2410&quot;&gt;ExternalIdentifier&lt;/a&gt; class .&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425061188508_163854_2613'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061241086_739613_2631' name='fips'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061272416_498928_2635' name='local-level'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061308144_642254_2639' name='national-level'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061253888_677563_2633' name='ocd-id'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061292620_153404_2637' name='state-level'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061332140_426311_2641' name='other'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061241086_739613_2631' name='fips'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358109705_106286_6446' body='For FIPS codes.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425061241086_739613_2631'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061272416_498928_2635' name='local-level'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358115668_442918_6447' body='For a code that is specific to a county or other similar locality.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425061272416_498928_2635'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061308144_642254_2639' name='national-level'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358123193_115458_6448' body='For a code that is used at the national level other than “fips” or “ocd-id”.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425061308144_642254_2639'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061253888_677563_2633' name='ocd-id'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358128817_729594_6449' body='For Open Civic Data identifiers.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425061253888_677563_2633'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061292620_153404_2637' name='state-level'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358134016_603732_6450' body='For a code that is specific to a state.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425061292620_153404_2637'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425061332140_426311_2641' name='other'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358139408_144949_6451' body='Used when the type of code is not included in this enumeration.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425061332140_426311_2641'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Enumeration' xmi:id='_17_0_2_4_f71035d_1425314816880_411605_2504' name='OfficeTermType'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208517_661834_4791' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for the office term type in the &lt;a href=&quot;mdel://_17_0_5_1_43401a7_1400623830572_164081_3518&quot;&gt;Office&lt;/a&gt; class.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425314816880_411605_2504'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425314848544_236391_2522' name='full-term'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425314870188_959725_2524' name='unexpired-term'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425314848544_236391_2522' name='full-term'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358425057_212409_6470' body='When the officeholder’s term began at the beginning of the full term of the office, e.g., 6 years for U.S. Senate.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425314848544_236391_2522'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425314870188_959725_2524' name='unexpired-term'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358429908_178013_6471' body='When the officeholder’s term began at some date after the beginning of the full term of the office, generally because the previous officeholder vacated the office before the fullterm expired.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425314870188_959725_2524'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Enumeration' xmi:id='_17_0_2_4_f71035d_1425325534467_889921_2544' name='GeoSpatialFormat'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208517_182781_4789' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      Enumeration for geospatial vector data formats used in geographic &#10;      information system (GIS) software, used in the &lt;a href=&quot;mdel://_17_0_2_4_f71035d_1409080246279_778720_2209&quot;&gt;SpatialExtent&lt;/a&gt; &#10;      class.&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
 					<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425325534467_889921_2544'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325554296_227692_2562' name='geo-json'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325658423_23072_2564' name='gml'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325669323_898515_2566' name='kml'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325695625_410292_2570' name='shp'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325676288_248577_2568' name='wkt'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325554296_227692_2562' name='geo-json'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358385208_555904_6463' body='For GeoJSON open standard format.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425325554296_227692_2562'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325658423_23072_2564' name='gml'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358392957_488830_6464' body='For Geography Markup Language format.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425325658423_23072_2564'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325669323_898515_2566' name='kml'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358398755_978344_6465' body='For Keyhole Markup Language format.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425325669323_898515_2566'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325695625_410292_2570' name='shp'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358404135_368331_6466' body='For the shape file format associated with Esri.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425325695625_410292_2570'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1425325676288_248577_2568' name='wkt'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358409476_799685_6467' body='For Well-known Text format.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1425325676288_248577_2568'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Class' xmi:id='_18_0_2_6340208_1425646217522_163181_4554' name='RetentionContest'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208511_345071_4766' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;For judicial retention or other types of retention contests. Retention contests can be treated essentially as ballot measure contests, however this element differs from       &#10;&lt;br&gt;&lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366932057_929676_2783&quot;&gt;BallotMeasureContest&lt;/a&gt; in that it can include a reference to a candidate or the associated office.&#10;&#10;    &lt;/p&gt;&#10;&#10;    &lt;p&gt;&#10;&amp;#160;&#10;&#10;    &lt;/p&gt;&#10;&#10;    &lt;p&gt;&#10;This element uses &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366932057_929676_2783&quot;&gt;BallotMeasureContest&lt;/a&gt; as a superclass. Therefore, it inherits the attributes of &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366251994_876831_2400&quot;&gt;Contest&lt;/a&gt; as well as &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366932057_929676_2783&quot;&gt;BallotMeasureContest&lt;/a&gt;.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
@@ -2634,7 +2866,11 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208516_732348_4787' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for the day(s) in a schedule in the &lt;a href=&quot;mdel://_18_0_2_6340208_1427122121448_198970_4547&quot;&gt;Schedule&lt;/a&gt; element.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_18_0_2_6340208_1425647845906_917814_4818'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425648118607_235416_4887' name='all'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425648118607_235416_4887' name='all'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356394496_465104_6377' body='Used for all days of the week.'>
+						<annotatedElement xmi:idref='_18_0_2_6340208_1425648118607_235416_4887'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647888198_705727_4849' name='sunday'/>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647855134_998400_4837' name='monday'/>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647860730_71688_4839' name='tuesday'/>
@@ -2642,8 +2878,16 @@
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647870130_428637_4843' name='thursday'/>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647878776_463447_4845' name='friday'/>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647881824_34266_4847' name='saturday'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647889758_954217_4851' name='weekday'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647894225_692230_4853' name='weekend'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647889758_954217_4851' name='weekday'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356400518_78014_6378' body='Used for any day of the week.'>
+						<annotatedElement xmi:idref='_18_0_2_6340208_1425647889758_954217_4851'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1425647894225_692230_4853' name='weekend'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356413015_22975_6379' body='Used for both Saturday and Sunday.'>
+						<annotatedElement xmi:idref='_18_0_2_6340208_1425647894225_692230_4853'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Class' xmi:id='_18_0_2_6340208_1425911626288_420556_4530' name='DeviceClass'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532352060508_957439_6291' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;&#9;&#9;&lt;style&gt;&#10;&#9;&#9;&#9;p {padding:0px; margin:0px;}&#10;&#9;&#9;&lt;/style&gt;&#10;&#9;&lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;For a string containing a 6-digit Red-Green-Blue (RGB) code that can be displayed using HTML. Used in &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366278128_412819_2460&quot;&gt;Party&lt;/a&gt; to associate a web-displayable color with the party. The RGB code is specified in hexadecimal, such that the RGB code for the color green is &amp;ldquo;00FF00&amp;rdquo; (&amp;ldquo;#00&amp;rdquo; + &amp;ldquo;#FF&amp;rdquo; + &amp;ldquo;#00&amp;rdquo;).&#10;&#10;    &lt;/p&gt;&#10;&#10;&lt;/body&gt;&#10;&lt;/html&gt;'>
@@ -2881,11 +3125,31 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208515_7294_4784' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for types of ballot measures in the &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366932057_929676_2783&quot;&gt;BallotMeasureContest&lt;/a&gt; element.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426549604222_56408_2487'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549624051_325504_2505' name='ballot-measure'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549642875_810873_2507' name='initiative'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_5_43401a7_1508329822727_578792_4301' name='recall'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549650643_862674_2509' name='referendum'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549671283_243982_2511' name='other'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549624051_325504_2505' name='ballot-measure'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358467657_138871_6474' body='For reports that contain only aggregated counts.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426549624051_325504_2505'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549642875_810873_2507' name='initiative'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358472287_902373_6475' body='For an initiative.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426549642875_810873_2507'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_5_43401a7_1508329822727_578792_4301' name='recall'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358496832_520620_6478' body='For a recall.'>
+						<annotatedElement xmi:idref='_18_0_5_43401a7_1508329822727_578792_4301'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549650643_862674_2509' name='referendum'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358486006_49735_6476' body='For a referendum. '>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426549650643_862674_2509'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1426549671283_243982_2511' name='other'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358491107_223894_6477' body='Used when the type of ballot measure is not included in this enumeration.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426549671283_243982_2511'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Association' xmi:id='_17_0_2_4_f71035d_1426788177420_185066_2551'>
 				<memberEnd xmi:idref='_17_0_2_4_f71035d_1426788177421_963220_2552'/>
@@ -3066,9 +3330,21 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208515_363055_4785' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      Enumeration for various pre-election statuses applicable to a candidate &#10;      in the &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366272694_544359_2440&quot;&gt;Candidate&lt;/a&gt; &#10;      class.&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
 					<annotatedElement xmi:idref='_17_0_2_4_f71035d_1427223542780_950918_2213'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1427223640266_788861_2231' name='filed'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1427223649963_617948_2233' name='qualified'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1427223661291_298091_2235' name='withdrawn'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1427223640266_788861_2231' name='filed'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358075879_798570_6443' body='For candidates who have filed with the election authority but not necessarily qualified.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1427223640266_788861_2231'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1427223649963_617948_2233' name='qualified'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358084467_867927_6444' body='For candidates who are qualified by the election authority to be on the ballot for a contest.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1427223649963_617948_2233'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1427223661291_298091_2235' name='withdrawn'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532358094667_47742_6445' body='For candidates who have withdrawn from the contest.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1427223661291_298091_2235'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Class' xmi:id='_18_0_2_6340208_1427385616970_86952_4407' name='TimeWithZone'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1520006068957_92621_4612' body='Restricts time to require inclusion of timezone information and excludes fractional seconds'>
@@ -3356,35 +3632,147 @@
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208518_249273_4793' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Enumeration for the type of geopolitical unit in the &lt;a href=&quot;mdel://_17_0_2_4_f71035d_1400606476166_735297_2593&quot;&gt;ReportingUnit&lt;/a&gt; class .&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
 					<annotatedElement xmi:idref='_17_0_2_4_f71035d_1431607637366_785815_2242'/>
 				</ownedComment>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114658492_609849_2529' name='ballot-batch'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1443124003815_739653_2224' name='ballot-style-area'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1446109817045_28569_2509' name='borough'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1431607678535_652600_2264' name='city'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114667618_868300_2531' name='city-council'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114700100_811167_2533' name='combined-precinct'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114755212_383591_2535' name='congressional'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114658492_609849_2529' name='ballot-batch'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356438847_636861_6382' body='Used for reporting batches of ballots that may cross precinct boundaries.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114658492_609849_2529'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1443124003815_739653_2224' name='ballot-style-area'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356443234_986808_6383' body='Used for a ballot style areas generally composed of precincts'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1443124003815_739653_2224'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1446109817045_28569_2509' name='borough'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356447009_912505_6384' body='Used in CT, NJ, PA, other states, and New York City for boroughs. For AK and LA, see county.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1446109817045_28569_2509'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1431607678535_652600_2264' name='city'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356456258_561899_6385' body='Used for a city that reports results and/or for the district that encompasses it.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1431607678535_652600_2264'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114667618_868300_2531' name='city-council'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356482670_323684_6386' body='Used for city council districts.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114667618_868300_2531'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114700100_811167_2533' name='combined-precinct'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356487660_27099_6387' body='Used for one or more precincts that have been combined for the purposes of reporting.  Used for “Ward” if “Ward” is used interchangeably with “CombinedPrecinct”.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114700100_811167_2533'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114755212_383591_2535' name='congressional'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356493584_201288_6388' body='Used for U.S. Congressional districts.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114755212_383591_2535'/>
+					</ownedComment>
+				</ownedLiteral>
 				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_18_0_2_6340208_1498659495271_27294_4634' name='country'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114781732_167572_2537' name='county'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114788779_738591_2539' name='county-council'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114797634_816991_2541' name='drop-box'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1431607656912_452127_2260' name='judicial'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114803817_62853_2543' name='municipality'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114882623_309688_2545' name='polling-place'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115364942_567288_2548' name='precinct'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115381430_470118_2550' name='school'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115393894_919432_2552' name='special'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115433028_554839_2554' name='split-precinct'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115443635_44997_2556' name='state'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115460812_273865_2560' name='state-house'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115450698_21141_2558' name='state-senate'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115468017_414462_2562' name='town'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115478563_205395_2564' name='township'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115489758_945904_2566' name='utility'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115498698_592530_2568' name='village'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115505571_11321_2570' name='vote-center'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115513438_413272_2572' name='ward'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115520086_128633_2574' name='water'/>
-				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115630759_996037_2576' name='other'/>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114781732_167572_2537' name='county'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356511892_533557_6389' body='Used for a county and/or for the district that encompasses it.  In AK, used for counties that are called boroughs.  In LA, used for parishes.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114781732_167572_2537'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114788779_738591_2539' name='county-council'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356523809_779563_6390' body='Used for county council districts.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114788779_738591_2539'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114797634_816991_2541' name='drop-box'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356533859_134443_6391' body='Used for a dropbox for absentee ballots.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114797634_816991_2541'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1431607656912_452127_2260' name='judicial'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356540058_931229_6392' body='Used for judicial districts.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1431607656912_452127_2260'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114803817_62853_2543' name='municipality'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356550797_561983_6393' body='Used as applicable for various units such as towns, townships, villages that report votes and/or for the district that encompasses it.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114803817_62853_2543'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441114882623_309688_2545' name='polling-place'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356557671_777798_6394' body='Used for a polling place.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441114882623_309688_2545'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115364942_567288_2548' name='precinct'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356566222_14001_6395' body='Used also for “Ward” or “District” when these terms are used interchangeably with “Precinct”.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115364942_567288_2548'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115381430_470118_2550' name='school'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356600162_968560_6396' body='Used for a school district. '>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115381430_470118_2550'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115393894_919432_2552' name='special'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356604539_33921_6397' body='Used for a special district.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115393894_919432_2552'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115433028_554839_2554' name='split-precinct'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356610587_870985_6398' body='Used for splits of precincts.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115433028_554839_2554'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115443635_44997_2556' name='state'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356621685_908971_6399' body='Used for a state and/or for the district that encompasses it.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115443635_44997_2556'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115460812_273865_2560' name='state-house'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356631060_130261_6400' body='Used for a state house or assembly district. '>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115460812_273865_2560'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115450698_21141_2558' name='state-senate'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356638912_905432_6401' body='Used for a state senate district.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115450698_21141_2558'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115468017_414462_2562' name='town'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356646788_771695_6402' body='Used in some New England states as a type of municipality that reports votes and/or for the district that encompasses it.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115468017_414462_2562'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115478563_205395_2564' name='township'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356655298_819015_6403' body='Used in some mid-western states as a type of municipality that reports votes and/or for the district that encompasses it.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115478563_205395_2564'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115489758_945904_2566' name='utility'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356659797_487708_6404' body='Used for a utility district.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115489758_945904_2566'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115498698_592530_2568' name='village'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356664699_595496_6405' body='Used as a type of municipality that reports votes and/or for the district that encompasses it.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115498698_592530_2568'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115505571_11321_2570' name='vote-center'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356668950_987838_6406' body='Used for a vote center.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115505571_11321_2570'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115513438_413272_2572' name='ward'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356674238_414625_6407' body='Used for combinations or groupings of precincts or other units.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115513438_413272_2572'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115520086_128633_2574' name='water'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356678939_327582_6408' body='Used for a water district.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115520086_128633_2574'/>
+					</ownedComment>
+				</ownedLiteral>
+				<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_2_4_f71035d_1441115630759_996037_2576' name='other'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_5_3_43701b0_1532356697645_512940_6409' body='Used for other types of reporting units not included in this enumeration.'>
+						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1441115630759_996037_2576'/>
+					</ownedComment>
+				</ownedLiteral>
 			</packagedElement>
 			<packagedElement xmi:type='uml:Class' xmi:id='_17_0_2_4_f71035d_1433183615993_866714_2239' name='OfficeGroup'>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1532029208502_719147_4729' body='&lt;html&gt;&lt;body&gt;&#10;&lt;p&gt;&#10;Used to assign a name to a grouping of office definitions. It includes references to &lt;a href=&quot;mdel://_17_0_5_1_43401a7_1400623830572_164081_3518&quot;&gt;Office&lt;/a&gt; instances and a name to identify the grouping of references, e.g., &amp;ldquo;Judicial&amp;rdquo; or &amp;ldquo;Statewide&amp;rdquo;, etc. SubOfficeGroup can be used to create a nested hierarchy of groupings. &lt;a href=&quot;mdel://_17_0_2_4_78e0236_1389366195564_913164_2300&quot;&gt;ElectionReport&lt;/a&gt; includes OfficeGroup.&#10;&#10;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'>
@@ -3839,8 +4227,8 @@
 						<ownedDiagram xmi:type='uml:Diagram' xmi:id='_17_0_2_4_78e0236_1389733486700_311705_3438' name='xsd' visibility='public' ownerOfDiagram='_17_0_2_4_78e0236_1389733484660_420867_3380'>
 							<xmi:Extension extender='MagicDraw UML 18.5'>
 								<diagramRepresentation>
-									<diagram:DiagramRepresentationObject ID='_17_0_2_4_78e0236_1389733486712_494233_3458' diagramProperties='3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 27 31 2e 30 27 20 65 6e 63 6f 64 69 6e 67 3d 27 55 54 46 2d 38 27 3f 3e a a 3c 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e a 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 50 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 27 3e a 9 9 3c 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e 5f 31 38 5f 35 5f 33 5f 34 33 37 30 31 62 30 5f 31 35 33 32 33 35 35 36 36 39 32 39 30 5f 32 38 36 38 39 30 5f 36 33 35 36 3c 2f 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e a 9 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 46 6f 6e 74 50 72 6f 70 65 72 74 79 27 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 49 44 3e 46 4f 4e 54 3c 2f 70 72 6f 70 65 72 74 79 49 44 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e 46 4f 4e 54 5f 44 45 53 43 52 49 50 54 49 4f 4e 3c 2f 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e a 9 9 9 3c 66 6f 6e 74 4e 61 6d 65 3e 43 61 6c 69 62 72 69 3c 2f 66 6f 6e 74 4e 61 6d 65 3e a 9 9 9 3c 73 69 7a 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 31 31 27 2f 3e a 9 9 9 3c 73 74 79 6c 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 30 27 2f 3e a 9 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 3c 2f 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e ' diagramStyleID='_18_5_3_43701b0_1532349003755_714505_6208' initialFrameSizeSet='true' requiredFeature=';UML_Standard_Profile.mdzip^UML_FEATURE' type='Class Diagram' umlType='Class Diagram' xmi:id='_f6LV8H1fEeO6esaPx_2qPw' xmi:version='2.0' xmlns:binary='http://www.nomagic.com/ns/cameo/client/binary/1.0' xmlns:diagram='http://www.nomagic.com/ns/magicdraw/core/diagram/1.0' xmlns:xmi='http://www.omg.org/XMI' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
-										<diagramContents contentHash='a363b498-6df1-4bd9-bfcb-32af9c6e25cc' exporterName='MagicDraw UML' exporterVersion='18.5' xmi:id='_f6LV8X1fEeO6esaPx_2qPw'>
+									<diagram:DiagramRepresentationObject ID='_17_0_2_4_78e0236_1389733486712_494233_3458' diagramProperties='3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 27 31 2e 30 27 20 65 6e 63 6f 64 69 6e 67 3d 27 55 54 46 2d 38 27 3f 3e a a 3c 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e a 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 50 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 27 3e a 9 9 3c 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e 5f 31 38 5f 35 5f 33 5f 34 33 37 30 31 62 30 5f 31 35 33 32 33 35 38 35 32 38 34 37 35 5f 37 30 32 38 38 39 5f 36 34 38 31 3c 2f 70 72 6f 70 65 72 74 79 4d 61 6e 61 67 65 72 49 44 3e a 9 9 3c 6d 64 45 6c 65 6d 65 6e 74 20 65 6c 65 6d 65 6e 74 43 6c 61 73 73 3d 27 46 6f 6e 74 50 72 6f 70 65 72 74 79 27 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 49 44 3e 46 4f 4e 54 3c 2f 70 72 6f 70 65 72 74 79 49 44 3e a 9 9 9 3c 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e 46 4f 4e 54 5f 44 45 53 43 52 49 50 54 49 4f 4e 3c 2f 70 72 6f 70 65 72 74 79 44 65 73 63 72 69 70 74 69 6f 6e 49 44 3e a 9 9 9 3c 66 6f 6e 74 4e 61 6d 65 3e 43 61 6c 69 62 72 69 3c 2f 66 6f 6e 74 4e 61 6d 65 3e a 9 9 9 3c 73 69 7a 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 31 31 27 2f 3e a 9 9 9 3c 73 74 79 6c 65 20 78 6d 69 3a 76 61 6c 75 65 3d 27 30 27 2f 3e a 9 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 9 3c 2f 6d 64 45 6c 65 6d 65 6e 74 3e a 3c 2f 50 72 6f 70 65 72 74 79 56 69 73 69 74 6f 72 41 63 63 65 70 74 6f 72 3e ' diagramStyleID='_18_5_3_43701b0_1532349003755_714505_6208' initialFrameSizeSet='true' requiredFeature=';UML_Standard_Profile.mdzip^UML_FEATURE' type='Class Diagram' umlType='Class Diagram' xmi:id='_f6LV8H1fEeO6esaPx_2qPw' xmi:version='2.0' xmlns:binary='http://www.nomagic.com/ns/cameo/client/binary/1.0' xmlns:diagram='http://www.nomagic.com/ns/magicdraw/core/diagram/1.0' xmlns:xmi='http://www.omg.org/XMI' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+										<diagramContents contentHash='5fa77825-26aa-4570-9169-2e09ad22a852' exporterName='MagicDraw UML' exporterVersion='18.5' xmi:id='_f6LV8X1fEeO6esaPx_2qPw'>
 											<binaryObject streamContentID='BINARY-68a69de8-1deb-452c-922b-f7e6f3df723c' xmi:id='_f6LV8n1fEeO6esaPx_2qPw' xsi:type='binary:StreamIdentityBinaryObject'/>
 											<usedObjects href='#_17_0_2_4_78e0236_1389733484704_325090_3429'/>
 											<usedObjects href='#_17_0_2_4_78e0236_1389733484705_212065_3431'/>
@@ -4830,47 +5218,49 @@
 		</stereotypesHREFS>
 	</xmi:Extension>
 	<XML_Schema:Root xmi:id='_17_0_2_4_78e0236_1389807491108_795121_7634' base_Class='_17_0_2_4_78e0236_1389366195564_913164_2300'/>
-	<MagicDraw_Profile:DiagramInfo xmi:id='_17_0_2_4_78e0236_1389366179332_904249_2289' base_Diagram='_17_0_2_4_78e0236_1389366179320_546130_2278' Author='s.dana' Creation_date='1/10/14 10:02 AM' Last_modified_by='sdana' Modification_date='7/19/18 3:55 PM'/>
-	<ArtifactGeneration:generation_options xmi:id='_18_0_2_6340208_1498052904624_54625_4580' base_Package='eee_1045467100313_135436_1' pluralize_role_names='false' snakecase_role_names='false'/>
-	<UmlMetamodelAdapter:generation_options xmi:id='_18_0_2_6340208_1498052904624_54625_4580application1' base_Package='eee_1045467100313_135436_1' pluralize_role_names='false' snakecase_role_names='false'/>
-	<UmlMetamodelAdapter:metainformation xmi:id='_18_0_2_6340208_1498052904624_54625_4580application2' base_Element='eee_1045467100313_135436_1' project_name='NIST V2.0 - ElectionResultsReporting'/>
+	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851833710_937114_4571' base_Property='_17_0_2_4_f71035d_1441215163702_951734_2515'/>
 	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851937875_695420_4578' base_Property='_17_0_2_4_f71035d_1441362119057_984284_2224'/>
 	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851879436_446345_4574' base_Property='_17_0_2_4_f71035d_1441215533034_678840_2525'/>
 	<Primitives__Class_based_:prim xmi:id='_18_0_2_6340208_1427385616971_393820_4411' base_Class='_18_0_2_6340208_1427385616970_86952_4407'/>
 	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505852469011_966005_4588' base_Property='_18_0_2_6340208_1505852448141_524598_4584'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_f71035d_1428586849776_736690_2255' base_Class='_17_0_2_4_f71035d_1428586849773_722256_2252'/>
 	<XML_Schema:simpleContent xmi:id='_18_0_2_6340208_1429122590487_1951_4427' base_Property='_17_0_2_4_f71035d_1428953680098_437370_2221'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_17_0_2_4_78e0236_1389366179332_904249_2289' base_Diagram='_17_0_2_4_78e0236_1389366179320_546130_2278' Author='s.dana' Creation_date='1/10/14 10:02 AM' Last_modified_by='sdana' Modification_date='7/19/18 3:55 PM'/>
 	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851899940_547055_4575' base_Property='_17_0_2_4_f71035d_1441215669264_408334_2533'/>
-	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851925963_10681_4577' base_Property='_17_0_2_4_f71035d_1441363295584_2457_2492'/>
 	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851859164_884678_4573' base_Property='_17_0_2_4_f71035d_1441215385623_864674_2521'/>
+	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851925963_10681_4577' base_Property='_17_0_2_4_f71035d_1441363295584_2457_2492'/>
 	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851914191_614620_4576' base_Property='_17_0_2_4_f71035d_1443104953915_703386_2253'/>
-	<XML_Schema:simpleContent xmi:id='_18_0_2_6340208_1497553265377_461870_4590' base_Property='_18_0_2_6340208_1497553239224_304629_4586'/>
 	<XML_Schema:simpleContent xmi:id='_18_0_2_6340208_1498658485544_479241_4588' base_Property='_18_0_2_6340208_1498658457673_356828_4586'/>
 	<Primitives__Class_based_:prim xmi:id='_18_0_2_6340208_1499878650098_765532_4581' base_Class='_18_0_2_6340208_1499878618645_537953_4560'/>
 	<Primitives__Class_based_:prim xmi:id='_18_0_2_6340208_1519999711892_757486_4597' base_Class='_18_0_2_6340208_1519999692422_172889_4576'/>
+	<XML_Schema:simpleContent xmi:id='_18_0_2_6340208_1497553265377_461870_4590' base_Property='_18_0_2_6340208_1497553239224_304629_4586'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486720_977246_3481' base_Class='_17_0_2_4_78e0236_1389733484681_672518_3390'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486720_500950_3483' base_Class='_17_0_2_4_78e0236_1389733484681_69371_3391'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486721_42506_3487' base_Class='_17_0_2_4_78e0236_1389733484682_628991_3392'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486721_364687_3489' base_Class='_17_0_2_4_78e0236_1389733484682_115730_3393'/>
+	<ArtifactGeneration:generation_options xmi:id='_18_0_2_6340208_1498052904624_54625_4580' base_Package='eee_1045467100313_135436_1' pluralize_role_names='false' snakecase_role_names='false'/>
+	<UmlMetamodelAdapter:generation_options xmi:id='_18_0_2_6340208_1498052904624_54625_4580application1' base_Package='eee_1045467100313_135436_1' pluralize_role_names='false' snakecase_role_names='false'/>
+	<UmlMetamodelAdapter:metainformation xmi:id='_18_0_2_6340208_1498052904624_54625_4580application2' base_Element='eee_1045467100313_135436_1' project_name='NIST V2.0 - ElectionResultsReporting'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486721_934411_3492' base_Class='_17_0_2_4_78e0236_1389733484683_113657_3394'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_17_0_2_4_78e0236_1389733486730_133527_3569' base_Diagram='_17_0_2_4_78e0236_1389733486700_311705_3438' Author='s.dana' Creation_date='1/14/14 4:04 PM' Last_modified_by='wack' Modification_date='3/3/14 3:03 PM'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486721_402838_3494' base_Class='_17_0_2_4_78e0236_1389733484684_671168_3395'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486721_364687_3489' base_Class='_17_0_2_4_78e0236_1389733484682_115730_3393'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486723_781686_3506' base_Class='_17_0_2_4_78e0236_1389733484686_973909_3398'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486722_652841_3501' base_Class='_17_0_2_4_78e0236_1389733484684_962828_3396'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486723_807246_3505' base_Class='_17_0_2_4_78e0236_1389733484685_653521_3397'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486723_781686_3506' base_Class='_17_0_2_4_78e0236_1389733484686_973909_3398'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486723_354089_3507' base_Class='_17_0_2_4_78e0236_1389733484686_309394_3399'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486723_583917_3510' base_Class='_17_0_2_4_78e0236_1389733484687_643733_3400'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486723_354089_3507' base_Class='_17_0_2_4_78e0236_1389733484686_309394_3399'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486723_816129_3512' base_Class='_17_0_2_4_78e0236_1389733484688_526156_3401'/>
-	<MagicDraw_Profile:DiagramInfo xmi:id='_17_0_2_4_78e0236_1389733486730_133527_3569' base_Diagram='_17_0_2_4_78e0236_1389733486700_311705_3438' Author='s.dana' Creation_date='1/14/14 4:04 PM' Last_modified_by='wack' Modification_date='3/3/14 3:03 PM'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486724_19330_3513' base_Class='_17_0_2_4_78e0236_1389733484688_705605_3402'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486724_955916_3516' base_Class='_17_0_2_4_78e0236_1389733484689_75975_3404'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486724_687419_3515' base_Class='_17_0_2_4_78e0236_1389733484689_406587_3403'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486724_955916_3516' base_Class='_17_0_2_4_78e0236_1389733484689_75975_3404'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486724_486132_3517' base_Class='_17_0_2_4_78e0236_1389733484690_726252_3405'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486724_837405_3520' base_Class='_17_0_2_4_78e0236_1389733484691_275387_3406'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486725_833738_3524' base_Class='_17_0_2_4_78e0236_1389733484691_67945_3407'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486725_364836_3526' base_Class='_17_0_2_4_78e0236_1389733484692_667105_3408'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486725_125039_3527' base_Class='_17_0_2_4_78e0236_1389733484692_259230_3409'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486725_352149_3528' base_Class='_17_0_2_4_78e0236_1389733484693_457603_3410'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486725_969194_3529' base_Class='_17_0_2_4_78e0236_1389733484693_920822_3411'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486726_235668_3532' base_Class='_17_0_2_4_78e0236_1389733484694_526234_3412'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486725_969194_3529' base_Class='_17_0_2_4_78e0236_1389733484693_920822_3411'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486726_624824_3533' base_Class='_17_0_2_4_78e0236_1389733484695_985594_3413'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486726_840866_3534' base_Class='_17_0_2_4_78e0236_1389733484695_950073_3414'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486726_30499_3536' base_Class='_17_0_2_4_78e0236_1389733484696_569147_3415'/>
@@ -4884,44 +5274,42 @@
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486727_174780_3548' base_Class='_17_0_2_4_78e0236_1389733484700_370943_3423'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486728_612103_3550' base_Class='_17_0_2_4_78e0236_1389733484701_726131_3424'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486728_978417_3551' base_Class='_17_0_2_4_78e0236_1389733484701_545196_3425'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486728_411199_3552' base_Class='_17_0_2_4_78e0236_1389733484702_618400_3426'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486728_993175_3554' base_Class='_17_0_2_4_78e0236_1389733484702_668356_3427'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486728_411199_3552' base_Class='_17_0_2_4_78e0236_1389733484702_618400_3426'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486728_396524_3555' base_Class='_17_0_2_4_78e0236_1389733484703_236474_3428'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486728_497873_3556' base_Class='_17_0_2_4_78e0236_1389733484704_325090_3429'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_897073_3559' base_Class='_17_0_2_4_78e0236_1389733484704_780190_3430'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_999526_3560' base_Class='_17_0_2_4_78e0236_1389733484705_212065_3431'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_268115_3561' base_Class='_17_0_2_4_78e0236_1389733484705_671757_3432'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_956300_3563' base_Class='_17_0_2_4_78e0236_1389733484706_284527_3433'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_268115_3561' base_Class='_17_0_2_4_78e0236_1389733484705_671757_3432'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_871862_3564' base_Class='_17_0_2_4_78e0236_1389733484707_765513_3434'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_853736_3566' base_Class='_17_0_2_4_78e0236_1389733484707_597220_3435'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_738558_3567' base_Class='_17_0_2_4_78e0236_1389733484708_421725_3436'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486730_81711_3568' base_Class='_17_0_2_4_78e0236_1389733484709_72835_3437'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486729_738558_3567' base_Class='_17_0_2_4_78e0236_1389733484708_421725_3436'/>
 	<Primitives__Class_based_:prim xmi:id='_18_0_2_6340208_1503087054888_566919_4560' base_Class='_17_0_2_4_78e0236_1389733484661_358463_3381'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486743_259497_3574' base_Class='_17_0_2_4_78e0236_1389733486713_729576_3462'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486744_855667_3575' base_Class='_17_0_2_4_78e0236_1389733486714_484973_3463'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486746_657959_3590' base_Class='_17_0_2_4_78e0236_1389733486714_730777_3464'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486748_910893_3605' base_Class='_17_0_2_4_78e0236_1389733486714_480102_3465'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486748_31938_3606' base_Class='_17_0_2_4_78e0236_1389733486715_484583_3466'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486748_56270_3607' base_Class='_17_0_2_4_78e0236_1389733486715_479247_3467'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486750_534976_3622' base_Class='_17_0_2_4_78e0236_1389733486715_549906_3468'/>
+	<XML_Schema:XML_Schema xmi:id='_17_0_2_4_d420315_1391459606922_622592_2176' base_Package='_17_0_2_4_78e0236_1389366160416_780968_2277' append_id_to_reference_names='true' prefix='er' use_collection_containers='false' id_attribute_name='ObjectId' always_keep_compositions='true' full_version='2.0' major_version='2' id_suffix_for_references='Id' append_type_to_type_names='false' include_documentation_annotations='false' targetNamespace='NIST_V&lt;MAJOR_VERSION&gt;_election_results_reporting.xsd' object_id_only_if_referenced='true' documentation_inline='false' schema_filename='NIST_V&lt;MAJOR_VERSION&gt;_election_results_reporting.xsd' use_idrefs='true' id_suffix_for_plural_references='Ids' generate_attributes_as_elements='true' sort_other_attributes_following_base_attributes='true' only_keep_compositions='true' sort_end_attributes_following_start_attributes='true' beginning_comment='Version 2.0, NIST Election Results CDF Specification, National Institute of Standards and Technology'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486750_827831_3623' base_Class='_17_0_2_4_78e0236_1389733486716_673592_3469'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486750_427377_3624' base_Class='_17_0_2_4_78e0236_1389733486716_206327_3470'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486752_117072_3639' base_Class='_17_0_2_4_78e0236_1389733486717_126126_3471'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486754_583532_3654' base_Class='_17_0_2_4_78e0236_1389733486717_494732_3472'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486755_202332_3655' base_Class='_17_0_2_4_78e0236_1389733486718_280819_3473'/>
 	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486755_690607_3656' base_Class='_17_0_2_4_78e0236_1389733486718_571809_3474'/>
 	<XML_Schema:XML_Schema xmi:id='_17_0_2_4_78e0236_1389733516836_485527_3764' base_Package='_17_0_2_4_78e0236_1389733516832_463470_3756'/>
 	<UmlMetamodelAdapter:metainformation xmi:id='_18_0_2_6340208_1532029208395_574132_4605' base_Element='uml_metamodel_adapter_package' version='0.0.0'/>
 	<Validation_Profile:validationSuite xmi:id='_18_5_3_43701b0_1532349003725_626575_6207' base_Package='_18_5_3_43701b0_1532348986318_78074_6206'/>
-	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486725_125039_3527' base_Class='_17_0_2_4_78e0236_1389733484692_259230_3409'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486744_855667_3575' base_Class='_17_0_2_4_78e0236_1389733486714_484973_3463'/>
 	<Validation_Profile:validationRule xmi:id='_18_5_3_43701b0_1532349500862_796636_6269' base_Constraint='_18_5_3_43701b0_1532349015554_646458_6209' severity='error' errorMessage='Element is missing documentation'/>
 	<MagicDraw_Profile:InvisibleStereotype xmi:id='_18_5_3_43701b0_1532349500862_796636_6269application1' base_Element='_18_5_3_43701b0_1532349015554_646458_6209'/>
 	<Validation_Profile:validationRule xmi:id='_18_5_3_43701b0_1532349945018_476116_6276' base_Constraint='_18_5_3_43701b0_1532349945016_844929_6274' severity='error' errorMessage='Class is missing documentation'/>
 	<MagicDraw_Profile:InvisibleStereotype xmi:id='_18_5_3_43701b0_1532349945018_476116_6276application1' base_Element='_18_5_3_43701b0_1532349945016_844929_6274'/>
-	<XML_Schema:xmlAttribute xmi:id='_18_0_2_6340208_1505851833710_937114_4571' base_Property='_17_0_2_4_f71035d_1441215163702_951734_2515'/>
 	<Validation_Profile:validationRule xmi:id='_18_5_3_43701b0_1532355585663_796468_6349' base_Constraint='_18_5_3_43701b0_1532355585661_852221_6347' severity='error' errorMessage='Enumeration literal is missing documentation'/>
 	<MagicDraw_Profile:InvisibleStereotype xmi:id='_18_5_3_43701b0_1532355585663_796468_6349application1' base_Element='_18_5_3_43701b0_1532355585661_852221_6347'/>
-	<XML_Schema:XML_Schema xmi:id='_17_0_2_4_d420315_1391459606922_622592_2176' base_Package='_17_0_2_4_78e0236_1389366160416_780968_2277' append_id_to_reference_names='true' prefix='er' use_collection_containers='false' id_attribute_name='ObjectId' always_keep_compositions='true' full_version='2.0' major_version='2' id_suffix_for_references='Id' append_type_to_type_names='false' include_documentation_annotations='false' targetNamespace='NIST_V&lt;MAJOR_VERSION&gt;_election_results_reporting.xsd' object_id_only_if_referenced='true' documentation_inline='false' schema_filename='NIST_V&lt;MAJOR_VERSION&gt;_election_results_reporting.xsd' use_idrefs='true' id_suffix_for_plural_references='Ids' generate_attributes_as_elements='true' sort_other_attributes_following_base_attributes='true' only_keep_compositions='true' sort_end_attributes_following_start_attributes='true' beginning_comment='Version 2.0, NIST Election Results CDF Specification, National Institute of Standards and Technology'/>
+	<Primitives__Class_based_:prim xmi:id='_17_0_2_4_78e0236_1389733486752_117072_3639' base_Class='_17_0_2_4_78e0236_1389733486717_126126_3471'/>
 	<xmi:Extension extender='MagicDraw UML 18.5'>
 		<filePart name='proxy.local__PROJECT$h877558e9224f114d50dea1f39a1c119_resource_com$dnomagic$dci$dmetamodel$dproject$dsnapshot' type='XML' header='&lt;?xml version=&quot;1.0&quot; encoding=&quot;ASCII&quot;?&gt;'>
 <project:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:project="http://www.nomagic.com/ns/cameo/client/project/1.0" xmi:id="_VWTUgU_TEeCNOP_jel_PNg" description="" id="PROJECT-877558e9224f114d50dea1f39a1c119">
@@ -8841,7 +9229,7 @@
 	<xmi:Extension extender='MagicDraw UML 18.5'>
 		<filePart name='com.nomagic.ci.persistence.local.proxy.privatedependencylist' type='XML' header='&lt;?xml version=&quot;1.0&quot; encoding=&quot;ASCII&quot;?&gt;'>
 <snapshot:PrivateDependenciesContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:snapshot="http://www.nomagic.com/ns/cameo/client/snapshot/1.0" xmi:id="_OeQxMHoIEeOrMIuLMIvipg">
-  <referencedResources xmi:id="_pTL0AI6DEeiQE7eDmk-Eyg" originalResourceURI="local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel">
+  <referencedResources xmi:id="_TUo04I6KEeiQE7eDmk-Eyg" originalResourceURI="local:/PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel">
     <referencedObjects>_11_5_f720368_1159529761793_335077_93</referencedObjects>
     <referencedObjects>_9_0_be00301_1108044380615_150487_0</referencedObjects>
     <referencedObjects>_9_0_62a020a_1105704884649_358727_7668</referencedObjects>
@@ -8866,10 +9254,10 @@
     <referencedObjects>_9_0_62a020a_1105704884807_371561_7741</referencedObjects>
     <referencedObjects>_be00301_1073306188629_537791_2</referencedObjects>
   </referencedResources>
-  <referencedResources xmi:id="_pTL0AY6DEeiQE7eDmk-Eyg" originalResourceURI="local:/PROJECT-7cb77253-fa43-4d18-a9a8-f5a7e0ba68e6?resource=com.nomagic.magicdraw.uml_umodel.model">
+  <referencedResources xmi:id="_TUpb8I6KEeiQE7eDmk-Eyg" originalResourceURI="local:/PROJECT-7cb77253-fa43-4d18-a9a8-f5a7e0ba68e6?resource=com.nomagic.magicdraw.uml_umodel.model">
     <referencedObjects>eee_1045467100313_135436_1</referencedObjects>
   </referencedResources>
-  <referencedResources xmi:id="_pTL0Ao6DEeiQE7eDmk-Eyg" originalResourceURI="local:/PROJECT-2ec71e6958a204431ca201f7293703c?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel">
+  <referencedResources xmi:id="_TUpb8Y6KEeiQE7eDmk-Eyg" originalResourceURI="local:/PROJECT-2ec71e6958a204431ca201f7293703c?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel">
     <referencedObjects>_17_0_4_2_78e0236_1386346294425_836962_3291</referencedObjects>
   </referencedResources>
 </snapshot:PrivateDependenciesContainer>
@@ -11187,7 +11575,7 @@
     <mountPoints xmi:id="_HBun4FYDEeCyhsLctII43A" sharePointID="magicdraw_uml_standard_profile_v_0001" containmentFeatureID="59" featureName="UML Model" containmentIndex="-1" containmentFeatureName="packagedElement">
       <mountedPoint href="PROJECT-877558e9224f114d50dea1f39a1c119?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#magicdraw_uml_standard_profile_v_0001"/>
       <mountedOn href="PROJECT-7cb77253-fa43-4d18-a9a8-f5a7e0ba68e6?resource=com.nomagic.magicdraw.uml_umodel.model#eee_1045467100313_135436_1"/>
-      <options xmi:id="_pOs8oI6DEeiQE7eDmk-Eyg" key="preferredPath" value="::"/>
+      <options xmi:id="_TR5p8I6KEeiQE7eDmk-Eyg" key="preferredPath" value="::"/>
     </mountPoints>
     <properties xmi:id="_HBzgYFYDEeCyhsLctII43A" key="usedVersion" value="18.5"/>
     <properties xmi:id="_I2i0cFYDEeCyhsLctII43A" key="LOCAL_PROJECT_ID" value="PROJECT-877558e9224f114d50dea1f39a1c119"/>
@@ -11197,7 +11585,7 @@
     <mountPoints xmi:id="_9qjJcSh8EeS6_O9LhS77SA" sharePointID="_9_5_1_f2e0365_1132085180552_532309_18941" containmentFeatureID="59" featureName="UML Model" containmentIndex="-1" containmentFeatureName="packagedElement">
       <mountedPoint href="PROJECT-2ec71e6958a204431ca201f7293703c?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_9_5_1_f2e0365_1132085180552_532309_18941"/>
       <mountedOn href="PROJECT-7cb77253-fa43-4d18-a9a8-f5a7e0ba68e6?resource=com.nomagic.magicdraw.uml_umodel.model#eee_1045467100313_135436_1"/>
-      <options xmi:id="_pOs8oY6DEeiQE7eDmk-Eyg" key="preferredPath" value="::"/>
+      <options xmi:id="_TR5p8Y6KEeiQE7eDmk-Eyg" key="preferredPath" value="::"/>
       <mountedSharePoint href="PROJECT-2ec71e6958a204431ca201f7293703c?resource=com.nomagic.ci.metamodel.project#_vQGk8F6QEeOH2NE9KSPbKg"/>
     </mountPoints>
     <properties xmi:id="_9mskMih8EeS6_O9LhS77SA" key="loadIndex" value="true"/>
@@ -11211,12 +11599,12 @@
   <properties xmi:id="_GPLwoFYDEeCyhsLctII43A" key="standardProfile" value="false"/>
   <properties xmi:id="_GPLwoVYDEeCyhsLctII43A" key="internalVersion" value="-1"/>
   <properties xmi:id="_I3t5IFYDEeCyhsLctII43A" key="MODULES_DIRS" value="&lt;project.dir>&lt;>&lt;install.root>\profiles&lt;>&lt;install.root>\modelLibraries&lt;>\Users\s.dana\projects\gui_builder_reference&lt;>\Users\sdana\projects\gui_builder_reference"/>
-  <properties xmi:id="_4iLt4JjZEeCrL4EC3xSIEw" key="fileVersion" value="1080"/>
+  <properties xmi:id="_4iLt4JjZEeCrL4EC3xSIEw" key="fileVersion" value="1094"/>
   <properties xmi:id="_4ieo0JjZEeCrL4EC3xSIEw" key="exporterDescription" value="ac ed 0 5 73 72 0 2e 63 6f 6d 2e 6e 6f 6d 61 67 69 63 2e 70 65 72 73 69 73 74 65 6e 63 65 2e 58 6d 69 45 78 70 6f 72 74 65 72 44 65 73 63 72 69 70 74 69 6f 6e f5 3e fd c8 e7 3c 3b d7 2 0 5 4c 0 5 6d 4e 61 6d 65 74 0 12 4c 6a 61 76 61 2f 6c 61 6e 67 2f 53 74 72 69 6e 67 3b 4c 0 12 6d 52 65 71 75 69 72 65 64 50 6c 75 67 69 6e 4d 61 70 74 0 f 4c 6a 61 76 61 2f 75 74 69 6c 2f 4d 61 70 3b 4c 0 12 6d 52 65 71 75 69 72 65 64 52 65 73 6f 75 72 63 65 73 74 0 10 4c 6a 61 76 61 2f 75 74 69 6c 2f 4c 69 73 74 3b 4c 0 10 6d 55 4d 4c 4e 61 6d 65 73 70 61 63 65 55 52 49 71 0 7e 0 1 4c 0 8 6d 56 65 72 73 69 6f 6e 71 0 7e 0 1 78 70 74 0 d 4d 61 67 69 63 44 72 61 77 20 55 4d 4c 73 72 0 11 6a 61 76 61 2e 75 74 69 6c 2e 48 61 73 68 4d 61 70 5 7 da c1 c3 16 60 d1 3 0 2 46 0 a 6c 6f 61 64 46 61 63 74 6f 72 49 0 9 74 68 72 65 73 68 6f 6c 64 78 70 3f 40 0 0 0 0 0 0 77 8 0 0 0 10 0 0 0 0 78 73 72 0 13 6a 61 76 61 2e 75 74 69 6c 2e 41 72 72 61 79 4c 69 73 74 78 81 d2 1d 99 c7 61 9d 3 0 1 49 0 4 73 69 7a 65 78 70 0 0 0 0 77 4 0 0 0 0 78 70 74 0 4 31 38 2e 35 "/>
   <properties xmi:id="_4ieo0ZjZEeCrL4EC3xSIEw" key="MODEL_ROOT_HREF" value="local:/PROJECT-7cb77253-fa43-4d18-a9a8-f5a7e0ba68e6?resource=com.nomagic.magicdraw.uml_umodel.model#eee_1045467100313_135436_1"/>
   <properties xmi:id="_Oe_xAHoIEeOrMIuLMIvipg" key="CI_VERSION" value="V1702_SP1"/>
   <properties xmi:id="_je7C4MBbEeWf_OJs1fKvPg" key="fileFormatVersion" value="18.1 beta.esi"/>
-  <properties xmi:id="_NS3McGQIEeiGAPyD2qGutg" key="saveID" value="295bb67a-c36c-4136-ab38-2e7da4e4099c"/>
+  <properties xmi:id="_NS3McGQIEeiGAPyD2qGutg" key="saveID" value="6b7bcb17-50ac-479b-a065-b66de40e10a9"/>
   <projectUsers xmi:id="_zRtSwZjZEeCrL4EC3xSIEw" userId="default"/>
 </project:Project>
 </filePart>
@@ -11469,10 +11857,10 @@
 </filePart>
 	</xmi:Extension>
 	<xmi:Extension extender='MagicDraw UML 18.5'>
-		<filePart name='Binaries.properties' type='BINARY'>H4sIAAAAAAAAAC3KsQrCMBAA0L3Qfwh09UJyadKk4KDooKCDuDhJmkuK0DQgFH9fKS5vek1dNZcys/MyMVRMih5lLxw7Hu4MhbR1FUrmc8l+fAW+Sm//4UuenrlQnPjqdn+67m4PCEJb5ygBaa2hFVaDFzgABduRMjZ4pTf/a6w3jqIFSXGAVmMAh7+bumiSotShCnX1BaAxGZOhAAAA</filePart>
+		<filePart name='Binaries.properties' type='BINARY'>H4sIAAAAAAAAAC3KuwrCMBQA0L3Qfwh09YY8mvSm4KDooKCDuDhJmpsUoWlAKP6+UlzOdJq6ai5lZudlYkozKXuBfYvseLgzJSTWVSiZzyX78RX4Kr39hy95euZCceKr2/3purs9IAiDzlECMsZAK9CAF2oACtiRthi8Npv/teito4ggKQ7QGhXAqd9NXbRJU+qUDnX1BQGuZfihAAAA</filePart>
 	</xmi:Extension>
 	<xmi:Extension extender='MagicDraw UML 18.5'>
-		<filePart name='personal-Binaries.properties' type='BINARY'>H4sIAAAAAAAAAFPm5VL2zc9T8CrNUTAyVjA0sDIytDI0UHB1CVEwMjC04OUCACUERB8iAAAA</filePart>
+		<filePart name='personal-Binaries.properties' type='BINARY'>H4sIAAAAAAAAAFPm5VL2zc9T8CrNUTAyVjA0tDKwsDKxUHB1CVEwMjC04OUCACVF5xoiAAAA</filePart>
 	</xmi:Extension>
 	<xmi:Extension extender='MagicDraw UML 18.5'>
 		<filePart name='com.nomagic.magicdraw.core.project.options.commonprojectoptions' type='XML' header='&lt;?xml version=&quot;1.0&quot; encoding=&quot;ASCII&quot;?&gt;'>
@@ -11481,7 +11869,7 @@
 	</xmi:Extension>
 	<xmi:Extension extender='MagicDraw UML 18.5'>
 		<filePart name='personal-com.nomagic.magicdraw.core.project.options.personalprojectoptions' type='XML' header='&lt;?xml version=&quot;1.0&quot; encoding=&quot;ASCII&quot;?&gt;'>
-<project.options:UserProjectOptions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:project.options="http://www.nomagic.com/ns/magicdraw/core/project/options/1.0" xmi:id="_HB5nAFYDEeCyhsLctII43A" optionsString="UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAAAAkAVVQFAAEAAAAA7R3Zcts48jn5Cj1NnmbD+5hxMqVYdMIdWfJKsmfyIhZFQg53KFJLUV57v35xEwB12XEySYXFlIiz0Rca3aCBnP12v8p7d6DaZGXx5pX+D+1VDxRJmWbF7ZtX17OLn71Xv719+fLsqirXoKofbrJNVpdVP0nAGr7fvnxxtkqDHKxAUfcAeZ/n8Wbz5tU0W61zMK0fcvAKtntxVsQr8HY6+zgMoqtgMh2P+sPoajKG6VkYTM9e43rUMAXLeJvXvftV9stdnG/Bm1fLON+AV69x9b4BGY6XcRHfggoPSkfl44Wjm3AavkMo7Bj5xdlahhEO3ka6F9mRGVmmq+kLLdJt0zBtzdZ0W9ciQzNdW4scw7PPXrc7Y5j78B2G0xlD4yPBtkEAdg7fj8aTYBCdj0fT2aQfjmYtvn1sBqWjNRAGYJNU2bqGkj0RWDQIpueT8GoWjkcNYBkOpug1J+kwhdO6gorE5LKDxGH/4/h6Fr0LLiBy0cX1cBhBDIJgdDJdeyH83cQEf4azZ6BIBfPsZL0ryxzExQG6wmn0bjL+YxpMIjp5Tte6VtdT8X9xhme+aAPqaktNwOnUnX8qswQcII6hF86Cy2j28QqZgxOJa3d9JHFvz16TNylLMK4ixbAnJDpBPcdJsq0qaJvBdA2SbJklMSqeD7aVnAiLGlSw/5wy5AaBmgf36wpskJWfv49rMA9X0ELNw2JTxxAkaTPMYM84pwrBsggeNGYsO9rmOUtPQMzTZHaw3HWRZyuYTEdxDfHK55dwcDjiPirG6/g/WyAgScAJBbNsBZQspzTS3Qia4gWo40iPvEWsGa4T6abh6a7mOqZlu5HneZqpw5aaTnXoxVlWpOBe5PfP+mP166hRYEpCZvWjdYsag0fqldbTrZ6242GlJi9x6Nun7xS1Qs2sJfpBDW0bpXAFTgFUhpvoPOXzHgCDcf3ewqYgPfrWFWSWClKW1F7vWaxh4is9NQWiobMuLGGog7G81ULP2Ana7bmAssqVEeMtIAyJnYbfW6rgbb23YAPwkthQAbCHVpg9pYUX92JN6d7QpCs1sGnqK/1UTjQ1sdNzE6WfwFqlxvV6PsXJ7qWJAkGlpKnxAcrskoVj92JP6nVAFjZrKcvCcnq6Igy7l+gKfEizbkitGrpECDINfowq5TZfhmd6q0aWsMyp5ZL9i4V0QttbS5ZIj3LM2MsxNjLUZsds9ZOx21VzqoStHnCoWKiov46EVcy/llwNbDSxScVGE2excUUtbFyGRiMW1uS1Fqu1DVZmawwKLrObJprcDjGY2GmcdXk7l1cAjstSakJqiTDhapDGknjbz1LJyxZe7wGbJkxWk3hNolFm+R/pkhhqX0XZ9J6vrhdmoibE8XbTsO+RRxO58SVG2/egMQUBc3kT2XJFEORNpoO4Hj1tXYbazxp+zrrM3gQtcd4+ho3H2KmSpj6nWRJF5AILO9/h7/UdRCl1vsMh38GDJjTlYzyf73CAY8KIz+FFHJf1j+ZF6HhY7B3w0KsJzIQlfUfsRpZ+nOIugkWsjOf3PDboPgN7YuymI/6SJFCdBZ3V+GxFNxhhqbqwKJogIPhkC2z2ZFMoAm1ZW7M1zo9obUHaiGjfDFwCWu2q4T8VNreIbahGjLw3XBb3XJe0d3sm66vORRGWTM23Y3d38UxnTVyHtuS+7JLh9Xlcg3rpy7pnL5hERFgyrrtqTpW8S1uaPUf1L9sk2HtJ8D3W31kynxVOZcBgfR8qgO0tNr84ha0xjrKwJ45tdcKbYGe9CfZwliCgw+nEduq+xVDLbEcAXy7SEpnxJUbb9+CAHIVbZI3FP0iqNt8fVRbfJiKzqHZz3/6b3AsV0evimb93hW280S6eUWtkCcuc+n72Qo9L+EeLYkyELuaog+TkIBkZiHAHSGXYQ3DQMur4rAdpt6/WQSx3DVaLfSPcA/tdpEfCe1i8ncXLlgwN0s0gDMZWSSP+FAaAe+AyE68UGADRSoQbSCDZLkrpiNYE9cOiAVifUApbK+zomiilJ6wxMpULxvzdCrN/9WDr9/M6AbIo+bbYMTR3rSJySz3uGY5UA4E6KnTSF9rQBLR6ybOwqYHBp24q/VRCmprGPjf9Wn49r2n0XbTr7Dlk+/c9zTdY7CBy97HxEokHgj/O7o/jG6+6HcezclVzNKX90paatx8uSUXXIIdUk2G1sHqOIJLA2BVLfC/Rgszc4/w57o5BxV/KaitCtZl4AGi1lrFsauBa6rlKv9aU4DULwNbcpp/KcQGi0zMJBHNBPGoRgjpKU+P75Dua2E+lQKz5snr4I2xm7OLZ97eZccoM6zYzGhXAMS7eR+ZrDVmYmi/KuIku1zZR8fGvzMJKf9zLYY/sRHCrCJegPQCOPS2H5jBGgh32ljtbtl0TASiNPbk0xMay9Btp7PJ1Ho9t537tfL4oQ59Z/BaLQdnTAGo6Co3a03pHI/LE0vcXfTckeTOl1Yg84v6MMBzdFxI/wHi0ii2zX+jLls6sqEEirOZp0FJ3sgSsPn8rUAD2TH9oKUB86t+E6CS6wEt3o537osLD0aLFnYB0t04069AB7YJKau/QLgbbozI0mjaHsHJITI0eurPisM1Rg+0ct1CQDcUeBRft015iZJPHG9Fd7ZbNFWfBV1l5hQG7rZje3q2YQxr21PniMzdWR2MdHkGNb9SoSg3RbSWvKXC+4z9BfLYPbM+21YIe8TDH850fGIT995P+5fSxBwiUfo8/QYB1in/342HFgjECh+wmlw+eMCRl8BRXBNyOWBe7J84uE89URwZqssamLzUhP3xcodaQMbDZ4EIPs40k+eGoibMoYe4BUJ2/H4UTT1bpY8ca+4NBiNSwP0SHEWf9cHQZjGbRbBI84uzVISDPfkTuGEUfwsEgGPGTbo+jZFfnv+PsIiRxGgyD81kwiC7Hg2t0RLY/+/CIY4t7IDzW9PyU179m6GBanv+jKsv6p9v6V9RtmeVg8ySNPHoIcBKcI+35IxwNoBROJlnudjqd7YN+9ARbZEWuBzTDRKfXPN90HN31TUOLbMvRTdjAcL3nPL12VLE/wpphOPo9uujfjCfh7DF63e77WE1YpSD/5fXr3cxxfU/zXct1I8exPNeLLMPw5AOVJ0FxdUfXXTMyHd/wzcjS3MdDMR3X8HXHMSPDs3wXvUz7IBQPQ3FMSzM0L9JhJ9s2DcOyHUSI7/lwCNs5DGOPykAd0Q0IBf7ofmRYjvYkKKZpWg7ExfT1yDC904AsXV0z7RQSZDi6pnuGYft+ZJmabxlQezX/SajYuu9bkec6nglxsTTtSVaAlg6zTX3AFDBljaAlQ0vK6Qrf6nm6uqfZZp3HD/EiB7OHNdiIs7q/2NRVjM8Az8m1C+fQMvbFguAO0sVLhFdwD5ItSsinbUllWKy39VVGsndZ/cATQXoLeOYiK+J8VKZNyfuq3K55Tqq6iqt4BWpQqaV1xkYuq3k/Taf4XDM6GnwB0BFhcgSZIZ+mN3GVIXZIxcXDBCQguwOY4HkfQl1Czsz7m02ZZJS2Jo3lPn8HPsV3GRyVJfYwhVVzjHgJSDEk2BRAKFUZp0m8qafZLWQMRU0QCUqynkIRQRmlxlAN8JCsFlagY9fb5ZLy7fxTXNxSIgkRAgJNcgZWUGtqwJmO6rYb2D8HcSUwgg2EiluMFysZ11lZmefxoqQHzKXcNRqmXC2yAqQXVXy7wriWK/7eFpSxV3H9CZWsy4LWkRQ6PJ79j4EuUqwgVNNgvgBJjVChs3ZH0Q7ySRs0aJmhESBD0VlzVlFWTSooUpTZZCmowtsCSlkgo0BTLiPJOiu2HMu6KvOLvPwvSxNsK8hJMMyKvxjfeMF48W84mlQsFQ3iOp5CbAAGhHJo/s8HUDHRMXdSCtYALvVF8oCSefkAUq75pABj3SSVCwJ4+SyubgFqCKkrHwR8aYmM2QlXD4A76MbMB1l8CyUA3xXsDtIJyHH95lO2bl9PIDC3dWMBKxgvNqgA92Pyp+8Qak9VK3cbFEm83myRLogzNSi2KzrTxDS9oWBOpldwjwwoLP4QF2mOemHrgNQMM58bi6C4y6qyILiwwn2c2WNigvt1XHC58twE3NJadrtBcF9DkZNXU7DBaAjFWMvnzFw1hhqnpjW65wEpq1BRVn+RxLbAouXGEV8K8R4UiDXjCs4JdJkDzbNZKmenUJXYLRJJvk3Re1lWK1yJ54iQD2uwgnk4xykmfPFhV1DInJIvpsAKQpdAIS2oklDKp7FQhk0u5JxQhAwYzsJ5JKREq4QLqy1UD2oS0VpGhcV1liUkZO7KRDS8/4RywlQPsyXIocmcC5MPJaFUsXGAeWQDWJmUbuYjLf6cyzokZp92g8ewLNeYiMu4gGRA+eDOlwAaFVJOrvhgb6SpLImn2pErQC4hjHx+uc3rbJ1nCXJD6NQfQfOeipnNGskMD0psFlY3kqSljQE5fOUIFQLJ8NnQuo6Er9lNqr38jLc1VeqrOPkLsYK+qdGiOcwxlhGXuAYST6FJxjNK2xquEmgx3RDXCo+Lh6mQ4KCXhJeSKxI4s3d/jZhLSGFeMErUZVIiHcYzFi2ZrAybkcs4+YTUlhXOKmS5CJAN2KblBhubf23h5EG2l0zbSZxtADewlNNQDVNswGqhINxwu51KqxCqFOYKy5I2UMP2lXNMhAZTkC/F7B5HCNUpfpBoFJAHumYpgvSDgnIKltDiCsISipjWYO8Rm21YuU2akW7JS1hCJ2BV3oGDDjNpsstnnsDV/4Gmp3BNkVBFBZIbOwVQ7aH08SQiNfRFpvA0L+FPDXWvWWcVXxfXklHaNVBH8C+0kAjXop5L6jWFSg7KGqlt6/6fFv3tEj4OKQepFKI0xYKPMN3C6Cqr8Vo9Z7J5lxXo/rt5e4a3Snb2b2TLSkRlmEHTGUJ3DnZjgkGXGQnrB77qCPP70KVHKCPaOWFOzqrsFq0C2ACgH249r4tVXG0+NdHKNTbZcDE8j+GCiDUHGRKckO1lu4iCYGo3V2bNDbQt4H7+R5VJzjHO75MdrpTh8P2uDQznSQDQxchdjNzFyF2M3MXIXYzcxchdjNzFyF2M3MXIXYzcxchdjPxjx8gJdLkhf/DX7903Z784K5HrAtI9t+s/+/f0cDgLJtH0fHz1lG/qu3p339W7PYNuz6DbM+j2DLo9g27PoNsz6PYMuj2Dbs+g2zPo9gy6PYNuz6D7rt7FyF2M3MXIXYzcxchdjJx1MXLWxchdjNzFyF2M3MXIXYzcxcjf/Hf14/8hN/0qHvx5PrweBFN62cajv6qr/b/yf819Mp0fQoRkOJkEw+CmP5o9+c8I9gL6VimffkD3ioSXV+MJulTlyX8+sRvMs98ycxmvD9B0PRqOz39vxo8mweX4pj+MwtHF+GSSDkJ5IkVqdh99jDjohULLVREazwpojt9eBZMpvo2I/Tf39FaVEE1L3OKlSBOFANFBV4HYkRlZpqvpCy3SbdMwbc3WdFvXI9P0PFePHMNzGnqazi3cpdzZa4bwDYzoa7QYIv+hrN7+H1BLBwhoKvIrMBAAAPeDAABQSwECFAAUAAgICAAAACEAaCryKzAQAAD3gwAAAAAJAAAAAAAAAAAAAAAAAAAAVVQFAAEAAAAAUEsFBgAAAAABAAEANwAAAGcQAAAAAA==" diagramViewStyleString="UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAAAAkAVVQFAAEAAAAAvZZdc6IwFIav9Vd4x1WrISEJO2jHKt1xZts66n54YyYLqWYGCANotb++KdhS7Njq2q03Gch5T97zAOfoXKzDoLESSSpV1DbAectoiMhTvozmbePn5OqMGhedet0ZJioWSbb5JVOZqaTreSLWa6dec0LfDUQooqwhirUX8DRtG2MZxoEYZ5tAGDqu5kQ8FJ3xZPrDZf1B9/uoe82Go9uhO5oM3LHTzLef4nxxx5dB1liH8tuKB0vRNu54kAqjmW/vO+/Z4jWP+Fwk+ZnbQxkgrMVMhhihomVCzACkNsQYEBsiwgBALaADTJuWPmpOXM046O9NRHCLAMti0Ia2pQOohZ3mW3medZ//m2X4VyTPVRT2Sw9a/aBUeMU9jb3MvU1axvVF6iUyzvTzrEhY3x33RoPhZHB7U8qr0UWmHPlr+OAcIPvpRzCwKEBm8SB0aLaJK5HlTqDuRzya7+TRlDVihBE0EQXEPUPWi2Ih54s3EqglJjUhwhhSy6QUu5BuJU7zheT7YC+VCgSP3iGrCcmVOJhqEX4C0SxZis+vwpd8nvDwNhaR8A8upqL64po+fOW35sZeooJgqHTv0R7+HFvbjvyEIm2CdIt87yU/M/XXQhCFGFHX/hog09OATE8AYuov+b8S6S2U9MTHRH7LyFf3l2oZ+emxOF5rj2TRcZrFWtzzcreVDjaDcAYsgmcWLNujPlCsK5DA5/eDkK9lKB+O6AUvikMp7Ljdvfy0UU0gRBQToO/byISQQWT906jWiSyKLJMwBPVo0ROb2GDPqK5WU7lymvv+ED0CUEsHCATFBMVYAgAAUgkAAFBLAQIUABQACAgIAAAAIQAExQTFWAIAAFIJAAAAAAkAAAAAAAAAAAAAAAAAAABVVAUAAQAAAABQSwUGAAAAAAEAAQA3AAAAjwIAAAAA"/>
+<project.options:UserProjectOptions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:project.options="http://www.nomagic.com/ns/magicdraw/core/project/options/1.0" xmi:id="_HB5nAFYDEeCyhsLctII43A" optionsString="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" diagramViewStyleString="UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAAAAkAVVQFAAEAAAAAvZZNb+IwEIbP7a/gllMLjj+zClRtSVdI2xYB+8GlljdxwVISR0mg0F9fl1DSUEFhYZuL5Xje8cwTeybuxSwKa1OZZkrHTQucN6yajH0dqHjUtH4Obs6YddE6PXW7qU5kms9/qUzlOr30fZmYsXV64kaBF8pIxnlNFuN1KLKsafVVlISyn89DaRm7EzcWkWz1B8MfHm93Lr/3Lm95t3ff9XqDjtd364vlV7tAPopJmNdmkfo2FeFENq1HEWbSqi+WN+33FuKtiMVIpos9l5tyQHmD2xxxymTDhoQDyBxICKAORJQDgBrAGNgOK+M4cZOqx057oyNKGhRgzKEDHWwMGCZu/aN84XVT/HeT6K9M37Iowi9jMOpnraMb4Rvspe+l09KuLTM/VUluvmdFwtte/7rX6Q4693elvGpdeFogfw8fnAPkvD6UAMwAsosPYUzzeVKxLFdC/dQT8WjNj6FsECOCoI0YoN4ZwivFWI3GHyTQSGxmQ0QIZNhmjHiQLSVufUVyO9grrUMp4i1kDSE1lTtTLcwPIJqnE3n8LAIlRqmI7hMZy2DnZCqqL87p0yO/DK7vpzoMu9rUHhPDn31zW5MfchUofq2R2075mW2uC0UMEsQ852uIDA8jMjyECITovxK5Hmvly8+J/FZxoJ+u9CQOsn1xvNfuyaLl1ouxeOcvoq2UsAcIHwCm5AHDsj6aDeWsAgkcvyBEYqYi9bxHMVgpdqWwFu369Gi9mppjxggF5r2DbAg5RPiferVxhBnCNuUImt5iWjZ1wIZeXc2mMnPrm/6IXgBQSwcIC5HZ41cCAABTCQAAUEsBAhQAFAAICAgAAAAhAAuR2eNXAgAAUwkAAAAACQAAAAAAAAAAAAAAAAAAAFVUBQABAAAAAFBLBQYAAAAAAQABADcAAACOAgAAAAA="/>
 </filePart>
 	</xmi:Extension>
 	<xmi:Extension extender='MagicDraw UML 18.5'>
@@ -11615,6 +12003,6 @@
 </filePart>
 	</xmi:Extension>
 	<xmi:Extension extender='MagicDraw UML 18.5'>
-		<filePart name='Records.properties' type='BINARY'>H4sIAAAAAAAAAL1VTY+bMBC9I/EfkJarEQYMZiUO3e0eulI/tNpLT5FjD8EV2MiQtvn3NVmSTfPRLm2SCx/jefM8743h5l43LevlXNayX3mgerNynZuPWnmPy9qLYg+HtxG+xaH38P7Zi0JMXacF02nFasR1EyjdsIXkwfoqDPsRcG0gaI3+BrwPdNtLrbpggxnjY7g4XynX2S3BZdBAzxotoN4UKP6WcFDCxn+ugk6xtqt0HwjouJFtr83OY7df9k0gK+I6rdac1bPZl6fPjw/3z35Fs4wQCnkUJSXGiSChAIbLOGeYY5zPDHR6aTjMLKkvRlZfcOmLbTu+GPvxxWYXxVXZdibkTipmJHSDKjbY28fiT4u/W7AzCGBnoWm04pYT1EIqACPVopiWfuiw3YvselAWsVZntK818jvrQUALStjVVW2zDpyeAj6z49tefbFs6tly9KKrmAHx+noR/6dxn7T02Nl+cW3vI/GfeNc5NoVHh+/uw6d3T19RSlmaC6AIC5ijhEQcWY3mqMwgLWNRZlHMiwm5pyQY1Hv5Aq2vJxrdyzo1SBHwDEOaE8qiMElizO0dW/48zsKYX3SQrsLtOiMfyvg8yyISo5IlMUoEpojljKKSsAzCOUsppMWU5FOabrB+NYD9akD71QC3kR38xAbfJup1yM88Tv/4J7oQ2/ZE85DQPBclEoQQlISUIBbaUyo4zUScUs5iUkzIdZ1fslxZojoJAAA=</filePart>
+		<filePart name='Records.properties' type='BINARY'>H4sIAAAAAAAAAL1VTY+bMBC9I/EfkJarEQYMZiUO3e0eulI/tNpLT5FjD8EV2MiQtvn3NVmSTfPRLm2SCx/jefM8743h5l43LevlXNayX3mgerNynZuPWnmPy9qLYg/j25DeJrn38P7Zi0JMXacF02nFasR1EyjdsIXkwfoqDPsRcG0gaI3+BrwPdNtLrbpggxnjY7g4XynX2S3BZdBAzxotoN4UKP6WcFDCxn+ugk6xtqt0HwjouJFtr83OY7df9k0gK+I6rdac1bPZl6fPjw/3z35Fs4wQCnkUJSXGiSChAIbLOGeYY5zPDHR6aTjMLKkvRlZfcOmLbTu+GPvxxWYXxVXZdibkTipmJHSDKjbY28fiT4u/W7AzCGBnoWm04pYT1EIqACPVopiWfuiw3YvselAWsVZntK818jvrQUALStjVVW2zDpyeAj6z49tefbFs6tly9KKrmAHx+noR/6dxn7T02Nl+cW3vI/GfeNc5NoVHh+/uw6d3T19RSlmaC6AIC5ijhEQcWY3mqMwgLWNRZlHMiwm5pyQY1Hv5Aq2vJxrdyzo1SBHwDEOaE8qiMElizO0dW/48zsKYX3SQrsLtOiMfyvg8yyISo5IlMUoEpojljKKSsAzCOUsppMWU5FOabrB+NYD9akD71QC3kR38xAbfJup1yM88Tv/4J7oQ2/ZE85DQPBclEoQQlISUIBbaUyo4zUScUs5iUkzIdZ1fAQvfqToJAAA=</filePart>
 	</xmi:Extension>
 </xmi:XMI>
