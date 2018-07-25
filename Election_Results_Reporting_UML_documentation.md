@@ -463,19 +463,12 @@ Contest is an abstract class with four subclasses that get used according to the
 
  
 
-[Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) includes [BallotSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) to link the selections on the ballot to the contest, e.g., to link one or more candidates to a candidate contest. Like Contest, [BallotSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) is also an abstract class and has subclasses that essentially correspond to those of Contest, as follows:
+[Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) includes [BallotSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) to link the selections on the ballot to the contest, e.g., to link one or more candidates to a candidate contest. Like Contest, [BallotSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) is also an abstract class and has subclasses that essentially correspond to those of Contest, as follows: 
 
- 
-
-• [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) includes [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)
-
-• [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806) includes [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562)
-
-• [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144) includes [PartySelection](#_17_0_2_4_f71035d_1426519980658_594892_2511)
-
-• [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554) includes [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)
-
- 
+ *  [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) includes [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)
+ *  [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806) includes [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562)
+ *  [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144) includes [PartySelection](#_17_0_2_4_f71035d_1426519980658_594892_2511)
+ *  [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554) includes [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)
 
 Contest includes a required <ElectoralDistrictId> reference to a <GpUnit> defined for the geographical scope of the contest. For example, in a state senate contest, <ElectoralDistrictId> would reference a <GpUnit xsi:type="ReportingUnit"> element defined for the district associated with the contest. <Office> also includes an optional reference that serves the same purpose. Note that for contests that are state-wide or county-wide and so forth, the same <GpUnit> defined for the state or county, etc., can be re-used.
 
@@ -513,15 +506,10 @@ Used for the ballot selections in a contest (e.g., for candidates, for ballot me
 
 BallotSelection is an abstract class with three subclasses that get used according to the type of contest:
 
-•[BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926), used if the contest type is for a ballot measure, including for retentions
-
-•[CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562), used if the contest type is for one or more candidates, to link the ballot selection to the candidate instances and endorsement parties; and
-
-•[PartySelection](#_17_0_2_4_f71035d_1426519980658_594892_2511), used if the contest type is for a party, e.g., for a straight party contest.
-
-BallotSelection includes [VoteCounts](#_17_0_2_4_78e0236_1389372026000_187007_2862) for associating vote counts with the ballot selection.
-
-[SequenceOrder](#_17_0_2_4_f71035d_1426296042287_22607_2200) is included to specify an ordering for the ballot selections for purposes of display only. The original ballot ordering can be preserved, however, by using the [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360) class.
+ *  [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926), used if the contest type is for a ballot measure, including for retentions
+ *  [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562), used if the contest type is for one or more candidates, to link the ballot selection to the candidate instances and endorsement parties; and
+ *  [PartySelection](#_17_0_2_4_f71035d_1426519980658_594892_2511), used if the contest type is for a party, e.g., for a straight party contest. BallotSelection includes [VoteCounts](#_17_0_2_4_78e0236_1389372026000_187007_2862) for associating vote counts with the ballot selection.
+ *  [SequenceOrder](#_17_0_2_4_f71035d_1426296042287_22607_2200) is included to specify an ordering for the ballot selections for purposes of display only. The original ballot ordering can be preserved, however, by using the [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360) class.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -718,21 +706,14 @@ Values for language are from ISO 639 \[12\] and include:
 
  
 
-• en – English
-
-• en-US – U.S. English
-
-• en-GB – U.K. English
-
-• fr – French
-
-• es – Spanish
-
-• zh – Chinese
-
-• ja – Japanese
-
-• ko – Korean
+ *  en – English
+ *  en-US – U.S. English
+ *  en-GB – U.K. English
+ *  fr – French
+ *  es – Spanish
+ *  zh – Chinese
+ *  ja – Japanese
+ *  ko – Korean
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
