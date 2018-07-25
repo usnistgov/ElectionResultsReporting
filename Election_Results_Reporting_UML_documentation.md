@@ -293,8 +293,6 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For ballot measure (i.e., referenda or a tax measure) and judicial retention contests. It inherits the attributes of [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
 
- 
-
 If the type of ballot measure is not listed in enumeration [BallotMeasureType](#_17_0_2_4_f71035d_1426549604222_56408_2487), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1426550214099_344315_2520).
 
 Attribute | Multiplicity | Type | Attribute Description
@@ -321,15 +319,9 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining a ballot style composed of ordered content (i.e. Headers or Contests) and their contest selections, and associating the ballot style with a political party, a reference to an image of the ballot, and a reference to the a precinct or other geopolitical unit that the ballot is unique to. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes BallotStyle.
 
- 
-
 BallotStyle references [OrderedContent](#_18_5_3_43701b0_1520434015209_434672_4990) to include content that appears on that ballot style. To preserve any rotation associated with the ballot, it is expected that the generating application will list the occurrences of [OrderedContest](#_17_0_3_43401a7_1394476416139_808596_3142) in the order as on the ballot for the associated geopolitical unit.
 
- 
-
 BallotStyle references one or more [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances defined for the associated precincts or split precincts. If the ballot style is associated with multiple precincts (or other geographies), multiple references to the precinct [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances can be included.
-
- 
 
 When including [ExternalIdentifier](#_17_0_2_4_f71035d_1430405712653_451634_2410), if the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
@@ -345,11 +337,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining information about a candidate in a contest. [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) references [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instances to associate one or more candidates with a contest selection. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes Candidate.
 
- 
-
 Candidate uses the [Party](#_17_0_2_4_78e0236_1389366597377_433664_2698) association to reference the candidate’s political party. If the candidate is endorsed by other parties for a particular contest, the endorsing parties are referenced using the [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) attribute.
-
- 
 
 [ExternalIdentifier](#_17_0_2_4_f71035d_1430405890311_465205_2454) can be used to associate an ID with the candidate. If the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
@@ -370,11 +358,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For a contest that involves selecting one or more candidates. It inherits the attributes of [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
 
- 
-
 This class optionally references [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) and [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460). If the candidate contest is associated with a ticket (of candidates) and each candidate in the ticket is associated with a separate office, the [association to Office](#_17_0_5_1_43401a7_1400624734486_732685_3699) can reference each of the separate offices. For example, if the contest is for the state governor ticket but Governor and Lieutenant (Lt.) Governor are both separate offices, the association references first to the [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance defined for the Governor’s office and then to the Lt. Governor’s office. In this case, it is expected that the generating application will list the multiple references according to a jurisdiction-defined ordering scheme, e.g., Governor first and Lt. Governor second.
-
- 
 
 Note that when using the [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) class to associate the candidates with a contest selection for the contest, the order of the candidates should match the order of offices. Again, using the example of the state governor ticket, if the offices are listed with Governor first and Lt. Governor second, then the order of the candidates in the [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) instance should be identical, with the Governor candidate first and the Lt. Governor candidate second.
 
@@ -404,11 +388,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining a coalition, i.e., a collection of parties organized for the purpose of endorsing a candidates in a contest. It inherits the attributes and elements of [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460).
 
- 
-
 Coalition instances themselves are composed of multiple [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) references along with a reference to an associated [Contests](#_17_0_2_4_78e0236_1389366251994_876831_2400).
-
- 
 
 If there are no associated [Contests](#_17_0_2_4_78e0236_1389366251994_876831_2400), a general default is that the coalition endorses the associated parties.
 
@@ -421,15 +401,9 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining contact information about objects such as persons, boards of authorities, organizations, etc. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209), [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433), [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567), [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), and [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) include ContactInformation.
 
- 
-
 To include an address for the contact, use multiple occurrences of [AddressLine](#_18_0_2_6340208_1425645912998_115448_4529). It is expected that the generating application will list the name of the person/organization in the first occurrence of [AddressLine](#_18_0_2_6340208_1425645912998_115448_4529), with subsequent ordered occurrences for street address, city, state, zip code, etc. [Directions](#_17_0_2_4_f71035d_1443105112875_46223_2290) can be used to supply any additional address-related information that may appear in multiple languages.
 
- 
-
 ContactInformation includes [LatLng](#_17_0_2_4_f71035d_1443104838926_393729_2222) so as to associate latitude/longitude with the contact address.
-
- 
 
 [Email](#_17_0_5_1_43401a7_1400668036651_743620_3650), [Fax](#_17_0_5_1_43401a7_1400668021448_721992_3646), and [Phone](#_17_0_5_1_43401a7_1400667951215_637516_3638) are of type [AnnotatedString](#_18_0_2_6340208_1497553224568_429892_4565), which permits up to a 16-character annotation to be associated with the data.
 
@@ -450,18 +424,12 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining a contest and linking the contest to the associated candidates, ballot measures, parties, or retention contests. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes Contest.
 
- 
-
 Contest is an abstract class with four subclasses that get used according to the type of contest:
-
- 
 
  *  [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783), used for a contest involving a ballot measure
  *  [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806), used for a contest involving one or more candidates for an office
  *  [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144), used for a contest for a straight party selection on the ballot
  *  [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554), used for a judicial or other type of retention contest 
-
- 
 
 [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) includes [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) to link the selections on the ballot to the contest, e.g., to link one or more candidates to a candidate contest. Like Contest, [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) is also an abstract class and has subclasses that essentially correspond to those of Contest, as follows: 
 
@@ -472,11 +440,7 @@ Contest is an abstract class with four subclasses that get used according to the
 
 Contest includes a required <ElectoralDistrictId> reference to a <GpUnit> defined for the geographical scope of the contest. For example, in a state senate contest, <ElectoralDistrictId> would reference a <GpUnit xsi:type="ReportingUnit"> element defined for the district associated with the contest. <Office> also includes an optional reference that serves the same purpose. Note that for contests that are state-wide or county-wide and so forth, the same <GpUnit> defined for the state or county, etc., can be re-used.
 
- 
-
 <Contest> includes <SummaryCounts> for providing a summary of miscellaneous counts associated with the contest, including total number of ballots cast containing the contest, total number of overvotes, undervotes, or write-ins. The summary counts can be associated with the contest as a whole, or with precincts or other lower-level reporting units by using multiple occurrences of <SummaryCounts> (see sections 4.2.8 and 4.2.23).
-
- 
 
 <SequenceOrder> is used for results display ordering, i.e., to display contests according to a particular ordering. For example, “100” may indicate a U.S. Senatorial contest, “200” may indicate a U.S. Congressional contest, etc. <SequenceOrder> is not appropriate to use as the contest order on the ballot; contest order on each ballot can be preserved, however, using the <BallotStyle> element, which associates ballot styles with their corresponding precincts or other geopolitical units (see section 4.2.3).
 
@@ -533,8 +497,6 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For reporting on the counting status for various items such as ballot types or write-ins, e.g., whether for a certain type of ballot, the counts are in progress, not yet started, complete, etc. [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400), [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209), and [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) include CountStatus.
 
- 
-
 If the type of count item is not listed in enumeration <CountItemType>, use other and include the type (that is not listed in the enumeration) in <OtherType>.
 
 Attribute | Multiplicity | Type | Attribute Description
@@ -566,11 +528,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining the status of the election and associated information such as candidates, contests, and vote counts.
 
- 
-
 [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes links to the major instances that are specific to an election: [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360), [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440), and [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
-
- 
 
 Election includes a required association end [ElectionScope](#_17_0_2_4_f71035d_1426102211616_609900_2331), which links to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance for the purpose of identifying the geographical scope of the election. For example, for an election within a county, [ElectionScope](#_17_0_2_4_f71035d_1426102211616_609900_2331) would reference a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined for the county. If it is desired to include election authority information, the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) can include [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433).
 
@@ -594,8 +552,6 @@ Attribute | Multiplicity | Type | Attribute Description
 
 Used to provide various information about an election authority. [ReportingUnit](#_17_0_2_4_f71035d_1400606476166_735297_2593) includes ElectionAdministration.
 
- 
-
 ElectionAdministration includes [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) for the election authority and, using [ElectionOfficialPerson](#_18_0_2_6340208_1441312523523_377380_4513) references one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances defined for individuals/organizations associated with the election authority.
 
 Attribute | Multiplicity | Type | Attribute Description
@@ -608,11 +564,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining items pertaining to the status and format of the report and when it was generated.
 
- 
-
 ElectionReport references the major elements that are not necessarily specific to an election and that therefore can exist in a pre-election report: [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) and [OfficeGroup](#_17_0_2_4_f71035d_1433183615993_866714_2239), [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460), [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567), and [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209).
-
- 
 
 When a particular ordering of items such as offices or political parties are important to preserve, it is expected that the generating application will define those elements according to any ordering scheme in place.
 
@@ -642,10 +594,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For associating a jurisdiction’s codes, i.e., identifiers, with objects such as candidates, offices, or geopolitical units such as counties, towns, precincts, etc. Multiple occurrences of the ExternalIdentifier sub-element can be used to associate multiple codes, e.g., if there is a desire to associate multiple codes with a particular object such as FIPS (Federal Information Processing Standard) codes as well as OCD-IDs (Open Civic Data Identifiers).
 
- 
-
-For elements that link to ExternalIdentifier instances, if the type is not listed in enumeration
-[IdentifierType](#_17_0_2_4_f71035d_1430405763078_743585_2433), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
+For elements that link to ExternalIdentifier instances, if the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1430405763078_743585_2433), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -696,15 +645,9 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For strings that can contain multi-national text, for use with text as shown on a ballot containing multi-national text. The Identifier attribute can be used to assign an identifier to the text as desired.
 
- 
-
 [Text](#_17_0_2_4_f71035d_1428953680100_198341_2225) uses the xsd:language type such that its language attribute must be set to a value that identifies the language.
 
- 
-
 Values for language are from ISO 639 \[12\] and include:
-
- 
 
  *  en – English
  *  en-US – U.S. English
@@ -744,11 +687,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining an office and associated information associated with a contest and/or a district. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Office. [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806) and [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554) reference Office.
 
- 
-
 Office includes [Term](#_17_0_2_4_f71035d_1428489072598_282236_2217) for defining details about the term of an office such as start/end dates and the type of term. [OfficeGroup](#_17_0_2_4_f71035d_1433183615993_866714_2239) is included from [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) to assign a name to a grouping of office definitions.
-
- 
 
 Office includes an optional [ElectoralDistrict](#_17_0_5_1_43401a7_1400701616170_933421_3684) reference to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) for the purpose of identifying the geographical scope of the office. For example, for an office for a state senate seat, [ElectoralDistrict](#_17_0_5_1_43401a7_1400701616170_933421_3684) would include a reference to the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined for the district associated with that office.
 
@@ -778,8 +717,6 @@ Attribute | Multiplicity | Type | Attribute Description
 ![Image of OrderedContent](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342791_594538_6176.png)
 
 An abstract base class for content that can appear under a particular ballot style.
-
- 
 
 OrderedContent is an abstract class with two subclasses that get used according to the type of content:
 
@@ -824,8 +761,6 @@ Attribute | Multiplicity | Type | Attribute Description
 ![Image of Party](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_989674_5350.png)
 
 Used to describe a political party that can then be referenced in other elements. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Party. [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440), [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144), [PartyRegistration](#_17_0_2_4_78e0236_1394566839296_58362_2826), and [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) reference Party.
-
- 
 
 <Party> is an abstract element with one xsi:type:
 
@@ -873,8 +808,6 @@ Attribute | Multiplicity | Type | Attribute Description
 For defining information about a person; the person may be a candidate, election official, authority for a reporting unit, etc. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Person. [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) and [ElectionAdminsitration](#_18_0_2_6340208_1441311877439_710008_4433) and
 [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) reference Person. Person optionally references [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) for associating contact information.
 
- 
-
 Multiple occurrences of the <MiddleName> element can be used as needed, e.g., for names such as “John Andrew Winston Smith”.
 
 Attribute | Multiplicity | Type | Attribute Description
@@ -907,19 +840,11 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining a geopolitical unit such as state, county, township, precinct, etc., using the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration. It inherits the attributes of [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
 
- 
-
 This class optionally references [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) to associate one or more individuals, e.g., authorities, for the reporting unit. It also includes [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) to provide contact addresses for the reporting unit, such as an address of a vote center.
-
- 
 
 [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) references this class so as to identify the geographical scope of the election. In this case, the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element defined for the scope of the election may include [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433) so as to include election authority-related information.
 
- 
-
 The [Type](#_17_0_2_4_78e0236_1389713376966_77071_2393) attribute uses the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration to specify the type of geopolitical geography being defined. [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) contains the most common types of geographies, e.g., state, county, precinct, and so forth . If the reporting unit type is not listed in enumeration [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242), use other and include the reporting unit type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1426007519161_685921_2510).
-
- 
 
 The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can be used in a number of ways. It is not strictly necessary, as it is possible to identify districts by their [Type](#_17_0_2_4_78e0236_1389713376966_77071_2393) attribute or by examining the [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) instance’s [ElectoralDistrict](#_17_0_2_4_78e0236_1389366667508_703141_2753) reference, which links to the electoral district associated with the contest. However, if a district is defined but is not linked from a contest, or if the type of district is not listed in the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration and therefore [OtherType](#_17_0_2_4_f71035d_1426007519161_685921_2510) is used, then [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) is necessary to identify the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) as a district. The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can also be used to signify that a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined as a jurisdiction, e.g., a county, is also used as a district for, e.g., county-wide contests.
 
@@ -945,8 +870,6 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For judicial retention or other types of retention contests. Retention contests can be treated essentially as ballot measure contests, however this element differs from
 [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) in that it can include a reference to a candidate or the associated office.
-
- 
 
 This element uses [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) as a superclass. Therefore, it inherits the attributes of [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) as well as [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783).
 
@@ -1016,7 +939,7 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_17_0_2_4_78e0236_1397156604549_15838_2489"></a>*The **VoteCounts** Class*
 ![Image of VoteCounts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1397156604556_583070_2490.png)
 
- For reporting on vote counts for contest selections in a contest. VoteCounts includes [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835) as an extension base and therefore inherits the elements from [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835), but it is included directly by <BallotSelection>.
+For reporting on vote counts for contest selections in a contest. VoteCounts includes [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835) as an extension base and therefore inherits the elements from [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835), but it is included directly by <BallotSelection>.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
