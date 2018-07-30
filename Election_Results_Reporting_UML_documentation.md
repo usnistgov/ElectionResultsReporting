@@ -511,7 +511,7 @@ Restricts dateTime to require inclusion of timezone information and excludes fra
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`pattern`||`string`|
+`pattern`||`string`|Pattern used for indicating the date, time and the accompanying timezone.
 ### <a name="_18_0_2_6340208_1425911626288_420556_4530"></a>*The **DeviceClass** Class*
 ![Image of DeviceClass](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1425911626300_559547_4531.png)
 
@@ -635,11 +635,11 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_17_0_2_4_f71035d_1428586849773_722256_2252"></a>*The **HtmlColorString** Class*
 ![Image of HtmlColorString](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1428586856729_349934_2257.png)
 
-Used for associating an HTML RGB color coding with the party.
+For a string containing a 6-digit Red-Green-Blue (RGB) code that can be displayed using HTML. Used in Party to associate a web-displayable color with the party. The RGB code is specified in hexadecimal, such that the RGB code for the color green is “00FF00” (“\#00” + “\#FF” + “\#00”).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`pattern`||`String`|
+`pattern`||`String`|Pattern used for indicating the RGB color to use.
 ### <a name="_17_0_2_4_f71035d_1428953680097_700602_2220"></a>*The **InternationalizedText** Class*
 ![Image of InternationalizedText](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1428953680136_311337_2237.png)
 
@@ -695,7 +695,7 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `{Term}`|0..1|`Term`|For including office term-related information.
 `ContactInformation`|0..1|`ContactInformation`|For associating various contact information with the office.
-`Description`|0..1|`InternationalizedText`|
+`Description`|0..1|`InternationalizedText`|A description of the office, possibly as shown on the ballot to the voter.
 `ElectoralDistrict`|0..1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the office with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the office.
 `FilingDeadline`|0..1|`date`|Date and time when a candidate must have filed for the contest for the office.
@@ -833,7 +833,7 @@ Class/element describing a specific vote-capture device.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`DeviceClass`|0..1|`DeviceClass`|
+`DeviceClass`|0..1|`DeviceClass`|Used for reporting on details about the type of voting device used for the results in question.
 `SerialNumber`|0..1|`RichText`|Device's serial number of other unique identifier.
 ### <a name="_17_0_2_4_f71035d_1400606476166_735297_2593"></a>*The **ReportingUnit** Class*
 ![Image of ReportingUnit](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1400606476167_480570_2594.png)
@@ -898,7 +898,7 @@ For defining a 16-character annotation, used with character strings in [Annotate
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`maxLength`||`Integer`|
+`maxLength`||`Integer`|The maximum allowed length of a ShortString.
 ### <a name="_17_0_2_4_f71035d_1407165065674_39189_2188"></a>*The **SpatialDimension** Class*
 ![Image of SpatialDimension](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1407165065676_7001_2189.png)
 
