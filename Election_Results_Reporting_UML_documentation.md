@@ -735,7 +735,6 @@ For the appearance of a contest on a particular ballot style.
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `Contest`|1|`Contest`|
-`Header`|0..*|`Header`|Association to the header to be used.
 `OrderedContestSelection`|0..*|`ContestSelection`|The contest selections for the ballot.
 ### <a name="_18_5_3_43701b0_1527684342714_129907_6145"></a>*The **OrderedHeader** Class*
 ![Image of OrderedHeader](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342790_575094_6175.png)
@@ -744,6 +743,7 @@ For the appearance of a header on a particular ballot style.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
+`{OrderedContent}`|0..*|`OrderedContent`|
 `Header`|1|`Header`|Association to the header to be used.
 ### <a name="_18_0_2_6340208_1508176198256_527421_4561"></a>*The **OtherCounts** Class*
 ![Image of OtherCounts](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1508176198261_91260_4562.png)
