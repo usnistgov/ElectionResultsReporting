@@ -300,7 +300,7 @@ Attribute | Multiplicity | Type | Attribute Description
 `ConStatement`|0..1|`InternationalizedText`|For a statement on the ballot associated with a “no” vote.
 `EffectOfAbstain`|0..1|`InternationalizedText`|For a statement on the ballot detailing the effect of abstaining from voting on the ballot measure.
 `FullText`|0..1|`InternationalizedText`|For full text on the ballot of the ballot measure.
-`InfoUri`|0..1|`anyURI`|For associating a URI with the ballot measure contest.
+`InfoUri`|0..*|`AnnotatedUri`|For associating a URI with the ballot measure contest.
 `OtherType`|0..1|`string`|Used when BallotMeasureType is other.
 `PassageThreshold`|0..1|`InternationalizedText`|For a statement on the ballot of the number or percentage of votes needed to approve or pass the ballot measure.
 `ProStatement`|0..1|`InternationalizedText`|For a statement on the ballot associated with a “yes” vote.
@@ -317,9 +317,9 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_17_0_2_4_78e0236_1389366224561_797289_2360"></a>*The **BallotStyle** Class*
 ![Image of BallotStyle](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389799207465_976765_6435.png)
 
-For defining a ballot style composed of ordered content (i.e. Headers or Contests) and their contest selections, and associating the ballot style with a political party, a reference to an image of the ballot, and a reference to the a precinct or other geopolitical unit that the ballot is unique to. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes BallotStyle.
+For defining a ballot style composed of ordered content (i.e. Headers or Contests) and their contest selections, and associating the ballot style with a political party, a reference to an image of the ballot, and a reference to a precinct or other geopolitical unit that the ballot is unique to. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes BallotStyle.
 
-BallotStyle references [OrderedContent](#_18_5_3_43701b0_1520434015209_434672_4990) to include content that appears on that ballot style. To preserve any rotation associated with the ballot, it is expected that the generating application will list the occurrences of [OrderedContest](#_17_0_3_43401a7_1394476416139_808596_3142) in the order as on the ballot for the associated geopolitical unit.
+BallotStyle references [OrderedContent](#_18_5_3_43701b0_1527684342715_643544_6146) to include content that appears on that ballot style. To preserve any rotation associated with the ballot, it is expected that the generating application will list the occurrences of [OrderedContest](#_17_0_3_43401a7_1394476416139_808596_3142) in the order as on the ballot for the associated geopolitical unit.
 
 BallotStyle references one or more [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances defined for the associated precincts or split precincts. If the ballot style is associated with multiple precincts (or other geographies), multiple references to the precinct [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances can be included.
 
@@ -327,15 +327,15 @@ When including [ExternalIdentifier](#_17_0_2_4_f71035d_1430405712653_451634_2410
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{OrderedContent}`|*|`OrderedContent`|
 `{GpUnit}`|1..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For associating specific geopolitical units with the ballot style.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot style.
-`ImageUri`|0..*|`anyURI`|URI for a ballot image.
-`Party`|*|`Party`|Unique identifier for one or more Party instances. For associating one or more parties with the ballot style.
+`ImageUri`|0..*|`AnnotatedUri`|URI for a ballot image.
+`OrderedContent`|0..*|`OrderedContent`|For associating a ballot style with ballot content, such as contests or headers.
+`Party`|0..*|`Party`|Unique identifier for one or more Party instances. For associating one or more parties with the ballot style.
 ### <a name="_17_0_2_4_78e0236_1389366272694_544359_2440"></a>*The **Candidate** Class*
 ![Image of Candidate](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_557229_5346.png)
 
-For defining information about a candidate in a contest. [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) references [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instances to associate one or more candidates with a contest selection. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes Candidate.
+For defining information about a candidate in a contest. [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) references Candidate instances to associate one or more candidates with a contest selection. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes Candidate.
 
 Candidate uses the [Party](#_17_0_2_4_78e0236_1389366597377_433664_2698) association to reference the candidate’s political party. If the candidate is endorsed by other parties for a particular contest, the endorsing parties are referenced using the [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) attribute.
 
@@ -431,7 +431,7 @@ Contest is an abstract class with four subclasses that get used according to the
  *  [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144), used for a contest for a straight party selection on the ballot
  *  [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554), used for a judicial or other type of retention contest 
 
-[Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) includes [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) to link the selections on the ballot to the contest, e.g., to link one or more candidates to a candidate contest. Like Contest, [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) is also an abstract class and has subclasses that essentially correspond to those of Contest, as follows: 
+Contest includes [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) to link the selections on the ballot to the contest, e.g., to link one or more candidates to a candidate contest. Like Contest, [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) is also an abstract class and has subclasses that essentially correspond to those of Contest, as follows: 
 
  *  [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) includes [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)
  *  [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806) includes [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562)
@@ -489,7 +489,7 @@ Attribute | Multiplicity | Type | Attribute Description
 `DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
 `GpUnit`|1|`GpUnit`|
 `IsSuppressedForPrivacy`|0..1|`boolean`|Boolean to indicate if votes are suppressed for voter privacy, e.g., true or false. Assumed to be false if not present.
-`OtherType`|0..1|`string`|Used when  is other.
+`OtherType`|0..1|`string`|Used when Type is other.
 `Round`|0..1|`integer`|An identification of the RCV round being reported.
 `Type`|1|`CountItemType`|The type of count being used as a filter on the vote counts, e.g., election day, early voting, etc.
 ### <a name="_17_0_2_4_f71035d_1430412663878_61362_2269"></a>*The **CountStatus** Class*
@@ -497,7 +497,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For reporting on the counting status for various items such as ballot types or write-ins, e.g., whether for a certain type of ballot, the counts are in progress, not yet started, complete, etc. [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400), [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209), and [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) include CountStatus.
 
-If the type of count item is not listed in enumeration <CountItemType>, use other and include the type (that is not listed in the enumeration) in <OtherType>.
+If the type of count item is not listed in enumeration [CountItemType](#_17_0_2_4_78e0236_1389798097477_664878_4228), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1426077858771_890955_2661).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -507,7 +507,7 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_18_0_2_6340208_1519999692422_172889_4576"></a>*The **DateTimeWithZone** Class*
 ![Image of DateTimeWithZone](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1519999692425_740254_4577.png)
 
-Restricts dateTime to require inclusion of timezone information and excludes fractional seconds
+Restricts dateTime to require inclusion of timezone information and excludes fractional seconds.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -528,7 +528,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For defining the status of the election and associated information such as candidates, contests, and vote counts.
 
-[Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes links to the major instances that are specific to an election: [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360), [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440), and [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
+Election includes links to the major instances that are specific to an election: [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360), [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440), and [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
 
 Election includes a required association end [ElectionScope](#_17_0_2_4_f71035d_1426102211616_609900_2331), which links to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance for the purpose of identifying the geographical scope of the election. For example, for an election within a county, [ElectionScope](#_17_0_2_4_f71035d_1426102211616_609900_2331) would reference a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined for the county. If it is desired to include election authority information, the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) can include [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433).
 
@@ -557,7 +557,7 @@ ElectionAdministration includes [ContactInformation](#_17_0_5_1_43401a7_14006243
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `{ContactInformation}`|0..1|`ContactInformation`|For including various contact information.
-`ElectionOfficialPerson`|0..*|`Person`|Unique identifier for one or more  elements defined for the election authority.
+`ElectionOfficialPerson`|0..*|`Person`|Unique identifier for one or more Person elements defined for the election authority.
 `Name`|0..1|`RichText`|Name of the election authority.
 ### <a name="_17_0_2_4_78e0236_1389366195564_913164_2300"></a>*The **ElectionReport** Class*
 ![Image of ElectionReport](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_73815_5340.png)
@@ -594,7 +594,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 For associating a jurisdiction’s codes, i.e., identifiers, with objects such as candidates, offices, or geopolitical units such as counties, towns, precincts, etc. Multiple occurrences of the ExternalIdentifier sub-element can be used to associate multiple codes, e.g., if there is a desire to associate multiple codes with a particular object such as FIPS (Federal Information Processing Standard) codes as well as OCD-IDs (Open Civic Data Identifiers).
 
-For elements that link to ExternalIdentifier instances, if the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1430405763078_743585_2433), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
+For elements that link to ExternalIdentifier instances, if the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -619,7 +619,7 @@ For defining a reusable set of headers.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot style.
+`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the header.
 `Name`|1|`InternationalizedText`|Name of the header, as it is to appear on a ballot style.
 ### <a name="_18_0_2_6340208_1427122205989_885563_4602"></a>*The **Hours** Class*
 ![Image of Hours](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1427122205998_606908_4603.png)
@@ -743,8 +743,8 @@ For the appearance of a header on a particular ballot style.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{OrderedContent}`|0..*|`OrderedContent`|
 `Header`|1|`Header`|Association to the header to be used.
+`OrderedContent`|0..*|`OrderedContent`|For associating a header with ballot content, such as contests or nested headers.
 ### <a name="_18_0_2_6340208_1508176198256_527421_4561"></a>*The **OtherCounts** Class*
 ![Image of OtherCounts](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1508176198261_91260_4562.png)
 
@@ -776,7 +776,7 @@ Attribute | Multiplicity | Type | Attribute Description
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the party.
 `IsRecognizedParty`|0..1|`boolean`|For indicating whether the party is recognized by the election authority.
 `LeaderPerson`|0..*|`Person`|Identification of a Party's leader.
-`LogoUri`|0..1|`anyURI`|A URI to the party’s graphical logo.
+`LogoUri`|0..*|`AnnotatedUri`|A URI to the party’s graphical logo.
 `Name`|1|`InternationalizedText`|Official full name of the party, e.g., “Republican”; can appear on the ballot.
 ### <a name="_17_0_2_4_d420315_1393514218965_55008_3144"></a>*The **PartyContest** Class*
 ![Image of PartyContest](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_d420315_1393514218978_361648_3145.png)
@@ -805,7 +805,7 @@ Attribute | Multiplicity | Type | Attribute Description
 ### <a name="_17_0_5_1_43401a7_1400623980732_100904_3567"></a>*The **Person** Class*
 ![Image of Person](Election_Results_Reporting_UML_documentation_files/_17_0_5_1_43401a7_1400623980734_867286_3568.png)
 
-For defining information about a person; the person may be a candidate, election official, authority for a reporting unit, etc. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Person. [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) and [ElectionAdminsitration](#_18_0_2_6340208_1441311877439_710008_4433) and
+For defining information about a person; the person may be a candidate, election official, authority for a reporting unit, etc. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Person. [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) and [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433) and
 [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) reference Person. Person optionally references [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) for associating contact information.
 
 Multiple occurrences of the <MiddleName> element can be used as needed, e.g., for names such as “John Andrew Winston Smith”.
@@ -907,7 +907,7 @@ For defining the spatial layout of a [GpUnit](#_17_0_2_4_78e0236_1389366233346_4
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `{SpatialExtent}`|0..1|`SpatialExtent`|For associating a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element’s spatial extent information.
-`MapUri`|0..1|`anyURI`|Typically a URL to a map of the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
+`MapUri`|0..*|`AnnotatedUri`|Typically a URI to a map of the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
 ### <a name="_17_0_2_4_f71035d_1409080246279_778720_2209"></a>*The **SpatialExtent** Class*
 ![Image of SpatialExtent](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1409080246298_242462_2210.png)
 
