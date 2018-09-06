@@ -327,8 +327,8 @@ When including [ExternalIdentifier](#_17_0_2_4_f71035d_1430405712653_451634_2410
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{GpUnit}`|1..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For associating specific geopolitical units with the ballot style.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot style.
+`GpUnit`|1..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For associating specific geopolitical units with the ballot style.
 `ImageUri`|0..*|`AnnotatedUri`|URI for a ballot image.
 `OrderedContent`|0..*|`OrderedContent`|For associating a ballot style with ballot content, such as contests or headers.
 `Party`|0..*|`Party`|Unique identifier for one or more Party instances. For associating one or more parties with the ballot style.
@@ -343,8 +343,8 @@ Candidate uses the [Party](#_17_0_2_4_78e0236_1389366597377_433664_2698) associa
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{ContactInformation}`|0..1|`ContactInformation`|
 `BallotName`|1|`InternationalizedText`|For the candidate’s name as listed on the ballot.
+`ContactInformation`|0..1|`ContactInformation`|
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the candidate.
 `FileDate`|0..1|`date`|Date when the candidate filed for the contest.
 `IsIncumbent`|0..1|`boolean`|Boolean to indicate whether the candidate is the incumbent for the office associated with the contest. Assumed to be “no” if not present.
@@ -409,15 +409,15 @@ ContactInformation includes [LatLng](#_17_0_2_4_f71035d_1443104838926_393729_222
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{Schedule}`|0..*|`Schedule`|For associating a schedule with the contact.
-`{LatLng}`|0..1|`LatLng`|For latitude and longitude information associated with the contact.
 `AddressLine`|0..*|`RichText`|For associating an address with the contact.
 `Directions`|0..1|`InternationalizedText`|Directional information in addition to address information.
 `Email`|0..*|`AnnotatedString`|Email address associated with the contact.
 `Fax`|0..*|`AnnotatedString`|Fax number associated with the contact.
 `Label`|0..1|`string`|For use as needed and compatibility with the VIP schema.
+`LatLng`|0..1|`LatLng`|For latitude and longitude information associated with the contact.
 `Name`|0..1|`RichText`|Name associated with the contact.
 `Phone`|0..*|`AnnotatedString`|Phone number associated with the contact.
+`Schedule`|0..*|`Schedule`|For associating a schedule with the contact.
 `Uri`|0..*|`AnnotatedUri`|URI associated with the contact.
 ### <a name="_17_0_2_4_78e0236_1389366251994_876831_2400"></a>*The **Contest** Class*
 ![Image of Contest](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_293750_5341.png)
@@ -448,16 +448,16 @@ When including <ExternalIdentifiers>, if the type is not listed in enumeration <
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{ContestSelection}`|0..*|`ContestSelection`|For associating a contest selection for the contest, i.e., a candidate, a ballot measure.
-`{OtherCounts}`|0..*|`OtherCounts`|
 `Abbreviation`|0..1|`string`|Abbreviation for the contest.
 `BallotSubTitle`|0..1|`InternationalizedText`|Subtitle of the contest as it appears on the ballot.
 `BallotTitle`|0..1|`InternationalizedText`|Title of the contest as it appears on the ballot.
+`ContestSelection`|0..*|`ContestSelection`|For associating a contest selection for the contest, i.e., a candidate, a ballot measure.
 `CountStatus`|0..*|`CountStatus`|For providing various counting status associated with the contest.
 `ElectoralDistrict`|1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the contest with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the contest.
 `HasRotation`|0..1|`boolean`|Boolean to indicate whether the selections in the contest are rotated. Assumed to be “no” if not present.
 `Name`|1|`RichText`|Name of the contest, not necessarily as it appears on the ballot.
+`OtherCounts`|0..*|`OtherCounts`|For associating counts such as overvote and undervotes with the contest.
 `OtherVoteVariation`|0..1|`string`|For use when [VoteVariation](#_17_0_2_4_78e0236_1389798198604_276106_4268) is other.
 `SequenceOrder`|0..1|`integer`|Orderering for listing the contest for purposes of results display. If not present, no order is assumed.
 `SubUnitsReported`|0..1|`integer`|Number of subunits, e.g., precincts, that have completed reporting votes for this contest.
@@ -477,8 +477,8 @@ BallotSelection is an abstract class with three subclasses that get used accordi
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{VoteCounts}`|0..*|`VoteCounts`|
 `SequenceOrder`|0..1|`integer`|Order in which the candidate is listed on the ballot for purposes of results display. If not present, no order is assumed.
+`VoteCounts`|0..*|`VoteCounts`|For associating the contest selection’s vote counts.
 ### <a name="_17_0_2_4_78e0236_1389367291663_284973_2835"></a>*The **Counts** Class*
 ![Image of Counts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_267901_5355.png)
 
@@ -487,7 +487,7 @@ class/element for reporting on contest vote counts. Contains attributes to categ
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 `DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
-`GpUnit`|1|`GpUnit`|
+`GpUnit`|1|`GpUnit`|For filtering counts by political geography or device or device type.
 `IsSuppressedForPrivacy`|0..1|`boolean`|Boolean to indicate if votes are suppressed for voter privacy, e.g., true or false. Assumed to be false if not present.
 `OtherType`|0..1|`string`|Used when Type is other.
 `Round`|0..1|`integer`|An identification of the RCV round being reported.
@@ -534,11 +534,11 @@ Election includes a required association end [ElectionScope](#_17_0_2_4_f71035d_
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{Contest}`|0..*|`Contest`|For defining contests associated with the election.
-`{Candidate}`|0..*|`Candidate`|For defining candidates associated with the election.
-`{BallotStyle}`|0..*|`BallotStyle`|For defining ballot styles associated with the election.
-`{BallotCounts}`|0..*|`BallotCounts`|Used for identifying various ballot counts.
+`BallotCounts`|0..*|`BallotCounts`|Used for identifying various ballot counts.
+`BallotStyle`|0..*|`BallotStyle`|For defining ballot styles associated with the election.
+`Candidate`|0..*|`Candidate`|For defining candidates associated with the election.
 `ContactInformation`|0..1|`ContactInformation`|For associating various contact information with the election.
+`Contest`|0..*|`Contest`|For defining contests associated with the election.
 `CountStatus`|0..*|`CountStatus`|For providing various counting status on types of ballots or other items.
 `ElectionScope`|1|`ReportingUnit`|Unique identifier for a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element. For associating the election with a reporting unit that represents the geographical scope of the election, e.g., a state, a county, etc.
 `EndDate`|1|`date`|Calendar end date of the election; for a typical one-day election, the end date is the same as the start date.
@@ -556,7 +556,7 @@ ElectionAdministration includes [ContactInformation](#_17_0_5_1_43401a7_14006243
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{ContactInformation}`|0..1|`ContactInformation`|For including various contact information.
+`ContactInformation`|0..1|`ContactInformation`|For including various contact information.
 `ElectionOfficialPerson`|0..*|`Person`|Unique identifier for one or more Person elements defined for the election authority.
 `Name`|0..1|`RichText`|Name of the election authority.
 ### <a name="_17_0_2_4_78e0236_1389366195564_913164_2300"></a>*The **ElectionReport** Class*
@@ -566,23 +566,21 @@ For defining items pertaining to the status and format of the report and when it
 
 ElectionReport references the major elements that are not necessarily specific to an election and that therefore can exist in a pre-election report: [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) and [OfficeGroup](#_17_0_2_4_f71035d_1433183615993_866714_2239), [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460), [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567), and [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209).
 
-When a particular ordering of items such as offices or political parties are important to preserve, it is expected that the generating application will define those elements according to any ordering scheme in place.
-
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{Election}`|0..*|`Election`|For associating elections with the report.
-`{Office}`|0..*|`Office`|For associating offices with the report.
-`{Party}`|0..*|`Party`|For associating parties with the report.
-`{GpUnit}`|0..*|`GpUnit`|For associating geopolitical units with the report.
-`{OfficeGroup}`|0..*|`OfficeGroup`|For associating a name for a grouping of offices with the report.
-`{Header}`|0..*|`Header`|For associating headers with parts of a ballot style.
+`Election`|0..*|`Election`|For associating elections with the report.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the report.
 `Format`|1|`ReportDetailLevel`|Detail level of the report, e.g., contest summary, precinct level results, etc.
 `GeneratedDate`|1|`DateTimeWithZone`|Identifies the date and time that the election report was generated.
+`GpUnit`|0..*|`GpUnit`|For associating geopolitical units with the report.
+`Header`|0..*|`Header`|For associating headers with parts of a ballot style.
 `Issuer`|1|`RichText`|Identification of the report issuer.
 `IssuerAbbreviation`|1|`RichText`|An abbreviation of the report issuer such as the 2-character U.S. Census Bureau abbreviation of the state whose results are being reported, e.g., AL, TX, MN, etc.
 `IsTest`|0..1|`boolean`|Used to indicate whether the report is a test report. Assumed to be “no” if not present.
 `Notes`|0..1|`RichText`|For including an arbitrary message with the report.
+`Office`|0..*|`Office`|For associating offices with the report.
+`OfficeGroup`|0..*|`OfficeGroup`|For associating a name for a grouping of offices with the report.
+`Party`|0..*|`Party`|For associating parties with the report.
 `Person`|0..*|`Person`|For associating persons with the report.
 `SequenceEnd`|1|`integer`|The upper bound of the sequence; e.g., “1” if there is only 1 report, “2” if there are two reports in the sequence, etc.
 `SequenceStart`|1|`integer`|The report’s number as part of a sequence of reports, used with  so as to be read as, e.g., 1 of 1, 1 of 2, 2 of 2, etc. Starts with “1”.
@@ -693,7 +691,6 @@ Office includes an optional [ElectoralDistrict](#_17_0_5_1_43401a7_1400701616170
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{Term}`|0..1|`Term`|For including office term-related information.
 `ContactInformation`|0..1|`ContactInformation`|For associating various contact information with the office.
 `Description`|0..1|`InternationalizedText`|A description of the office, possibly as shown on the ballot to the voter.
 `ElectoralDistrict`|0..1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the office with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
@@ -702,6 +699,7 @@ Attribute | Multiplicity | Type | Attribute Description
 `IsPartisan`|0..1|`boolean`|Boolean to indicate whether the office is partisan, e.g., true or false. If not present, assumption is true.
 `Name`|1|`InternationalizedText`|Name of the office; can appear on the ballot.
 `OfficeHolderPerson`|0..*|`Person`|Links to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances defined for the office holder.
+`Term`|0..1|`Term`|For including office term-related information.
 ### <a name="_17_0_2_4_f71035d_1433183615993_866714_2239"></a>*The **OfficeGroup** Class*
 ![Image of OfficeGroup](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1433183615994_647505_2240.png)
 
@@ -709,9 +707,9 @@ Used to assign a name to a grouping of office definitions. It includes reference
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{Office}`|0..*|`Office`|Link to one or more [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instances.
 `Label`|0..1|`string`|For use as needed and compatibility with the VIP schema.
 `Name`|1|`string`|Name of the office grouping.
+`Office`|0..*|`Office`|Link to one or more [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instances.
 `SubOfficeGroup`|0..*|`OfficeGroup`|For defining a nested hierarchy of [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance groupings.
 ### <a name="_18_5_3_43701b0_1527684342715_643544_6146"></a>*The **OrderedContent** Class*
 ![Image of OrderedContent](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342791_594538_6176.png)
@@ -750,8 +748,8 @@ Identifies various counts associated with a contest.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{GpUnit}`|1|`GpUnit`|
 `DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
+`GpUnit`|1|`GpUnit`|For filter counts by political geography or device or device type.
 `Overvotes`|0..1|`float`|Number of overvotes.
 `Undervotes`|0..1|`float`|Number of undervotes.
 `WriteIns`|0..1|`integer`|Number of write-ins.
@@ -766,9 +764,9 @@ The Color attribute specifies a 6-digit RGB code displayable using HTML.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{ContactInformation}`|0..1|`ContactInformation`|
 `Abbreviation`|0..1|`string`|Short name for the party, e.g., “DEM”.
 `Color`|0..1|`HtmlColorString`|For associating an HTML RGB color coding with the party.
+`ContactInformation`|0..1|`ContactInformation`|For associating contact information regarding the party, e.g., party offices.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the party.
 `IsRecognizedParty`|0..1|`boolean`|For indicating whether the party is recognized by the election authority.
 `LeaderPerson`|0..*|`Person`|Identification of a Party's leader.
@@ -808,7 +806,7 @@ Multiple occurrences of the MiddleName attribute can be used as needed, e.g., fo
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{ContactInformation}`|0..*|`ContactInformation`|For associating contact information with the person.
+`ContactInformation`|0..*|`ContactInformation`|For associating contact information with the person.
 `DateOfBirth`|0..1|`date`|Person’s date of birth.
 `ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the person.
 `FirstName`|0..1|`RichText`|Person’s first (given) name.
@@ -846,16 +844,16 @@ The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can be u
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{SpatialDimension}`|0..1|`SpatialDimension`|For describing the reporting unit’s spatial extent (a polygon that shows the related area).
-`{PartyRegistration}`|0..*|`PartyRegistration`|For associating a count of registered voters per party with the geopolitical unit.
-`{ElectionAdministration}`|0..1|`ElectionAdministration`|For use when the reporting unit serves as the authority in the election.
 `Authority`|0..*|`Person`|A link to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances describing an authority responsible for the reporting unit.
 `ContactInformation`|0..1|`ContactInformation`|For associating contact information with the reporting unit.
 `CountStatus`|0..*|`CountStatus`|For providing various counting status on types of ballots or other items.
+`ElectionAdministration`|0..1|`ElectionAdministration`|For use when the reporting unit serves as the authority in the election.
 `IsDistricted`|0..1|`boolean`|Boolean to indicate whether the reporting unit is a district; assumed to be “no” if not present.
 `IsMailOnly`|0..1|`boolean`|Boolean to indicate whether the reporting unit handles only mail-in or absentee ballot elections, assumed to be “no” if not present.
 `Number`|0..1|`string`|A number associated with the reporting unit; for compatibility with VIP.
 `OtherType`|0..1|`string`|For use when [ReportingUnitType](#_17_0_2_4_78e0236_1389713376966_77071_2393) value is other.
+`PartyRegistration`|0..*|`PartyRegistration`|For associating a count of registered voters per party with the geopolitical unit.
+`SpatialDimension`|0..1|`SpatialDimension`|For describing the reporting unit’s spatial extent (a polygon that shows the related area).
 `SubUnitsReported`|0..1|`integer`|Number of associated subunits such as precincts that have completed reporting.
 `TotalSubUnits`|0..1|`integer`|Total number of associated subunits such as precincts.
 `Type`|1|`ReportingUnitType`|Enumerated type of reporting unit, e.g., state, county, district, precinct, etc.
@@ -871,7 +869,7 @@ This element uses [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`Candidate`||`Candidate`|Link to a [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instance. For associating a candidate with the retention contest.
+`Candidate`|1|`Candidate`|Link to a [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instance. For associating a candidate with the retention contest.
 `Office`|0..1|`Office`|Link to an [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance. For associating an office description with the retention contest.
 ### <a name="_18_0_2_6340208_1427122121448_198970_4547"></a>*The **Schedule** Class*
 ![Image of Schedule](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1427122121457_980308_4548.png)
@@ -880,8 +878,8 @@ For defining a schedule associated with a particular election office or location
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{Hours}`|0..*|`Hours`|For specifying a range of hours for a schedule.
 `EndDate`|0..1|`date`|For the ending date of the schedule.
+`Hours`|0..*|`Hours`|For specifying a range of hours for a schedule.
 `IsOnlyByAppointment`|0..1|`boolean`|If an appointment is only by appointment; assumed to be “no” if not present.
 `IsOrByAppointment`|0..1|`boolean`|If an appointment can by appointment presumably as desired; assumed to be “no” if not present.
 `IsSubjectToChange`|0..1|`boolean`|If an appointment may be subject to change; assumed to be “no” if not present.
@@ -902,8 +900,8 @@ For defining the spatial layout of a [GpUnit](#_17_0_2_4_78e0236_1389366233346_4
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-`{SpatialExtent}`|0..1|`SpatialExtent`|For associating a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element’s spatial extent information.
 `MapUri`|0..*|`AnnotatedUri`|Typically a URI to a map of the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
+`SpatialExtent`|0..1|`SpatialExtent`|For associating a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element’s spatial extent information.
 ### <a name="_17_0_2_4_f71035d_1409080246279_778720_2209"></a>*The **SpatialExtent** Class*
 ![Image of SpatialExtent](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1409080246298_242462_2210.png)
 
