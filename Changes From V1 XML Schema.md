@@ -1,6 +1,8 @@
+# Changelog for 1500-100 v2
+
 The 2.0 version of the Election Results Reporting XML Schema includes the following important changes from the 1.0 XML Schema:
 
-- Removed various 'collection' elements
+- Removed various 'collection' elements:
   - BallotSelection->VoteCountsCollection
   - Election->BallotStyleCollection
   - Election->CandidateCollection
@@ -11,12 +13,14 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
   - ElectionReport->PersonCollection
   - all occurrences of ExternalIdentifiers
 - Removed BallotStyle->objectId attribute
+- Removed ElectionReport->Signature element
+- Removed `SummaryCounts` from `GpUnit`
+- Removed `OrderedContest` from BallotStyle
 - Capitalized all lower case attributes:
   - all label attributes are now "Label"
   - all objectId attributes are now "ObjectId"
   - AnnotatedString->annotation attribute is now "Annotation"
   - LanguageString->language attribute is now "Language"
-- Removed ElectionReport->Signature element
 - Changes to reporting of other counts besides vote counts:
   - Changed name of SummaryCounts to BallotCounts
   - Added Election->BallotCounts
@@ -24,17 +28,44 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
     - Overvotes, Undervotes, WriteIns moved from BallotCounts
     - Changed Overvotes, Undervotes to be float types
   - Counts->Type attribute is now required (applies to SummaryCounts and VoteCounts types)
-- Added AnnotatedUri type
+- Adjusted the multiplicity of various attributes and associations:
+  - Adjusted multiplicity of ContactInformation->Directions from `0..*` to `0..1`.
+  - Adjusted multiplicity of ContestSelection->CandidateIds from `1` to `0..1` (ERROR?)
+  - Adjusted multiplicity of ContactInformation->LatLng from `0..1` to `0..*` (ERROR?)
+  - All attributes whose Type is `AnnotatedUri` now have multiplicity of `0..*`
+- Added new types:
+  - Added `AnnotatedUri` type
+  - Added `Header` type
+  - Added `OrderedContent` type
+  - Added `OrderedHeader` type
+  - Added `DateTimeWithZone` type to enforce timezone requirement
 - Added various new associations and attributes:
-  - Added CandidateContest->NumberRunoff
-  - Added Person->ExternalIdentifier
-  - Added Candidate->ContactInformation
-  - Added Party->IsWriteIn
-  - Added Office->Description
+  - Added BallotStyle-OrderedContest
+  - Added CandidateContest->NumberRunoff  
   - Added Counts->Round
-- Added 'country' ReportingUnitType
-- Changed ContactInformation->Uri to be of type AnnotatedUri
-- Changed OtherCounts->overvotes, undervotes to float
-- Added 'defeated' to CandidatePostElectionStatus
-- Added DateTimeWithZone type to enforce timezone requirement
+  - Added Candidate->ContactInformation
+  - Added ElectionReport->Header
+  - Added Office->Description
+  - Added Party->IsRecognizedParty
+  - Added Party->ContactInformation
+  - Added Party->LeaderPersonIds
+  - Added Person->ExternalIdentifier
+- Modified enumeration literals:
+  - Added `recall` enumeration literal to `BallotMeasureType`
+  - Added `defeated` enumeration literal to `CandidatePostElectionStatus`
+  - Removed `write-in` enumeration literal from `CandidatePreElectionStatus`
+  - Added `seats` enumeration literal to `CountItemType`
+  - Added `country` enumeration literal to `ReportingUnitType`
+- Modified attribute types:
+  - Changed ContactInformation->Uri to be of type `AnnotatedUri`
+  - Changed OtherCounts->overvotes, undervotes to `float`
 - Changed ElectionReport->GeneratedDate to be of type DateTimeWithZone
+Renamed the following:
+- maxLength of ShortString is now 32 (up from 16)
+- Converted all usages of `anyURI` to `AnnotatedUri`
+- Renamed `BallotSelection` to `ContestSelection`
+- Removed pluralization of ExternalIdentifier
+- Renamed `Device` to `DeviceClass`
+- Rename ReportingDevice->Device to DeviceClass
+
+UNSPECIFIED maxOccurs = unbounded?
