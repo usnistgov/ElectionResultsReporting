@@ -90,13 +90,11 @@
   </xsd:simpleType>
   <xsd:simpleType name="DeviceType">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="electronic"/>
-      <xsd:enumeration value="lever"/>
+      <xsd:enumeration value="bmd"/>
+      <xsd:enumeration value="dre"/>
       <xsd:enumeration value="manual-count"/>
-      <xsd:enumeration value="mixed-systems"/>
       <xsd:enumeration value="opscan-central"/>
       <xsd:enumeration value="opscan-precinct"/>
-      <xsd:enumeration value="punch-card"/>
       <xsd:enumeration value="unknown"/>
       <xsd:enumeration value="other"/>
     </xsd:restriction>
@@ -333,7 +331,7 @@
       <xsd:element name="BallotTitle" type="InternationalizedText" minOccurs="0"/>
       <xsd:element name="ContestSelection" type="ContestSelection" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="CountStatus" type="CountStatus" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="ElectoralDistrictId" type="xsd:IDREF"/>
+      <xsd:element name="ElectionDistrictId" type="xsd:IDREF"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="HasRotation" type="xsd:boolean" minOccurs="0"/>
       <xsd:element name="Name" type="xsd:string"/>
@@ -481,7 +479,7 @@
     <xsd:sequence>
       <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
       <xsd:element name="Description" type="InternationalizedText" minOccurs="0"/>
-      <xsd:element name="ElectoralDistrictId" type="xsd:IDREF" minOccurs="0"/>
+      <xsd:element name="ElectionDistrictId" type="xsd:IDREF" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="FilingDeadline" type="xsd:date" minOccurs="0"/>
       <xsd:element name="IsPartisan" type="xsd:boolean" minOccurs="0"/>

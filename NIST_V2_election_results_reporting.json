@@ -99,7 +99,7 @@
       "required": [
         "@id",
         "@type",
-        "ElectoralDistrictId",
+        "ElectionDistrictId",
         "Name"
       ],
       "additionalProperties": false,
@@ -152,7 +152,7 @@
         "EffectOfAbstain": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
-        "ElectoralDistrictId": {
+        "ElectionDistrictId": {
           "type": "string",
           "refTypes": [
             "ElectionResults.ReportingUnit"
@@ -396,7 +396,7 @@
       "required": [
         "@id",
         "@type",
-        "ElectoralDistrictId",
+        "ElectionDistrictId",
         "Name",
         "VotesAllowed"
       ],
@@ -444,7 +444,7 @@
           "minItems": 0,
           "type": "array"
         },
-        "ElectoralDistrictId": {
+        "ElectionDistrictId": {
           "type": "string",
           "refTypes": [
             "ElectionResults.ReportingUnit"
@@ -842,14 +842,12 @@
     },
     "ElectionResults.DeviceType": {
       "enum": [
-        "electronic",
-        "lever",
+        "bmd",
+        "dre",
         "manual-count",
-        "mixed-systems",
         "opscan-central",
         "opscan-precinct",
         "other",
-        "punch-card",
         "unknown"
       ],
       "type": "string"
@@ -1338,7 +1336,7 @@
         "Description": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
-        "ElectoralDistrictId": {
+        "ElectionDistrictId": {
           "type": "string",
           "refTypes": [
             "ElectionResults.ReportingUnit"
@@ -1594,7 +1592,7 @@
       "required": [
         "@id",
         "@type",
-        "ElectoralDistrictId",
+        "ElectionDistrictId",
         "Name"
       ],
       "additionalProperties": false,
@@ -1641,7 +1639,7 @@
           "minItems": 0,
           "type": "array"
         },
-        "ElectoralDistrictId": {
+        "ElectionDistrictId": {
           "type": "string",
           "refTypes": [
             "ElectionResults.ReportingUnit"
@@ -2034,7 +2032,8 @@
       "required": [
         "@id",
         "@type",
-        "ElectoralDistrictId",
+        "CandidateId",
+        "ElectionDistrictId",
         "Name"
       ],
       "additionalProperties": false,
@@ -2093,7 +2092,7 @@
         "EffectOfAbstain": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
-        "ElectoralDistrictId": {
+        "ElectionDistrictId": {
           "type": "string",
           "refTypes": [
             "ElectionResults.ReportingUnit"
