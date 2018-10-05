@@ -469,8 +469,8 @@
   </xsd:complexType>
   <xsd:complexType name="LatLng">
     <xsd:sequence>
-      <xsd:element name="Latitude" type="xsd:float"/>
-      <xsd:element name="Longitude" type="xsd:float"/>
+      <xsd:element name="Latitude" type="xsd:double"/>
+      <xsd:element name="Longitude" type="xsd:double"/>
       <xsd:element name="Source" type="xsd:string" minOccurs="0"/>
     </xsd:sequence>
     <xsd:attribute name="Label" type="xsd:string"/>
