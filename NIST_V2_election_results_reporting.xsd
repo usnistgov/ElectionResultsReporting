@@ -186,7 +186,6 @@
   </xsd:simpleType>
   <xsd:simpleType name="VoteVariation">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="1-of-m"/>
       <xsd:enumeration value="approval"/>
       <xsd:enumeration value="borda"/>
       <xsd:enumeration value="cumulative"/>

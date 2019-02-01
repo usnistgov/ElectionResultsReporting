@@ -2340,7 +2340,6 @@
     },
     "ElectionResults.VoteVariation": {
       "enum": [
-        "1-of-m",
         "approval",
         "borda",
         "cumulative",
