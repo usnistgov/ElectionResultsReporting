@@ -17,10 +17,10 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
 - Removed `SummaryCounts` from `GpUnit`
 - Removed `OrderedContest` from BallotStyle
 - Capitalized all lower case attributes:
-  - all label attributes are now "Label"
-  - all objectId attributes are now "ObjectId"
-  - AnnotatedString->annotation attribute is now "Annotation"
-  - LanguageString->language attribute is now "Language"
+  - all label attributes are now `Label`
+  - all objectId attributes are now `ObjectId`
+  - AnnotatedString->annotation attribute is now `Annotation`
+  - LanguageString->language attribute is now `Language`
 - Changes to reporting of other counts besides vote counts:
   - Changed name of SummaryCounts to BallotCounts
   - Added Election->BallotCounts
@@ -30,8 +30,6 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
   - Counts->Type attribute is now required (applies to SummaryCounts and VoteCounts types)
 - Adjusted the multiplicity of various attributes and associations:
   - Adjusted multiplicity of ContactInformation->Directions from `0..*` to `0..1`.
-  - Adjusted multiplicity of ContestSelection->CandidateIds from `1` to `0..1` (ERROR?)
-  - Adjusted multiplicity of ContactInformation->LatLng from `0..1` to `0..*` (ERROR?)
   - All attributes whose Type is `AnnotatedUri` now have multiplicity of `0..*`
 - Added new types:
   - Added `AnnotatedUri` type
@@ -55,17 +53,19 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
   - Added `defeated` enumeration literal to `CandidatePostElectionStatus`
   - Removed `write-in` enumeration literal from `CandidatePreElectionStatus`
   - Added `seats` enumeration literal to `CountItemType`
+  - Added `bmd`, `dre` enumeration literals to `DeviceClass`
+  - Removed `electronic`, `lever`, `mixed-systems`, `punch-card` from `DeviceClass`
   - Added `country` enumeration literal to `ReportingUnitType`
+  - Removed `1-of-m` enumeration literal from `VoteVariation`
 - Modified attribute types:
   - Changed ContactInformation->Uri to be of type `AnnotatedUri`
   - Changed OtherCounts->overvotes, undervotes to `float`
-- Changed ElectionReport->GeneratedDate to be of type DateTimeWithZone
-Renamed the following:
+  - Changed LatLng->Latitude and LatLng->Longitude to `float`  
+- Changed ElectionReport->GeneratedDate to be of type `DateTimeWithZone`
 - maxLength of ShortString is now 32 (up from 16)
 - Converted all usages of `anyURI` to `AnnotatedUri`
-- Renamed `BallotSelection` to `ContestSelection`
-- Removed pluralization of ExternalIdentifier
-- Renamed `Device` to `DeviceClass`
-- Rename ReportingDevice->Device to DeviceClass
-
-UNSPECIFIED maxOccurs = unbounded?
+- Renamed the following:
+  - Renamed `BallotSelection` to `ContestSelection`
+  - Renamed `Device` to `DeviceClass`
+  - Renamed ReportingDevice->Device to `DeviceClass`
+  - Removed pluralization of `ExternalIdentifier`
