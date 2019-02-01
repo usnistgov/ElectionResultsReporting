@@ -127,7 +127,7 @@ Name | Value
 
 ![Image of CountItemType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_781011_5347.png)
 
-Enumeration for the items that are counted during the course of an election and for which the status of the counts are of interest. Used in the [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835) and [CountStatus](#_17_0_2_4_f71035d_1430412663878_61362_2269) classes.
+Enumeration for the items that are counted during the course of an election and for which the status of the counts is of interest. Used in the [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835) and [CountStatus](#_17_0_2_4_f71035d_1430412663878_61362_2269) classes.
 
 Name | Value
 ---- | -----
@@ -199,7 +199,7 @@ Name | Value
 
 ![Image of GeoSpatialFormat](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1425325534469_261190_2545.png)
 
-Enumeration for geospatial vector data formats used in geographic information system (GIS) software, used in the [SpatialExtent](#_17_0_2_4_f71035d_1409080246279_778720_2209) class.
+Enumeration for geospatial vector data formats used in Geographic Information System (GIS) software, used in the [SpatialExtent](#_17_0_2_4_f71035d_1409080246279_778720_2209) class.
 
 Name | Value
 ---- | -----
@@ -307,7 +307,6 @@ Enumeration for contest decision algorithm or rules in the [Contest](#_17_0_2_4_
 
 Name | Value
 ---- | -----
-`1-of-m`|For 1 of M voting.
 `approval`|When voter can select as many candidates as desired in a contest up to a maximum number.
 `borda`|For the Borda count voting.
 `cumulative`|When voter can allocate more than one vote to a given candidate.
@@ -350,7 +349,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 ![Image of BallotCounts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1397156576165_50958_2462.png)
 
-Used for identifying various ballot counts.
+Used for identifying various ballot counts. It inherits the attributes of [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -396,12 +395,8 @@ Attribute | Multiplicity | Type | Attribute Description
 ![Image of BallotStyle](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389799207465_976765_6435.png)
 
 For defining a ballot style composed of ordered content (i.e. Headers or Contests) and their contest selections, and associating the ballot style with a political party, a reference to an image of the ballot, and a reference to a precinct or other geopolitical unit that the ballot is unique to. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes BallotStyle.
-
 BallotStyle references [OrderedContent](#_18_5_3_43701b0_1527684342715_643544_6146) to include content that appears on that ballot style. To preserve any rotation associated with the ballot, it is expected that the generating application will list the occurrences of [OrderedContest](#_17_0_3_43401a7_1394476416139_808596_3142) in the order as on the ballot for the associated geopolitical unit.
-
 BallotStyle references one or more [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances defined for the associated precincts or split precincts. If the ballot style is associated with multiple precincts (or other geographies), multiple references to the precinct [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances can be included.
-
-When including [ExternalIdentifier](#_17_0_2_4_f71035d_1430405712653_451634_2410), if the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -582,7 +577,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 ![Image of Counts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_267901_5355.png)
 
-class/element for reporting on contest vote counts. Contains attributes to categorize the counts according to voting classification (e.g., election day, early voting, etc.) and type of device on which the votes were cast(e.g., DRE, accessible device, etc.)
+Used for reporting on contest vote counts. Contains attributes to categorize the counts according to voting classification (e.g., election day, early voting, etc.) and type of device on which the votes were cast (e.g., DRE, accessible device, etc.).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -613,11 +608,11 @@ Attribute | Multiplicity | Type | Attribute Description
 
 ![Image of DateTimeWithZone](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1519999692425_740254_4577.png)
 
-Restricts dateTime to require inclusion of timezone information and excludes fractional seconds.
+Restricts dateTime to require inclusion of time zone information and excludes fractional seconds.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1519999795210_981371_4601"></a>`pattern`||`string`|Pattern used for indicating the date, time and the accompanying timezone.
+<a name="_18_0_2_6340208_1519999795210_981371_4601"></a>`pattern`||`string`|Pattern used for indicating the date, time and the accompanying time zone.
 
 
 ### <a name="_18_0_2_6340208_1425911626288_420556_4530"></a>*The **DeviceClass** Class*
@@ -631,7 +626,7 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_17_0_2_4_f71035d_1401286171326_648907_2273"></a>`Manufacturer`|0..1|`String`|Manufacturer of the device.
 <a name="_17_0_2_4_f71035d_1401286117587_806540_2269"></a>`Model`|0..1|`String`|Manufacturer’s device model, used to filter on, e.g., a specific model of DRE or other device type.
 <a name="_18_0_2_6340208_1497894619958_710016_4605"></a>`OtherType`|0..1|`String`|Used when Type is other.
-<a name="_17_0_2_4_f71035d_1401285959630_42686_2265"></a>`Type`|0..1|`DeviceType`|Enumerated type of device, e.g., "DRE", "opscan-precinct", etc.
+<a name="_17_0_2_4_f71035d_1401285959630_42686_2265"></a>`Type`|0..1|`DeviceType`|Enumerated type of device, e.g., "dre", "opscan-precinct", etc.
 
 
 ### <a name="_17_0_2_4_f71035d_1426101822599_430942_2209"></a>*The **Election** Class*
@@ -1023,7 +1018,7 @@ This class optionally references [Person](#_17_0_5_1_43401a7_1400623980732_10090
 
 The [Type](#_17_0_2_4_78e0236_1389713376966_77071_2393) attribute uses the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration to specify the type of geopolitical geography being defined. [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) contains the most common types of geographies, e.g., state, county, precinct, and so forth. If the reporting unit type is not listed in enumeration [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242), use other and include the reporting unit type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1426007519161_685921_2510).
 
-The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can be used in a number of ways. It is not strictly necessary, as it is possible to identify districts by their [Type](#_17_0_2_4_78e0236_1389713376966_77071_2393) attribute or by examining the [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) instance’s [ElectoralDistrict](#_17_0_2_4_78e0236_1389366667508_703141_2753) reference, which links to the electoral district associated with the contest. However, if a district is defined but is not linked from a contest, or if the type of district is not listed in the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration and therefore [OtherType](#_17_0_2_4_f71035d_1426007519161_685921_2510) is used, then [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) is necessary to identify the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) as a district. The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can also be used to signify that a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined as a jurisdiction, e.g., a county, is also used as a district for, e.g., county-wide contests.
+The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can be used in a number of ways. It is not strictly necessary, as it is possible to identify districts by their [Type](#_17_0_2_4_78e0236_1389713376966_77071_2393) attribute or by examining the [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) instance’s [ElectionDistrict](#_17_0_2_4_78e0236_1389366667508_703141_2753) reference, which links to the election district associated with the contest. However, if a district is defined but is not linked from a contest, or if the type of district is not listed in the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration and therefore [OtherType](#_17_0_2_4_f71035d_1426007519161_685921_2510) is used, then [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) is necessary to identify the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) as a district. The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can also be used to signify that a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined as a jurisdiction, e.g., a county, is also used as a district for, e.g., county-wide contests.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
