@@ -624,7 +624,7 @@ Attribute | Multiplicity | Type | Attribute Description
 
 ![Image of DeviceClass](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1425911626300_559547_4531.png)
 
-For a string containing a 6-digit Red-Green-Blue (RGB) code that can be displayed using HTML. Used in [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) to associate a web-displayable color with the party. The RGB code is specified in hexadecimal, such that the RGB code for the color green is “00FF00” (“\#00” + “\#FF” + “\#00”).
+For filtering vote counts by device-related information. [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835), and [OtherCounts](#_18_0_2_6340208_1508176198256_527421_4561) include [DeviceClass](#_18_0_2_6340208_1425911626288_420556_4530).
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
