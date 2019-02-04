@@ -2,8 +2,8 @@
 
 ## Specifications
 
-[Version 1](https://github.com/usnistgov/ElectionResultsReporting/tree/version1)
-[Version 2](https://github.com/usnistgov/ElectionResultsReporting/tree/version2)
+- [Version 1](https://github.com/usnistgov/ElectionResultsReporting/tree/version1)
+- [Version 2](https://github.com/usnistgov/ElectionResultsReporting/tree/version2)
 
 ## Voting - Election Results Reporting CDF Version 1.0 Specification
 
