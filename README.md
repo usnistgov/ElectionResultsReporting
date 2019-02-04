@@ -1,4 +1,11 @@
-# Voting - Election Results Reporting CDF Version 1.0 Specification
+# Voting - Election Results Reporting CDF
+
+## Specifications
+
+[Version 1](https://github.com/usnistgov/ElectionResultsReporting/tree/version1)
+[Version 2](https://github.com/usnistgov/ElectionResultsReporting/tree/version2)
+
+## Voting - Election Results Reporting CDF Version 1.0 Specification
 
 This directory contains the NIST SP 1500-100 Version 1.0 election results reporting common data format (CDF) specification and associated files that are being created by NIST and collaborators. Version 1.0 is stable and has been used in 2016 and later elections, both in the U.S. and internationally.  Version 2 of the specification is underway; see the version2 branch of this repository.
 
@@ -10,11 +17,15 @@ The SP 1500-100 version 1.0 specification is comprehensive and detailed in its c
 
 The specification supports three different election scenarios:
 
-1. Pre-election.  The period prior to an election, for reporting pre-election data from a jurisdiction.
 
-2. Election.  The period(s) when voting is being conducted and election results reports are being produced.  The reports could include aggregated results data or more detailed, precinct-level reporting, depending on the capabilities of the reporting jurisdiction.
+1. Pre-election.  The period prior to an election, for reporting pre-election data from a jurisdiction.
 
-3. Post-election.  The period after the close of polls when more detailed election results reports are produced with options for precinct reporting, type of ballot, and type of device.
+
+2. Election.  The period(s) when voting is being conducted and election results reports are being produced.  The reports could include aggregated results data or more detailed, precinct-level reporting, depending on the capabilities of the reporting jurisdiction.
+
+
+3. Post-election.  The period after the close of polls when more detailed election results reports are produced with options for precinct reporting, type of ballot, and type of device.
+
 
 The XML schema associated with this specification is derived from a UML model that defines the types, structure, and interrelationships of geopolitical geography across the U.S. This model was designed to accommodate multiple types of contests and their many variations, and to provide the capability to report on these contests from higher aggregate levels down to very fine levels of detail, including:
 
@@ -24,5 +35,6 @@ The XML schema associated with this specification is derived from a UML model th
 
 - Reporting by device type and specific voting device.
 
-Please contact [John P. Wack](mailto:john.wack@nist.gov) for questions and more information.
+
+Please contact [John P. Wack](mailto:john.wack@nist.gov) for questions and more information.
 
