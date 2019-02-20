@@ -187,12 +187,12 @@ Enumeration for the type of election in the [ElectionReport](#_17_0_2_4_78e0236_
 
 Name | Value
 ---- | -----
-`general`|For the election held typically on the national day for elections (e.g., the Tuesday after the 1st Monday in November).
-`partisan-primary-closed`|For a primary election that is for a specific party where voter eligibility is based on registration.
-`partisan-primary-open`|For a primary election that is for a specific party where voter declares desired party or chooses in private.
-`primary`|For a primary election, type not specified such as nonpartisan.
-`runoff`|For an election to decide a prior contest that ended with no candidate receiving a majority of the votes.
-`special`|For an election held out of sequence for special circumstances, e.g., to fill a vacated office.
+`general`|Election in which all eligible voters, regardless of party affiliation, are permitted to select candidates to fill public office and/or vote on ballot measures.
+`partisan-primary-closed`|Primary election in which the voter receives a ballot containing only those party-specific contests pertaining to the political party with which the voter is affiliated, along with non-party-specific contests presented at the same election. Unaffiliated voters may be permitted to vote only on non-party-specific contests.
+`partisan-primary-open`|Primary election in which the voter may choose a political party at the time of voting and vote in party-specific contests associated with that party, along with non-party-specific contests presented at the same election. Some states require voters to publicly declare their choice of party at the polling place, after which the election worker provides or activates the appropriate ballot. Other states allow the voters to make their choice of party within the privacy of the voting booth.
+`primary`|Election held to determine which candidates qualify to appear as contest options in subsequent elections.
+`runoff`|Election to select a winner following a primary or a general election, in which no candidate in the contest received the required minimum percentage of the votes cast. The two candidates receiving the most votes for the contest in question proceed to a runoff election.
+`special`|Primary or general election that is not regularly scheduled. A special election may be combined with a scheduled election.
 `other`|Used when the election type is not listed in this enumeration.
 
 ### <a name="_17_0_2_4_f71035d_1425325534467_889921_2544"></a>*The **GeoSpatialFormat** Enumeration*
