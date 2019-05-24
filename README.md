@@ -7,7 +7,7 @@ The specifications are located as follows:
 - [Version 1](https://github.com/usnistgov/ElectionResultsReporting/tree/version1)
 - [Version 2](https://github.com/usnistgov/ElectionResultsReporting/tree/version2)
 
-An HTML version is being developed at https://pages.nist.gov/ElectionResultsReporting/. Google has also created a a very informative documentation site, located at:
+An HTML version is being developed at https://pages.nist.gov/ElectionResultsReporting/. Google has also created a very informative documentation site, located at:
 
 [https://developers.google.com/elections-data/reference/](https://developers.google.com/elections-data/reference/)
 
