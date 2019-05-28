@@ -1,8 +1,8 @@
 # Version 2 Development for the Election Results Reporting CDF Specification
 
-This directory holds version 2 development files for the NIST SP 1500-100 election results reporting specification common data format and related information and files that are being created by NIST and collaborators.
+This branch holds version 2 files for the NIST SP 1500-100 V2 election results reporting specification common data format and related information and files that are being created by NIST and collaborators.  SP 1500-100 V2 is complete and awaiting NIST publishing.
 
-Contact [John P. Wack](mailto:john.wack@nist.gov) for questions and more information.
+Please contact [John P. Wack](mailto:john.wack@nist.gov) for questions and more information.
 
 ## Repo Structure
 
