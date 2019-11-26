@@ -1,8 +1,12 @@
 # Version 2 Development for the Election Results Reporting CDF Specification
 
-This branch holds version 2 files for the NIST SP 1500-100 V2 election results reporting specification common data format and related information and files that are being created by NIST and collaborators.  SP 1500-100 V2 is complete and awaiting NIST publishing.
+This branch holds the NIST Special Publication 1500-100 Version 2 Election Results Reporting Common Data Format Specification and related information and supporting files.  SP 1500-100 V2 is available using the following Digital Object Identifier (DOI):
 
-Please contact [John P. Wack](mailto:john.wack@nist.gov) for questions and more information.
+https://doi.org/10.6028/NIST.SP.1500-100r2
+
+Besides the PDF and Word versions of the specification located in this repository, there is an HTML version being developed at https://pages.nist.gov/ElectionResultsReporting.
+
+Please contact [John Wack](mailto:john.wack@nist.gov) or [John Dziurlaj](mailto:john@hiltonroscoe.com) for questions and more information.
 
 ## Repo Structure
 
@@ -11,8 +15,8 @@ Please contact [John P. Wack](mailto:john.wack@nist.gov) for questions and more 
 |Election_Results_Reporting_UML_documentation_files|Images of UML classes|
 |Changes From V1 XML Schema.md|Changelog|
 |Election_Results_Reporting_UML_documentation.md|UML Documentation|
-|ElectionResultsReportingV2-2019-02-19 WERB-final.docm|Word version of ERR specification|
-|**ElectionResultsReportingV2-2019-02-19 WERB-final.pdf**|PDF version of ERR specification|
+|NIST 1500-100 ERR Specification V2.docx|Word version of ERR specification|
+|**NIST 1500-100 ERR Specification V2.pdf**|PDF version of ERR specification|
 |ElectionResultsReportingV2.png|Image of Election Results Reporting model|
 |NIST V2.0 - ElectionResultsReporting.xml|MagicDraw UML Model  |
 |**NIST_V2_election_results_reporting.json**|JSON Schema           |
