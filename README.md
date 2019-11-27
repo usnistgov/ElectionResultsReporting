@@ -1,6 +1,6 @@
-# Voting - NIST Special Publication 1500-100 Election Results Reporting Common Data Format Specification Versions 1 and 2
+# Voting - NIST Special Publication 1500-100 Election Results Reporting Common Data Format Specification Versions 1 & 2
 
-This repository contains the NIST Special Publication 1500-100 Version 1.0 and Version 2.0 Election Results Reporting Common Data Format (CDF) Specification Versions 1 and 2 and associated JSON and XML schemas and other supporting files. Version 1.0 supports XML; Version 2.0 contains improvements to the usability of the specification, adds additional data items, and supports JSON as well as XML. The specifications are being used in various U.S. states and counties, and by organizations including AP and Google both internationally and internationally.
+This repository contains the NIST Special Publication 1500-100 Election Results Reporting Common Data Format (CDF) Specification Versions 1 and 2 and associated JSON and XML schemas and other supporting files. Version 1 supports XML; Version 2 contains improvements to the usability of the specification, adds additional data items, and supports JSON as well as XML. The specifications are being used in various U.S. states and counties, and by organizations including AP and Google both internationally and internationally.
 
 The specifications are located as follows:
 
