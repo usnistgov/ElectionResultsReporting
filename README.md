@@ -1,4 +1,4 @@
-# Version 2 Development for the Election Results Reporting CDF Specification
+# NIST Special Publication 1500-100 Version 2 Election Results Reporting Common Data Format Specification
 
 This branch holds the NIST Special Publication 1500-100 Version 2 Election Results Reporting Common Data Format Specification and related information and supporting files.  SP 1500-100 V2 is available using the following Digital Object Identifier (DOI):
 
