@@ -1,6 +1,6 @@
 # Voting - NIST Special Publication 1500-100 Election Results Reporting Common Data Format Specification Version 2
 
-This branch holds the NIST Special Publication 1500-100 Election Results Reporting Common Data Format Specification Version 2 and supporting files. Besides the PDF and Word versions of the specification located in this repository, there is an HTML version being developed at https://pages.nist.gov/ElectionResultsReporting. SP 1500-100 V2 is also available using the following Digital Object Identifier (DOI):
+This branch holds the NIST Special Publication 1500-100 Election Results Reporting Common Data Format Specification Version 2 and supporting files. SP 1500-100 V2 is also available using the following Digital Object Identifier (DOI):
 
 https://doi.org/10.6028/NIST.SP.1500-100r2
 
