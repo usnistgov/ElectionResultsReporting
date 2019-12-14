@@ -263,6 +263,7 @@
   <xsd:complexType name="Candidate">
     <xsd:sequence>
       <xsd:element name="BallotName" type="InternationalizedText"/>
+      <xsd:element name="CampaignSlogan" type="InternationalizedText" minOccurs="0"/>
       <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="FileDate" type="xsd:date" minOccurs="0"/>
@@ -434,7 +435,7 @@
     <xsd:sequence>
       <xsd:element name="ComposingGpUnitIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Name" type="InternationalizedText" minOccurs="0"/>
     </xsd:sequence>
     <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
   </xsd:complexType>
@@ -529,7 +530,7 @@
   </xsd:complexType>
   <xsd:complexType name="Party">
     <xsd:sequence>
-      <xsd:element name="Abbreviation" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Abbreviation" type="InternationalizedText" minOccurs="0"/>
       <xsd:element name="Color" type="HtmlColorString" minOccurs="0"/>
       <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
       <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
@@ -537,6 +538,8 @@
       <xsd:element name="LeaderPersonIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="LogoUri" type="AnnotatedUri" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Name" type="InternationalizedText"/>
+      <xsd:element name="PartyGpUnitScopeIds" type="xsd:IDREFS" minOccurs="0"/>
+      <xsd:element name="Slogan" type="InternationalizedText" minOccurs="0"/>
     </xsd:sequence>
     <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
   </xsd:complexType>
