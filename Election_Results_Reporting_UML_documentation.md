@@ -387,6 +387,7 @@ For a contest selection in a ballot measure contest. Because judicial or other r
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
+<a name="_19_0_2_43701b0_1576350241608_897910_4990"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|
 <a name="_17_0_2_4_78e0236_1389710917151_765889_2176"></a>`Selection`|1|`InternationalizedText`|Contains the text used to indicate a vote for or against the ballot measure, e.g., “yes”, “no”.
 
 
@@ -420,6 +421,7 @@ Candidate uses the [Party](#_17_0_2_4_78e0236_1389366597377_433664_2698) associa
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_78e0236_1389710816659_20227_2170"></a>`BallotName`|1|`InternationalizedText`|For the candidate’s name as listed on the ballot.
+<a name="_19_0_2_43701b0_1576187672054_587470_4958"></a>`CampaignSlogan`|0..1|`InternationalizedText`|
 <a name="_18_0_2_6340208_1498659302196_151943_4608"></a>`ContactInformation`|0..1|`ContactInformation`|
 <a name="_17_0_2_4_f71035d_1430405890311_465205_2454"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the candidate.
 <a name="_17_0_2_4_f71035d_1400615133498_375109_2704"></a>`FileDate`|0..1|`date`|Date when the candidate filed for the contest.
@@ -736,7 +738,7 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1442233726833_338497_2238"></a>`ComposingGpUnit`|0..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For creating a reference to another GpUnit that is contained with the parent GpUnit.
 <a name="_17_0_2_4_f71035d_1430412120441_638024_2251"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the GpUnit, e.g., a district’s or county’s code.
-<a name="_17_0_2_4_d420315_1393450176252_314086_2868"></a>`Name`|0..1|`String`|Name of the geopolitical unit.
+<a name="_17_0_2_4_d420315_1393450176252_314086_2868"></a>`Name`|0..1|`InternationalizedText`|Name of the geopolitical unit.
 
 
 ### <a name="_18_5_3_43701b0_1527684342703_968085_6144"></a>*The **Header** Class*
@@ -927,7 +929,7 @@ The Color attribute specifies a 6-digit RGB code displayable using HTML.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_78e0236_1389734813018_766516_3987"></a>`Abbreviation`|0..1|`String`|Short name for the party, e.g., “DEM”.
+<a name="_17_0_2_4_78e0236_1389734813018_766516_3987"></a>`Abbreviation`|0..1|`InternationalizedText`|Short name for the party, e.g., “DEM”.
 <a name="_18_0_2_6340208_1425913135379_377945_4658"></a>`Color`|0..1|`HtmlColorString`|For associating an HTML RGB color coding with the party.
 <a name="_18_5_3_43701b0_1527686777870_350302_6379"></a>`ContactInformation`|0..1|`ContactInformation`|For associating contact information regarding the party, e.g., party offices.
 <a name="_17_0_2_4_f71035d_1430412372015_749476_2263"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the party.
@@ -935,6 +937,8 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_18_0_2_6340208_1506626085733_481329_4570"></a>`LeaderPerson`|0..*|`Person`|Identification of a Party's leader.
 <a name="_18_0_2_6340208_1425913456780_607661_4662"></a>`LogoUri`|0..*|`AnnotatedUri`|A URI to the party’s graphical logo.
 <a name="_17_0_2_4_78e0236_1389710882517_230322_2174"></a>`Name`|1|`InternationalizedText`|Official full name of the party, e.g., “Republican”; can appear on the ballot.
+<a name="_19_0_2_43701b0_1576188118603_242873_4972"></a>`PartyGpUnitScope`|0..*|`GpUnit`|
+<a name="_19_0_2_43701b0_1576187804877_651454_4962"></a>`Slogan`|0..1|`InternationalizedText`|
 
 
 ### <a name="_17_0_2_4_d420315_1393514218965_55008_3144"></a>*The **PartyContest** Class*
