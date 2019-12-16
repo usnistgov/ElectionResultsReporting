@@ -387,7 +387,7 @@ For a contest selection in a ballot measure contest. Because judicial or other r
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_19_0_2_43701b0_1576350241608_897910_4990"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|
+<a name="_19_0_2_43701b0_1576350241608_897910_4990"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot measure selection.
 <a name="_17_0_2_4_78e0236_1389710917151_765889_2176"></a>`Selection`|1|`InternationalizedText`|Contains the text used to indicate a vote for or against the ballot measure, e.g., “yes”, “no”.
 
 
@@ -421,8 +421,8 @@ Candidate uses the [Party](#_17_0_2_4_78e0236_1389366597377_433664_2698) associa
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_78e0236_1389710816659_20227_2170"></a>`BallotName`|1|`InternationalizedText`|For the candidate’s name as listed on the ballot.
-<a name="_19_0_2_43701b0_1576187672054_587470_4958"></a>`CampaignSlogan`|0..1|`InternationalizedText`|
-<a name="_18_0_2_6340208_1498659302196_151943_4608"></a>`ContactInformation`|0..1|`ContactInformation`|
+<a name="_19_0_2_43701b0_1576187672054_587470_4958"></a>`CampaignSlogan`|0..1|`InternationalizedText`|The slogan or motto used by the candidate in their campaign.
+<a name="_18_0_2_6340208_1498659302196_151943_4608"></a>`ContactInformation`|0..1|`ContactInformation`|For associating contact information for the candidate.
 <a name="_17_0_2_4_f71035d_1430405890311_465205_2454"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the candidate.
 <a name="_17_0_2_4_f71035d_1400615133498_375109_2704"></a>`FileDate`|0..1|`date`|Date when the candidate filed for the contest.
 <a name="_17_0_2_4_f71035d_1401280462978_833890_2462"></a>`IsIncumbent`|0..1|`Boolean`|Boolean to indicate whether the candidate is the incumbent for the office associated with the contest. Assumed to be “no” if not present.
@@ -800,7 +800,7 @@ Values for language are from ISO 639 \[12\] and include:
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1441215669264_408334_2533"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
-<a name="_17_0_2_4_f71035d_1428953680100_198341_2225"></a>`Text`|1..*|`LanguageString`|A string of text, i.e., possibly non-English.
+<a name="_17_0_2_4_f71035d_1428953680100_198341_2225"></a>`Text`|1..*|`LanguageString`|Used to hold a string of text with an associated table indicating the language used.
 
 
 ### <a name="_17_0_2_4_f71035d_1428953680095_709464_2219"></a>*The **LanguageString** Class*
@@ -812,7 +812,7 @@ Used to hold a string of text with an associated table indicating the language u
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1428953680098_437370_2221"></a>`Content`|1|`String`|The string in the specified language.
-<a name="_17_0_2_4_f71035d_1428953680098_683534_2222"></a>`Language`|1|`language`|A string of text, i.e., possibly non-English.
+<a name="_17_0_2_4_f71035d_1428953680098_683534_2222"></a>`Language`|1|`language`|Identification of the language, such as 'es'.
 
 
 ### <a name="_17_0_2_4_f71035d_1443104838926_393729_2222"></a>*The **LatLng** Class*
@@ -937,8 +937,8 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_18_0_2_6340208_1506626085733_481329_4570"></a>`LeaderPerson`|0..*|`Person`|Identification of a Party's leader.
 <a name="_18_0_2_6340208_1425913456780_607661_4662"></a>`LogoUri`|0..*|`AnnotatedUri`|A URI to the party’s graphical logo.
 <a name="_17_0_2_4_78e0236_1389710882517_230322_2174"></a>`Name`|1|`InternationalizedText`|Official full name of the party, e.g., “Republican”; can appear on the ballot.
-<a name="_19_0_2_43701b0_1576188118603_242873_4972"></a>`PartyGpUnitScope`|0..*|`GpUnit`|
-<a name="_19_0_2_43701b0_1576187804877_651454_4962"></a>`Slogan`|0..1|`InternationalizedText`|
+<a name="_19_0_2_43701b0_1576188118603_242873_4972"></a>`PartyScopeGpUnit`|0..*|`GpUnit`|The GpUnit(s) the party operates in or the top-most GpUnit.
+<a name="_19_0_2_43701b0_1576187804877_651454_4962"></a>`Slogan`|0..1|`InternationalizedText`|The slogan or motto used by a political party.
 
 
 ### <a name="_17_0_2_4_d420315_1393514218965_55008_3144"></a>*The **PartyContest** Class*
