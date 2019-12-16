@@ -668,23 +668,23 @@
         "Name": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
-        "PartyGpUnitScopeIds": {
-          "items": {
-            "type": "string",
-            "refTypes": [
-              "ElectionResults.ReportingDevice",
-              "ElectionResults.ReportingUnit"
-            ]
-          },
-          "minItems": 0,
-          "type": "array"
-        },
         "PartyIds": {
           "items": {
             "type": "string",
             "refTypes": [
               "ElectionResults.Party",
               "ElectionResults.Coalition"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "PartyScopeGpUnitIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.ReportingDevice",
+              "ElectionResults.ReportingUnit"
             ]
           },
           "minItems": 0,
@@ -1609,7 +1609,7 @@
         "Name": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
-        "PartyGpUnitScopeIds": {
+        "PartyScopeGpUnitIds": {
           "items": {
             "type": "string",
             "refTypes": [

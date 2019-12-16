@@ -246,6 +246,7 @@
     <xsd:complexContent>
       <xsd:extension base="ContestSelection">
         <xsd:sequence>
+          <xsd:element name="ExternalIdentifier" type="ExternalIdentifier" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element name="Selection" type="InternationalizedText"/>
         </xsd:sequence>
       </xsd:extension>
@@ -538,7 +539,7 @@
       <xsd:element name="LeaderPersonIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="LogoUri" type="AnnotatedUri" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Name" type="InternationalizedText"/>
-      <xsd:element name="PartyGpUnitScopeIds" type="xsd:IDREFS" minOccurs="0"/>
+      <xsd:element name="PartyScopeGpUnitIds" type="xsd:IDREFS" minOccurs="0"/>
       <xsd:element name="Slogan" type="InternationalizedText" minOccurs="0"/>
     </xsd:sequence>
     <xsd:attribute name="ObjectId" type="xsd:ID" use="required"/>
