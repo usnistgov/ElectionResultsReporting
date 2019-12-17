@@ -38,15 +38,18 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
   - Added `OrderedHeader` type
   - Added `DateTimeWithZone` type to enforce timezone requirement
 - Added various new associations and attributes:
-  - Added BallotStyle-OrderedContest
+  - Added BallotStyle->OrderedContest
   - Added CandidateContest->NumberRunoff  
   - Added Counts->Round
   - Added Candidate->ContactInformation
+  - Added Candidate->CampaignSlogan
   - Added ElectionReport->Header
   - Added Office->Description
   - Added Party->IsRecognizedParty
   - Added Party->ContactInformation
   - Added Party->LeaderPersonIds
+  - Added Party->PartyScopeGpUnitIds
+  - Added Party->Slogan
   - Added Person->ExternalIdentifier
 - Modified enumeration literals:
   - Added `recall` enumeration literal to `BallotMeasureType`
@@ -59,7 +62,9 @@ The 2.0 version of the Election Results Reporting XML Schema includes the follow
   - Removed `1-of-m` enumeration literal from `VoteVariation`
 - Modified attribute types:
   - Changed ContactInformation->Uri to be of type `AnnotatedUri`
+  - Changed GpUnit->Name to be of type `InternationalizedText`
   - Changed OtherCounts->overvotes, undervotes to `float`
+  - Changed Party->Abbreviation to be of type `InternationalizedText`
   - Changed LatLng->Latitude and LatLng->Longitude to `float`  
 - Changed ElectionReport->GeneratedDate to be of type `DateTimeWithZone`
 - maxLength of ShortString is now 32 (up from 16)
