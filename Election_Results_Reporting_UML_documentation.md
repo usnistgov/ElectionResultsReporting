@@ -372,11 +372,11 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_17_0_2_4_f71035d_1426519513798_649615_2501"></a>`EffectOfAbstain`|0..1|`InternationalizedText`|For a statement on the ballot detailing the effect of abstaining from voting on the ballot measure.
 <a name="_17_0_2_4_78e0236_1389733794199_310242_3824"></a>`FullText`|0..1|`InternationalizedText`|For full text on the ballot of the ballot measure.
 <a name="_17_0_2_4_f71035d_1441214816702_348487_2511"></a>`InfoUri`|0..*|`AnnotatedUri`|For associating a URI with the ballot measure contest.
-<a name="_17_0_2_4_f71035d_1426550214099_344315_2520"></a>`OtherType`|0..1|`String`|Used when BallotMeasureType is other.
 <a name="_17_0_2_4_f71035d_1426519474233_980390_2497"></a>`PassageThreshold`|0..1|`InternationalizedText`|For a statement on the ballot of the number or percentage of votes needed to approve or pass the ballot measure.
 <a name="_17_0_2_4_f71035d_1426519388364_485730_2487"></a>`ProStatement`|0..1|`InternationalizedText`|For a statement on the ballot associated with a “yes” vote.
 <a name="_17_0_2_4_78e0236_1389733722505_364946_3820"></a>`SummaryText`|0..1|`InternationalizedText`|For a summary on the ballot of the ballot measure.
 <a name="_17_0_2_4_f71035d_1426550181692_978243_2516"></a>`Type`|0..1|`BallotMeasureType`|For indicating the type of ballot measure.
+<a name="_17_0_2_4_f71035d_1426550214099_344315_2520"></a>`OtherType`|0..1|`String`|Used when BallotMeasureType is other.
 
 
 ### <a name="_17_0_2_4_78e0236_1389372163799_981952_2926"></a>*The **BallotMeasureSelection** Class*
@@ -402,10 +402,10 @@ BallotStyle references one or more [GpUnit](#_17_0_2_4_78e0236_1389366233346_423
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1441377633582_32184_2220"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot style.
-<a name="_17_0_2_4_f71035d_1436214223050_585224_2515"></a>`GpUnit`|1..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For associating specific geopolitical units with the ballot style.
+<a name="_17_0_2_4_f71035d_1436214223050_585224_2515"></a>`{GpUnit}`|1..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For associating specific geopolitical units with the ballot style.
 <a name="_17_0_2_4_f71035d_1428529376950_608184_2486"></a>`ImageUri`|0..*|`AnnotatedUri`|URI for a ballot image.
-<a name="_17_0_2_4_f71035d_1426189065873_416235_2489"></a>`OrderedContent`|0..*|`OrderedContent`|For associating a ballot style with ballot content, such as contests or headers.
-<a name="_18_0_2_6340208_1427483833143_782361_4565"></a>`Party`|0..*|`Party`|Unique identifier for one or more Party instances. For associating one or more parties with the ballot style.
+<a name="_17_0_2_4_f71035d_1426189065873_416235_2489"></a>`{OrderedContent}`|0..*|`OrderedContent`|For associating a ballot style with ballot content, such as contests or headers.
+<a name="_18_0_2_6340208_1427483833143_782361_4565"></a>`{Party}`|0..*|`Party`|Unique identifier for one or more Party instances. For associating one or more parties with the ballot style.
 
 
 ### <a name="_17_0_2_4_78e0236_1389366272694_544359_2440"></a>*The **Candidate** Class*
@@ -422,13 +422,13 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_78e0236_1389710816659_20227_2170"></a>`BallotName`|1|`InternationalizedText`|For the candidate’s name as listed on the ballot.
 <a name="_19_0_2_43701b0_1576187672054_587470_4958"></a>`CampaignSlogan`|0..1|`InternationalizedText`|The slogan or motto used by the candidate in their campaign.
-<a name="_18_0_2_6340208_1498659302196_151943_4608"></a>`ContactInformation`|0..1|`ContactInformation`|For associating contact information for the candidate.
+<a name="_18_0_2_6340208_1498659302196_151943_4608"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating contact information for the candidate.
 <a name="_17_0_2_4_f71035d_1430405890311_465205_2454"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the candidate.
 <a name="_17_0_2_4_f71035d_1400615133498_375109_2704"></a>`FileDate`|0..1|`date`|Date when the candidate filed for the contest.
 <a name="_17_0_2_4_f71035d_1401280462978_833890_2462"></a>`IsIncumbent`|0..1|`Boolean`|Boolean to indicate whether the candidate is the incumbent for the office associated with the contest. Assumed to be “no” if not present.
 <a name="_17_0_2_4_f71035d_1403276277476_329066_2190"></a>`IsTopTicket`|0..1|`Boolean`|Boolean to indicate whether the candidate is the top of a ticket that includes multiple candidates. Assumed to be “no” if not present.
-<a name="_17_0_2_4_78e0236_1389366597377_433664_2698"></a>`Party`|0..1|`Party`|For associating a party with the candidate.
-<a name="_17_0_5_1_43401a7_1400624143347_418542_3604"></a>`Person`|0..1|`Person`|For associating more detailed information about the candidate.
+<a name="_17_0_2_4_78e0236_1389366597377_433664_2698"></a>`{Party}`|0..1|`Party`|For associating a party with the candidate.
+<a name="_17_0_5_1_43401a7_1400624143347_418542_3604"></a>`{Person}`|0..1|`Person`|For associating more detailed information about the candidate.
 <a name="_17_0_2_4_78e0236_1389797778404_982263_4132"></a>`PostElectionStatus`|0..1|`CandidatePostElectionStatus`|Final status of the candidate, e.g., winner, withdrawn, etc.
 <a name="_17_0_2_4_f71035d_1426535359938_597654_2790"></a>`PreElectionStatus`|0..1|`CandidatePreElectionStatus`|Registration status of the candidate, e.g., filed, qualified, etc.
 
@@ -447,8 +447,8 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_78e0236_1389797739578_12603_4129"></a>`NumberElected`|0..1|`Integer`|Number of candidates that are elected in the contest (“n” of n-of-m).
 <a name="_18_0_2_6340208_1498659576131_900303_4636"></a>`NumberRunoff`|0..1|`Integer`|The number of candidates in a runoff contest.
-<a name="_17_0_5_1_43401a7_1400624734486_732685_3699"></a>`Office`|0..*|`Office`|For associating office descriptions.
-<a name="_17_0_2_4_78e0236_1389735000217_728769_4016"></a>`PrimaryParty`|0..*|`Party`|For associating parties with the contest.
+<a name="_17_0_5_1_43401a7_1400624734486_732685_3699"></a>`{Office}`|0..*|`Office`|For associating office descriptions.
+<a name="_17_0_2_4_78e0236_1389735000217_728769_4016"></a>`{PrimaryParty}`|0..*|`Party`|For associating parties with the contest.
 <a name="_17_0_2_4_78e0236_1389797728177_241732_4126"></a>`VotesAllowed`|1|`Integer`|Maximum number of votes per voter in this contest.
 
 
@@ -464,9 +464,9 @@ When multiple candidates are referenced for a ticket and the ordering of the can
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_d420315_1392145686219_781480_2594"></a>`Candidate`|0..*|`Candidate`|For associating a candidate with the candidate selection on the ballot and for cases where the contest selection is for multiple candidates, e.g., a ticket.
-<a name="_17_0_2_4_d420315_1391370669921_519404_2559"></a>`EndorsementParty`|0..*|`Party`|For associating one or more endorsing parties with the candidate selection.
+<a name="_17_0_2_4_d420315_1392145686219_781480_2594"></a>`{Candidate}`|0..*|`Candidate`|For associating a candidate with the candidate selection on the ballot and for cases where the contest selection is for multiple candidates, e.g., a ticket.
 <a name="_17_0_2_4_78e0236_1389797859448_230579_4174"></a>`IsWriteIn`|0..1|`Boolean`|Indicates whether the candidate is a write-in, e.g., true or false. Assumed to be false if not present.
+<a name="_17_0_2_4_d420315_1391370669921_519404_2559"></a>`{EndorsementParty}`|0..*|`Party`|For associating one or more endorsing parties with the candidate selection.
 
 
 ### <a name="_18_0_2_6340208_1425647247631_162984_4712"></a>*The **Coalition** Class*
@@ -481,8 +481,8 @@ If there are no associated [Contests](#_17_0_2_4_78e0236_1389366251994_876831_24
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1427484451489_775363_4609"></a>`Contest`|0..*|`Contest`|For associating contests with the coalition.
-<a name="_18_0_2_6340208_1425647321121_89855_4744"></a>`Party`|0..*|`Party`|For associating parties with the coalition.
+<a name="_18_0_2_6340208_1427484451489_775363_4609"></a>`{Contest}`|0..*|`Contest`|For associating contests with the coalition.
+<a name="_18_0_2_6340208_1425647321121_89855_4744"></a>`{Party}`|0..*|`Party`|For associating parties with the coalition.
 
 
 ### <a name="_17_0_5_1_43401a7_1400624327407_326048_3637"></a>*The **ContactInformation** Class*
@@ -504,10 +504,10 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_17_0_5_1_43401a7_1400668036651_743620_3650"></a>`Email`|0..*|`AnnotatedString`|Email address associated with the contact.
 <a name="_17_0_5_1_43401a7_1400668021448_721992_3646"></a>`Fax`|0..*|`AnnotatedString`|Fax number associated with the contact.
 <a name="_17_0_2_4_f71035d_1441215163702_951734_2515"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
-<a name="_17_0_2_4_f71035d_1443105009955_640511_2261"></a>`LatLng`|0..1|`LatLng`|For latitude and longitude information associated with the contact.
+<a name="_17_0_2_4_f71035d_1443105009955_640511_2261"></a>`{LatLng}`|0..1|`LatLng`|For latitude and longitude information associated with the contact.
 <a name="_18_0_2_6340208_1429287939709_269212_4416"></a>`Name`|0..1|`RichText`|Name associated with the contact.
 <a name="_17_0_5_1_43401a7_1400667951215_637516_3638"></a>`Phone`|0..*|`AnnotatedString`|Phone number associated with the contact.
-<a name="_17_0_2_4_f71035d_1429176643252_845913_2230"></a>`Schedule`|0..*|`Schedule`|For associating a schedule with the contact.
+<a name="_17_0_2_4_f71035d_1429176643252_845913_2230"></a>`{Schedule}`|0..*|`Schedule`|For associating a schedule with the contact.
 <a name="_17_0_5_1_43401a7_1400668251889_705688_3666"></a>`Uri`|0..*|`AnnotatedUri`|URI associated with the contact.
 
 
@@ -542,18 +542,18 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_17_0_5_1_43401a7_1395831571231_804795_3632"></a>`Abbreviation`|0..1|`String`|Abbreviation for the contest.
 <a name="_17_0_2_4_f71035d_1426519324658_821208_2483"></a>`BallotSubTitle`|0..1|`InternationalizedText`|Subtitle of the contest as it appears on the ballot.
 <a name="_17_0_2_4_f71035d_1426519300284_211849_2479"></a>`BallotTitle`|0..1|`InternationalizedText`|Title of the contest as it appears on the ballot.
-<a name="_17_0_2_4_78e0236_1389366541302_23458_2637"></a>`ContestSelection`|0..*|`ContestSelection`|For associating a contest selection for the contest, i.e., a candidate, a ballot measure.
+<a name="_17_0_2_4_78e0236_1389366541302_23458_2637"></a>`{ContestSelection}`|0..*|`ContestSelection`|For associating a contest selection for the contest, i.e., a candidate, a ballot measure.
+<a name="_17_0_2_4_78e0236_1397059165386_471037_2443"></a>`{OtherCounts}`|0..*|`OtherCounts`|For associating counts such as overvote and undervotes with the contest.
 <a name="_17_0_2_4_f71035d_1430428675044_368644_2247"></a>`CountStatus`|0..*|`CountStatus`|For providing various counting status associated with the contest.
-<a name="_17_0_2_4_78e0236_1389366667508_703141_2753"></a>`ElectionDistrict`|1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the contest with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
+<a name="_17_0_2_4_78e0236_1389366667508_703141_2753"></a>`{ElectionDistrict}`|1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the contest with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
 <a name="_17_0_2_4_f71035d_1430412090176_814999_2249"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the contest.
 <a name="_17_0_2_4_f71035d_1426006769365_710376_2474"></a>`HasRotation`|0..1|`Boolean`|Boolean to indicate whether the selections in the contest are rotated. Assumed to be “no” if not present.
 <a name="_17_0_2_4_78e0236_1389712460582_306281_2220"></a>`Name`|1|`RichText`|Name of the contest, not necessarily as it appears on the ballot.
-<a name="_17_0_2_4_78e0236_1397059165386_471037_2443"></a>`OtherCounts`|0..*|`OtherCounts`|For associating counts such as overvote and undervotes with the contest.
-<a name="_17_0_2_4_f71035d_1426537329540_929122_2797"></a>`OtherVoteVariation`|0..1|`String`|For use when [VoteVariation](#_17_0_2_4_78e0236_1389798198604_276106_4268) is other.
 <a name="_17_0_2_4_f71035d_1426083547931_912709_2690"></a>`SequenceOrder`|0..1|`Integer`|Orderering for listing the contest for purposes of results display. If not present, no order is assumed.
 <a name="_17_0_2_4_d420315_1393508523463_695325_3041"></a>`SubUnitsReported`|0..1|`Integer`|Number of subunits, e.g., precincts, that have completed reporting votes for this contest.
 <a name="_17_0_2_4_d420315_1393508532825_910334_3045"></a>`TotalSubUnits`|0..1|`Integer`|Total number of subunits, e.g., precincts that have this contest on the ballot.
 <a name="_17_0_2_4_78e0236_1389798198604_276106_4268"></a>`VoteVariation`|0..1|`VoteVariation`|Vote variation associated with the contest, e.g., n-of-m.
+<a name="_17_0_2_4_f71035d_1426537329540_929122_2797"></a>`OtherVoteVariation`|0..1|`String`|For use when [VoteVariation](#_17_0_2_4_78e0236_1389798198604_276106_4268) is other.
 
 
 ### <a name="_17_0_2_4_78e0236_1389372124445_11077_2906"></a>*The **ContestSelection** Class*
@@ -572,7 +572,7 @@ Used for the contest selections in a contest (e.g., for candidates, for ballot m
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1426296042287_22607_2200"></a>`SequenceOrder`|0..1|`Integer`|Order in which the candidate is listed on the ballot for purposes of results display. If not present, no order is assumed.
-<a name="_17_0_2_4_78e0236_1389372026000_187007_2862"></a>`VoteCounts`|0..*|`VoteCounts`|For associating the contest selection’s vote counts.
+<a name="_17_0_2_4_78e0236_1389372026000_187007_2862"></a>`{VoteCounts}`|0..*|`VoteCounts`|For associating the contest selection’s vote counts.
 
 
 ### <a name="_17_0_2_4_78e0236_1389367291663_284973_2835"></a>*The **Counts** Class*
@@ -584,11 +584,11 @@ Used for reporting on contest vote counts. Contains attributes to categorize the
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1430428463182_799732_2239"></a>`DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
-<a name="_17_0_2_4_78e0236_1389372033343_84394_2882"></a>`GpUnit`|1|`GpUnit`|For filtering counts by political geography or device or device type.
+<a name="_17_0_2_4_78e0236_1389372033343_84394_2882"></a>`{GpUnit}`|1|`GpUnit`|For filtering counts by political geography or device or device type.
 <a name="_17_0_2_4_f71035d_1443037119396_390572_2220"></a>`IsSuppressedForPrivacy`|0..1|`Boolean`|Boolean to indicate if votes are suppressed for voter privacy, e.g., true or false. Assumed to be false if not present.
-<a name="_17_0_2_4_f71035d_1426077947627_227957_2665"></a>`OtherType`|0..1|`String`|Used when Type is other.
 <a name="_18_0_5_43401a7_1508329922419_951254_4303"></a>`Round`|0..1|`Integer`|An identification of the RCV round being reported.
 <a name="_17_0_2_4_f71035d_1401285906925_720136_2261"></a>`Type`|1|`CountItemType`|The type of count being used as a filter on the vote counts, e.g., election day, early voting, etc.
+<a name="_17_0_2_4_f71035d_1426077947627_227957_2665"></a>`OtherType`|0..1|`String`|Used when Type is other.
 
 
 ### <a name="_17_0_2_4_f71035d_1430412663878_61362_2269"></a>*The **CountStatus** Class*
@@ -601,9 +601,9 @@ If the type of count item is not listed in enumeration [CountItemType](#_17_0_2_
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_f71035d_1426077858771_890955_2661"></a>`OtherType`|0..1|`String`|Used when Type is other.
 <a name="_17_0_2_4_f71035d_1426077427867_28021_2619"></a>`Status`|1|`CountItemStatus`|The status of the count, from the [CountItemStatus](#_17_0_2_4_78e0236_1389797161173_369293_4078) enumeration.
 <a name="_17_0_2_4_f71035d_1426077318387_348887_2615"></a>`Type`|1|`CountItemType`|The type of item, from the [CountItemType](#_17_0_2_4_78e0236_1389798097477_664878_4228) enumeration.
+<a name="_17_0_2_4_f71035d_1426077858771_890955_2661"></a>`OtherType`|0..1|`String`|Used when Type is other.
 
 
 ### <a name="_18_0_2_6340208_1519999692422_172889_4576"></a>*The **DateTimeWithZone** Class*
@@ -627,8 +627,8 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1401286171326_648907_2273"></a>`Manufacturer`|0..1|`String`|Manufacturer of the device.
 <a name="_17_0_2_4_f71035d_1401286117587_806540_2269"></a>`Model`|0..1|`String`|Manufacturer’s device model, used to filter on, e.g., a specific model of DRE or other device type.
-<a name="_18_0_2_6340208_1497894619958_710016_4605"></a>`OtherType`|0..1|`String`|Used when Type is other.
 <a name="_17_0_2_4_f71035d_1401285959630_42686_2265"></a>`Type`|0..1|`DeviceType`|Enumerated type of device, e.g., "dre", "opscan-precinct", etc.
+<a name="_18_0_2_6340208_1497894619958_710016_4605"></a>`OtherType`|0..1|`String`|Used when Type is other.
 
 
 ### <a name="_17_0_2_4_f71035d_1426101822599_430942_2209"></a>*The **Election** Class*
@@ -643,19 +643,19 @@ Election includes a required association end [ElectionScope](#_17_0_2_4_f71035d_
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1508176491404_114747_4598"></a>`BallotCounts`|0..*|`BallotCounts`|Used for identifying various ballot counts.
-<a name="_17_0_2_4_f71035d_1426789041442_265842_2746"></a>`BallotStyle`|0..*|`BallotStyle`|For defining ballot styles associated with the election.
-<a name="_17_0_2_4_f71035d_1426788786008_599642_2643"></a>`Candidate`|0..*|`Candidate`|For defining candidates associated with the election.
-<a name="_18_0_2_6340208_1429710511392_588063_4545"></a>`ContactInformation`|0..1|`ContactInformation`|For associating various contact information with the election.
-<a name="_17_0_2_4_f71035d_1426788714136_545781_2616"></a>`Contest`|0..*|`Contest`|For defining contests associated with the election.
+<a name="_18_0_2_6340208_1508176491404_114747_4598"></a>`{BallotCounts}`|0..*|`BallotCounts`|Used for identifying various ballot counts.
+<a name="_17_0_2_4_f71035d_1426789041442_265842_2746"></a>`{BallotStyle}`|0..*|`BallotStyle`|For defining ballot styles associated with the election.
+<a name="_17_0_2_4_f71035d_1426788786008_599642_2643"></a>`{Candidate}`|0..*|`Candidate`|For defining candidates associated with the election.
+<a name="_18_0_2_6340208_1429710511392_588063_4545"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating various contact information with the election.
+<a name="_17_0_2_4_f71035d_1426788714136_545781_2616"></a>`{Contest}`|0..*|`Contest`|For defining contests associated with the election.
 <a name="_17_0_2_4_f71035d_1430428731982_612772_2251"></a>`CountStatus`|0..*|`CountStatus`|For providing various counting status on types of ballots or other items.
-<a name="_17_0_2_4_f71035d_1426102211616_609900_2331"></a>`ElectionScope`|1|`ReportingUnit`|Unique identifier for a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element. For associating the election with a reporting unit that represents the geographical scope of the election, e.g., a state, a county, etc.
-<a name="_17_0_2_4_f71035d_1431009646277_24904_2233"></a>`EndDate`|1|`date`|Calendar end date of the election; for a typical one-day election, the end date is the same as the start date.
+<a name="_17_0_2_4_f71035d_1426102211616_609900_2331"></a>`{ElectionScope}`|1|`ReportingUnit`|Unique identifier for a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element. For associating the election with a reporting unit that represents the geographical scope of the election, e.g., a state, a county, etc.
 <a name="_17_0_2_4_f71035d_1430411992333_911417_2240"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the election.
 <a name="_17_0_2_4_f71035d_1426101865703_367602_2232"></a>`Name`|1|`InternationalizedText`|For including a name for the election; the name could be the same name as appears on the ballot.
-<a name="_17_0_2_4_f71035d_1447709724802_42785_2220"></a>`OtherType`|0..1|`String`|Used when [Type](#_17_0_2_4_f71035d_1426101886743_683410_2236) is other.
 <a name="_17_0_2_4_f71035d_1426101837248_396898_2228"></a>`StartDate`|1|`date`|Calendar start date of the election, e.g., “2018-11-04”.
+<a name="_17_0_2_4_f71035d_1431009646277_24904_2233"></a>`EndDate`|1|`date`|Calendar end date of the election; for a typical one-day election, the end date is the same as the start date.
 <a name="_17_0_2_4_f71035d_1426101886743_683410_2236"></a>`Type`|1|`ElectionType`|Enumerated type of election, e.g., partisan-primary, open-primary, etc.
+<a name="_17_0_2_4_f71035d_1447709724802_42785_2220"></a>`OtherType`|0..1|`String`|Used when [Type](#_17_0_2_4_f71035d_1426101886743_683410_2236) is other.
 
 
 ### <a name="_18_0_2_6340208_1441311877439_710008_4433"></a>*The **ElectionAdministration** Class*
@@ -668,8 +668,8 @@ ElectionAdministration includes [ContactInformation](#_17_0_5_1_43401a7_14006243
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1441312459706_787590_4464"></a>`ContactInformation`|0..1|`ContactInformation`|For including various contact information.
-<a name="_18_0_2_6340208_1441312523523_377380_4513"></a>`ElectionOfficialPerson`|0..*|`Person`|Unique identifier for one or more Person elements defined for the election authority.
+<a name="_18_0_2_6340208_1441312459706_787590_4464"></a>`{ContactInformation}`|0..1|`ContactInformation`|For including various contact information.
+<a name="_18_0_2_6340208_1441312523523_377380_4513"></a>`{ElectionOfficialPerson}`|0..*|`Person`|Unique identifier for one or more Person elements defined for the election authority.
 <a name="_18_0_2_6340208_1441312432223_272740_4455"></a>`Name`|0..1|`RichText`|Name of the election authority.
 
 
@@ -683,22 +683,22 @@ ElectionReport references the major elements that are not necessarily specific t
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_f71035d_1426102320351_976615_2363"></a>`Election`|0..*|`Election`|For associating elections with the report.
+<a name="_17_0_2_4_f71035d_1426102320351_976615_2363"></a>`{Election}`|0..*|`Election`|For associating elections with the report.
 <a name="_17_0_2_4_f71035d_1430412040553_669909_2247"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the report.
 <a name="_17_0_2_4_d420315_1392318153856_710707_2448"></a>`Format`|1|`ReportDetailLevel`|Detail level of the report, e.g., contest summary, precinct level results, etc.
 <a name="_17_0_2_4_78e0236_1389733247429_431211_3338"></a>`GeneratedDate`|1|`DateTimeWithZone`|Identifies the date and time that the election report was generated.
-<a name="_17_0_2_4_f71035d_1426788982595_725441_2719"></a>`GpUnit`|0..*|`GpUnit`|For associating geopolitical units with the report.
-<a name="_18_5_3_43701b0_1527684452231_716184_6305"></a>`Header`|0..*|`Header`|For associating headers with parts of a ballot style.
+<a name="_17_0_2_4_f71035d_1426788982595_725441_2719"></a>`{GpUnit}`|0..*|`GpUnit`|For associating geopolitical units with the report.
+<a name="_18_5_3_43701b0_1527684452231_716184_6305"></a>`{Header}`|0..*|`Header`|For associating headers with parts of a ballot style.
 <a name="_17_0_5_1_43401a7_1394578590416_259347_3759"></a>`Issuer`|1|`RichText`|Identification of the report issuer.
 <a name="_17_0_2_4_f71035d_1426542944036_608477_2211"></a>`IssuerAbbreviation`|1|`RichText`|An abbreviation of the report issuer such as the 2-character U.S. Census Bureau abbreviation of the state whose results are being reported, e.g., AL, TX, MN, etc.
 <a name="_18_0_2_6340208_1425917205849_590264_4699"></a>`IsTest`|0..1|`Boolean`|Used to indicate whether the report is a test report. Assumed to be “false” if not present.
 <a name="_17_0_2_4_f71035d_1400594737789_912202_2453"></a>`Notes`|0..1|`RichText`|For including an arbitrary message with the report.
-<a name="_17_0_2_4_f71035d_1426788177421_963220_2552"></a>`Office`|0..*|`Office`|For associating offices with the report.
-<a name="_17_0_2_4_f71035d_1433183761792_828366_2293"></a>`OfficeGroup`|0..*|`OfficeGroup`|For associating a name for a grouping of offices with the report.
-<a name="_17_0_2_4_f71035d_1426788475880_621446_2579"></a>`Party`|0..*|`Party`|For associating parties with the report.
-<a name="_17_0_2_4_f71035d_1426788901070_281905_2692"></a>`Person`|0..*|`Person`|For associating persons with the report.
-<a name="_17_0_3_43401a7_1390917636239_792774_2880"></a>`SequenceEnd`|1|`Integer`|The upper bound of the sequence; e.g., “1” if there is only 1 report, “2” if there are two reports in the sequence, etc.
+<a name="_17_0_2_4_f71035d_1426788177421_963220_2552"></a>`{Office}`|0..*|`Office`|For associating offices with the report.
+<a name="_17_0_2_4_f71035d_1433183761792_828366_2293"></a>`{OfficeGroup}`|0..*|`OfficeGroup`|For associating a name for a grouping of offices with the report.
+<a name="_17_0_2_4_f71035d_1426788475880_621446_2579"></a>`{Party}`|0..*|`Party`|For associating parties with the report.
+<a name="_17_0_2_4_f71035d_1426788901070_281905_2692"></a>`{Person}`|0..*|`Person`|For associating persons with the report.
 <a name="_17_0_2_4_78e0236_1389734122703_834255_3892"></a>`SequenceStart`|1|`Integer`|The report’s number as part of a sequence of reports, used with  so as to be read as, e.g., 1 of 1, 1 of 2, 2 of 2, etc. Starts with “1”.
+<a name="_17_0_3_43401a7_1390917636239_792774_2880"></a>`SequenceEnd`|1|`Integer`|The upper bound of the sequence; e.g., “1” if there is only 1 report, “2” if there are two reports in the sequence, etc.
 <a name="_17_0_2_4_78e0236_1389734118887_523907_3888"></a>`Status`|1|`ResultsStatus`|Status of the election report, e.g., test mode, unofficial, etc.
 <a name="_17_0_2_4_f71035d_1428427515312_561619_2215"></a>`TestType`|0..1|`String`|A description of the type of test, e.g., pre-election, logic and accuracy, etc.
 <a name="_17_0_2_4_78e0236_1389733233791_999255_3335"></a>`VendorApplicationId`|1|`String`|An identifier of the vendor application generating the election report, e.g., X-EMS version 3.1.a.
@@ -715,8 +715,8 @@ For elements that link to ExternalIdentifier instances, if the type is not liste
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1441215385623_864674_2521"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
-<a name="_17_0_2_4_f71035d_1430405732252_109247_2429"></a>`OtherType`|0..1|`String`|Used when [IdentifierType](#_17_0_2_4_f71035d_1430405763078_743585_2433) value is other.
 <a name="_17_0_2_4_f71035d_1430405763078_743585_2433"></a>`Type`|1|`IdentifierType`|An identifier type, e.g., FIPS.
+<a name="_17_0_2_4_f71035d_1430405732252_109247_2429"></a>`OtherType`|0..1|`String`|Used when [IdentifierType](#_17_0_2_4_f71035d_1430405763078_743585_2433) value is other.
 <a name="_17_0_2_4_f71035d_1430405785820_123111_2437"></a>`Value`|1|`String`|The identifier used by the jurisdiction.
 
 
@@ -736,7 +736,7 @@ Class for describing a geo-politically bounded area of geography such as a city,
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_f71035d_1442233726833_338497_2238"></a>`ComposingGpUnit`|0..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For creating a reference to another GpUnit that is contained with the parent GpUnit.
+<a name="_17_0_2_4_f71035d_1442233726833_338497_2238"></a>`{ComposingGpUnit}`|0..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For creating a reference to another GpUnit that is contained with the parent GpUnit.
 <a name="_17_0_2_4_f71035d_1430412120441_638024_2251"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the GpUnit, e.g., a district’s or county’s code.
 <a name="_17_0_2_4_d420315_1393450176252_314086_2868"></a>`Name`|0..1|`InternationalizedText`|Name of the geopolitical unit.
 
@@ -762,9 +762,9 @@ Hours is used to specify a specific day and hours on that day, including the tim
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_18_0_2_6340208_1427123259576_729129_4765"></a>`Day`|0..1|`DayType`|Day of the week.
-<a name="_18_0_2_6340208_1427122318779_390600_4652"></a>`EndTime`|1|`TimeWithZone`|End time of the schedule.
 <a name="_17_0_2_4_f71035d_1441215533034_678840_2525"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
 <a name="_18_0_2_6340208_1427122284481_637314_4650"></a>`StartTime`|1|`TimeWithZone`|Start time of the schedule.
+<a name="_18_0_2_6340208_1427122318779_390600_4652"></a>`EndTime`|1|`TimeWithZone`|End time of the schedule.
 
 
 ### <a name="_17_0_2_4_f71035d_1428586849773_722256_2252"></a>*The **HtmlColorString** Class*
@@ -800,7 +800,7 @@ Values for language are from ISO 639 \[12\] and include:
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1441215669264_408334_2533"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
-<a name="_17_0_2_4_f71035d_1428953680100_198341_2225"></a>`Text`|1..*|`LanguageString`|Used to hold a string of text with an associated table indicating the language used.
+<a name="_17_0_2_4_f71035d_1428953680100_198341_2225"></a>`{Text}`|1..*|`LanguageString`|Used to hold a string of text with an associated table indicating the language used.
 
 
 ### <a name="_17_0_2_4_f71035d_1428953680095_709464_2219"></a>*The **LanguageString** Class*
@@ -841,15 +841,15 @@ Office includes an optional [ElectionDistrict](#_17_0_5_1_43401a7_1400701616170_
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_f71035d_1429207941244_121672_2262"></a>`ContactInformation`|0..1|`ContactInformation`|For associating various contact information with the office.
+<a name="_17_0_2_4_f71035d_1429207941244_121672_2262"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating various contact information with the office.
 <a name="_18_0_2_6340208_1498658815063_675104_4595"></a>`Description`|0..1|`InternationalizedText`|A description of the office, possibly as shown on the ballot to the voter.
-<a name="_17_0_5_1_43401a7_1400701616170_933421_3684"></a>`ElectionDistrict`|0..1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the office with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
+<a name="_17_0_5_1_43401a7_1400701616170_933421_3684"></a>`{ElectionDistrict}`|0..1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the office with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
 <a name="_17_0_2_4_f71035d_1430411943269_859941_2238"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the office.
 <a name="_17_0_2_4_f71035d_1400610269818_58929_2680"></a>`FilingDeadline`|0..1|`date`|Date and time when a candidate must have filed for the contest for the office.
 <a name="_17_0_2_4_f71035d_1400610117397_796726_2672"></a>`IsPartisan`|0..1|`Boolean`|Boolean to indicate whether the office is partisan, e.g., true or false. If not present, assumption is true.
 <a name="_17_0_5_1_43401a7_1400701703746_703309_3706"></a>`Name`|1|`InternationalizedText`|Name of the office; can appear on the ballot.
-<a name="_17_0_2_4_f71035d_1429177738058_248218_2294"></a>`OfficeHolderPerson`|0..*|`Person`|Links to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances defined for the office holder.
-<a name="_17_0_2_4_f71035d_1428489163406_781378_2243"></a>`Term`|0..1|`Term`|For including office term-related information.
+<a name="_17_0_2_4_f71035d_1429177738058_248218_2294"></a>`{OfficeHolderPerson}`|0..*|`Person`|Links to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances defined for the office holder.
+<a name="_17_0_2_4_f71035d_1428489163406_781378_2243"></a>`{Term}`|0..1|`Term`|For including office term-related information.
 
 
 ### <a name="_17_0_2_4_f71035d_1433183615993_866714_2239"></a>*The **OfficeGroup** Class*
@@ -862,8 +862,8 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1441363295584_2457_2492"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
 <a name="_17_0_2_4_f71035d_1433183632661_693280_2258"></a>`Name`|1|`String`|Name of the office grouping.
-<a name="_17_0_2_4_f71035d_1433183725966_939706_2266"></a>`Office`|0..*|`Office`|Link to one or more [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instances.
-<a name="_17_0_2_4_f71035d_1433429126207_828493_2535"></a>`SubOfficeGroup`|0..*|`OfficeGroup`|For defining a nested hierarchy of [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance groupings.
+<a name="_17_0_2_4_f71035d_1433183725966_939706_2266"></a>`{Office}`|0..*|`Office`|Link to one or more [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instances.
+<a name="_17_0_2_4_f71035d_1433429126207_828493_2535"></a>`{SubOfficeGroup}`|0..*|`OfficeGroup`|For defining a nested hierarchy of [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance groupings.
 
 
 ### <a name="_18_5_3_43701b0_1527684342715_643544_6146"></a>*The **OrderedContent** Class*
@@ -886,8 +886,8 @@ For the appearance of a contest on a particular ballot style.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_3_43401a7_1394477833535_563732_3249"></a>`Contest`|1|`Contest`|The contest associated represented by OrderedContest.
-<a name="_17_0_3_43401a7_1394477871277_951066_3270"></a>`OrderedContestSelection`|0..*|`ContestSelection`|The contest selections for the ballot.
+<a name="_17_0_3_43401a7_1394477833535_563732_3249"></a>`{Contest}`|1|`Contest`|The contest associated represented by OrderedContest.
+<a name="_17_0_3_43401a7_1394477871277_951066_3270"></a>`{OrderedContestSelection}`|0..*|`ContestSelection`|The contest selections for the ballot.
 
 
 ### <a name="_18_5_3_43701b0_1527684342714_129907_6145"></a>*The **OrderedHeader** Class*
@@ -898,8 +898,8 @@ For the appearance of a header on a particular ballot style.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_5_3_43701b0_1527684342723_761487_6155"></a>`Header`|1|`Header`|Association to the header to be used.
-<a name="_19_0_43701b0_1535731879583_845997_4783"></a>`OrderedContent`|0..*|`OrderedContent`|For associating a header with ballot content, such as contests or nested headers.
+<a name="_18_5_3_43701b0_1527684342723_761487_6155"></a>`{Header}`|1|`Header`|Association to the header to be used.
+<a name="_19_0_43701b0_1535731879583_845997_4783"></a>`{OrderedContent}`|0..*|`OrderedContent`|For associating a header with ballot content, such as contests or nested headers.
 
 
 ### <a name="_18_0_2_6340208_1508176198256_527421_4561"></a>*The **OtherCounts** Class*
@@ -911,7 +911,7 @@ Identifies other counts associated with a contest.
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_18_0_2_6340208_1508176283326_821025_4589"></a>`DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
-<a name="_18_0_2_6340208_1508176572777_602711_4625"></a>`GpUnit`|1|`GpUnit`|For filter counts by political geography or device or device type.
+<a name="_18_0_2_6340208_1508176572777_602711_4625"></a>`{GpUnit}`|1|`GpUnit`|For filter counts by political geography or device or device type.
 <a name="_17_0_2_4_78e0236_1397155833926_751839_2443"></a>`Overvotes`|0..1|`float`|Number of overvotes.
 <a name="_17_0_2_4_78e0236_1397155803428_746302_2439"></a>`Undervotes`|0..1|`float`|Number of undervotes.
 <a name="_17_0_2_4_78e0236_1397155839370_24420_2447"></a>`WriteIns`|0..1|`Integer`|Number of write-ins.
@@ -931,13 +931,13 @@ Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_78e0236_1389734813018_766516_3987"></a>`Abbreviation`|0..1|`InternationalizedText`|Short name for the party, e.g., “DEM”.
 <a name="_18_0_2_6340208_1425913135379_377945_4658"></a>`Color`|0..1|`HtmlColorString`|For associating an HTML RGB color coding with the party.
-<a name="_18_5_3_43701b0_1527686777870_350302_6379"></a>`ContactInformation`|0..1|`ContactInformation`|For associating contact information regarding the party, e.g., party offices.
+<a name="_18_5_3_43701b0_1527686777870_350302_6379"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating contact information regarding the party, e.g., party offices.
 <a name="_17_0_2_4_f71035d_1430412372015_749476_2263"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the party.
 <a name="_18_0_2_6340208_1498658977530_13951_4599"></a>`IsRecognizedParty`|0..1|`Boolean`|For indicating whether the party is recognized by the election authority; “false” is assumed if not present.
-<a name="_18_0_2_6340208_1506626085733_481329_4570"></a>`LeaderPerson`|0..*|`Person`|Identification of a Party's leader.
+<a name="_18_0_2_6340208_1506626085733_481329_4570"></a>`{LeaderPerson}`|0..*|`Person`|Identification of a Party's leader.
 <a name="_18_0_2_6340208_1425913456780_607661_4662"></a>`LogoUri`|0..*|`AnnotatedUri`|A URI to the party’s graphical logo.
 <a name="_17_0_2_4_78e0236_1389710882517_230322_2174"></a>`Name`|1|`InternationalizedText`|Official full name of the party, e.g., “Republican”; can appear on the ballot.
-<a name="_19_0_2_43701b0_1576188118603_242873_4972"></a>`PartyScopeGpUnit`|0..*|`GpUnit`|The GpUnit(s) the party operates in or the top-most GpUnit.
+<a name="_19_0_2_43701b0_1576188118603_242873_4972"></a>`{PartyScopeGpUnit}`|0..*|`GpUnit`|The GpUnit(s) the party operates in or the top-most GpUnit.
 <a name="_19_0_2_43701b0_1576187804877_651454_4962"></a>`Slogan`|0..1|`InternationalizedText`|The slogan or motto used by a political party.
 
 
@@ -957,7 +957,7 @@ For tracking the number of registered voters per party per geopolitical unit, i.
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_78e0236_1394566847763_82144_2845"></a>`Count`|1|`Integer`|A count for tracking the number of registered voters.
-<a name="_17_0_2_4_78e0236_1394566867126_871059_2851"></a>`Party`|1|`Party`|Link to a [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instance. For associating a political party.
+<a name="_17_0_2_4_78e0236_1394566867126_871059_2851"></a>`{Party}`|1|`Party`|Link to a [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instance. For associating a political party.
 
 
 ### <a name="_17_0_2_4_f71035d_1426519980658_594892_2511"></a>*The **PartySelection** Class*
@@ -968,7 +968,7 @@ For a contest selection involving a party such as for a straight party selection
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_f71035d_1426520590194_384550_2564"></a>`Party`|1..*|`Party`|Link to one or more [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instances. For associating one or more parties with the party selection.
+<a name="_17_0_2_4_f71035d_1426520590194_384550_2564"></a>`{Party}`|1..*|`Party`|Link to one or more [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instances. For associating one or more parties with the party selection.
 
 
 ### <a name="_17_0_5_1_43401a7_1400623980732_100904_3567"></a>*The **Person** Class*
@@ -982,7 +982,7 @@ Multiple occurrences of the MiddleName attribute can be used as needed, e.g., fo
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_f71035d_1409158807179_27867_2211"></a>`ContactInformation`|0..*|`ContactInformation`|For associating contact information with the person.
+<a name="_17_0_2_4_f71035d_1409158807179_27867_2211"></a>`{ContactInformation}`|0..*|`ContactInformation`|For associating contact information with the person.
 <a name="_18_0_2_6340208_1425648435033_458578_4893"></a>`DateOfBirth`|0..1|`date`|Person’s date of birth.
 <a name="_18_0_2_6340208_1498659439219_798023_4630"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the person.
 <a name="_17_0_2_4_f71035d_1400615204010_564458_2712"></a>`FirstName`|0..1|`RichText`|Person’s first (given) name.
@@ -991,7 +991,7 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="_17_0_2_4_78e0236_1389710872821_553533_2172"></a>`LastName`|0..1|`RichText`|Person’s last (family) name.
 <a name="_17_0_2_4_f71035d_1400615257828_340032_2716"></a>`MiddleName`|0..*|`RichText`|Person’s middle name.
 <a name="_17_0_2_4_f71035d_1401280254171_19718_2456"></a>`Nickname`|0..1|`RichText`|Nickname associated with the person.
-<a name="_17_0_5_1_43401a7_1400673254137_48726_3702"></a>`Party`|0..1|`Party`|Links to a [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instance. For associating a political party with the person.
+<a name="_17_0_5_1_43401a7_1400673254137_48726_3702"></a>`{Party}`|0..1|`Party`|Links to a [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instance. For associating a political party with the person.
 <a name="_17_0_5_1_43401a7_1400674672870_670385_3783"></a>`Prefix`|0..1|`RichText`|A prefix associated with the person, e.g., Mr.
 <a name="_17_0_5_1_43401a7_1400673145437_284424_3693"></a>`Profession`|0..1|`InternationalizedText`|Person’s profession.
 <a name="_17_0_2_4_f71035d_1400615284895_343066_2720"></a>`Suffix`|0..1|`RichText`|A suffix associated with the person, e.g., Jr.
@@ -1026,19 +1026,19 @@ The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can be u
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_5_1_43401a7_1400624362436_113642_3662"></a>`Authority`|0..*|`Person`|A link to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances describing an authority responsible for the reporting unit.
-<a name="_17_0_2_4_f71035d_1429207854277_960649_2231"></a>`ContactInformation`|0..1|`ContactInformation`|For associating contact information with the reporting unit.
+<a name="_17_0_5_1_43401a7_1400624362436_113642_3662"></a>`{Authority}`|0..*|`Person`|A link to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances describing an authority responsible for the reporting unit.
+<a name="_17_0_2_4_f71035d_1429207854277_960649_2231"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating contact information with the reporting unit.
 <a name="_17_0_2_4_f71035d_1430754449802_75794_2264"></a>`CountStatus`|0..*|`CountStatus`|For providing various counting status on types of ballots or other items.
-<a name="_18_0_2_6340208_1441312768897_951923_4552"></a>`ElectionAdministration`|0..1|`ElectionAdministration`|For use when the reporting unit serves as the authority in the election.
+<a name="_18_0_2_6340208_1441312768897_951923_4552"></a>`{ElectionAdministration}`|0..1|`ElectionAdministration`|For use when the reporting unit serves as the authority in the election.
 <a name="_17_0_2_4_f71035d_1441207733430_83517_2240"></a>`IsDistricted`|0..1|`Boolean`|Boolean to indicate whether the reporting unit is a district; assumed to be “false” if not present.
 <a name="_17_0_2_4_f71035d_1443123936727_89395_2220"></a>`IsMailOnly`|0..1|`Boolean`|Boolean to indicate whether the reporting unit handles only mail-in or absentee ballot elections, assumed to be “false” if not present.
 <a name="_18_0_2_6340208_1497894720963_498162_4611"></a>`Number`|0..1|`String`|A number associated with the reporting unit; for compatibility with VIP.
-<a name="_17_0_2_4_f71035d_1426007519161_685921_2510"></a>`OtherType`|0..1|`String`|For use when [ReportingUnitType](#_17_0_2_4_78e0236_1389713376966_77071_2393) value is other.
-<a name="_17_0_2_4_f71035d_1409141976968_835708_2555"></a>`PartyRegistration`|0..*|`PartyRegistration`|For associating a count of registered voters per party with the geopolitical unit.
-<a name="_17_0_2_4_f71035d_1426084480956_43890_2738"></a>`SpatialDimension`|0..1|`SpatialDimension`|For describing the reporting unit’s spatial extent (a polygon that shows the related area).
+<a name="_17_0_2_4_f71035d_1409141976968_835708_2555"></a>`{PartyRegistration}`|0..*|`PartyRegistration`|For associating a count of registered voters per party with the geopolitical unit.
+<a name="_17_0_2_4_f71035d_1426084480956_43890_2738"></a>`{SpatialDimension}`|0..1|`SpatialDimension`|For describing the reporting unit’s spatial extent (a polygon that shows the related area).
 <a name="_17_0_2_4_d420315_1393507535261_72915_3031"></a>`SubUnitsReported`|0..1|`Integer`|Number of associated subunits such as precincts that have completed reporting.
 <a name="_17_0_2_4_d420315_1393507564958_992105_3035"></a>`TotalSubUnits`|0..1|`Integer`|Total number of associated subunits such as precincts.
 <a name="_17_0_2_4_78e0236_1389713376966_77071_2393"></a>`Type`|1|`ReportingUnitType`|Enumerated type of reporting unit, e.g., state, county, district, precinct, etc.
+<a name="_17_0_2_4_f71035d_1426007519161_685921_2510"></a>`OtherType`|0..1|`String`|For use when [ReportingUnitType](#_17_0_2_4_78e0236_1389713376966_77071_2393) value is other.
 <a name="_17_0_2_4_f71035d_1409163555614_991016_2207"></a>`VotersParticipated`|0..1|`Integer`|Number of voters who have participated in the election, i.e., shown up at the polls, including those who did not cast ballots.
 <a name="_17_0_2_4_78e0236_1389730517829_705754_2675"></a>`VotersRegistered`|0..1|`Integer`|Number of registered voters residing within the boundaries of the geopolitical unit.
 
@@ -1054,8 +1054,8 @@ This element uses [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1425646466278_708197_4616"></a>`Candidate`|1|`Candidate`|Link to a [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instance. For associating a candidate with the retention contest.
-<a name="_18_0_2_6340208_1425646257224_14886_4580"></a>`Office`|0..1|`Office`|Link to an [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance. For associating an office description with the retention contest.
+<a name="_18_0_2_6340208_1425646466278_708197_4616"></a>`{Candidate}`|1|`Candidate`|Link to a [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instance. For associating a candidate with the retention contest.
+<a name="_18_0_2_6340208_1425646257224_14886_4580"></a>`{Office}`|0..1|`Office`|Link to an [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance. For associating an office description with the retention contest.
 
 
 ### <a name="_18_0_2_6340208_1427122121448_198970_4547"></a>*The **Schedule** Class*
@@ -1066,13 +1066,13 @@ For defining a schedule associated with a particular election office or location
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1427122178673_228183_4597"></a>`EndDate`|0..1|`date`|For the ending date of the schedule.
-<a name="_18_0_2_6340208_1427122219893_697937_4628"></a>`Hours`|0..*|`Hours`|For specifying a range of hours for a schedule.
+<a name="_18_0_2_6340208_1427122219893_697937_4628"></a>`{Hours}`|0..*|`Hours`|For specifying a range of hours for a schedule.
 <a name="_18_0_2_6340208_1427122382178_611115_4660"></a>`IsOnlyByAppointment`|0..1|`Boolean`|If an appointment is only by appointment; assumed to be “no” if not present.
 <a name="_18_0_2_6340208_1427122372629_379532_4658"></a>`IsOrByAppointment`|0..1|`Boolean`|If an appointment can by appointment presumably as desired; assumed to be “no” if not present.
 <a name="_18_0_2_6340208_1427122390387_8752_4662"></a>`IsSubjectToChange`|0..1|`Boolean`|If an appointment may be subject to change; assumed to be “no” if not present.
 <a name="_17_0_2_4_f71035d_1441362119057_984284_2224"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
 <a name="_18_0_2_6340208_1427122157536_969193_4595"></a>`StartDate`|0..1|`date`|For the starting date of the schedule.
+<a name="_18_0_2_6340208_1427122178673_228183_4597"></a>`EndDate`|0..1|`date`|For the ending date of the schedule.
 
 
 ### <a name="_18_0_2_6340208_1499878618645_537953_4560"></a>*The **ShortString** Class*
@@ -1095,7 +1095,7 @@ For defining the spatial layout of a [GpUnit](#_17_0_2_4_78e0236_1389366233346_4
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
 <a name="_17_0_2_4_f71035d_1407172954401_413137_2508"></a>`MapUri`|0..*|`AnnotatedUri`|Typically a URI to a map of the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
-<a name="_17_0_2_4_f71035d_1409080509711_839030_2261"></a>`SpatialExtent`|0..1|`SpatialExtent`|For associating a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element’s spatial extent information.
+<a name="_17_0_2_4_f71035d_1409080509711_839030_2261"></a>`{SpatialExtent}`|0..1|`SpatialExtent`|For associating a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element’s spatial extent information.
 
 
 ### <a name="_17_0_2_4_f71035d_1409080246279_778720_2209"></a>*The **SpatialExtent** Class*
@@ -1118,9 +1118,9 @@ For describing information about an office term. [Term](#_17_0_2_4_f71035d_1428
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_f71035d_1400610488881_890128_2692"></a>`EndDate`|0..1|`date`|End date for the current term of the office.
 <a name="_18_0_2_6340208_1505852448141_524598_4584"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
 <a name="_17_0_2_4_f71035d_1400610432611_11829_2688"></a>`StartDate`|0..1|`date`|Start date for the current term of the office.
+<a name="_17_0_2_4_f71035d_1400610488881_890128_2692"></a>`EndDate`|0..1|`date`|End date for the current term of the office.
 <a name="_17_0_2_4_f71035d_1400610203299_137168_2676"></a>`Type`|0..1|`OfficeTermType`|Enumerated type of term, e.g., full-term, unexpired-term, etc.
 
 
