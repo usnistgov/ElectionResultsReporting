@@ -614,7 +614,7 @@ Restricts dateTime to require inclusion of time zone information and excludes fr
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1519999795210_981371_4601"></a>`pattern`||`string`|Pattern used for indicating the date, time and the accompanying time zone.
+<a name="_18_0_2_6340208_1519999795210_981371_4601"></a>`pattern`||`String`|Pattern used for indicating the date, time and the accompanying time zone.
 
 
 ### <a name="_18_0_2_6340208_1425911626288_420556_4530"></a>*The **DeviceClass** Class*
@@ -1132,7 +1132,7 @@ Restricts time to require inclusion of time zone information and excludes fracti
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1427385616971_659746_4409"></a>`pattern`||`string`|Pattern used for indicating the time with the accompanying time zone.
+<a name="_18_0_2_6340208_1427385616971_659746_4409"></a>`pattern`||`String`|Pattern used for indicating the time with the accompanying time zone.
 
 
 ### <a name="_17_0_2_4_78e0236_1397156604549_15838_2489"></a>*The **VoteCounts** Class*
