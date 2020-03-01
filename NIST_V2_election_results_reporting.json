@@ -238,6 +238,13 @@
           ],
           "type": "string"
         },
+        "ExternalIdentifier": {
+          "items": {
+            "$ref": "#/definitions/ElectionResults.ExternalIdentifier"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
         "Selection": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
@@ -348,6 +355,9 @@
           "type": "string"
         },
         "BallotName": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "CampaignSlogan": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
         "ContactInformation": {
@@ -607,7 +617,7 @@
           "type": "string"
         },
         "Abbreviation": {
-          "type": "string"
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
         "Color": {
           "$ref": "#/definitions/ElectionResults.HtmlColorString"
@@ -668,6 +678,20 @@
           },
           "minItems": 0,
           "type": "array"
+        },
+        "PartyScopeGpUnitIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.ReportingDevice",
+              "ElectionResults.ReportingUnit"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Slogan": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
         }
       },
       "type": "object"
@@ -1547,7 +1571,7 @@
           "type": "string"
         },
         "Abbreviation": {
-          "type": "string"
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
         "Color": {
           "$ref": "#/definitions/ElectionResults.HtmlColorString"
@@ -1583,6 +1607,20 @@
           "type": "array"
         },
         "Name": {
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
+        },
+        "PartyScopeGpUnitIds": {
+          "items": {
+            "type": "string",
+            "refTypes": [
+              "ElectionResults.ReportingDevice",
+              "ElectionResults.ReportingUnit"
+            ]
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "Slogan": {
           "$ref": "#/definitions/ElectionResults.InternationalizedText"
         }
       },
@@ -1874,7 +1912,7 @@
           "type": "array"
         },
         "Name": {
-          "type": "string"
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
         "SerialNumber": {
           "type": "string"
@@ -1947,7 +1985,7 @@
           "type": "boolean"
         },
         "Name": {
-          "type": "string"
+          "$ref": "#/definitions/ElectionResults.InternationalizedText"
         },
         "Number": {
           "type": "string"
