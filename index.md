@@ -1,34 +1,12 @@
-# NIST V2.0 - Election Results Reporting
-
-
-**National Institute of Standards and Technology (NIST) Special
-Publication 1500-100, Revision 2.0**
+# National Institute of Standards and Technology (NIST) Special Publication 1500-100, Revision 2.0
 
 **March 2020**
 
-Mark Cwalinksi, Justin Moore, *Google, Inc*.
+**The following is an excerpt from the SP 1500-100 specification. It contains the specification's executive summary and class documentation.**
 
-Sam Dana, *Prometheus Computing*
-
-John Dziurlaj, *Democracy Fund*
-
-Jared Marcotte, *The Turnout*
-
-John Wack, *Software and Systems Division,*
-*Information Technology Laboratory, NIST*
-
-Sarah Whitt, *Electronic Registration Information Center*
-
-This publication is available free of charge from:
+The complete publication including JSON and XML schemas is available free of charge from:
 
 <https://github.com/usnistgov/ElectionResultsReporting>
-
-and
-
-<https://doi.org/10.6028/NIST.SP.1500-100r2>
-
-
-**NOTE: The following is an excerpt from the complete specification available at the above links. It contains the specification's executive summary and class documentation.**
 
 # Executive Summary
 
@@ -39,10 +17,10 @@ comprehensive and detailed in its coverage of election results-related
 data and at the same time very flexible, able to accommodate election
 scenarios used throughout the United States. This publication describes:
 
-  - a UML (Unified Modeling Language) model \[1\],
+  - a UML (Unified Modeling Language) model,
 
   - derived XML (eXtensible Markup Language) and JSON (JavaScript Object
-    Notation) schemas \[2\]\[3\],
+    Notation) schemas,
 
   - usage information and guidance, and
 
