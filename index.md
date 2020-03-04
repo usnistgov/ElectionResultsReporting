@@ -1,1422 +1,1256 @@
-<title>NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0</title>
-# **NIST SP 1500-100 Election Results Reporting Common Data Format Specification Version 1.0**
+# NIST V2.0 - Election Results Reporting
 
-### **February 2016**
 
-*Note: This is a partial GitHub pages version of the NIST SP 1500-100 specification that is currently in process of being converted from the Word/PDF version. The specification in PDF is located at [https://github.com/usnistgov/ElectionResultsReporting](https://github.com/usnistgov/ElectionResultsReporting).*
+**National Institute of Standards and Technology (NIST) Special
+Publication 1500-100, Revision 2.0**
 
-**Kim Brace**, EDS<br>
-**Sam Dana**, Prometheus Computing<br>
-**Herb Deutsch**, ES&S<br>
-**John Dziurlaj**, Ohio SoS Office<br>
-**Ian Piper**, Dominion Voting<br>
-**Don Rehill**, AP<br>
-**Richard Rivello**, NIST<br>
-**John P. Wack**, NIST<br>
-**Sarah Whitt**, Wisconsin GAB
+**March 2020**
 
-<br>
+Mark Cwalinksi, Justin Moore, *Google, Inc*.
 
-This publication is available free of charge from: [http://dx.doi.org/10.6028/NIST.SP.1500-100](http://dx.doi.org/10.6028/NIST.SP.1500-100).
+Sam Dana, *Prometheus Computing*
 
-	NIST Special Publication series 1500 is intended to capture external perspectives related to NIST standards, measurement, and
-	testing-related efforts. These external perspectives can come from industry, academia, government, and others. These reports are
-	intended to document external perspectives and do not necessarily represent official NIST positions.
+John Dziurlaj, *Democracy Fund*
 
-	Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental
-	procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by NIST, nor is it
-	intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.
+Jared Marcotte, *The Turnout*
 
-	There may be references in this publication to other publications currently under development by NIST in accordance with its
-	assigned statutory responsibilities. The information in this publication, including concepts and methodologies, may be used by
-	federal agencies even before the completion of such companion publications. Thus, until each publication is completed, current
-	requirements, guidelines, and procedures, where they exist, remain operative. For planning and transition purposes, federal
-	agencies may wish to closely follow the development of these new publications by NIST.
+John Wack, *Software and Systems Division,*
+*Information Technology Laboratory, NIST*
 
-	Organizations are encouraged to review all draft publications during public comment periods and provide feedback to NIST.
-	All NIST publications are available at http://www.nist.gov/publication-portal.cfm.
+Sarah Whitt, *Electronic Registration Information Center*
 
-	National Institute of Standards and Technology
-	Attn: Software and Systems Division, Information Technology Laboratory
-	100 Bureau Drive (Mail Stop 8970) Gaithersburg, MD 20899-8930
-	Email: voting@nist.gov
+This publication is available free of charge from:
 
-## Abstract
-This publication describes an election results common data format specification for pre-election setup information and post-election results reporting.  It contains a UML model of the election data and an XML format derived from the UML model.  It also contains background information regarding how geopolitical geography is structured and used in the model and schema.  The XML format is comprehensive and at the same time very flexible, able to accommodate election scenarios used throughout the U.S. It is part of a series of planned common data format specifications for voting equipment.
+<https://doi.org/10.6028/NIST.SP.1500-100r2>
 
-## Keywords
-Ballot; common data format; contest; district; election results; jurisdiction; overvote; political office; political party; precinct; referendum; undervote, voting.
+# Executive Summary
 
-## Table of Contents
+This publication presents a common data format (CDF) for pre-election
+setup information and post-election results reporting. The format, known
+as the Election Results Common Data Format Specification Version 2.0, is
+comprehensive and detailed in its coverage of election results-related
+data and at the same time very flexible, able to accommodate election
+scenarios used throughout the United States. This publication describes:
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
+  - a UML (Unified Modeling Language) model \[1\],
 
-- [Acknowledgements](#acknowledgements)
-- [Executive Summary](#executive-summary)
-- [1	Introduction](#1-introduction)
-	- [1.1	Purpose](#11-purpose)
-	- [1.2	Audience](#12-audience)
-	- [1.3	Motivation and methodology](#13-motivation-and-methodology)
-	- [1.4	Document Structure](#14-document-structure)
-- [2 Background: Geopolitical Geography](#2-background-geopolitical-geography)
-	- [2.1 The Primary Types of Geopolitical Geography](#21-the-primary-types-of-geopolitical-geography)
-		- [2.1.1 Governmental-based Geography](#211-governmental-based-geography)
-		- [2.1.2 Political-based Geography](#212-political-based-geography)
-		- [2.1.3 Administrative-based Geography](#213-administrative-based-geography)
-	- [2.2 Linking the Geopolitical Geographies Together](#22-linking-the-geopolitical-geographies-together)
-	- [2.3 Geopolitical Geography in the UML Model and XML Schema](#23-geopolitical-geography-in-the-uml-model-and-xml-schema)
-- [3 Use Cases and UML Model](#3-use-cases-and-uml-model)
-	- [3.1	Use Cases](#31-use-cases)
-		- [3.1.1	Pre-Election Use Case](#311-pre-election-use-case)
-		- [3.1.2	Election Night Reporting Use Case](#312-election-night-reporting-use-case)
-		- [3.1.3	Post-Election Reporting Use Case](#313-post-election-reporting-use-case)
-	- [3.2	UML Model](#32-uml-model)
-		- [3.2.1	Major Classes](#321-major-classes)
-		- [3.2.2	Relationships between Classes](#322-relationships-between-classes)
-- [4 XML Schema](#4-xml-schema)
-- [5 XML Schema Aspects and Usage](#5-xml-schema-aspects-and-usage)
-- [Appendices](#appendices)
-	- [A Acronyms](#a-acronyms)
-	- [B Glossary](#b-glossary)
-	- [C References](#c-references)
-	- [D File Download locations](#d-file-download-locations)
-	- [E XML Schema](#e-xml-schema)
-	- [F Detailed UML Class Diagram](#f-detailed-uml-class-diagram)
+  - derived XML (eXtensible Markup Language) and JSON (JavaScript Object
+    Notation) schemas \[2\]\[3\],
 
-<!-- /TOC -->
+  - usage information and guidance, and
 
-<br>
+  - background information.
 
-## Acknowledgements
-The authors wish to thank their colleagues of the National Institute of Standards and Technology Interoperability Public Working Group, who
-reviewed drafts of this document and contributed to its technical content.  The authors gratefully acknowledge and appreciate the following
-contributors for their keen and insightful assistance with developing this specification:
+This specification provides a common data interchange format for
+election data used in voting systems across U.S. jurisdictions. Using
+this specification, pre-election and post-election data can be published
+in a common, well-understood format. The format accommodates highly
+detailed election results data and is sufficiently flexible to
+accommodate many different types of contests and political structures.
 
-* Kenneth Bennett, Office of Registrar-Recorder /County Clerk, Los Angeles
-* Thomas Connolly, New York State Board of Elections
-* Art Greisser, Prometheus Computing
-* Chris Jerdonek, Elections Commission, City and County of San Francisco
-* Arthur Keller, University of California
-* Jared Marcotte, The Turnout
-* Lauren Massa-Lochridge, Independent Researcher
-* Neal McBurnett, ElectionAudits
-* John McCarthy, Verified Voting
-* Janet Modrow, Florida Division of Elections
-* Justin Moore, Google
-* Tammy Patrick, Bipartisan Policy Institute
-* Benjamin Rice, Dominion Voting
-* John Sebes, OSET Foundation
-* Paul Stenbjorn, Election Information Services
-* Beth Ann Surber, Office of the Secretary of State, West Virginia
-* David Tarrent, Bureau of Elections, Michigan
-* David Webber, Horizon Industries
-
-In addition to the above acknowledgments, the authors also gratefully acknowledge and appreciate the National Institute of Standards and Technology's
-Mary Brady, James Foti, and Joshua Franklin, for their exceptional contributions in helping to improve the content of the publication.  The authors also gratefully acknowledge and appreciate the significant contributions from individuals and organizations in the
-public and private sectors, whose thoughtful and constructive comments improved the overall quality, thoroughness, and usefulness of this publication.
-
-<br>
-
-## Executive Summary
-This publication is a specification for a common data format (CDF) for pre-election setup information and post-election results reporting.  The format, known as the Election Results Common Data Format Specification, is comprehensive and detailed in its coverage of election results-related data and at the same time very flexible, able to accommodate election scenarios used throughout the United States.  This publication contains a UML (Unified Modeling Language) model, a derived XML (eXtensible Markup Language) schema, usage information and guidance, and background information.
-
-This specification provides a common data interchange format for election data used in voting systems across U.S. jurisdictions. Using this specification, pre-election and post-election data can be published in a common, well-understood format. The format accommodates highly detailed election results data and is sufficiently flexible to accommodate many different types of contests and political structures.
-
-This specification provides manufacturers of election management systems (EMS) and managers of election jurisdictions with standard methods for importing and exporting election data, thereby increasing interoperability among election devices and reducing the need to create software to translate between proprietary formats.  Interoperable data will reduce costs to election jurisdictions by reducing the complexity in election management and offering jurisdictions more choice in election equipment.
+This specification provides manufacturers of election management systems
+(EMS) and managers of election jurisdictions with standard methods for
+importing and exporting election data, thereby increasing
+interoperability among election devices and reducing the need to create
+software to translate between proprietary formats. Interoperable data
+will reduce costs to election jurisdictions by reducing the complexity
+in election management and offering jurisdictions more choice in
+election equipment.
 
 This specification is geared towards the following audiences:
 
-*	Election officials,
-*	Voting equipment manufacturers,
-*	Election-affiliated organizations, and
-*	Election analysts and the general public.
+  - Election officials
+
+  - Voting equipment manufacturers
+
+  - Election-affiliated organizations and
+
+  - Election analysts and the general public
 
 The format accommodates three different election scenarios:
 
-**Pre-election**.  The period prior to an election, for reporting pre-election data from a jurisdiction but not yet complete information about any election.
+**Pre-election**. The period prior to an election, for reporting
+pre-election data from a jurisdiction but not yet complete information
+about any election.
+
+**Election**. The period during which an election is being conducted and
+election results reports are produced. The reports include aggregated
+results data or more detailed, precinct-level reporting, depending on
+the capabilities of the reporting jurisdiction.
+
+**Post-election**. The period after the polls close when more detailed
+election results reports are produced with options for precinct
+reporting, type of ballot, and type of device.
+
+The XML and JSON schemas associated with this specification are derived
+from the UML model, which defines the types, structure, and
+interrelationships of geopolitical geography across the United States.
+The model was designed to accommodate multiple types of contests and
+their many variations. It also provides the capability to report on
+these contests from higher aggregate levels down to very fine levels of
+detail, including:
+
+  - reporting by precincts and split precincts;
+
+  - reporting by ballot type, for example, absentee and election day;
+    and
+
+  - reporting by device type and specific voting device.
+
+The UML model can be re-used and modified to meet the needs of other
+planned common data format specifications for voting devices such as
+electronic pollbooks and ballot marking devices.
+
+# Notice of Revision 2.0
+
+This document is a version 2.0 revision to the NIST Special Publication
+1500-100, Election Results Common Data Format Specification, Version 1.
+Changes were made to the version 1 UML model to add additional
+information and make the model easier to implement and use.
+Additionally, the XML schema was updated accordingly and a new JSON
+schema was generated.
+
+# Table of Contents
+  - Enumerations
+    - *The **[BallotMeasureType](#_17_0_2_4_f71035d_1426549604222_56408_2487)** Enumeration*
+    - *The **[CandidatePostElectionStatus](#_17_0_2_4_78e0236_1389797791548_146399_4136)** Enumeration*
+    - *The **[CandidatePreElectionStatus](#_17_0_2_4_f71035d_1427223542780_950918_2213)** Enumeration*
+    - *The **[CountItemStatus](#_17_0_2_4_78e0236_1389797161173_369293_4078)** Enumeration*
+    - *The **[CountItemType](#_17_0_2_4_78e0236_1389798097477_664878_4228)** Enumeration*
+    - *The **[DayType](#_18_0_2_6340208_1425647845906_917814_4818)** Enumeration*
+    - *The **[DeviceType](#_17_0_2_4_78e0236_1389798087342_91702_4210)** Enumeration*
+    - *The **[ElectionType](#_17_0_2_4_78e0236_1389734457182_720347_3938)** Enumeration*
+    - *The **[GeoSpatialFormat](#_17_0_2_4_f71035d_1425325534467_889921_2544)** Enumeration*
+    - *The **[IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613)** Enumeration*
+    - *The **[OfficeTermType](#_17_0_2_4_f71035d_1425314816880_411605_2504)** Enumeration*
+    - *The **[ReportDetailLevel](#_17_0_2_4_d420315_1392318380928_311473_2471)** Enumeration*
+    - *The **[ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242)** Enumeration*
+    - *The **[ResultsStatus](#_17_0_2_4_78e0236_1389734128637_37089_3895)** Enumeration*
+    - *The **[VoteVariation](#_17_0_2_4_78e0236_1389798224990_11192_4272)** Enumeration*
+  - Classes
+    - *The **[AnnotatedString](#_18_0_2_6340208_1497553224568_429892_4565)** Class*
+    - *The **[AnnotatedUri](#_18_0_2_6340208_1498658436378_308208_4565)** Class*
+    - *The **[BallotCounts](#_17_0_2_4_78e0236_1397156576157_466818_2461)** Class*
+    - *The **[BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783)** Class*
+    - *The **[BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)** Class*
+    - *The **[BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360)** Class*
+    - *The **[Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440)** Class*
+    - *The **[CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806)** Class*
+    - *The **[CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562)** Class*
+    - *The **[Coalition](#_18_0_2_6340208_1425647247631_162984_4712)** Class*
+    - *The **[ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637)** Class*
+    - *The **[Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400)** Class*
+    - *The **[ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906)** Class*
+    - *The **[Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835)** Class*
+    - *The **[CountStatus](#_17_0_2_4_f71035d_1430412663878_61362_2269)** Class*
+    - *The **[DateTimeWithZone](#_18_0_2_6340208_1519999692422_172889_4576)** Class*
+    - *The **[DeviceClass](#_18_0_2_6340208_1425911626288_420556_4530)** Class*
+    - *The **[Election](#_17_0_2_4_f71035d_1426101822599_430942_2209)** Class*
+    - *The **[ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433)** Class*
+    - *The **[ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300)** Class*
+    - *The **[ExternalIdentifier](#_17_0_2_4_f71035d_1430405712653_451634_2410)** Class*
+    - *The **[GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380)** Class*
+    - *The **[Header](#_18_5_3_43701b0_1527684342703_968085_6144)** Class*
+    - *The **[Hours](#_18_0_2_6340208_1427122205989_885563_4602)** Class*
+    - *The **[HtmlColorString](#_17_0_2_4_f71035d_1428586849773_722256_2252)** Class*
+    - *The **[InternationalizedText](#_17_0_2_4_f71035d_1428953680097_700602_2220)** Class*
+    - *The **[LanguageString](#_17_0_2_4_f71035d_1428953680095_709464_2219)** Class*
+    - *The **[LatLng](#_17_0_2_4_f71035d_1443104838926_393729_2222)** Class*
+    - *The **[Office](#_17_0_5_1_43401a7_1400623830572_164081_3518)** Class*
+    - *The **[OfficeGroup](#_17_0_2_4_f71035d_1433183615993_866714_2239)** Class*
+    - *The **[OrderedContent](#_18_5_3_43701b0_1527684342715_643544_6146)** Class*
+    - *The **[OrderedContest](#_17_0_3_43401a7_1394476416139_808596_3142)** Class*
+    - *The **[OrderedHeader](#_18_5_3_43701b0_1527684342714_129907_6145)** Class*
+    - *The **[OtherCounts](#_18_0_2_6340208_1508176198256_527421_4561)** Class*
+    - *The **[Party](#_17_0_2_4_78e0236_1389366278128_412819_2460)** Class*
+    - *The **[PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144)** Class*
+    - *The **[PartyRegistration](#_17_0_2_4_78e0236_1394566839296_58362_2826)** Class*
+    - *The **[PartySelection](#_17_0_2_4_f71035d_1426519980658_594892_2511)** Class*
+    - *The **[Person](#_17_0_5_1_43401a7_1400623980732_100904_3567)** Class*
+    - *The **[ReportingDevice](#_17_0_2_4_78e0236_1389798013459_389380_4178)** Class*
+    - *The **[ReportingUnit](#_17_0_2_4_f71035d_1400606476166_735297_2593)** Class*
+    - *The **[RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554)** Class*
+    - *The **[Schedule](#_18_0_2_6340208_1427122121448_198970_4547)** Class*
+    - *The **[ShortString](#_18_0_2_6340208_1499878618645_537953_4560)** Class*
+    - *The **[SpatialDimension](#_17_0_2_4_f71035d_1407165065674_39189_2188)** Class*
+    - *The **[SpatialExtent](#_17_0_2_4_f71035d_1409080246279_778720_2209)** Class*
+    - *The **[Term](#_17_0_2_4_f71035d_1428489072598_282236_2217)** Class*
+    - *The **[TimeWithZone](#_18_0_2_6340208_1427385616970_86952_4407)** Class*
+    - *The **[VoteCounts](#_17_0_2_4_78e0236_1397156604549_15838_2489)** Class*
 
-**Election**.  The period during which an election is being conducted and election results reports are produced.  The reports include aggregated results data or more detailed, precinct-level reporting, depending on the capabilities of the reporting jurisdiction.
+## Enumerations
 
-**Post-election**.  The period after the close of polls when more detailed election results reports are produced with options for precinct reporting, type of ballot, and type of device.
+### <a name="_17_0_2_4_f71035d_1426549604222_56408_2487"></a>*The **BallotMeasureType** Enumeration*
 
-The XML schema associated with this specification is derived from a UML model that defines the types, structure, and interrelationships of geopolitical geography across the U.S.  The model was designed to accommodate multiple types of contests and their many variations, and to provide the capability to report on these contests from higher aggregate levels down to very fine levels of detail, including:
+![Image of BallotMeasureType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1426549604223_980638_2488.png)
 
-* Reporting by precinct and splits of precincts;
-*	Reporting by ballot type, e.g., absentee, election day; and
-*	Reporting by device type and specific voting device.
+Enumeration for types of ballot measures in the [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) element.
 
-The UML model can be re-used and modified to meet the needs of other planned common data format specifications for voting devices such as electronic pollbooks and ballot marking devices.
+Name | Value
+---- | -----
+`ballot-measure`|For reports that contain only aggregated counts.
+`initiative`|For an initiative.
+`recall`|For a recall.
+`referendum`|For a referendum.
+`other`|Used when the type of ballot measure is not included in this enumeration.
 
-<br>
+### <a name="_17_0_2_4_78e0236_1389797791548_146399_4136"></a>*The **CandidatePostElectionStatus** Enumeration*
 
-# 1	Introduction
-This publication is a specification for an XML-based (eXtensible Markup Language) common data format (CDF) for exchanging pre-election and post-election data from voting systems used for managing elections and tabulating election results across states and territories of the United States.  The format serves as a basic export of election information from an election management system (EMS) and as a means for combining election data from different EMSs or transferring election data between EMSs.  It defines common exchange methods between distributed voting places and central offices as well as from election offices to news media and the general public. These common exchange methods promote interoperability and eliminate the need for proprietary formats.
-This specification includes a data model in UML (Unified Modeling Language) that specifies and defines the data involved in pre-election setup and post-election results reporting.  The XML format is derived from the UML model.
+![Image of CandidatePostElectionStatus](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_58243_5353.png)
 
-The primary features of this specification are:
+Enumeration for various post-election statuses applicable to a candidate in the [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) element.
 
-*	Major data elements and their attributes and associations are fully defined in a UML data model;
-*	The data model can be used to generate data formats (e.g., XML, JSON (JavaScript Object Notation)) for today’s election systems as well as for future election systems;
-*	Election data and results can be reported at flexible levels from highly aggregated to very detailed;
-*	Detailed reporting includes by device type, by type of ballot, and by geopolitical geographies including precinct and split precinct;
-*	Geopolitical units of geography can be specified in a flexible manner to mirror reporting structures used across states and counties and cities;
-*	Major elements such as contests, geopolitical units, and parties include the capability to support multiple types of identifiers and cross-references; and
-*	Detailed instructions for implementation and use of the XML schema are included.
+Name | Value
+---- | -----
+`advanced-to-runoff`|For candidates who have advanced to a runoff.
+`defeated`|Used for candidates who were defeated in the election.
+`projected-winner`|For a projected contest winner.
+`winner`|For the official contest winner or one of “n” contest winners for n-of-m voting.
+`withdrawn`|For candidates who have withdrawn from the contest.
 
-<br>
+### <a name="_17_0_2_4_f71035d_1427223542780_950918_2213"></a>*The **CandidatePreElectionStatus** Enumeration*
 
-## 1.1	Purpose
-The purpose of this specification is to provide a comprehensive, flexible, and interoperable pre-election setup and post-election results reporting XML format for manufacturers to integrate into their voting equipment and for election offices, the media, and other groups to use in their own software.  The advantages of using this specification include:
+![Image of CandidatePreElectionStatus](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1427223542789_361508_2214.png)
 
-*	Election results can be reported directly from election offices in this format regardless of voting system manufacturer, thus enabling interoperability;
-*	The need for custom software and custom reporting formats is greatly reduced;
-*	Jurisdictions that use multiple versions of EMSs and tabulators can more easily combine and transfer information between systems; and
-*	Consistency in election results reports across different voting systems, jurisdictions, and states, will make reporting on election performance, e.g., for the EAC (Election Assistance Commission) election administration and voting survey (EAVS) and other election analyses, easier and more accurate.
+Enumeration for various pre-election statuses applicable to a candidate in the [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) class.
 
-<br>
+Name | Value
+---- | -----
+`filed`|For candidates who have filed with the election authority but not necessarily qualified.
+`qualified`|For candidates who are qualified by the election authority to be on the ballot for a contest.
+`withdrawn`|For candidates who have withdrawn from the contest.
 
-## 1.2	Audience
-The intended audience of this specification includes election officials, manufacturers and developers, as well as others in the election community including the general public.  Election results reporting is deceptively complex, thus some background in election administration or technology is useful in understanding the material in this specification.
+### <a name="_17_0_2_4_78e0236_1389797161173_369293_4078"></a>*The **CountItemStatus** Enumeration*
 
-<br>
+![Image of CountItemStatus](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_740364_5352.png)
 
-## 1.3	Motivation and methodology
-This specification was motivated primarily to reduce the inherent complexity for U.S. election officials in collecting and publishing election data, especially on election night when time frames are tight and there are more opportunities for error and a greater need for automation.  The process of reporting election results is a highly complicated activity that occurs over several different time frames and in multiple scenarios.  The equipment involved and data produced often do not interoperate, adding more complexity to the process.  Additionally, there are sometimes significant variations among different jurisdictions within a state as well among the states themselves in the way they perform election results reporting.
+Enumeration for various counting-related statuses for types of ballots or write-ins, used in the [CountStatus](#_17_0_2_4_f71035d_1430412663878_61362_2269) class.
 
-NIST and a community of U.S. election officials, analysts, and voting system manufacturers investigated reporting scenarios and their associated geopolitical geographies throughout the United States and in existing and emerging voting systems.  Further study included evaluation of other XML schemas associated with U.S. elections, including:
+Name | Value
+---- | -----
+`completed`|For counts that are complete.
+`in-process`|For counts that are in process.
+`not-processed`|When the counting has not started or is not underway.
+`unknown`|When the status of the counting is unknown.
 
-*	The State of Florida XML schema for election results reporting [4],
-*	The Pew Voting Information Project XML schema version 3.0 [5],
-*	The OASIS Election Markup Language (EML) XML schema version 7.0 [6], and
-*	Schemas created by the Associated Press.
+### <a name="_17_0_2_4_78e0236_1389798097477_664878_4228"></a>*The **CountItemType** Enumeration*
 
-From this analysis, three use cases were developed for election results reporting:
+![Image of CountItemType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_781011_5347.png)
 
-1.	Pre-election – election data that is known ahead of the election; basically an export from an EMS of the contests, candidates, ballot initiatives, information about offices, and the geopolitical geographies associated with the reporting jurisdiction;
+Enumeration for the items that are counted during the course of an election and for which the status of the counts is of interest. Used in the [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835) and [CountStatus](#_17_0_2_4_f71035d_1430412663878_61362_2269) classes.
 
-2.	Election night – reporting of election results either summarized by contest and jurisdiction or broken down by individual reporting units such as precincts, and associated formats, either as updates or corrections to previous reports or as internal intermediate reports within a state or county; and
+Name | Value
+---- | -----
+`absentee`|For any/all classes of absentee, generally when absentee is not broken out into specific classes.
+`absentee-fwab`|A type of absentee; for Federal Write-in Absentee Ballots.
+`absentee-in-person`|A class of absentee; for absentee ballots cast in-person, e.g., at a county office.
+`absentee-mail`|A class of absentee; for postal mail absentee ballots separately.
+`early`|For ballots cast during early voting periods.
+`election-day`|For ballots cast on election day.
+`provisional`|For challenged ballots.
+`seats`|For legislative balance-of-power results information.
+`total`|Total of all ballots cast regardless of voting class.
+`uocava`|A class of absentee; for absentee ballots from Uniformed and Overseas Citizens Absentee Voting Act (UOCAVA) voters.
+`write-in`|For write-ins on ballots.
+`other`|Used when the type of counting item is not included in this enumeration.
 
-3.	Post-election – updates and the final results compiled during the post-election canvass.
+### <a name="_18_0_2_6340208_1425647845906_917814_4818"></a>*The **DayType** Enumeration*
 
-A UML data model was subsequently generated to define the data associated with the use cases and to show the relationship and organization of the data elements.  Finally, an XML schema was generated from the UML data model.  The XML schema defines the rules of the XML format.
+![Image of DayType](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1425647845916_861367_4819.png)
 
-The advantages of using a UML data model as an intermediate step to generating an XML schema include (1) that the model is independent of the concrete XML format or other potential formats that could be derived and (2) relationships between data elements are easier to correctly define and visualize when they are independent of any specific data format.  If changes are needed to the XML format, one can make changes to the UML model and generate a new version of the format.
-Note that this specification addresses U.S. governmental elections and is not intended for use “as is” in other types of elections or in other countries.  However, the specification was written with the intention that it be adaptable to other election environments.
+Enumeration for the day(s) in a schedule in the [Schedule](#_18_0_2_6340208_1427122121448_198970_4547) element.
 
-<br>
+Name | Value
+---- | -----
+`all`|Used for all days of the week.
+`sunday`|Used if day of week is Sunday.
+`monday`|Used if day of week is Monday.
+`tuesday`|Used if day of week is Tuesday.
+`wednesday`|Used if day of week is Wednesday.
+`thursday`|Used if day of week is Thursday.
+`friday`|Used if day of week is Friday.
+`saturday`|Used if day of week is Saturday.
+`weekday`|Used for any day of the week.
+`weekend`|Used for both Saturday and Sunday.
 
-## 1.4	Document Structure
-Section 2 starts with an overview of geopolitical geographies such as counties, districts, and precincts, describing how they are categorized, how they interrelate, and how election results are tied to them.  Section 3 contains an overview of the three use cases for election results reporting and the UML data model that implements the use cases.  Section 4 contains documentation for the XML schema that is derived from the UML model.  Section 5 describes how to use the major features of the schema.  
+### <a name="_17_0_2_4_78e0236_1389798087342_91702_4210"></a>*The **DeviceType** Enumeration*
 
-The appendices include references, definitions, acronyms, and instructions for downloading the files associated with this specification.
-
-<br>
+![Image of DeviceType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_639477_5345.png)
 
-# 2 Background: Geopolitical Geography
-This section provides an overview of the geopolitical geography in the United States as it relates to elections and election results reporting, and serves to provide background for how geopolitical geography is implemented in the UML model and XML schema that are described in sections 3 through 5.  Knowledge of what constitutes geopolitical geography and how it is interrelated and used in elections provides the underpinning for understanding the complexities of election results reporting.  
+Enumeration for the type of device in the [DeviceClass](#_18_0_2_6340208_1425911626288_420556_4530) class.
 
-<br>
+Name | Value
+---- | -----
+`bmd`|For ballots prepared on ballot marking devices and then scanned.
+`dre`|For DRE (Direct Record Electronic) and other all-electronic devices.
+`manual-count`|For hand-counted paper ballots.
+`opscan-central`|For an optical scanner used at a central office with no opportunity for voter correction of mistakes.
+`opscan-precinct`|For an optical scanner used at a precinct or other location where voter correction of mistakes such as overvotes is possible.
+`unknown`|Used when the type of device is unknown.
+`other`|Used when the device type is not listed in this enumeration.
+
+### <a name="_17_0_2_4_78e0236_1389734457182_720347_3938"></a>*The **ElectionType** Enumeration*
+
+![Image of ElectionType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_571622_5349.png)
+
+Enumeration for the type of election in the [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) class.
+
+Name | Value
+---- | -----
+`general`|Election in which all eligible voters, regardless of party affiliation, are permitted to select candidates to fill public office and/or vote on ballot measures.
+`partisan-primary-closed`|Primary election in which the voter receives a ballot containing only those party-specific contests pertaining to the political party with which the voter is affiliated, along with non-party-specific contests presented at the same election. Unaffiliated voters may be permitted to vote only on non-party-specific contests.
+`partisan-primary-open`|Primary election in which the voter may choose a political party at the time of voting and vote in party-specific contests associated with that party, along with non-party-specific contests presented at the same election. Some states require voters to publicly declare their choice of party at the polling place, after which the election worker provides or activates the appropriate ballot. Other states allow the voters to make their choice of party within the privacy of the voting booth.
+`primary`|Election held to determine which candidates qualify to appear as contest options in subsequent elections.
+`runoff`|Election to select a winner following a primary or a general election, in which no candidate in the contest received the required minimum percentage of the votes cast. The two candidates receiving the most votes for the contest in question proceed to a runoff election.
+`special`|Primary or general election that is not regularly scheduled. A special election may be combined with a scheduled election.
+`other`|Used when the election type is not listed in this enumeration.
+
+### <a name="_17_0_2_4_f71035d_1425325534467_889921_2544"></a>*The **GeoSpatialFormat** Enumeration*
+
+![Image of GeoSpatialFormat](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1425325534469_261190_2545.png)
+
+Enumeration for geospatial vector data formats used in Geographic Information System (GIS) software, used in the [SpatialExtent](#_17_0_2_4_f71035d_1409080246279_778720_2209) class.
+
+Name | Value
+---- | -----
+`geo-json`|For GeoJSON open standard format.
+`gml`|For Geography Markup Language format.
+`kml`|For Keyhole Markup Language format.
+`shp`|For the shape file format associated with Esri.
+`wkt`|For Well-known Text format.
+
+### <a name="_17_0_2_4_f71035d_1425061188508_163854_2613"></a>*The **IdentifierType** Enumeration*
+
+![Image of IdentifierType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1425061188510_56434_2614.png)
+
+Enumeration for election data-related codes in the [ExternalIdentifier](#_17_0_2_4_f71035d_1430405712653_451634_2410) class .
+
+Name | Value
+---- | -----
+`fips`|For FIPS codes.
+`local-level`|For a code that is specific to a county or other similar locality.
+`national-level`|For a code that is used at the national level other than “fips” or “ocd-id”.
+`ocd-id`|For Open Civic Data identifiers.
+`state-level`|For a code that is specific to a state.
+`other`|Used when the type of code is not included in this enumeration.
+
+### <a name="_17_0_2_4_f71035d_1425314816880_411605_2504"></a>*The **OfficeTermType** Enumeration*
+
+![Image of OfficeTermType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1425314816883_792510_2505.png)
+
+Enumeration for the office term type in the [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) class.
+
+Name | Value
+---- | -----
+`full-term`|When the officeholder’s term began at the beginning of the full term of the office, e.g., 6 years for U.S. Senate.
+`unexpired-term`|When the officeholder’s term began at some date after the beginning of the full term of the office, generally because the previous officeholder vacated the office before the fullterm expired.
+
+### <a name="_17_0_2_4_d420315_1392318380928_311473_2471"></a>*The **ReportDetailLevel** Enumeration*
+
+![Image of ReportDetailLevel](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_d420315_1392318381019_76514_2472.png)
 
-## 2.1 The Primary Types of Geopolitical Geography
-The primary types of geopolitical geography include those geographies that run elections such as states, counties, and cities, as well as the many types of electoral districts that are tied to contests, precincts, and various other geographical units associated with political boundaries.  Generally, the media and election analysts wish to obtain voting results broken out by these units, thus the process of running an election includes associating contests and vote counts with these units so that they can be ultimately reported.
+Enumeration for the detail level of the election results report in the [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) class.
 
-Ballot counts and vote counts for contests can be associated with a variety of different types of geopolitical geography, ranging from aggregated counts associated with a county or state down to more detailed counts associated with a precinct and breakdowns of a precinct.  Precincts are generally the smallest unit of geopolitical geography, and in many states, there is generally one polling place per precinct.  Precincts can be thought of as the bricks or building blocks that compose all other geopolitical geography.
+Name | Value
+---- | -----
+`precinct-level`|For reports that contain counts from precincts in the reporting jurisdiction.
+`summary-contest`|For reports that contain only aggregated counts.
 
-Geopolitical geography can often be quite complex in that some are hierarchical, others overlap, and still others change their boundaries regularly, sometimes several times within a year.  Changes to city and district boundaries affect precinct boundaries, splitting them into multiple parts (called split precincts), with each part requiring distinct ballot styles.  
+### <a name="_17_0_2_4_f71035d_1431607637366_785815_2242"></a>*The **ReportingUnitType** Enumeration*
 
-The following sections break down geopolitical geography into three primary types and show how the geographies interrelate.  These three types are:
+![Image of ReportingUnitType](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1431607637380_196295_2243.png)
 
-1. Governmental-based geography,
-2. Political-based geography, and
-3. Administrative-based geography.
+Enumeration for the type of geopolitical unit in the [ReportingUnit](#_17_0_2_4_f71035d_1400606476166_735297_2593) class.
 
-<br>
+Name | Value
+---- | -----
+`ballot-batch`|Used for reporting batches of ballots that may cross precinct boundaries.
+`ballot-style-area`|Used for ballot style areas generally composed of precincts.
+`borough`|Used in CT, NJ, PA, other states, and New York City for boroughs. For AK and LA, see county.
+`city`|Used for a city that reports results and/or for the district that encompasses it.
+`city-council`|Used for city council districts.
+`combined-precinct`|Used for one or more precincts that have been combined for the purposes of reporting. Used for “Ward” if “Ward” is used interchangeably with “CombinedPrecinct”.
+`congressional`|Used for U.S. Congressional districts.
+`country`|Used for a reporting unit of type country.
+`county`|Used for a county and/or for the district that encompasses it. In AK, used for counties that are called boroughs. In LA, used for parishes.
+`county-council`|Used for county council districts.
+`drop-box`|Used for a dropbox for absentee ballots.
+`judicial`|Used for judicial districts.
+`municipality`|Used as applicable for various units such as towns, townships, villages that report votes and/or for the district that encompasses it.
+`polling-place`|Used for a polling place.
+`precinct`|Used also for “Ward” or “District” when these terms are used interchangeably with “Precinct”.
+`school`|Used for a school district.
+`special`|Used for a special district.
+`split-precinct`|Used for splits of precincts.
+`state`|Used for a state and/or for the district that encompasses it.
+`state-house`|Used for a state house or assembly district.
+`state-senate`|Used for a state senate district.
+`town`|Used in some New England states as a type of municipality that reports votes and/or for the district that encompasses it.
+`township`|Used in some mid-western states as a type of municipality that reports votes and/or for the district that encompasses it.
+`utility`|Used for a utility district.
+`village`|Used as a type of municipality that reports votes and/or for the district that encompasses it.
+`vote-center`|Used for a vote center.
+`ward`|Used for combinations or groupings of precincts or other units.
+`water`|Used for a water district.
+`other`|Used for other types of reporting units not included in this enumeration.
 
-### 2.1.1 Governmental-based Geography
-Governmental-based geography refers to entities that (1) run elections and (2) are well-established and do not change over time, with the exception of some cities.   For many states, the governmental-based geography is hierarchical, as shown in Figure 1.  This can be categorized as follows:
+### <a name="_17_0_2_4_78e0236_1389734128637_37089_3895"></a>*The **ResultsStatus** Enumeration*
 
-- States,
-- Counties,
-- Cities,
-- American Indian Reservations,
-- Towns and Townships, and
-- Other Civil Divisions.
+![Image of ResultsStatus](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_795592_5348.png)
 
-Nearly all states have counties, although some use different words to describe them, e.g., parishes for Louisiana and boroughs for Alaska.   Townships occur in 20 states and adhere to county boundaries.   In the six New England states, townships run the election process and there is no county government, thus election results are reported directly to the state. Municipalities (cities, towns, or villages) in Michigan, Minnesota, and Wisconsin also run their elections, but report their information to the county, which then reports to the state.  Other civil divisions include boroughs as used in Connecticut, New Jersey, Pennsylvania, and other states; New York City's boroughs are treated as counties.
+Enumeration for the status of the election results in the [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) class.
 
-<div class="text-center" markdown="1">
-<img src="Figures/Governmental-based-geographies.png" height="400"/>
+Name | Value
+---- | -----
+`certified`|For results that have been certified by the election authority.
+`correction`|For results that are a correction to an earlier report.
+`pre-election`|For a pre-election data.
+`recount`|For results that are a recount of an earlier election.
+`unofficial-complete`|For results that are unofficial and complete, e.g., the complete election night results.
+`unofficial-partial`|For results that are unofficial and partial, e.g., partial election night results.
 
-**Figure 1 - Governmental-based Geographies**
-</div>
+### <a name="_17_0_2_4_78e0236_1389798224990_11192_4272"></a>*The **VoteVariation** Enumeration*
 
-Governmental-based geographies are associated with offices that are elected jurisdiction-wide (such as for Governor, County Clerk, Supervisor, Treasurer, Assessor, Highway Commissioner, etc.) and thus do not require different ballot style areas within the geography for those offices, i.e., all voters in the jurisdiction vote for the office.  
-Governmental-based geographies do not cross the lines of the precincts that compose them; however cities can change their boundaries through annexations and, in some states, city boundaries can also cross county boundaries. Thus, changes to city boundaries may result in crossing the boundaries of one or more precincts, creating split precincts and requiring a distinct ballot style per split precinct.   
+![Image of VoteVariation](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_521336_5354.png)
 
-<br>
+Enumeration for contest decision algorithm or rules in the [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) element.
 
-### 2.1.2 Political-based Geography
-Political-based geographies are those that tend to be population-based and therefore may change with each U.S. Census every 10 years in a process known as re-districting.  Political-based geographies are generally known as electoral districts, where people are elected to an office that has jurisdiction within a specific geography, e.g., a U.S. Congressional district.
+Name | Value
+---- | -----
+`approval`|When voter can select as many candidates as desired in a contest up to a maximum number.
+`borda`|For the Borda count voting.
+`cumulative`|When voter can allocate more than one vote to a given candidate.
+`majority`|For majority voting.
+`n-of-m`|Includes vote for 1, i.e., 1-of-m.
+`plurality`|For plurality voting.
+`proportional`|For proportional voting.
+`range`|For range voting.
+`rcv`|For ranked choice voting.
+`super-majority`|For super majority voting.
+`other`|Used when the vote variation type is not included in this enumeration.
 
-<div class="text-center" markdown="1">
-<img src="Figures/Political-based-geographies.png" height="450"/>
+## Classes
 
-**Figure 2 - Political-based Geographies**
-</div>
+### <a name="_18_0_2_6340208_1497553224568_429892_4565"></a>*The **AnnotatedString** Class*
 
-Figure 2 shows the most common political-based geographies as they interrelate with the governmental-based geographies.  Political-based geographies can be categorized as follows:
+![Image of AnnotatedString](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1497553224573_140163_4566.png)
 
-- U.S. Congressional districts;
-- State senate or upper-house districts;
-- State house or lower-house districts (in some states, several state house districts combine to form a state senate district);
-- County electoral districts;
-- City electoral districts (sometimes called Wards); and
-- Numerous other forms of electoral districts.
+Used as a type for character strings; it adds a 16-character annotation to a character string.
 
-Because electoral districts can change as they are re-drawn, political-based geographies will often divide precincts, creating split precincts and requiring a distinct ballot style per split precinct.   
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1497553268113_377804_4591"></a>`Annotation`|0..1|`ShortString`|An annotation of up to 16 characters associated with a character string.
+<a name="_18_0_2_6340208_1497553239224_304629_4586"></a>`Content`|1|`String`|The string to be annotated.
 
-<br>
 
-### 2.1.3 Administrative-based Geography
-Administrative-based geographies are called thus because their boundaries are determined via election or civil administration.  Administrative-based geographies include precincts and their various types such as wards, combined precincts, and split precincts.  They can be very small, sometimes only applying to several streets or houses or even only a single house along a street. They can involve territory that is non-contiguous in itself, e.g., for some of the taxing and special districts.  They can change a number of times throughout a given year, even daily in some cases.  Figure 3 shows the basic administrative-based geographies, which can be categorized as follows:
+### <a name="_18_0_2_6340208_1498658436378_308208_4565"></a>*The **AnnotatedUri** Class*
 
-1. Election administrative areas;
-	- Precincts, split precincts, combined precincts, wards;
-	- Polling places, vote centers;
-	- Various other ballot style areas;
-2. Taxing districts, e.g., fire, water, sewer, transit, school, police, hospital, utilities; and
-3. Special districts, i.e., unique areas brought together for a referendum.
+![Image of AnnotatedUri](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1498658436383_253730_4566.png)
 
-<div class="text-center" markdown="1">
-<img src="Figures/Administrative-based-geographies.png" height="500"/>
+Used as a type for character strings that represent Uniform Resource Identifiers (URI); it adds a 16-character annotation to a character string.
 
-**Figure 3 - Administrative-based Geographies**
-</div>
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1498658485557_944083_4589"></a>`Annotation`|0..1|`ShortString`|An annotation of up to 16 characters associated with a character string.
+<a name="_18_0_2_6340208_1498658457673_356828_4586"></a>`Content`|1|`anyURI`|The URI to be annotated.
 
-<br>
 
-## 2.2 Linking the Geopolitical Geographies Together
-As an example of administrative-based geographies and their relationship to political-based and governmental-based geographies, Figure 4 shows the wards and precincts that make up the city of Cambridge, MA, and Figure 5 shows how the wards and precincts in the city compose the U.S. Congressional electoral districts [7].  The wards are implemented as collections of precincts.  In general, it is preferred that electoral districts are composed of whole precincts.
+### <a name="_17_0_2_4_78e0236_1397156576157_466818_2461"></a>*The **BallotCounts** Class*
 
-<div class="text-center" markdown="1">
-<img src="Figures/2013_WardsPrecincts-v2.png" height="500"/>
+![Image of BallotCounts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1397156576165_50958_2462.png)
 
-**Figure 4 - Ward and Precincts in Cambridge, MA.**
-</div>
+Used for identifying various ballot counts. It inherits the attributes of [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835).
 
-<div class="text-center" markdown="1">
-<img src="Figures/2014_CongressDistricts-v2.png" height="500"/>
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1426507405852_561323_2207"></a>`BallotsCast`|0..1|`Integer`|Number of ballots cast.
+<a name="_17_0_2_4_f71035d_1426007069403_906238_2480"></a>`BallotsOutstanding`|0..1|`Integer`|Number of ballots not yet counted.
+<a name="_17_0_2_4_f71035d_1430935326894_744193_2504"></a>`BallotsRejected`|0..1|`Integer`|Number of ballots rejected.
 
-**Figure 5 - Districts Overlaying Wards and Precincts in Cambridge, MA.**
-</div>
 
-In many states, the boundaries of electoral districts may crisscross the precinct boundaries, creating one or more split precincts, with a distinct ballot style per split precinct.  Depending on the number of districts and how often they cross the precinct boundaries, the resultant number of ballot styles created may grow substantially beyond the number of whole precincts.  It is possible sometimes that, despite best efforts, very low numbers of voters or even just one voter will require a district ballot style.
+### <a name="_17_0_2_4_78e0236_1389366932057_929676_2783"></a>*The **BallotMeasureContest** Class*
 
-<div class="text-center" markdown="1">
-<img src="Figures/Split-Precinct.png" height="450"/>
+![Image of BallotMeasureContest](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_80297_5351.png)
 
-**Figure 6 - Overlapping Non-hierarchical Electoral Districts**
-</div>
+For ballot measure (i.e., referenda or a tax measure) and judicial retention contests. It inherits the attributes of [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
 
-As an example, Figure 6 shows two electoral districts that overlay a series of precincts.  Every time a precinct is not wholly contained within either of the districts, the precinct is split into however many pieces are necessary.  Figure 6 shows that a number of the precincts are split in different ways, e.g., Precinct 6 is split into two pieces.
+If the type of ballot measure is not listed in enumeration [BallotMeasureType](#_17_0_2_4_f71035d_1426549604222_56408_2487), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1426550214099_344315_2520).
 
-Precinct 6 will thus require two distinct ballot styles, one for each of the splits.  To correctly tabulate the votes in the different electoral districts, it will be necessary to know which split of Precinct 6 is contained within each of the two electoral districts.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1426519421663_178011_2491"></a>`ConStatement`|0..1|`InternationalizedText`|For a statement on the ballot associated with a “no” vote.
+<a name="_17_0_2_4_f71035d_1426519513798_649615_2501"></a>`EffectOfAbstain`|0..1|`InternationalizedText`|For a statement on the ballot detailing the effect of abstaining from voting on the ballot measure.
+<a name="_17_0_2_4_78e0236_1389733794199_310242_3824"></a>`FullText`|0..1|`InternationalizedText`|For full text on the ballot of the ballot measure.
+<a name="_17_0_2_4_f71035d_1441214816702_348487_2511"></a>`InfoUri`|0..*|`AnnotatedUri`|For associating a URI with the ballot measure contest.
+<a name="_17_0_2_4_f71035d_1426519474233_980390_2497"></a>`PassageThreshold`|0..1|`InternationalizedText`|For a statement on the ballot of the number or percentage of votes needed to approve or pass the ballot measure.
+<a name="_17_0_2_4_f71035d_1426519388364_485730_2487"></a>`ProStatement`|0..1|`InternationalizedText`|For a statement on the ballot associated with a “yes” vote.
+<a name="_17_0_2_4_78e0236_1389733722505_364946_3820"></a>`SummaryText`|0..1|`InternationalizedText`|For a summary on the ballot of the ballot measure.
+<a name="_17_0_2_4_f71035d_1426550181692_978243_2516"></a>`Type`|0..1|`BallotMeasureType`|For indicating the type of ballot measure.
+<a name="_17_0_2_4_f71035d_1426550214099_344315_2520"></a>`OtherType`|0..1|`String`|Used when BallotMeasureType is other.
 
-Precincts can be split as well by changes to the other administrative-based geographies. Adding to the complexity, a number of states now use combined precincts and vote centers on election night, which associate multiple precincts with one polling place.  This means that for a vote center handling multiple precincts that themselves may be split, there can be potentially many different ballot styles in use at the vote center, with each voting device needing to display any one of the ballots.  This adds further complexity and places additional demands on election jurisdictions on their ability to manage and report details of votes on election night and post-election [8].
 
-To make this situation more manageable, some states/counties prefer over time to heal split precincts by combining them with other precincts or generally redrawing the precinct boundaries so that the number of ballot styles is reduced and election management and reporting is less complicated.
+### <a name="_17_0_2_4_78e0236_1389372163799_981952_2926"></a>*The **BallotMeasureSelection** Class*
 
-<br>
+![Image of BallotMeasureSelection](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_930954_5339.png)
 
-## 2.3 Geopolitical Geography in the UML Model and XML Schema
-The previous discussion served to show that there are different types of geopolitical geography that overlap each other or behave hierarchically, resulting sometimes in very complex maps and many small geopolitical units that require distinct, different ballot styles.  Election officials may spend considerable time in managing this complexity.
+For a contest selection in a ballot measure contest. Because judicial or other retention contests are often treated like ballot measure contests, this element can be used also for retention contests. It inherits the attributes of [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906).
 
-Furthermore, each state and sometimes county or city will manage elections differently, using combinations of units such as combined precincts or wards, with specific rules about how the associated contests operate.  When one combines (a) the complexities of geopolitical geography with (b) the different election rules employed in the U.S. states and territories, one sees that running an election can be an extremely complicated endeavor.  Election results reporting mirrors this complexity.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_19_0_2_43701b0_1576350241608_897910_4990"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot measure selection.
+<a name="_17_0_2_4_78e0236_1389710917151_765889_2176"></a>`Selection`|1|`InternationalizedText`|Contains the text used to indicate a vote for or against the ballot measure, e.g., “yes”, “no”.
 
-It is important to note that the different geographies form relationships much like a lattice, in which objects can be related in non-hierarchical ways.  The UML model and XML schema implement geopolitical geography in this way using an object that can be linked with other objects depending on the type of geopolitical geography.  In the UML model, this object is referred to as the GpUnit (short for Geopolitical Unit) class, and in the XML schema it is called the `<GpUnit>` element.  GpUnits can model a district, or county, or precinct, etc., and can be linked to each other to mirror the real-world geopolitical geography of the reporting jurisdiction.
 
-GpUnits can be linked hierarchically when modeling jurisdictional geographies.  To model a jurisdiction that runs/reports on elections, the lowest-level GpUnits, i.e., precincts, will be children of the election-running GpUnit, say a city or county or state.  
+### <a name="_17_0_2_4_78e0236_1389366224561_797289_2360"></a>*The **BallotStyle** Class*
 
-District GpUnits need to be linked to the precinct and/or split precinct GpUnits that compose them. The precincts and split precincts thus link the jurisdictional and district GpUnits together, as shown below in Figure 7 (and described in greater detail in section 5.2).  The wards are the children of the combined precincts, and so forth on up to the state.  The precincts and split precincts are also the children of the districts that they compose.  
+![Image of BallotStyle](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389799207465_976765_6435.png)
 
-<div class="text-center" markdown="1">
-<img src="Figures/Containment.png" height="400"/>
+For defining a ballot style composed of ordered content (i.e. Headers or Contests) and their contest selections, and associating the ballot style with a political party, a reference to an image of the ballot, and a reference to a precinct or other geopolitical unit that the ballot is unique to. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes BallotStyle.
+BallotStyle references [OrderedContent](#_18_5_3_43701b0_1527684342715_643544_6146) to include content that appears on that ballot style. To preserve any rotation associated with the ballot, it is expected that the generating application will list the occurrences of [OrderedContest](#_17_0_3_43401a7_1394476416139_808596_3142) in the order as on the ballot for the associated geopolitical unit.
+BallotStyle references one or more [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances defined for the associated precincts or split precincts. If the ballot style is associated with multiple precincts (or other geographies), multiple references to the precinct [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances can be included.
 
-**Figure 7 - GpUnit Structural Hierarchies**
-</div>
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1441377633582_32184_2220"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the ballot style.
+<a name="_17_0_2_4_f71035d_1436214223050_585224_2515"></a>`{GpUnit}`|1..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For associating specific geopolitical units with the ballot style.
+<a name="_17_0_2_4_f71035d_1428529376950_608184_2486"></a>`ImageUri`|0..*|`AnnotatedUri`|URI for a ballot image.
+<a name="_17_0_2_4_f71035d_1426189065873_416235_2489"></a>`{OrderedContent}`|0..*|`OrderedContent`|For associating a ballot style with ballot content, such as contests or headers.
+<a name="_18_0_2_6340208_1427483833143_782361_4565"></a>`{Party}`|0..*|`Party`|Unique identifier for one or more Party instances. For associating one or more parties with the ballot style.
 
-<br>
 
-# 3 Use Cases and UML Model
-This section describes the three use cases for pre-election setup and post-election results reporting included in this specification, and then describes the UML model that implements the use cases and was used to generate the XML schema.  This section is provided for background and to assist in understanding how the model and schema are structured and used.
+### <a name="_17_0_2_4_78e0236_1389366272694_544359_2440"></a>*The **Candidate** Class*
 
-<br>
+![Image of Candidate](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_557229_5346.png)
 
-## 3.1	Use Cases
-This section describes the three use cases for the following phases of pre-election setup and post-election results reporting:
+For defining information about a candidate in a contest. [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) references Candidate instances to associate one or more candidates with a contest selection. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes Candidate.
 
-1. **Pre-election** – for reporting of election data about offices, political parties, and the geopolitical geographies associated with the reporting jurisdiction, as well as any election-specific information such as the contests, candidates, or ballot measures;
-2. **Election night** – for reporting of election results to the public during the election or on election night and for internal state rolls-ups of election results between and among election management systems; and
-3. **Post-election** – for reporting the final results compiled during the post-election canvass, that is, when all results are re-examined and re-tabulated to ensure correctness.
+Candidate uses the [Party](#_17_0_2_4_78e0236_1389366597377_433664_2698) association to reference the candidate’s political party. If the candidate is endorsed by other parties for a particular contest, the endorsing parties are referenced using the [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) attribute.
 
-<br>
+[ExternalIdentifier](#_17_0_2_4_f71035d_1430405890311_465205_2454) can be used to associate an ID with the candidate. If the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
-### 3.1.1	Pre-Election Use Case
-The pre-election use case enables election officials to report on a variety of election-related data; the data could include information about a specific upcoming election or it could provide more general information about the reporting jurisdiction so as to determine whether the election data is accurate and organized correctly or to convey information to the general public about contests and ballot information in an upcoming election.  Pre-election information may come from any of the databases or devices that an election jurisdiction uses to manage elections, including voter registration databases, ballot programming systems, candidate filing systems, EMSs, campaign finance systems, etc.  
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_78e0236_1389710816659_20227_2170"></a>`BallotName`|1|`InternationalizedText`|For the candidate’s name as listed on the ballot.
+<a name="_19_0_2_43701b0_1576187672054_587470_4958"></a>`CampaignSlogan`|0..1|`InternationalizedText`|The slogan or motto used by the candidate in their campaign.
+<a name="_18_0_2_6340208_1498659302196_151943_4608"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating contact information for the candidate.
+<a name="_17_0_2_4_f71035d_1430405890311_465205_2454"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the candidate.
+<a name="_17_0_2_4_f71035d_1400615133498_375109_2704"></a>`FileDate`|0..1|`date`|Date when the candidate filed for the contest.
+<a name="_17_0_2_4_f71035d_1401280462978_833890_2462"></a>`IsIncumbent`|0..1|`Boolean`|Boolean to indicate whether the candidate is the incumbent for the office associated with the contest. Assumed to be “no” if not present.
+<a name="_17_0_2_4_f71035d_1403276277476_329066_2190"></a>`IsTopTicket`|0..1|`Boolean`|Boolean to indicate whether the candidate is the top of a ticket that includes multiple candidates. Assumed to be “no” if not present.
+<a name="_17_0_2_4_78e0236_1389366597377_433664_2698"></a>`{Party}`|0..1|`Party`|For associating a party with the candidate.
+<a name="_17_0_5_1_43401a7_1400624143347_418542_3604"></a>`{Person}`|0..1|`Person`|For associating more detailed information about the candidate.
+<a name="_17_0_2_4_78e0236_1389797778404_982263_4132"></a>`PostElectionStatus`|0..1|`CandidatePostElectionStatus`|Final status of the candidate, e.g., winner, withdrawn, etc.
+<a name="_17_0_2_4_f71035d_1426535359938_597654_2790"></a>`PreElectionStatus`|0..1|`CandidatePreElectionStatus`|Registration status of the candidate, e.g., filed, qualified, etc.
 
-The data for the pre-election use case includes the following:
 
-1. Pre-election reports in a variety of formats, including:
-  * As one complete file or a sequence of files;
-  * As additions to previous reports; and
-  * As corrections to previous reports;
-2. Jurisdictions, districts, offices, precincts and voting locations within the scope of the reporting jurisdiction and how they are organized;
-3. Political party information;
-4. Offices associated with contests and districts;
-5. Information about persons relevant to the jurisdiction such as authorities, candidates, office holders, etc.;
-6. Election type, date, place, jurisdiction, authority information, registered voters. The type of election could include:
-  - Open and closed partisan primaries;
-  - Runoffs;
-  - Special elections; and
-  - General elections;
-7. Ballot measures and contests, including retention contests;
-8. Candidates on the ballot and their associated party affiliations and contact information;
-9. Offices associated with the contests and electoral districts;
-10. Vote-capture device types or the specific devices associated with polling places; and
-11. Ballot styles containing contest and candidate information in the order as they appear on the ballot at specific precincts or split precincts.
+### <a name="_17_0_2_4_78e0236_1389366970084_183781_2806"></a>*The **CandidateContest** Class*
 
-<br>
+![Image of CandidateContest](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_347543_5358.png)
 
-### 3.1.2	Election Night Reporting Use Case
-The election night reporting use case addresses aggregated, contest-level reporting of election results.  Depending on a jurisdiction’s capabilities, it could include further details such as precinct-level vote and ballot counts and breakdowns of counts by device type and ballot type.
+For a contest that involves selecting one or more candidates. It inherits the attributes of [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
 
-The election night reporting use case involves election reporting managed in two primary ways:
+This class optionally references [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) and [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460). If the candidate contest is associated with a ticket (of candidates) and each candidate in the ticket is associated with a separate office, the [association to Office](#_17_0_5_1_43401a7_1400624734486_732685_3699) can reference each of the separate offices. For example, if the contest is for the state governor ticket but Governor and Lieutenant (Lt.) Governor are both separate offices, the association references first to the [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance defined for the Governor’s office and then to the Lt. Governor’s office. In this case, it is expected that the generating application will list the multiple references according to a jurisdiction-defined ordering scheme, e.g., Governor first and Lt. Governor second.
 
-1. By the counties (or cities, etc.) reporting directly to the public/media and, possibly, also reporting upward to the state, or
-2. By the counties reporting upward to the state and the state reporting directly to the public/media.
+Note that when using the [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562) class to associate the candidates with a contest selection for the contest, the order of the candidates should match the order of offices. Again, using the example of the state governor ticket, if the offices are listed with Governor first and Lt. Governor second, then the order of the candidates in the [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) instance should be identical, with the Governor candidate first and the Lt. Governor candidate second.
 
-When reporting upward to the state, election results are reported from local jurisdictions to the city or county or state level, where the results continue to be aggregated in a process referred to as rolling up the votes and creating state or county roll-ups.  As part of this process, internal, intermediate reports from different EMSs or databases need to be combined.  The roll-ups are then formatted and released to the media and public during election night until all results from the local jurisdictions are accounted for.  The results are, at this stage, considered as unofficial.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_78e0236_1389797739578_12603_4129"></a>`NumberElected`|0..1|`Integer`|Number of candidates that are elected in the contest (“n” of n-of-m).
+<a name="_18_0_2_6340208_1498659576131_900303_4636"></a>`NumberRunoff`|0..1|`Integer`|The number of candidates in a runoff contest.
+<a name="_17_0_5_1_43401a7_1400624734486_732685_3699"></a>`{Office}`|0..*|`Office`|For associating office descriptions.
+<a name="_17_0_2_4_78e0236_1389735000217_728769_4016"></a>`{PrimaryParty}`|0..*|`Party`|For associating parties with the contest.
+<a name="_17_0_2_4_78e0236_1389797728177_241732_4126"></a>`VotesAllowed`|1|`Integer`|Maximum number of votes per voter in this contest.
 
-The data for election night reporting includes the following:
 
-1.	Any information from the pre-election use case;
-2.	Aggregated contest results for offices and ballot measures, including:
-   * Votes reported in the contest;
-   * Votes reported for each candidate(s) or selection(s) in the contest;
-   * Overvotes reported for the contest; and
-   * Undervotes reported for the contest;
-3.	Further vote details as possible to report, including:
-   * Breakdowns of votes by various reporting units such as precinct or split precinct;
-   * Vote counts and ballot counts broken down by ballot type (absentee, early, etc.) and type of device (electronic, optical scan, etc.); and
-   * Additional counts as available, e.g., the number of votes cast by party or the number of straight party selections.
+### <a name="_17_0_2_4_d420315_1392145640524_831493_2562"></a>*The **CandidateSelection** Class*
 
-<br>
+![Image of CandidateSelection](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_d420315_1392145640527_433768_2563.png)
 
-### 3.1.3	Post-Election Reporting Use Case
-The post-election reporting use case addresses the updates to the election night unofficial results. Post-election results contain greater detail than election night results, including results by reporting unit, by counts of different types of ballots (early, absentee, provisional, etc.), and by the type of vote-capture device used by voters to cast their ballots. They may also include results that were not available for election night reporting, such as absentee ballots received too close to the election day, or provisional ballots. This use case is of interest especially by analysts and media performing detailed analysis of election results and other items of interest such as the methods people are choosing to vote (e.g., favoring absentee over in-person) or provisional voting rejection rates.
+For the contest selections in a candidate contest, including for write-ins. It inherits the attributes of [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906). References to multiple [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instances can be included if necessary, e.g., when the contest selection would be for a ticket of candidates (unless the ticket itself is defined as a candidate).
 
-The data for post-election night reporting includes:
+[EndorsementParty](#_17_0_2_4_d420315_1391370669921_519404_2559) is used to reference any associated endorsement parties other than the specific party of the candidate ([Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) references [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) for that purpose). For example, if a candidate of one party is also endorsed by a second party, use [EndorsementParty](#_17_0_2_4_d420315_1391370669921_519404_2559) to reference the second party. A second example would be for ballot fusion as used in some states, where the same candidate is listed multiple times in the same contest, but with different endorsement parties.
 
-1.	Any information from the pre-election and election night reporting use cases;
-2.	Ballot measure and contest vote counts, including:
-   *	By geopolitical units of geography (e.g., county, township, city, precinct, etc.);
-   *	By type of ballot/voting (e.g., absentee, early, in-person, provisional);
-   *	By type of voting equipment used (e.g., electronic, optical scan, etc.); and
-   *	By overvotes and undervotes for each contest;
-3.	Ballot measure and contest summaries broken down as per the vote counts, but also including the number of ballots on which the ballot measure or contest appeared; and
-*	Precinct summaries broken down as per the vote counts.
+When multiple candidates are referenced for a ticket and the ordering of the candidates is important to preserve, it is expected that the generating application will list the references to [Candidate](#_17_0_2_4_d420315_1392145686219_781480_2594) instances according to the ordering scheme in place. For example, if the contest is for a ticket in which each candidate is associated with a different office, then the order of the candidates should match the same ordering of the <Office> element references within <OfficeIds> in the <Contest xsi:type="CandidateContest" ... /> element.
 
-<br>
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_d420315_1392145686219_781480_2594"></a>`{Candidate}`|0..*|`Candidate`|For associating a candidate with the candidate selection on the ballot and for cases where the contest selection is for multiple candidates, e.g., a ticket.
+<a name="_17_0_2_4_78e0236_1389797859448_230579_4174"></a>`IsWriteIn`|0..1|`Boolean`|Indicates whether the candidate is a write-in, e.g., true or false. Assumed to be false if not present.
+<a name="_17_0_2_4_d420315_1391370669921_519404_2559"></a>`{EndorsementParty}`|0..*|`Party`|For associating one or more endorsing parties with the candidate selection.
 
-## 3.2	UML Model
-This section presents the UML model that was structured to implement the use cases.  It includes a class diagram that shows a picture of the model and an overview of how to read the relationships between the classes so as to understand how the model and XML schema are structured.
 
-The UML model represents a format-independent description of the data required by the three use cases of the specification.  Its primary benefit is that it unambiguously defines and describes the data elements and how they are related without requiring readers to know the technical details of any particular data format implementation such as XML.  By using a model-based approach, the resultant data format is more likely to be well-structured and more tolerant to modifications.  The data format can be generated from the model using commercial tools, thus if changes need to be made to a format, the model can be changed and the format can be re-generated.  
+### <a name="_18_0_2_6340208_1425647247631_162984_4712"></a>*The **Coalition** Class*
 
-Figure 8 shows a high-level view of the class diagram, minus its attributes and certain ancillary classes (the complete diagram is available for download, see Appendix C—References).
+![Image of Coalition](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1425647247641_920572_4713.png)
 
-<div class="text-center" markdown="1">
-<img src="Figures/SimplifiedUMLClassDiagram.png" height="550"/>
+For defining a coalition, i.e., a collection of parties organized for the purpose of endorsing a candidate in a contest. It inherits the attributes and elements of [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460).
 
-**Figure 8: Simplified UML Class Diagram**
-</div>
+Coalition instances themselves are composed of multiple [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) references along with a reference to an associated [Contests](#_17_0_2_4_78e0236_1389366251994_876831_2400).
 
-<br>
+If there are no associated [Contests](#_17_0_2_4_78e0236_1389366251994_876831_2400), a general default is that the coalition endorses the associated parties.
 
-### 3.2.1	Major Classes
-Each class represents a major data element, e.g., Contest, Candidate, or Party, and classes that are highly related to each other are shown in the same color.  When XML is generated from the UML model, the classes in the model get generated as major XML elements, e.g., the UML Candidate class results in the XML `<Candidate>` element.  The major classes shown in Figure 8 are:
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1427484451489_775363_4609"></a>`{Contest}`|0..*|`Contest`|For associating contests with the coalition.
+<a name="_18_0_2_6340208_1425647321121_89855_4744"></a>`{Party}`|0..*|`Party`|For associating parties with the coalition.
 
-* **ElectionReport** – the root class, includes attributes describing the type of report, when generated, etc.;
-* **Election** – for a specific election, includes attributes describing the type of election, date, etc.;
-* **GpUnit** – short for “Geopolitical Unit,” for describing units of geopolitical geography so that they can be associated with contests, offices, ballot styles, and election results.  There are two major types of GpUnits:
-  1.	ReportingUnit – for jurisdictions, districts, precincts, and other units for which election results can be associated; and
-  2.	ReportingDevice – for types of voting devices or specific voting devices for which election results can be associated (not shown in Figure 8);
-* **Office** – for political offices that are associated with contests and electoral districts and current office holders;
-* **Party** – for political parties associated with the reporting jurisdiction and for associating the parties with candidates and contests;
-* **Person** – for address and contact information for persons associated with the reporting jurisdiction, including boards of authorities, candidates, current office holders, or other election-related officials;
-* **Contest** – for contests and for linking together the major elements needed for contests such as candidates and ballot selections and election results. There are four types of Contests:
-  1.	CandidateContest – for contests involving candidates;
-  2.	BallotMeasureContest – for contests involving ballot measures (not shown in Figure 8);
-  3.	PartyContest – for straight-party selection (not shown in Figure 8); and
-  4.	RetentionContest – for judicial or other types of retention contests (not shown in Figure 8);
-* **Candidate** – for describing candidates so that they can be associated with contests;
-* **BallotSelection** – for describing the types of ballot selections in a contest and associating them with election results:
-  1.	BallotMeasureSelection – used if the ballot selection is for a ballot measure (not shown in Figure 8);
-  2.	CandidateSelection – used if the ballot selection is for a candidate; and
-  3.	PartySelection – used if the ballot selection is for a party as in straight party selections (not shown in Figure 8);
-* **VoteCounts** – used for the vote counts associated with a ballot selection;
-* **SummaryCounts** – for describing summary counts of overvotes and undervotes, write-ins, and ballot counts associated with (a) a contest or (b) geopolitical units such as precincts; and
-* **BallotStyle** – for describing the contests and ballot selections on a ballot and linking them to geopolitical units such as precincts.
 
-The attributes associated with the UML classes correspond closely to the XML schema’s attributes and sub-elements associated with the major elements, described in Section 4.
+### <a name="_17_0_5_1_43401a7_1400624327407_326048_3637"></a>*The **ContactInformation** Class*
 
-<br>
+![Image of ContactInformation](Election_Results_Reporting_UML_documentation_files/_17_0_5_1_43401a7_1400624327409_934516_3638.png)
 
-### 3.2.2	Relationships between Classes
+For defining contact information about objects such as persons, boards of authorities, organizations, etc. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209), [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433), [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567), [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), and [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) include ContactInformation.
 
-The major classes in the UML model result in major elements in the XML schema, and the different types of relationships between the UML classes determine how the XML elements are structured (linked) in the schema.  There are three types of relationships between the classes:
+To include an address for the contact, use multiple occurrences of [AddressLine](#_18_0_2_6340208_1425645912998_115448_4529). It is expected that the generating application will list the name of the person/organization in the first occurrence of [AddressLine](#_18_0_2_6340208_1425645912998_115448_4529), with subsequent ordered occurrences for street address, city, state, zip code, etc. [Directions](#_17_0_2_4_f71035d_1443105112875_46223_2290) can be used to supply any additional address-related information that may appear in multiple languages.
 
-**Directed Composition**: see Figure 9, ElectionReport and Election, read as, “An election report is composed of elections.”  In the XML schema, the `<Election>` element will be generated as a sub-element of the `<ElectionReport>` element. A directed composition relationship has a closed diamond at one end and an arrow pointing to the composing class:
+ContactInformation includes [LatLng](#_17_0_2_4_f71035d_1443104838926_393729_2222) so as to associate latitude/longitude with the contact address.
 
-<div class="text-center" markdown="1">
-<img src="Figures/DirectedComposition.png"/>
+[Email](#_17_0_5_1_43401a7_1400668036651_743620_3650), [Fax](#_17_0_5_1_43401a7_1400668021448_721992_3646), and [Phone](#_17_0_5_1_43401a7_1400667951215_637516_3638) are of type [AnnotatedString](#_18_0_2_6340208_1497553224568_429892_4565), which permits up to a 16-character annotation to be associated with the data.
 
-**Figure 9 – Directed Composition Example**
-</div>
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1425645912998_115448_4529"></a>`AddressLine`|0..*|`RichText`|For associating an address with the contact.
+<a name="_17_0_2_4_f71035d_1443105112875_46223_2290"></a>`Directions`|0..1|`InternationalizedText`|Directional information in addition to address information.
+<a name="_17_0_5_1_43401a7_1400668036651_743620_3650"></a>`Email`|0..*|`AnnotatedString`|Email address associated with the contact.
+<a name="_17_0_5_1_43401a7_1400668021448_721992_3646"></a>`Fax`|0..*|`AnnotatedString`|Fax number associated with the contact.
+<a name="_17_0_2_4_f71035d_1441215163702_951734_2515"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_17_0_2_4_f71035d_1443105009955_640511_2261"></a>`{LatLng}`|0..1|`LatLng`|For latitude and longitude information associated with the contact.
+<a name="_18_0_2_6340208_1429287939709_269212_4416"></a>`Name`|0..1|`RichText`|Name associated with the contact.
+<a name="_17_0_5_1_43401a7_1400667951215_637516_3638"></a>`Phone`|0..*|`AnnotatedString`|Phone number associated with the contact.
+<a name="_17_0_2_4_f71035d_1429176643252_845913_2230"></a>`{Schedule}`|0..*|`Schedule`|For associating a schedule with the contact.
+<a name="_17_0_5_1_43401a7_1400668251889_705688_3666"></a>`Uri`|0..*|`AnnotatedUri`|URI associated with the contact.
 
-**Is a Type of or Instance of**: see Figure 10, Contest and CandidateContest, read as, “A candidate contest is a type of contest.”  Contest is an abstract class; it is “implemented” by its concrete classes such as CandidateContest.  In the XML schema, Contest will be generated as an abstract XML element and serve as an extension base to the `<CandidateContest>` element. An instance relationship has an open triangle at one end, pointing from the concrete class to the abstract class:
 
-<div class="text-center" markdown="1">
-<img src="Figures/IsA.png"/>
+### <a name="_17_0_2_4_78e0236_1389366251994_876831_2400"></a>*The **Contest** Class*
 
-**Figure 10 – “Is a Type of” Example**
-</div>
+![Image of Contest](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_293750_5341.png)
 
-**Directed Association**: see Figure 11, Candidate and Party, read as, “A candidate is associated with or linked to a party.”  In the XML schema, the `<Candidate>` element will include a `<PartyId>` element, which will contain an identifier associated with a `<Party>` element.  A directed association has an arrow at one end, goes in one direction, and serves to link the class to another associated class, e.g., the party linked to the candidate:
+For defining a contest and linking the contest to the associated candidates, ballot measures, parties, or retention contests. [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) includes Contest.
 
-<div class="text-center" markdown="1">
-<img src="Figures/DirectedAssociation.png"/>
+Contest is an abstract class with four subclasses that get used according to the type of contest:
 
-**Figure 11 – Directed Association Example**
-</div>
+ *  [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783), used for a contest involving a ballot measure
+ *  [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806), used for a contest involving one or more candidates for an office
+ *  [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144), used for a contest for a straight party selection on the ballot
+ *  [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554), used for a judicial or other type of retention contest 
 
-The generation of XML elements from the UML model is discussed more specifically in section 5.1.2.
-For the directed composition associations in Figure 8, one can see that ElectionReport is composed of Election, GpUnit, Office, Party, and Person.  Election is composed of BallotStyle, Candidate, and Contest.  Contest is composed of BallotSelection and SummaryCounts. BallotSelection is composed of VoteCounts.  GpUnit is also composed of SummaryCounts.
+Contest includes [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) to link the selections on the ballot to the contest, e.g., to link one or more candidates to a candidate contest. Like Contest, [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) is also an abstract class and has subclasses that correspond to those of Contest, as follows: 
 
-For the “is a type of” relationships in Figure 8, one can see that CandidateContest is a type of Contest.  ReportingUnit is a type of GpUnit.  CandidateSelection is a type of BallotSelection.
+ *  [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) includes [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)
+ *  [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806) includes [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562)
+ *  [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144) includes [PartySelection](#_17_0_2_4_f71035d_1426519980658_594892_2511)
+ *  [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554) includes [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926)
 
-Lastly, for the directed associations in Figure 8, one can see that many of the classes are associated with each other, as one would expect.  For example, Party is associated with (or linked to) Candidate just as a political party would be associated with or linked to a candidate.  Candidate is associated or linked to CandidateSelection, just as a selection on the ballot in a candidate contest would be for a specific candidate.  The XML generation is more complicated for directed associations and is discussed in greater detail in section 5.1.3.
+[Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) includes a required [ElectionDistrict](#_17_0_2_4_78e0236_1389366667508_703141_2753) reference to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined for the geographical scope of the contest. For example, in a state senate contest, [ElectionDistrict](#_17_0_2_4_78e0236_1389366667508_703141_2753) would reference a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) of type [ReportingUnit](#_17_0_2_4_f71035d_1400606476166_735297_2593) element defined for the district associated with the contest. [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) also includes an optional reference that serves the same purpose. Note that for contests that are state-wide or county-wide and so forth, the same [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined for the state or county, etc., can be re-used.
+[Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) includes [OtherCounts](#_18_0_2_6340208_1508176198256_527421_4561) for providing a summary of miscellaneous counts associated with the contest, including total number of ballots cast containing the contest, total number of overvotes, undervotes, or write-ins. The summary counts can be associated with the contest as a whole, or with precincts or other lower-level reporting units by using multiple occurrences of [OtherCounts](#_18_0_2_6340208_1508176198256_527421_4561).
+[SequenceOrder](#_17_0_2_4_f71035d_1426083547931_912709_2690) is used for results display ordering, i.e., to display contests according to a particular ordering. For example, “100” may indicate a U.S. Senatorial contest, “200” may indicate a U.S. Congressional contest, etc. [SequenceOrder](#_17_0_2_4_f71035d_1426083547931_912709_2690) is not appropriate to use as the contest order on the ballot; contest order on each ballot can be preserved, however, using the [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360) element, which associates ballot styles with their corresponding precincts or other geopolitical units.
+When including [ExternalIdentifiers](#_17_0_2_4_f71035d_1430405712653_451634_2410), if the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
-<br>
 
-# 4 XML Schema
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_5_1_43401a7_1395831571231_804795_3632"></a>`Abbreviation`|0..1|`String`|Abbreviation for the contest.
+<a name="_17_0_2_4_f71035d_1426519324658_821208_2483"></a>`BallotSubTitle`|0..1|`InternationalizedText`|Subtitle of the contest as it appears on the ballot.
+<a name="_17_0_2_4_f71035d_1426519300284_211849_2479"></a>`BallotTitle`|0..1|`InternationalizedText`|Title of the contest as it appears on the ballot.
+<a name="_17_0_2_4_78e0236_1389366541302_23458_2637"></a>`{ContestSelection}`|0..*|`ContestSelection`|For associating a contest selection for the contest, i.e., a candidate, a ballot measure.
+<a name="_17_0_2_4_78e0236_1397059165386_471037_2443"></a>`{OtherCounts}`|0..*|`OtherCounts`|For associating counts such as overvote and undervotes with the contest.
+<a name="_17_0_2_4_f71035d_1430428675044_368644_2247"></a>`CountStatus`|0..*|`CountStatus`|For providing various counting status associated with the contest.
+<a name="_17_0_2_4_78e0236_1389366667508_703141_2753"></a>`{ElectionDistrict}`|1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the contest with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
+<a name="_17_0_2_4_f71035d_1430412090176_814999_2249"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the contest.
+<a name="_17_0_2_4_f71035d_1426006769365_710376_2474"></a>`HasRotation`|0..1|`Boolean`|Boolean to indicate whether the selections in the contest are rotated. Assumed to be “no” if not present.
+<a name="_17_0_2_4_78e0236_1389712460582_306281_2220"></a>`Name`|1|`RichText`|Name of the contest, not necessarily as it appears on the ballot.
+<a name="_17_0_2_4_f71035d_1426083547931_912709_2690"></a>`SequenceOrder`|0..1|`Integer`|Orderering for listing the contest for purposes of results display. If not present, no order is assumed.
+<a name="_17_0_2_4_d420315_1393508523463_695325_3041"></a>`SubUnitsReported`|0..1|`Integer`|Number of subunits, e.g., precincts, that have completed reporting votes for this contest.
+<a name="_17_0_2_4_d420315_1393508532825_910334_3045"></a>`TotalSubUnits`|0..1|`Integer`|Total number of subunits, e.g., precincts that have this contest on the ballot.
+<a name="_17_0_2_4_78e0236_1389798198604_276106_4268"></a>`VoteVariation`|0..1|`VoteVariation`|Vote variation associated with the contest, e.g., n-of-m.
+<a name="_17_0_2_4_f71035d_1426537329540_929122_2797"></a>`OtherVoteVariation`|0..1|`String`|For use when [VoteVariation](#_17_0_2_4_78e0236_1389798198604_276106_4268) is other.
 
-# 5 XML Schema Aspects and Usage
 
-# Appendices
+### <a name="_17_0_2_4_78e0236_1389372124445_11077_2906"></a>*The **ContestSelection** Class*
 
-## A Acronyms
+![Image of ContestSelection](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_125024_5356.png)
 
-Selected acronyms and abbreviations used in this document are defined below.
+Used for the contest selections in a contest (e.g., for candidates, for ballot measures) and to generally link them to vote counts. [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) includes [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906).
 
-Acronym | Meaning
---- | ---
-CDF | Common Data Format
-DRE | Direct Record Electronic
-EAC | Election Assistance Commission
-EAVS | EAC Election Administration and Voting Survey
-EMS | Election Management System
-FIPS | Federal Information Processing Standard
-FWAB | Federal Write-in Absentee Ballot
-JSON | JavaScript Object Notation
-NIST | National Institute of Standards and Technology
-OCD-ID | Open Civic Data Identifiers
-OASIS | Organization for the Advancement of Structured Information Standards
-SP | Special Publication
-UML | Unified Modeling Language
-UOCAVA | Uniform and Overseas Citizens Assistance in Voting Act
-VIP | Voting Information Project
-VVSG | Voluntary Voting Systems Guidelines
-XML  | eXtensible Markup Language
+[ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) is an abstract class with three subclasses that get used according to the type of contest:
 
-<b>
+ *  [BallotMeasureSelection](#_17_0_2_4_78e0236_1389372163799_981952_2926), used if the contest type is for a ballot measure, including for retentions
+ *  [CandidateSelection](#_17_0_2_4_d420315_1392145640524_831493_2562), used if the contest type is for one or more candidates, to link the contest selection to the candidate instances and endorsement parties; and
+ *  [PartySelection](#_17_0_2_4_f71035d_1426519980658_594892_2511), used if the contest type is for a party, e.g., for a straight party contest. [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906) includes [VoteCounts](#_17_0_2_4_78e0236_1389372026000_187007_2862) for associating vote counts with the contest selection.
+ *  [SequenceOrder](#_17_0_2_4_f71035d_1426296042287_22607_2200) is included to specify an ordering for the contest selections for purposes of display only. The original ballot ordering can be preserved, however, by using the [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360) class.
 
-## B Glossary
-Selected terms used throughout this document are defined below. In some of the definitions, there is ancillary information that is not part of the definition but helpful in understanding the definition; this ancillary information is preceded with "Note:".  Synonyms are preceded with "Syn:".
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1426296042287_22607_2200"></a>`SequenceOrder`|0..1|`Integer`|Order in which the candidate is listed on the ballot for purposes of results display. If not present, no order is assumed.
+<a name="_17_0_2_4_78e0236_1389372026000_187007_2862"></a>`{VoteCounts}`|0..*|`VoteCounts`|For associating the contest selection’s vote counts.
 
-**Absentee ballot:**
-Ballot resulting from absentee voting.
 
-**Absentee voting:**
-Voting that can occur unsupervised at a location chosen by the voter and usually done ahead of election day.  Note: In some jurisdictions, absentee voting is also called early voting and vote by mail.  
+### <a name="_17_0_2_4_78e0236_1389367291663_284973_2835"></a>*The **Counts** Class*
 
-**Affiliation:**
-Association with a political party.  See also: endorsement.  Note: Affiliation with a political party does not imply endorsement by that political party; endorsement does not imply affiliation.
+![Image of Counts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_267901_5355.png)
 
-**Ballot measure:**
-Contest in which the choices are typically Yes and No.  Syn: referendum.
+Used for reporting on contest vote counts. Contains attributes to categorize the counts according to voting classification (e.g., election day, early voting, etc.) and type of device on which the votes were cast (e.g., DRE, accessible device, etc.).
 
-**Ballot rotation:**
-The process of varying the order of the contest choices within a given contest.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1430428463182_799732_2239"></a>`DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
+<a name="_17_0_2_4_78e0236_1389372033343_84394_2882"></a>`{GpUnit}`|1|`GpUnit`|For filtering counts by political geography or device or device type.
+<a name="_17_0_2_4_f71035d_1443037119396_390572_2220"></a>`IsSuppressedForPrivacy`|0..1|`Boolean`|Boolean to indicate if votes are suppressed for voter privacy, e.g., true or false. Assumed to be false if not present.
+<a name="_18_0_5_43401a7_1508329922419_951254_4303"></a>`Round`|0..1|`Integer`|An identification of the RCV round being reported.
+<a name="_17_0_2_4_f71035d_1401285906925_720136_2261"></a>`Type`|1|`CountItemType`|The type of count being used as a filter on the vote counts, e.g., election day, early voting, etc.
+<a name="_17_0_2_4_f71035d_1426077947627_227957_2665"></a>`OtherType`|0..1|`String`|Used when Type is other.
 
-**Ballot style:**
-The list of contests and candidates associated with a particular ballot and its associated precinct or split precinct (and party, for some primaries), including language used and the ordering of contests and candidates. Note: In closed primaries, the same collection of ballot style layouts are used within the same ballot style geography, with the specific ballot style layout depending on the voter's affiliation.
 
-**Borough:**
-Term to signify a subdivision generally smaller than cities in terms of both geographic area and population and administered through a borough code in states such as CN, NJ, PA, and other states.  Used to mean a county in AK. Used in New York City to subdivide the city much as counties subdivide a state.
+### <a name="_17_0_2_4_f71035d_1430412663878_61362_2269"></a>*The **CountStatus** Class*
 
-**Closed primary:**
-Primary election in which only voters registered with a political party may vote in those party-specific contests associated with that party.
+![Image of CountStatus](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1430412663882_602578_2270.png)
 
-**Combined precinct:**
-Two or more precincts assigned the same polling place.  Syn: consolidated precinct.
+For reporting on the counting status for various items such as ballot types or write-ins, e.g., whether for a certain type of ballot, the counts are in progress, not yet started, complete, etc. [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400), [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209), and [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) include CountStatus.
 
-**Contest:**
-A single decision being put before the voters (e.g., the selection of candidates to fill a particular public office or the approval or disapproval of a constitutional amendment).
+If the type of count item is not listed in enumeration [CountItemType](#_17_0_2_4_78e0236_1389798097477_664878_4228), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1426077858771_890955_2661).
 
-**Cross-party endorsement:**
-Endorsement of a given contest choice by two or more political parties.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1426077427867_28021_2619"></a>`Status`|1|`CountItemStatus`|The status of the count, from the [CountItemStatus](#_17_0_2_4_78e0236_1389797161173_369293_4078) enumeration.
+<a name="_17_0_2_4_f71035d_1426077318387_348887_2615"></a>`Type`|1|`CountItemType`|The type of item, from the [CountItemType](#_17_0_2_4_78e0236_1389798097477_664878_4228) enumeration.
+<a name="_17_0_2_4_f71035d_1426077858771_890955_2661"></a>`OtherType`|0..1|`String`|Used when Type is other.
 
-**Direct record electronic (DRE):**
-An electronic vote-capture device that provides choices visible to the voter on a front panel of the machine in which voters directly enter choices into electronic storage with the use of a touch-screen, push-buttons, or similar device.  Note: An alphabetic keyboard is often provided with the entry device to allow for the possibility of write-in votes. The voter's choices are stored in these machines and added to the choices of all other voters.
 
-**Early voting:**
-Voting that occurs prior to election day at a polling location under the supervision of poll workers or election administrative staff.  See also: in-person voting.  Note: some jurisdictions, early voting is referred to as in-person absentee voting.
+### <a name="_18_0_2_6340208_1519999692422_172889_4576"></a>*The **DateTimeWithZone** Class*
 
-**Election certification:**
-The process of certifying the results of an election, including absentee or early votes, votes cast on election day, and valid provisional ballots.
+![Image of DateTimeWithZone](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1519999692425_740254_4577.png)
 
-**Election day:**
-The date on which the election is considered held.  Absentee votes and early votes may be cast in advance of election day.  Note: Some jurisdictions have an election period of several days or weeks for in-person or remote voting, and there is no one day that is election day.
+Restricts dateTime to require inclusion of time zone information and excludes fractional seconds.
 
-**Election night:**
-The period of time starting when the polls close in a jurisdiction in which results may first begin to be reported and ending when all precincts have reported.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1519999795210_981371_4601"></a>`pattern`||`String`|Pattern used for indicating the date, time and the accompanying time zone.
 
-**Election management system (EMS):**
-Computer systems used to perform such tasks as preparing ballots, setting up tally systems, maintaining voter registration information, generating reports, and to consolidate, report, and display election results.  Note: This device receives results data from the vote-capture devices or by manual input, accumulates the results, and reports the accumulated results.
 
-**Election official:**
-Any county clerk and recorder, election judge, member of a canvassing board, member of a board of county commissioners, member or secretary of a board of directors authorized to conduct public elections, representative of a governing body, or other person contracting for or engaged in the performance of election duties as required by the election code.
+### <a name="_18_0_2_6340208_1425911626288_420556_4530"></a>*The **DeviceClass** Class*
 
-**Electoral District:**
-As used in elections, administrative divisions in which voters are entitled to vote in contests that are specific to that division, such as those for state senators and delegates.
+![Image of DeviceClass](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1425911626300_559547_4531.png)
 
-**Endorsement:**  
-Approval by a political party (e.g., as the candidate that the party elects to field in a particular contest and/or as the candidate that should receive straight party votes).  See also: affiliation.  Note: In some states, more than one party may endorse a contest selection.  
+For filtering vote counts by device-related information. [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835), and [OtherCounts](#_18_0_2_6340208_1508176198256_527421_4561) include [DeviceClass](#_18_0_2_6340208_1425911626288_420556_4530).
 
-**General election:**
-Election in which the candidates for contests and offices have generally been chosen during a primary election.  Note: In presidential systems, the term refers to a regularly scheduled election where the president, and either a class of or all members of the national legislature are elected at the same time. A general election day may also include elections for local officials.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1401286171326_648907_2273"></a>`Manufacturer`|0..1|`String`|Manufacturer of the device.
+<a name="_17_0_2_4_f71035d_1401286117587_806540_2269"></a>`Model`|0..1|`String`|Manufacturer’s device model, used to filter on, e.g., a specific model of DRE or other device type.
+<a name="_17_0_2_4_f71035d_1401285959630_42686_2265"></a>`Type`|0..1|`DeviceType`|Enumerated type of device, e.g., "dre", "opscan-precinct", etc.
+<a name="_18_0_2_6340208_1497894619958_710016_4605"></a>`OtherType`|0..1|`String`|Used when Type is other.
 
-**In-person voting:**
-Voting that occurs at a polling place under the supervision of poll workers on election day.  See also: early voting. Syn: polling place voting.
 
-**Jurisdiction:**  
-Term as used in election contexts to signify a geographical area to which a practical authority has been granted to administer elections for political offices.  Areas of jurisdiction apply to local, state, and federal levels.  Note: States, counties, cities, towns and townships are all examples of jurisdictions.
+### <a name="_17_0_2_4_f71035d_1426101822599_430942_2209"></a>*The **Election** Class*
 
-**Municipality:**
-Term as used in election contexts to signify a jurisdiction such as city or town or village that has some form of local government for which elections are generally conducted.
+![Image of Election](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1426101822601_995748_2210.png)
 
-**N-of-M:**  
-Voting variation in which the voter is entitled to allocate a fixed number of votes (N) over a list of M contest choices or write-ins, with the constraint that at most 1 vote may be allocated to a given contest choice. Note: This usually occurs when multiple seats are concurrently being filled in a governing body such as a city council or school board where candidates run at-large.  The voter is not obliged to allocate all N votes.  1-of-M is N-of-M voting where N = 1.
+For defining the status of the election and associated information such as candidates, contests, and vote counts.
 
-**Nonpartisan primary:**
-Election held to narrow the field of candidates in non-party-specific contests prior to the general election.  Note: A primary election may be comprised of a nonpartisan primary for some contests or measures and a partisan and/or open primary for others.
+Election includes links to the major instances that are specific to an election: [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360), [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440), and [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400).
 
-**Open primary:**
-Primary held in a state where voters do not register as a party member.  Note: There are two variations.  In one, the voter declares a choice of party ballot to the pollworker and is issued a ballot containing only contests for that party (and nonpartisan contests).  In the other, the ballot issued contains all eligible contest from all parties and the voter selects the party of choice, privately, by only selecting candidates in contests of the desired party.  Selections in more than one party void the partisan section of the ballot.
+Election includes a required association end [ElectionScope](#_17_0_2_4_f71035d_1426102211616_609900_2331), which links to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance for the purpose of identifying the geographical scope of the election. For example, for an election within a county, [ElectionScope](#_17_0_2_4_f71035d_1426102211616_609900_2331) would reference a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined for the county. If it is desired to include election authority information, the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) can include [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433).
 
-**Overvote:**  
-Occurs when a voter selects more than one candidate in a 1-of-M contest or more than N candidates in an N-of-M contest. The vote for that contest is considered an overvote and not counted towards any candidate in that contest (unless approval voting applies for that contest). Note: Usually the rest of a properly marked ballot is counted. Large numbers of overvotes can be indicative of confusing ballot layout or confusing instructions.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1508176491404_114747_4598"></a>`{BallotCounts}`|0..*|`BallotCounts`|Used for identifying various ballot counts.
+<a name="_17_0_2_4_f71035d_1426789041442_265842_2746"></a>`{BallotStyle}`|0..*|`BallotStyle`|For defining ballot styles associated with the election.
+<a name="_17_0_2_4_f71035d_1426788786008_599642_2643"></a>`{Candidate}`|0..*|`Candidate`|For defining candidates associated with the election.
+<a name="_18_0_2_6340208_1429710511392_588063_4545"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating various contact information with the election.
+<a name="_17_0_2_4_f71035d_1426788714136_545781_2616"></a>`{Contest}`|0..*|`Contest`|For defining contests associated with the election.
+<a name="_17_0_2_4_f71035d_1430428731982_612772_2251"></a>`CountStatus`|0..*|`CountStatus`|For providing various counting status on types of ballots or other items.
+<a name="_17_0_2_4_f71035d_1426102211616_609900_2331"></a>`{ElectionScope}`|1|`ReportingUnit`|Unique identifier for a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element. For associating the election with a reporting unit that represents the geographical scope of the election, e.g., a state, a county, etc.
+<a name="_17_0_2_4_f71035d_1430411992333_911417_2240"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the election.
+<a name="_17_0_2_4_f71035d_1426101865703_367602_2232"></a>`Name`|1|`InternationalizedText`|For including a name for the election; the name could be the same name as appears on the ballot.
+<a name="_17_0_2_4_f71035d_1426101837248_396898_2228"></a>`StartDate`|1|`date`|Calendar start date of the election, e.g., “2018-11-04”.
+<a name="_17_0_2_4_f71035d_1431009646277_24904_2233"></a>`EndDate`|1|`date`|Calendar end date of the election; for a typical one-day election, the end date is the same as the start date.
+<a name="_17_0_2_4_f71035d_1426101886743_683410_2236"></a>`Type`|1|`ElectionType`|Enumerated type of election, e.g., partisan-primary, open-primary, etc.
+<a name="_17_0_2_4_f71035d_1447709724802_42785_2220"></a>`OtherType`|0..1|`String`|Used when [Type](#_17_0_2_4_f71035d_1426101886743_683410_2236) is other.
 
-**Partisan primary:**
-Election held to determine which candidate(s) would represent a political party for particular offices in the general election.
 
-**Polling place:**
-Location at which voters cast ballots in-person on vote-capture devices (e.g., DRE) under the supervision of poll workers usually on election day.  Syn: polling station or poll.  Note: A polling place is typically in 1-to-1 correspondence with a precinct except for combined precincts and vote centers.
+### <a name="_18_0_2_6340208_1441311877439_710008_4433"></a>*The **ElectionAdministration** Class*
 
-**Post-election canvass:**
-A review of all election results and re-tabulation, resulting in the certification of the results. Generally, the canvass is conducted according to established laws and time frames.
+![Image of ElectionAdministration](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1441311877445_664685_4434.png)
 
-**Precinct:**
-An election administration division corresponding to a contiguous geographic area that is the basis for determining the contests and measures on which the voters legally residing in that area are eligible to vote.  Syn: a beat, box, polling district, ward.  See also: combined precinct, electoral district, split precinct.
+Used to provide various information about an election authority. [ReportingUnit](#_17_0_2_4_f71035d_1400606476166_735297_2593) includes ElectionAdministration.
 
-**Primary election:**
-Election generally held to determine which candidate(s) will represent a political party for particular offices in the general election and/or to narrow the field of candidates in non-party-specific contests prior to the general election. In some cases, such as for local and state central committee members for a particular party, certain contests serve as the sole election as opposed to a primary followed by a general election.  Note: From the functional viewpoint of the voting system, the defining features of a primary election are the presence of party-specific contests and a requirement to report separate totals for the different political parties.
+ElectionAdministration includes [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) for the election authority and, using [ElectionOfficialPerson](#_18_0_2_6340208_1441312523523_377380_4513) references one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances defined for individuals/organizations associated with the election authority.
 
-**Provisional ballot:**
-Ballot cast by a voter whose eligibility to vote is disputed by an election official.  Syn: a challenged ballot.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1441312459706_787590_4464"></a>`{ContactInformation}`|0..1|`ContactInformation`|For including various contact information.
+<a name="_18_0_2_6340208_1441312523523_377380_4513"></a>`{ElectionOfficialPerson}`|0..*|`Person`|Unique identifier for one or more Person elements defined for the election authority.
+<a name="_18_0_2_6340208_1441312432223_272740_4455"></a>`Name`|0..1|`RichText`|Name of the election authority.
 
-**Reporting unit:**
-An administrative division that reports votes or to which votes are associated, e.g., state, county, city, precinct, etc.
 
-**Schema:**
-A file containing definitions of data elements and attributes with rules for usage, e.g., for XML.
+### <a name="_17_0_2_4_78e0236_1389366195564_913164_2300"></a>*The **ElectionReport** Class*
 
-**Split precinct:**
-Precinct serving voters from two or more administrative divisions, such as election districts, that may require different ballot styles, other than for primaries. Syn: split.
+![Image of ElectionReport](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_73815_5340.png)
 
-**Straight party voting:**
-Voting variation in a general election in which a vote in a designated, special contest (in which the choices are political parties) implies votes in accordance with the endorsements of the selected party in all other contests on the ballot in which straight party voting is allowed.  Note: There are different tabulation rules for processing paper ballots containing a straight party selection and direct selections of one or more candidates in individual contests that are state specific.
+For defining items pertaining to the status and format of the report and when it was generated.
 
-**Tabulator:**
-A programmed device that counts votes.
+ElectionReport references the major elements that are not necessarily specific to an election and that therefore can exist in a pre-election report: [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) and [OfficeGroup](#_17_0_2_4_f71035d_1433183615993_866714_2239), [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460), [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567), and [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209).
 
-**Town:**  
-An urban area that has a name, defined boundaries, and local government, and that is generally larger than a village and smaller than a city.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1426102320351_976615_2363"></a>`{Election}`|0..*|`Election`|For associating elections with the report.
+<a name="_17_0_2_4_f71035d_1430412040553_669909_2247"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the report.
+<a name="_17_0_2_4_d420315_1392318153856_710707_2448"></a>`Format`|1|`ReportDetailLevel`|Detail level of the report, e.g., contest summary, precinct level results, etc.
+<a name="_17_0_2_4_78e0236_1389733247429_431211_3338"></a>`GeneratedDate`|1|`DateTimeWithZone`|Identifies the date and time that the election report was generated.
+<a name="_17_0_2_4_f71035d_1426788982595_725441_2719"></a>`{GpUnit}`|0..*|`GpUnit`|For associating geopolitical units with the report.
+<a name="_18_5_3_43701b0_1527684452231_716184_6305"></a>`{Header}`|0..*|`Header`|For associating headers with parts of a ballot style.
+<a name="_17_0_5_1_43401a7_1394578590416_259347_3759"></a>`Issuer`|1|`RichText`|Identification of the report issuer.
+<a name="_17_0_2_4_f71035d_1426542944036_608477_2211"></a>`IssuerAbbreviation`|1|`RichText`|An abbreviation of the report issuer such as the 2-character U.S. Census Bureau abbreviation of the state whose results are being reported, e.g., AL, TX, MN, etc.
+<a name="_18_0_2_6340208_1425917205849_590264_4699"></a>`IsTest`|0..1|`Boolean`|Used to indicate whether the report is a test report. Assumed to be “false” if not present.
+<a name="_17_0_2_4_f71035d_1400594737789_912202_2453"></a>`Notes`|0..1|`RichText`|For including an arbitrary message with the report.
+<a name="_17_0_2_4_f71035d_1426788177421_963220_2552"></a>`{Office}`|0..*|`Office`|For associating offices with the report.
+<a name="_17_0_2_4_f71035d_1433183761792_828366_2293"></a>`{OfficeGroup}`|0..*|`OfficeGroup`|For associating a name for a grouping of offices with the report.
+<a name="_17_0_2_4_f71035d_1426788475880_621446_2579"></a>`{Party}`|0..*|`Party`|For associating parties with the report.
+<a name="_17_0_2_4_f71035d_1426788901070_281905_2692"></a>`{Person}`|0..*|`Person`|For associating persons with the report.
+<a name="_17_0_2_4_78e0236_1389734122703_834255_3892"></a>`SequenceStart`|1|`Integer`|The report’s number as part of a sequence of reports, used with  so as to be read as, e.g., 1 of 1, 1 of 2, 2 of 2, etc. Starts with “1”.
+<a name="_17_0_3_43401a7_1390917636239_792774_2880"></a>`SequenceEnd`|1|`Integer`|The upper bound of the sequence; e.g., “1” if there is only 1 report, “2” if there are two reports in the sequence, etc.
+<a name="_17_0_2_4_78e0236_1389734118887_523907_3888"></a>`Status`|1|`ResultsStatus`|Status of the election report, e.g., test mode, unofficial, etc.
+<a name="_17_0_2_4_f71035d_1428427515312_561619_2215"></a>`TestType`|0..1|`String`|A description of the type of test, e.g., pre-election, logic and accuracy, etc.
+<a name="_17_0_2_4_78e0236_1389733233791_999255_3335"></a>`VendorApplicationId`|1|`String`|An identifier of the vendor application generating the election report, e.g., X-EMS version 3.1.a.
 
-**Township:**  
-A subdivision of a county in most northeast and Midwest U.S. states, having the status of a unit of local government with varying governmental powers.  Syn: civil township.
 
-**UOCAVA voter:**
-From the Uniform and Overseas Citizens Assistance in Voting Act (UOCAVA); A U.S. citizen who is an active member of the Uniformed Services and the Merchant Marine, or the commissioned corps of the Public Health Service or the National Oceanic and Atmospheric Administration, their eligible family members, and U.S. citizens residing outside the United States.
+### <a name="_17_0_2_4_f71035d_1430405712653_451634_2410"></a>*The **ExternalIdentifier** Class*
 
-**Undervote:**  
-Occurs when the voter does not select a candidate in a 1-of-M contest or selects fewer than N candidates in an N-of-M contest.  Note: can indicate a conscious choice of the voter to not vote in the contest. As with overvotes, large numbers of undervotes can be indicative of confusing ballot layout or confusing instructions.
+![Image of ExternalIdentifier](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1430405712661_66241_2411.png)
 
-**Vote-capture device:**
-An automated device that is used directly by a voter to cast a ballot. See also: direct record electronic (DRE).
+For associating a jurisdiction’s codes, i.e., identifiers, with objects such as candidates, offices, or geopolitical units such as counties, towns, precincts, etc. Multiple occurrences of the ExternalIdentifier sub-element can be used to associate multiple codes, e.g., if there is a desire to associate multiple codes with a particular object such as FIPS (Federal Information Processing Standard) codes as well as OCD-IDs (Open Civic Data Identifiers).
 
-**Vote center:**
-A polling place where voters from multiple precincts may cast their ballots.  Syn: a super precinct.  See also: combined precinct.
+For elements that link to ExternalIdentifier instances, if the type is not listed in enumeration [IdentifierType](#_17_0_2_4_f71035d_1425061188508_163854_2613), use other and include the type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1430405732252_109247_2429).
 
-**Voter turnout:**
-The number of voters who have cast ballots as a percentage of the total number of voters who can cast ballots.  Note: Various states calculate this differently, sometimes using the total number of potentially eligible voters whether registered or not.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1441215385623_864674_2521"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_17_0_2_4_f71035d_1430405763078_743585_2433"></a>`Type`|1|`IdentifierType`|An identifier type, e.g., FIPS.
+<a name="_17_0_2_4_f71035d_1430405732252_109247_2429"></a>`OtherType`|0..1|`String`|Used when [IdentifierType](#_17_0_2_4_f71035d_1430405763078_743585_2433) value is other.
+<a name="_17_0_2_4_f71035d_1430405785820_123111_2437"></a>`Value`|1|`String`|The identifier used by the jurisdiction.
 
-**Voting variation:**
-A contest option or feature, e.g., approval voting, cumulative voting.
 
-**Write-in:**  
-Vote for a candidate who is explicitly named by the voter in lieu of choosing a candidate who is already listed on the ballot.  Note: In some states, this does not preclude writing in the name of a candidate who is already listed on the ballot. Some states require write-in candidates to be registered prior to the elections to be considered a valid write-in selection.
+### <a name="_17_0_2_4_78e0236_1389366233346_42391_2380"></a>*The **GpUnit** Class*
 
-<br>
+![Image of GpUnit](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1390579885871_183088_2445.png)
 
-## C References
-[1] W3C, Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C Recommendation, November 26, 2008, [http://www.w3.org/TR/xml/](http://www.w3.org/TR/xml/) [accessed 2/1/2016].
+Class for describing a geo-politically bounded area of geography such as a city, district, or jurisdiction, or a precinct or split-precinct, or specific vote-capture device, for the purpose of associating contest vote counts and ballot counts (and other information) with the reporting unit. Reporting units can link to each other to form a hierarchicallly-oriented model of a state's (or a county's, etc.) jurisdictions, districts, and precincts.
 
-[2] Object Management Group (OMG), UML Specification version 1.1 (OMG document ad/97-08-11) September 22, 2011, [http://omg.org/](http://omg.org/) [accessed 2/1/2016].
+[GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) is an abstract class with two subclasses that get used according to the type of unit:
 
-[3] Election Assistance Commission, Election Administration and Voting Survey [Web site], [http://www.eac.gov/research/election_administration_and_voting_survey.aspx](http://www.eac.gov/research/election_administration_and_voting_survey.aspx) [accessed 2/1/2016].
+ *  [ReportingDevice](#_17_0_2_4_78e0236_1389798013459_389380_4178), used for associating vote counts with a specific vote-capture device
+ *  [ReportingUnit](#_17_0_2_4_f71035d_1400606476166_735297_2593), for associating vote counts with geopolitical units such as cities, districts, counties, precincts, etc.
 
-[4] Florida Department of State, Division of Election, Florida Election Results Summary XML Schema Reference, Version 3.0-S, July 2015, [http://dos.myflorida.com/media/695297/ds-de-137-summary.pdf](http://dos.myflorida.com/media/695297/ds-de-137-summary.pdf) [accessed 2/1/2016].
+[Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) and [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) contain a required reference to [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) representing the jurisdiction of the election or contest respectively; [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) contains a similar reference that is optional.  OtherCounts and VoteCounts reference [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) to link vote or summary counts to [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances defined for precincts or other types of geopolitical units.  [BallotStyle](#_17_0_2_4_78e0236_1389366224561_797289_2360) references [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) to link a ballot style to its corresponding geopolitical unit.
 
-[5] Voting Information Project (VIP) [Web site], [http://votinginfoproject.github.io/vip-specification/](http://votinginfoproject.github.io/vip-specification/) [accessed 2/1/2016].
 
-[6] OASIS, Election Markup Language (EML) Specification Version 7.0, Committee Specification 01, October 27, 2011. Available at: [https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=election](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=election) [accessed 2/1/2016].
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1442233726833_338497_2238"></a>`{ComposingGpUnit}`|0..*|`GpUnit`|Unique identifier for one or more GpUnit instances. For creating a reference to another GpUnit that is contained with the parent GpUnit.
+<a name="_17_0_2_4_f71035d_1430412120441_638024_2251"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the GpUnit, e.g., a district’s or county’s code.
+<a name="_17_0_2_4_d420315_1393450176252_314086_2868"></a>`Name`|0..1|`InternationalizedText`|Name of the geopolitical unit.
 
-[7] City of Cambridge, Massachusetts, Geographic Information Systems:** Map Gallery [Web site], [https://www.cambridgema.gov/GIS/mapgallery](https://www.cambridgema.gov/GIS/mapgallery) [accessed 2/1/2016].
 
-[8] Hilkert, Scott, Application of Lessons Learned in the Illinois EDC Project Toward Emerging Election Data Standards and System Guidelines, submitted to Workshop for a Common Data Format for Electronic Voting Systems, National Institute of Standards and Technology, Gaithersburg, Maryland, October 29-30, 2009, [http://grouper.ieee.org/groups/1622/WorkingDocuments/workshop-2009-10-NIST/hilkert-Lessons-Learned-in-Illinois-EDC-1-1.pdf](http://grouper.ieee.org/groups/1622/WorkingDocuments/workshop-2009-10-NIST/hilkert-Lessons-Learned-in-Illinois-EDC-1-1.pdf) [accessed 2/1/2016].
+### <a name="_18_5_3_43701b0_1527684342703_968085_6144"></a>*The **Header** Class*
 
-[9] W3C, XML Signature Syntax and Processing (Second Edition), W3C Recommendation, June 10, 2008, [http://www.w3.org/TR/xmldsig-core/](http://www.w3.org/TR/xmldsig-core/) [accessed 2/1/2016].
+![Image of Header](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342785_40098_6174.png)
 
-[10] United States Census Bureau, American National Standards Institute (ANSI) Codes [Web page], [https://www.census.gov/geo/reference/ansi.html(https://www.census.gov/geo/reference/ansi.html)] [accessed 2/1/2016].
+For defining a reusable set of headers.
 
-[11] Open Civic Data, OCD Identifiers [Web page], [http://opencivicdata.readthedocs.org/en/latest/ocdids.html](http://opencivicdata.readthedocs.org/en/latest/ocdids.html) [accessed 2/1/2016].
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_5_3_43701b0_1527684342717_856894_6148"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the header.
+<a name="_18_5_3_43701b0_1527684342719_705794_6149"></a>`Name`|1|`InternationalizedText`|Name of the header, as it is to appear on a ballot style.
 
-[12] Wikipedia, ISO 639 [Web page], [https://en.wikipedia.org/wiki/ISO_639](https://en.wikipedia.org/wiki/ISO_639) [accessed 2/1/2016].
 
-<br>
+### <a name="_18_0_2_6340208_1427122205989_885563_4602"></a>*The **Hours** Class*
 
-## D File Download locations
-The files associated with this specification are available for download from a NIST repository.  
+![Image of Hours](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1427122205998_606908_4603.png)
 
-These files are:
+Hours is used to specify a specific day and hours on that day, including the time zone. Multiple occurrences of Hours can be used if the schedule includes a range of days and hours.
 
-*	This specification,
-*	XML schema,
-*	Example XML files,
-*	Validation tools, and
-*	UML model.
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1427123259576_729129_4765"></a>`Day`|0..1|`DayType`|Day of the week.
+<a name="_17_0_2_4_f71035d_1441215533034_678840_2525"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_18_0_2_6340208_1427122284481_637314_4650"></a>`StartTime`|1|`TimeWithZone`|Start time of the schedule.
+<a name="_18_0_2_6340208_1427122318779_390600_4652"></a>`EndTime`|1|`TimeWithZone`|End time of the schedule.
 
-Other files or updates to the files may be added.  The repository can be found via the following URL:
 
-[http://vote.nist.gov](http://vote.nist.gov)
+### <a name="_17_0_2_4_f71035d_1428586849773_722256_2252"></a>*The **HtmlColorString** Class*
 
-<br>
+![Image of HtmlColorString](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1428586856729_349934_2257.png)
 
-## E XML Schema
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!-- Version 1.0-50, January 11, 2016, NIST Election Results CDF Specification -->
-    <xsd:schema xmlns="NIST_V1_election_results_cdf.xsd" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="NIST_V1_election_results_cdf.xsd" elementFormDefault="qualified" version="1.0">
-    <!-- ========== Imports ========== -->
-    <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="http://www.w3.org/2000/09/xmldsig#"/>
-    <!-- ========== Roots ========== -->
-    <xsd:element name="ElectionReport" type="ElectionReport"/>
-    <!-- ========== Primitives ========== -->
-    <xsd:simpleType name="HtmlColorString">
-       <xsd:restriction base="xsd:string">
-          <xsd:pattern value="[0-9a-f]{6}"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="ShortString">
-       <xsd:restriction base="xsd:string">
-          <xsd:maxLength value="16"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="TimeWithZone">
-       <xsd:restriction base="xsd:time">
-          <xsd:pattern value="(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]|(24:00:00))(Z|[+-]((0[0-9]|1[0-3]):[0-5][0-9]|14:00))"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <!-- ========== Enumerations ========== -->
-    <xsd:simpleType name="BallotMeasureType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="ballot-measure"/>
-          <xsd:enumeration value="initiative"/>
-          <xsd:enumeration value="referendum"/>
-          <xsd:enumeration value="other"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="CandidatePostElectionStatus">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="advanced-to-runoff"/>
-          <xsd:enumeration value="projected-winner"/>
-          <xsd:enumeration value="winner"/>
-          <xsd:enumeration value="withdrawn"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="CandidatePreElectionStatus">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="filed"/>
-          <xsd:enumeration value="qualified"/>
-          <xsd:enumeration value="withdrawn"/>
-          <xsd:enumeration value="write-in"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="CountItemStatus">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="completed"/>
-          <xsd:enumeration value="in-process"/>
-          <xsd:enumeration value="not-processed"/>
-          <xsd:enumeration value="unknown"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="CountItemType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="absentee"/>
-          <xsd:enumeration value="absentee-fwab"/>
-          <xsd:enumeration value="absentee-in-person"/>
-          <xsd:enumeration value="absentee-mail"/>
-          <xsd:enumeration value="early"/>
-          <xsd:enumeration value="election-day"/>
-          <xsd:enumeration value="provisional"/>
-          <xsd:enumeration value="total"/>
-          <xsd:enumeration value="uocava"/>
-          <xsd:enumeration value="write-in"/>
-          <xsd:enumeration value="other"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="DayType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="all"/>
-          <xsd:enumeration value="sunday"/>
-          <xsd:enumeration value="monday"/>
-          <xsd:enumeration value="tuesday"/>
-          <xsd:enumeration value="wednesday"/>
-          <xsd:enumeration value="thursday"/>
-          <xsd:enumeration value="friday"/>
-          <xsd:enumeration value="saturday"/>
-          <xsd:enumeration value="weekday"/>
-          <xsd:enumeration value="weekend"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="DeviceType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="electronic"/>
-          <xsd:enumeration value="lever"/>
-          <xsd:enumeration value="manual-count"/>
-          <xsd:enumeration value="mixed-systems"/>
-          <xsd:enumeration value="opscan-central"/>
-          <xsd:enumeration value="opscan-precinct"/>
-          <xsd:enumeration value="punch-card"/>
-          <xsd:enumeration value="unknown"/>
-          <xsd:enumeration value="other"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="ElectionType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="general"/>
-          <xsd:enumeration value="partisan-primary-closed"/>
-          <xsd:enumeration value="partisan-primary-open"/>
-          <xsd:enumeration value="primary"/>
-          <xsd:enumeration value="runoff"/>
-          <xsd:enumeration value="special"/>
-          <xsd:enumeration value="other"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="GeoSpatialFormat">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="geo-json"/>
-          <xsd:enumeration value="gml"/>
-          <xsd:enumeration value="kml"/>
-          <xsd:enumeration value="shp"/>
-          <xsd:enumeration value="wkt"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="IdentifierType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="fips"/>
-          <xsd:enumeration value="local-level"/>
-          <xsd:enumeration value="national-level"/>
-          <xsd:enumeration value="ocd-id"/>
-          <xsd:enumeration value="state-level"/>
-          <xsd:enumeration value="other"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="OfficeTermType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="full-term"/>
-          <xsd:enumeration value="unexpired-term"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="ReportDetailLevel">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="precinct-level"/>
-          <xsd:enumeration value="summary-contest"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="ReportingUnitType">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="ballot-batch"/>
-          <xsd:enumeration value="ballot-style-area"/>
-          <xsd:enumeration value="borough"/>
-          <xsd:enumeration value="city"/>
-          <xsd:enumeration value="city-council"/>
-          <xsd:enumeration value="combined-precinct"/>
-          <xsd:enumeration value="congressional"/>
-          <xsd:enumeration value="county"/>
-          <xsd:enumeration value="county-council"/>
-          <xsd:enumeration value="drop-box"/>
-          <xsd:enumeration value="judicial"/>
-          <xsd:enumeration value="municipality"/>
-          <xsd:enumeration value="polling-place"/>
-          <xsd:enumeration value="precinct"/>
-          <xsd:enumeration value="school"/>
-          <xsd:enumeration value="special"/>
-          <xsd:enumeration value="split-precinct"/>
-          <xsd:enumeration value="state"/>
-          <xsd:enumeration value="state-house"/>
-          <xsd:enumeration value="state-senate"/>
-          <xsd:enumeration value="town"/>
-          <xsd:enumeration value="township"/>
-          <xsd:enumeration value="utility"/>
-          <xsd:enumeration value="village"/>
-          <xsd:enumeration value="vote-center"/>
-          <xsd:enumeration value="ward"/>
-          <xsd:enumeration value="water"/>
-          <xsd:enumeration value="other"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="ResultsStatus">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="certified"/>
-          <xsd:enumeration value="correction"/>
-          <xsd:enumeration value="pre-election"/>
-          <xsd:enumeration value="recount"/>
-          <xsd:enumeration value="unofficial-complete"/>
-          <xsd:enumeration value="unofficial-partial"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <xsd:simpleType name="VoteVariation">
-       <xsd:restriction base="xsd:string">
-          <xsd:enumeration value="1-of-m"/>
-          <xsd:enumeration value="approval"/>
-          <xsd:enumeration value="borda"/>
-          <xsd:enumeration value="cumulative"/>
-          <xsd:enumeration value="majority"/>
-          <xsd:enumeration value="n-of-m"/>
-          <xsd:enumeration value="plurality"/>
-          <xsd:enumeration value="proportional"/>
-          <xsd:enumeration value="range"/>
-          <xsd:enumeration value="rcv"/>
-          <xsd:enumeration value="super-majority"/>
-          <xsd:enumeration value="other"/>
-       </xsd:restriction>
-    </xsd:simpleType>
-    <!-- ========== Elements ========== -->
-    <xsd:complexType name="AnnotatedString">
-       <xsd:simpleContent>
-          <xsd:extension base="xsd:string">
-             <xsd:attribute name="annotation" type="ShortString"/>
-          </xsd:extension>
-       </xsd:simpleContent>
-    </xsd:complexType>
-    <xsd:complexType name="BallotMeasureContest">
-       <xsd:complexContent>
-          <xsd:extension base="Contest">
-             <xsd:sequence>
-                <xsd:element name="ConStatement" type="InternationalizedText" minOccurs="0"/>
-                <xsd:element name="EffectOfAbstain" type="InternationalizedText" minOccurs="0"/>
-                <xsd:element name="FullText" type="InternationalizedText" minOccurs="0"/>
-                <xsd:element name="InfoUri" type="xsd:anyURI" minOccurs="0"/>
-                <xsd:element name="PassageThreshold" type="InternationalizedText" minOccurs="0"/>
-                <xsd:element name="ProStatement" type="InternationalizedText" minOccurs="0"/>
-                <xsd:element name="SummaryText" type="InternationalizedText" minOccurs="0"/>
-                <xsd:element name="Type" type="BallotMeasureType" minOccurs="0"/>
-                <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="BallotMeasureSelection">
-       <xsd:complexContent>
-          <xsd:extension base="BallotSelection">
-             <xsd:sequence>
-                <xsd:element name="Selection" type="InternationalizedText"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="BallotSelection" abstract="true">
-       <xsd:sequence>
-          <xsd:element name="SequenceOrder" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="VoteCountsCollection" minOccurs="0" maxOccurs="unbounded">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="VoteCounts" type="VoteCounts" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="BallotStyle">
-       <xsd:sequence>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="GpUnitIds" type="xsd:IDREFS"/>
-          <xsd:element name="ImageUri" type="xsd:anyURI" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="OrderedContest" type="OrderedContest" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="PartyIds" type="xsd:IDREFS" minOccurs="0"/>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="Candidate">
-       <xsd:sequence>
-          <xsd:element name="BallotName" type="InternationalizedText"/>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="FileDate" type="xsd:date" minOccurs="0"/>
-          <xsd:element name="IsIncumbent" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="IsTopTicket" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="PartyId" type="xsd:IDREF" minOccurs="0"/>
-          <xsd:element name="PersonId" type="xsd:IDREF" minOccurs="0"/>
-          <xsd:element name="PostElectionStatus" type="CandidatePostElectionStatus" minOccurs="0"/>
-          <xsd:element name="PreElectionStatus" type="CandidatePreElectionStatus" minOccurs="0"/>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="CandidateContest">
-       <xsd:complexContent>
-          <xsd:extension base="Contest">
-             <xsd:sequence>
-                <xsd:element name="NumberElected" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="OfficeIds" type="xsd:IDREFS" minOccurs="0"/>
-                <xsd:element name="PrimaryPartyIds" type="xsd:IDREFS" minOccurs="0"/>
-                <xsd:element name="VotesAllowed" type="xsd:integer"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="CandidateSelection">
-       <xsd:complexContent>
-          <xsd:extension base="BallotSelection">
-             <xsd:sequence>
-                <xsd:element name="CandidateIds" type="xsd:IDREFS"/>
-                <xsd:element name="EndorsementPartyIds" type="xsd:IDREFS" minOccurs="0"/>
-                <xsd:element name="IsWriteIn" type="xsd:boolean" minOccurs="0"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="Coalition">
-       <xsd:complexContent>
-          <xsd:extension base="Party">
-             <xsd:sequence>
-                <xsd:element name="ContestIds" type="xsd:IDREFS" minOccurs="0"/>
-                <xsd:element name="PartyIds" type="xsd:IDREFS" minOccurs="0"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="ContactInformation">
-       <xsd:sequence>
-          <xsd:element name="AddressLine" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="Directions" type="InternationalizedText" minOccurs="0" maxOccurs="1"/>
-          <xsd:element name="Email" type="AnnotatedString" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="Fax" type="AnnotatedString" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="LatLng" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="Latitude" type="xsd:float" minOccurs="1" maxOccurs="1"/>
-                   <xsd:element name="Longitude" type="xsd:float" minOccurs="1" maxOccurs="1"/>
-                   <xsd:element name="Source" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-                </xsd:sequence>
-                <xsd:attribute name="label" type="xsd:string"/>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="Phone" type="AnnotatedString" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="Schedule" type="Schedule" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="Uri" type="xsd:anyURI" minOccurs="0" maxOccurs="unbounded"/>
-       </xsd:sequence>
-       <xsd:attribute name="label" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="Contest" abstract="true">
-       <xsd:sequence>
-          <xsd:element name="Abbreviation" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="BallotSelection" type="BallotSelection" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="BallotSubTitle" type="InternationalizedText" minOccurs="0"/>
-          <xsd:element name="BallotTitle" type="InternationalizedText" minOccurs="0"/>
-          <xsd:element name="CountStatus" type="CountStatus" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="ElectoralDistrictId" type="xsd:IDREF"/>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="HasRotation" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="Name" type="xsd:string"/>
-          <xsd:element name="SequenceOrder" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="SubUnitsReported" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="SummaryCounts" type="SummaryCounts" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="TotalSubUnits" type="xsd:integer" minOccurs="0"/>
-          <xsd:element name="VoteVariation" type="VoteVariation" minOccurs="0"/>
-          <xsd:element name="OtherVoteVariation" type="xsd:string" minOccurs="0"/>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="CountStatus">
-       <xsd:sequence>
-          <xsd:element name="Status" type="CountItemStatus"/>
-          <xsd:element name="Type" type="CountItemType"/>
-          <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="Counts" abstract="true">
-       <xsd:sequence>
-          <xsd:element name="Device" type="Device" minOccurs="0"/>
-          <xsd:element name="GpUnitId" type="xsd:IDREF" minOccurs="0"/>
-          <xsd:element name="IsSuppressedForPrivacy" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="Type" type="CountItemType" minOccurs="0"/>
-          <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="Device">
-       <xsd:sequence>
-          <xsd:element name="Manufacturer" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="Model" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="Type" type="DeviceType" minOccurs="0"/>
-          <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="Election">
-       <xsd:sequence>
-          <xsd:element name="BallotStyleCollection" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="BallotStyle" type="BallotStyle" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="CandidateCollection" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="Candidate" type="Candidate" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
-          <xsd:element name="ContestCollection" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="Contest" type="Contest" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="CountStatus" type="CountStatus" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="ElectionScopeId" type="xsd:IDREF"/>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="Name" type="InternationalizedText"/>
-          <xsd:element name="StartDate" type="xsd:date"/>
-          <xsd:element name="EndDate" type="xsd:date"/>
-          <xsd:element name="Type" type="ElectionType"/>
-          <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ElectionAdministration">
-       <xsd:sequence>
-          <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
-          <xsd:element name="ElectionOfficialPersonIds" type="xsd:IDREFS" minOccurs="0"/>
-          <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ElectionReport">
-       <xsd:sequence>
-          <xsd:element name="Election" type="Election" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="Format" type="ReportDetailLevel"/>
-          <xsd:element name="GeneratedDate" type="xsd:dateTime"/>
-          <xsd:element name="GpUnitCollection" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="GpUnit" type="GpUnit" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="Issuer" type="xsd:string"/>
-          <xsd:element name="IssuerAbbreviation" type="xsd:string"/>
-          <xsd:element name="IsTest" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="Notes" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="OfficeCollection" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="Office" type="Office" maxOccurs="unbounded"/>
-                   <xsd:element name="OfficeGroup" type="OfficeGroup" minOccurs="0" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="PartyCollection" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="Party" type="Party" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="PersonCollection" minOccurs="0" maxOccurs="1">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="Person" type="Person" maxOccurs="unbounded"/>
-                </xsd:sequence>
-             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="SequenceStart" type="xsd:integer"/>
-          <xsd:element name="SequenceEnd" type="xsd:integer"/>
-          <xsd:element name="Status" type="ResultsStatus"/>
-          <xsd:element name="TestType" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="VendorApplicationId" type="xsd:string"/>
-          <xsd:element ref="ds:Signature" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ExternalIdentifiers">
-       <xsd:sequence>
-          <xsd:element name="ExternalIdentifier" maxOccurs="unbounded">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="Type" type="IdentifierType"/>
-                   <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
-                   <xsd:element name="Value" type="xsd:string"/>
-                </xsd:sequence>
-                <xsd:attribute name="label" type="xsd:string"/>
-             </xsd:complexType>
-          </xsd:element>
-       </xsd:sequence>
-       <xsd:attribute name="label" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="GpUnit" abstract="true">
-       <xsd:sequence>
-          <xsd:element name="ComposingGpUnitIds" type="xsd:IDREFS" minOccurs="0"/>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="SummaryCounts" type="SummaryCounts" minOccurs="0" maxOccurs="unbounded"/>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="Hours">
-       <xsd:sequence>
-          <xsd:element name="Day" type="DayType" minOccurs="0"/>
-          <xsd:element name="StartTime" type="TimeWithZone"/>
-          <xsd:element name="EndTime" type="TimeWithZone"/>
-       </xsd:sequence>
-       <xsd:attribute name="label" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="InternationalizedText">
-       <xsd:sequence>
-          <xsd:element name="Text" type="LanguageString" maxOccurs="unbounded"/>
-       </xsd:sequence>
-       <xsd:attribute name="label" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="LanguageString">
-       <xsd:simpleContent>
-          <xsd:extension base="xsd:string">
-             <xsd:attribute name="language" type="xsd:language" use="required"/>
-          </xsd:extension>
-       </xsd:simpleContent>
-    </xsd:complexType>
-    <xsd:complexType name="Office">
-       <xsd:sequence>
-          <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
-          <xsd:element name="ElectoralDistrictId" type="xsd:IDREF" minOccurs="0"/>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="FilingDeadline" type="xsd:date" minOccurs="0"/>
-          <xsd:element name="IsPartisan" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="Name" type="InternationalizedText"/>
-          <xsd:element name="OfficeHolderPersonIds" type="xsd:IDREFS" minOccurs="0"/>
-          <xsd:element name="Term" minOccurs="0">
-             <xsd:complexType>
-                <xsd:sequence>
-                   <xsd:element name="StartDate" type="xsd:date" minOccurs="0"/>
-                   <xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
-                   <xsd:element name="Type" type="OfficeTermType" minOccurs="0"/>
-                </xsd:sequence>
-                <xsd:attribute name="label" type="xsd:string"/>
-             </xsd:complexType>
-          </xsd:element>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="OfficeGroup">
-       <xsd:sequence>
-          <xsd:element name="Name" type="xsd:string"/>
-          <xsd:element name="OfficeIds" type="xsd:IDREFS" minOccurs="0"/>
-          <xsd:element name="SubOfficeGroup" type="OfficeGroup" minOccurs="0" maxOccurs="unbounded"/>
-       </xsd:sequence>
-       <xsd:attribute name="label" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="OrderedContest">
-       <xsd:sequence>
-          <xsd:element name="ContestId" type="xsd:IDREF"/>
-          <xsd:element name="OrderedBallotSelectionIds" type="xsd:IDREFS" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="Party">
-       <xsd:sequence>
-          <xsd:element name="Abbreviation" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="Color" type="HtmlColorString" minOccurs="0"/>
-          <xsd:element name="ExternalIdentifiers" type="ExternalIdentifiers" minOccurs="0"/>
-          <xsd:element name="LogoUri" type="xsd:anyURI" minOccurs="0"/>
-          <xsd:element name="Name" type="InternationalizedText"/>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="PartyContest">
-       <xsd:complexContent>
-          <xsd:extension base="Contest"/>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="PartyRegistration">
-       <xsd:sequence>
-          <xsd:element name="Count" type="xsd:integer"/>
-          <xsd:element name="PartyId" type="xsd:IDREF"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="PartySelection">
-       <xsd:complexContent>
-          <xsd:extension base="BallotSelection">
-             <xsd:sequence>
-                <xsd:element name="PartyIds" type="xsd:IDREFS"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="Person">
-       <xsd:sequence>
-          <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="DateOfBirth" type="xsd:date" minOccurs="0"/>
-          <xsd:element name="FirstName" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="FullName" type="InternationalizedText" minOccurs="0"/>
-          <xsd:element name="Gender" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="LastName" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="MiddleName" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="Nickname" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="PartyId" type="xsd:IDREF" minOccurs="0"/>
-          <xsd:element name="Prefix" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="Profession" type="InternationalizedText" minOccurs="0"/>
-          <xsd:element name="Suffix" type="xsd:string" minOccurs="0"/>
-          <xsd:element name="Title" type="InternationalizedText" minOccurs="0"/>
-       </xsd:sequence>
-       <xsd:attribute name="objectId" type="xsd:ID" use="required"/>
-    </xsd:complexType>
-    <xsd:complexType name="ReportingDevice">
-       <xsd:complexContent>
-          <xsd:extension base="GpUnit">
-             <xsd:sequence>
-                <xsd:element name="Device" type="Device" minOccurs="0"/>
-                <xsd:element name="SerialNumber" type="xsd:string" minOccurs="0"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="ReportingUnit">
-       <xsd:complexContent>
-          <xsd:extension base="GpUnit">
-             <xsd:sequence>
-                <xsd:element name="AuthorityIds" type="xsd:IDREFS" minOccurs="0"/>
-                <xsd:element name="ContactInformation" type="ContactInformation" minOccurs="0"/>
-                <xsd:element name="CountStatus" type="CountStatus" minOccurs="0" maxOccurs="unbounded"/>
-                <xsd:element name="ElectionAdministration" type="ElectionAdministration" minOccurs="0"/>
-                <xsd:element name="IsDistricted" type="xsd:boolean" minOccurs="0"/>
-                <xsd:element name="IsMailOnly" type="xsd:boolean" minOccurs="0"/>
-                <xsd:element name="Number" type="xsd:string" minOccurs="0"/>
-                <xsd:element name="PartyRegistration" type="PartyRegistration" minOccurs="0" maxOccurs="unbounded"/>
-                <xsd:element name="SpatialDimension" type="SpatialDimension" minOccurs="0"/>
-                <xsd:element name="SubUnitsReported" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="TotalSubUnits" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="Type" type="ReportingUnitType"/>
-                <xsd:element name="OtherType" type="xsd:string" minOccurs="0"/>
-                <xsd:element name="VotersParticipated" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="VotersRegistered" type="xsd:integer" minOccurs="0"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="RetentionContest">
-       <xsd:complexContent>
-          <xsd:extension base="BallotMeasureContest">
-             <xsd:sequence>
-                <xsd:element name="CandidateId" type="xsd:IDREF"/>
-                <xsd:element name="OfficeId" type="xsd:IDREF" minOccurs="0"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="Schedule">
-       <xsd:sequence>
-          <xsd:element name="Hours" type="Hours" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="IsOnlyByAppointment" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="IsOrByAppointment" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="IsSubjectToChange" type="xsd:boolean" minOccurs="0"/>
-          <xsd:element name="StartDate" type="xsd:date" minOccurs="0"/>
-          <xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
-       </xsd:sequence>
-       <xsd:attribute name="label" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="SpatialDimension">
-       <xsd:sequence>
-          <xsd:element name="MapUri" type="xsd:anyURI" minOccurs="0"/>
-          <xsd:element name="SpatialExtent" type="SpatialExtent" minOccurs="0"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="SpatialExtent">
-       <xsd:sequence>
-          <xsd:element name="Coordinates" type="xsd:string"/>
-          <xsd:element name="Format" type="GeoSpatialFormat"/>
-       </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="SummaryCounts">
-       <xsd:complexContent>
-          <xsd:extension base="Counts">
-             <xsd:sequence>
-                <xsd:element name="BallotsCast" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="BallotsOutstanding" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="BallotsRejected" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="Overvotes" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="Undervotes" type="xsd:integer" minOccurs="0"/>
-                <xsd:element name="WriteIns" type="xsd:integer" minOccurs="0"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    <xsd:complexType name="VoteCounts">
-       <xsd:complexContent>
-          <xsd:extension base="Counts">
-             <xsd:sequence>
-                <xsd:element name="Count" type="xsd:float"/>
-             </xsd:sequence>
-          </xsd:extension>
-       </xsd:complexContent>
-    </xsd:complexType>
-    </xsd:schema>
-
-<br>
-
-## F Detailed UML Class Diagram
-This appendix contains a detailed image of the UML class diagram that when viewed electronically can be expanded to show attributes and other details not shown in the simplified image of the class diagram shown in Figure 8.  This image can also be downloaded using the instructions in Appendix D—File Download Locations.
-
-<div class="text-left" markdown="1">
-<img src="Figures/DetailedUMLClassDiagram.png" height="1800"/>
-</div>
+For a string containing a 6-digit Red-Green-Blue (RGB) code that can be displayed using HTML. Used in Party to associate a web-displayable color with the party. The RGB code is specified in hexadecimal, such that the RGB code for the color green is “00FF00” (“\#00” + “\#FF” + “\#00”).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1428586849775_553802_2253"></a>`pattern`||`String`|Pattern used for indicating the RGB color to use.
+
+
+### <a name="_17_0_2_4_f71035d_1428953680097_700602_2220"></a>*The **InternationalizedText** Class*
+
+![Image of InternationalizedText](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1428953680136_311337_2237.png)
+
+For strings that can contain multi-national text, for use with text as shown on a ballot containing multi-national text. The Identifier attribute can be used to assign an identifier to the text as desired.
+
+[Text](#_17_0_2_4_f71035d_1428953680100_198341_2225) uses the xsd:language type such that its language attribute must be set to a value that identifies the language.
+
+Values for language are from ISO 639 \[12\] and include:
+
+ *  en – English
+ *  en-US – U.S. English
+ *  en-GB – U.K. English
+ *  fr – French
+ *  es – Spanish
+ *  zh – Chinese
+ *  ja – Japanese
+ *  ko – Korean
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1441215669264_408334_2533"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_17_0_2_4_f71035d_1428953680100_198341_2225"></a>`{Text}`|1..*|`LanguageString`|Used to hold a string of text with an associated table indicating the language used.
+
+
+### <a name="_17_0_2_4_f71035d_1428953680095_709464_2219"></a>*The **LanguageString** Class*
+
+![Image of LanguageString](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1428953680134_904840_2236.png)
+
+Used to hold a string of text with an associated table indicating the language used.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1428953680098_437370_2221"></a>`Content`|1|`String`|The string in the specified language.
+<a name="_17_0_2_4_f71035d_1428953680098_683534_2222"></a>`Language`|1|`language`|Identification of the language, such as 'es'.
+
+
+### <a name="_17_0_2_4_f71035d_1443104838926_393729_2222"></a>*The **LatLng** Class*
+
+![Image of LatLng](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1443104838931_652630_2223.png)
+
+Associates latitude/longitude with a contact address.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1443104953915_703386_2253"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_17_0_2_4_f71035d_1443104855995_933877_2241"></a>`Latitude`|1|`double`|Latitude of the contact location.
+<a name="_17_0_2_4_f71035d_1443104888887_851843_2245"></a>`Longitude`|1|`double`|Longitude of the contact location.
+<a name="_17_0_2_4_f71035d_1443104920563_575015_2249"></a>`Source`|0..1|`String`|System used to perform the lookup from location name to lat/lng, e.g., the name of a geocoding service.
+
+
+### <a name="_17_0_5_1_43401a7_1400623830572_164081_3518"></a>*The **Office** Class*
+
+![Image of Office](Election_Results_Reporting_UML_documentation_files/_17_0_5_1_43401a7_1400623830579_197715_3519.png)
+
+For defining an office and information associated with a contest and/or a district. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Office. [CandidateContest](#_17_0_2_4_78e0236_1389366970084_183781_2806) and [RetentionContest](#_18_0_2_6340208_1425646217522_163181_4554) reference Office.
+
+Office includes [Term](#_17_0_2_4_f71035d_1428489072598_282236_2217) for defining details about the term of an office such as start/end dates and the type of term. [OfficeGroup](#_17_0_2_4_f71035d_1433183615993_866714_2239) is included from [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) to assign a name to a grouping of office definitions.
+
+Office includes an optional [ElectionDistrict](#_17_0_5_1_43401a7_1400701616170_933421_3684) reference to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) for the purpose of identifying the geographical scope of the office. For example, for an office for a state senate seat, [ElectionDistrict](#_17_0_5_1_43401a7_1400701616170_933421_3684) would include a reference to the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined for the district associated with that office.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1429207941244_121672_2262"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating various contact information with the office.
+<a name="_18_0_2_6340208_1498658815063_675104_4595"></a>`Description`|0..1|`InternationalizedText`|A description of the office, possibly as shown on the ballot to the voter.
+<a name="_17_0_5_1_43401a7_1400701616170_933421_3684"></a>`{ElectionDistrict}`|0..1|`ReportingUnit`|Link to a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance. For associating the office with a reporting unit that represents the geographical scope of the contest, e.g., a district, etc.
+<a name="_17_0_2_4_f71035d_1430411943269_859941_2238"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the office.
+<a name="_17_0_2_4_f71035d_1400610269818_58929_2680"></a>`FilingDeadline`|0..1|`date`|Date and time when a candidate must have filed for the contest for the office.
+<a name="_17_0_2_4_f71035d_1400610117397_796726_2672"></a>`IsPartisan`|0..1|`Boolean`|Boolean to indicate whether the office is partisan, e.g., true or false. If not present, assumption is true.
+<a name="_17_0_5_1_43401a7_1400701703746_703309_3706"></a>`Name`|1|`InternationalizedText`|Name of the office; can appear on the ballot.
+<a name="_17_0_2_4_f71035d_1429177738058_248218_2294"></a>`{OfficeHolderPerson}`|0..*|`Person`|Links to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances defined for the office holder.
+<a name="_17_0_2_4_f71035d_1428489163406_781378_2243"></a>`{Term}`|0..1|`Term`|For including office term-related information.
+
+
+### <a name="_17_0_2_4_f71035d_1433183615993_866714_2239"></a>*The **OfficeGroup** Class*
+
+![Image of OfficeGroup](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1433183615994_647505_2240.png)
+
+Used to assign a name to a grouping of office definitions. It includes references to [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instances and a name to identify the grouping of references, e.g., “Judicial” or “Statewide”, etc. SubOfficeGroup can be used to create a nested hierarchy of groupings. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes OfficeGroup.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1441363295584_2457_2492"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_17_0_2_4_f71035d_1433183632661_693280_2258"></a>`Name`|1|`String`|Name of the office grouping.
+<a name="_17_0_2_4_f71035d_1433183725966_939706_2266"></a>`{Office}`|0..*|`Office`|Link to one or more [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instances.
+<a name="_17_0_2_4_f71035d_1433429126207_828493_2535"></a>`{SubOfficeGroup}`|0..*|`OfficeGroup`|For defining a nested hierarchy of [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance groupings.
+
+
+### <a name="_18_5_3_43701b0_1527684342715_643544_6146"></a>*The **OrderedContent** Class*
+
+![Image of OrderedContent](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342791_594538_6176.png)
+
+An abstract base class for content that can appear under a particular ballot style.
+
+OrderedContent is an abstract class with two subclasses that get used according to the type of content:
+
+ *  OrderedContest, used for the appearance of a contest.
+ *  OrderedHeader, used for the appearance of a header, optionally with the inclusion of contests.
+
+
+### <a name="_17_0_3_43401a7_1394476416139_808596_3142"></a>*The **OrderedContest** Class*
+
+![Image of OrderedContest](Election_Results_Reporting_UML_documentation_files/_17_0_3_43401a7_1394476416143_213625_3143.png)
+
+For the appearance of a contest on a particular ballot style.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_3_43401a7_1394477833535_563732_3249"></a>`{Contest}`|1|`Contest`|The contest associated represented by OrderedContest.
+<a name="_17_0_3_43401a7_1394477871277_951066_3270"></a>`{OrderedContestSelection}`|0..*|`ContestSelection`|The contest selections for the ballot.
+
+
+### <a name="_18_5_3_43701b0_1527684342714_129907_6145"></a>*The **OrderedHeader** Class*
+
+![Image of OrderedHeader](Election_Results_Reporting_UML_documentation_files/_18_5_3_43701b0_1527684342790_575094_6175.png)
+
+For the appearance of a header on a particular ballot style.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_5_3_43701b0_1527684342723_761487_6155"></a>`{Header}`|1|`Header`|Association to the header to be used.
+<a name="_19_0_43701b0_1535731879583_845997_4783"></a>`{OrderedContent}`|0..*|`OrderedContent`|For associating a header with ballot content, such as contests or nested headers.
+
+
+### <a name="_18_0_2_6340208_1508176198256_527421_4561"></a>*The **OtherCounts** Class*
+
+![Image of OtherCounts](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1508176198261_91260_4562.png)
+
+Identifies other counts associated with a contest.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1508176283326_821025_4589"></a>`DeviceClass`|0..1|`DeviceClass`|For filtering counts by device type.
+<a name="_18_0_2_6340208_1508176572777_602711_4625"></a>`{GpUnit}`|1|`GpUnit`|For filter counts by political geography or device or device type.
+<a name="_17_0_2_4_78e0236_1397155833926_751839_2443"></a>`Overvotes`|0..1|`float`|Number of overvotes.
+<a name="_17_0_2_4_78e0236_1397155803428_746302_2439"></a>`Undervotes`|0..1|`float`|Number of undervotes.
+<a name="_17_0_2_4_78e0236_1397155839370_24420_2447"></a>`WriteIns`|0..1|`Integer`|Number of write-ins.
+
+
+### <a name="_17_0_2_4_78e0236_1389366278128_412819_2460"></a>*The **Party** Class*
+
+![Image of Party](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_989674_5350.png)
+
+Used to describe a political party that can then be referenced in other elements. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Party. [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440), [PartyContest](#_17_0_2_4_d420315_1393514218965_55008_3144), [PartyRegistration](#_17_0_2_4_78e0236_1394566839296_58362_2826), and [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) reference Party.
+
+Party is an abstract type with one subtype [Coalition](#_18_0_2_6340208_1425647247631_162984_4712), used to define coalitions.
+
+The Color attribute specifies a 6-digit RGB code displayable using HTML.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_78e0236_1389734813018_766516_3987"></a>`Abbreviation`|0..1|`InternationalizedText`|Short name for the party, e.g., “DEM”.
+<a name="_18_0_2_6340208_1425913135379_377945_4658"></a>`Color`|0..1|`HtmlColorString`|For associating an HTML RGB color coding with the party.
+<a name="_18_5_3_43701b0_1527686777870_350302_6379"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating contact information regarding the party, e.g., party offices.
+<a name="_17_0_2_4_f71035d_1430412372015_749476_2263"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating an ID with the party.
+<a name="_18_0_2_6340208_1498658977530_13951_4599"></a>`IsRecognizedParty`|0..1|`Boolean`|For indicating whether the party is recognized by the election authority; “false” is assumed if not present.
+<a name="_18_0_2_6340208_1506626085733_481329_4570"></a>`{LeaderPerson}`|0..*|`Person`|Identification of a Party's leader.
+<a name="_18_0_2_6340208_1425913456780_607661_4662"></a>`LogoUri`|0..*|`AnnotatedUri`|A URI to the party’s graphical logo.
+<a name="_17_0_2_4_78e0236_1389710882517_230322_2174"></a>`Name`|1|`InternationalizedText`|Official full name of the party, e.g., “Republican”; can appear on the ballot.
+<a name="_19_0_2_43701b0_1576188118603_242873_4972"></a>`{PartyScopeGpUnit}`|0..*|`GpUnit`|The GpUnit(s) the party operates in or the top-most GpUnit.
+<a name="_19_0_2_43701b0_1576187804877_651454_4962"></a>`Slogan`|0..1|`InternationalizedText`|The slogan or motto used by a political party.
+
+
+### <a name="_17_0_2_4_d420315_1393514218965_55008_3144"></a>*The **PartyContest** Class*
+
+![Image of PartyContest](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_d420315_1393514218978_361648_3145.png)
+
+For a contest that involves choosing a party, typically for a straight party selection on the ballot.
+
+
+### <a name="_17_0_2_4_78e0236_1394566839296_58362_2826"></a>*The **PartyRegistration** Class*
+
+![Image of PartyRegistration](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1394566839298_705765_2827.png)
+
+For tracking the number of registered voters per party per geopolitical unit, i.e., for reporting on the number of registered voters of a particular party in a district or other type of reporting unit. Referenced by [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_78e0236_1394566847763_82144_2845"></a>`Count`|1|`Integer`|A count for tracking the number of registered voters.
+<a name="_17_0_2_4_78e0236_1394566867126_871059_2851"></a>`{Party}`|1|`Party`|Link to a [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instance. For associating a political party.
+
+
+### <a name="_17_0_2_4_f71035d_1426519980658_594892_2511"></a>*The **PartySelection** Class*
+
+![Image of PartySelection](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1426519980661_572615_2512.png)
+
+For a contest selection involving a party such as for a straight party selection on the ballot. It inherits the attributes of [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1426520590194_384550_2564"></a>`{Party}`|1..*|`Party`|Link to one or more [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instances. For associating one or more parties with the party selection.
+
+
+### <a name="_17_0_5_1_43401a7_1400623980732_100904_3567"></a>*The **Person** Class*
+
+![Image of Person](Election_Results_Reporting_UML_documentation_files/_17_0_5_1_43401a7_1400623980734_867286_3568.png)
+
+For defining information about a person; the person may be a candidate, election official, authority for a reporting unit, etc. [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) includes Person. [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) and [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433) and
+[GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) references Person. Person optionally references [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) for associating contact information.
+
+Multiple occurrences of the MiddleName attribute can be used as needed, e.g., for names such as “John Andrew Winston Smith”.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1409158807179_27867_2211"></a>`{ContactInformation}`|0..*|`ContactInformation`|For associating contact information with the person.
+<a name="_18_0_2_6340208_1425648435033_458578_4893"></a>`DateOfBirth`|0..1|`date`|Person’s date of birth.
+<a name="_18_0_2_6340208_1498659439219_798023_4630"></a>`ExternalIdentifier`|0..*|`ExternalIdentifier`|For associating codes with the person.
+<a name="_17_0_2_4_f71035d_1400615204010_564458_2712"></a>`FirstName`|0..1|`RichText`|Person’s first (given) name.
+<a name="_17_0_2_4_f71035d_1430494058940_208317_2499"></a>`FullName`|0..1|`InternationalizedText`|Person’s full name.
+<a name="_17_0_2_4_f71035d_1434470206427_617716_2233"></a>`Gender`|0..1|`RichText`|Person’s gender.
+<a name="_17_0_2_4_78e0236_1389710872821_553533_2172"></a>`LastName`|0..1|`RichText`|Person’s last (family) name.
+<a name="_17_0_2_4_f71035d_1400615257828_340032_2716"></a>`MiddleName`|0..*|`RichText`|Person’s middle name.
+<a name="_17_0_2_4_f71035d_1401280254171_19718_2456"></a>`Nickname`|0..1|`RichText`|Nickname associated with the person.
+<a name="_17_0_5_1_43401a7_1400673254137_48726_3702"></a>`{Party}`|0..1|`Party`|Links to a [Party](#_17_0_2_4_78e0236_1389366278128_412819_2460) instance. For associating a political party with the person.
+<a name="_17_0_5_1_43401a7_1400674672870_670385_3783"></a>`Prefix`|0..1|`RichText`|A prefix associated with the person, e.g., Mr.
+<a name="_17_0_5_1_43401a7_1400673145437_284424_3693"></a>`Profession`|0..1|`InternationalizedText`|Person’s profession.
+<a name="_17_0_2_4_f71035d_1400615284895_343066_2720"></a>`Suffix`|0..1|`RichText`|A suffix associated with the person, e.g., Jr.
+<a name="_17_0_5_1_43401a7_1400624817153_655858_3721"></a>`Title`|0..1|`InternationalizedText`|A title associated with the person.
+
+
+### <a name="_17_0_2_4_78e0236_1389798013459_389380_4178"></a>*The **ReportingDevice** Class*
+
+![Image of ReportingDevice](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1389798977982_371820_5343.png)
+
+Class/element describing a specific vote-capture device.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1430428476569_589857_2241"></a>`DeviceClass`|0..1|`DeviceClass`|Used for reporting on details about the type of voting device used for the results in question.
+<a name="_17_0_2_4_d420315_1393446014406_394266_2688"></a>`SerialNumber`|0..1|`RichText`|Device's serial number or other unique identifier.
+
+
+### <a name="_17_0_2_4_f71035d_1400606476166_735297_2593"></a>*The **ReportingUnit** Class*
+
+![Image of ReportingUnit](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1400606476167_480570_2594.png)
+
+For defining a geopolitical unit such as state, county, township, precinct, etc., using the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration. It inherits the attributes of [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
+
+This class optionally references [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) to associate one or more individuals, e.g., authorities, for the reporting unit. It also includes [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) to provide contact addresses for the reporting unit, such as an address of a vote center.
+
+[Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) references this class so as to identify the geographical scope of the election. In this case, the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element defined for the scope of the election may include [ElectionAdministration](#_18_0_2_6340208_1441311877439_710008_4433) to include election authority-related information.
+
+The [Type](#_17_0_2_4_78e0236_1389713376966_77071_2393) attribute uses the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration to specify the type of geopolitical geography being defined. [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) contains the most common types of geographies, e.g., state, county, precinct, and so forth. If the reporting unit type is not listed in enumeration [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242), use other and include the reporting unit type (that is not listed in the enumeration) in [OtherType](#_17_0_2_4_f71035d_1426007519161_685921_2510).
+
+The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can be used in a number of ways. It is not strictly necessary, as it is possible to identify districts by their [Type](#_17_0_2_4_78e0236_1389713376966_77071_2393) attribute or by examining the [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) instance’s [ElectionDistrict](#_17_0_2_4_78e0236_1389366667508_703141_2753) reference, which links to the election district associated with the contest. However, if a district is defined but is not linked from a contest, or if the type of district is not listed in the [ReportingUnitType](#_17_0_2_4_f71035d_1431607637366_785815_2242) enumeration and therefore [OtherType](#_17_0_2_4_f71035d_1426007519161_685921_2510) is used, then [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) is necessary to identify the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) as a district. The [IsDistricted](#_17_0_2_4_f71035d_1441207733430_83517_2240) boolean can also be used to signify that a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) defined as a jurisdiction, e.g., a county, is also used as a district for, e.g., county-wide contests.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_5_1_43401a7_1400624362436_113642_3662"></a>`{Authority}`|0..*|`Person`|A link to one or more [Person](#_17_0_5_1_43401a7_1400623980732_100904_3567) instances describing an authority responsible for the reporting unit.
+<a name="_17_0_2_4_f71035d_1429207854277_960649_2231"></a>`{ContactInformation}`|0..1|`ContactInformation`|For associating contact information with the reporting unit.
+<a name="_17_0_2_4_f71035d_1430754449802_75794_2264"></a>`CountStatus`|0..*|`CountStatus`|For providing various counting status on types of ballots or other items.
+<a name="_18_0_2_6340208_1441312768897_951923_4552"></a>`{ElectionAdministration}`|0..1|`ElectionAdministration`|For use when the reporting unit serves as the authority in the election.
+<a name="_17_0_2_4_f71035d_1441207733430_83517_2240"></a>`IsDistricted`|0..1|`Boolean`|Boolean to indicate whether the reporting unit is a district; assumed to be “false” if not present.
+<a name="_17_0_2_4_f71035d_1443123936727_89395_2220"></a>`IsMailOnly`|0..1|`Boolean`|Boolean to indicate whether the reporting unit handles only mail-in or absentee ballot elections, assumed to be “false” if not present.
+<a name="_18_0_2_6340208_1497894720963_498162_4611"></a>`Number`|0..1|`String`|A number associated with the reporting unit; for compatibility with VIP.
+<a name="_17_0_2_4_f71035d_1409141976968_835708_2555"></a>`{PartyRegistration}`|0..*|`PartyRegistration`|For associating a count of registered voters per party with the geopolitical unit.
+<a name="_17_0_2_4_f71035d_1426084480956_43890_2738"></a>`{SpatialDimension}`|0..1|`SpatialDimension`|For describing the reporting unit’s spatial extent (a polygon that shows the related area).
+<a name="_17_0_2_4_d420315_1393507535261_72915_3031"></a>`SubUnitsReported`|0..1|`Integer`|Number of associated subunits such as precincts that have completed reporting.
+<a name="_17_0_2_4_d420315_1393507564958_992105_3035"></a>`TotalSubUnits`|0..1|`Integer`|Total number of associated subunits such as precincts.
+<a name="_17_0_2_4_78e0236_1389713376966_77071_2393"></a>`Type`|1|`ReportingUnitType`|Enumerated type of reporting unit, e.g., state, county, district, precinct, etc.
+<a name="_17_0_2_4_f71035d_1426007519161_685921_2510"></a>`OtherType`|0..1|`String`|For use when [ReportingUnitType](#_17_0_2_4_78e0236_1389713376966_77071_2393) value is other.
+<a name="_17_0_2_4_f71035d_1409163555614_991016_2207"></a>`VotersParticipated`|0..1|`Integer`|Number of voters who have participated in the election, i.e., shown up at the polls, including those who did not cast ballots.
+<a name="_17_0_2_4_78e0236_1389730517829_705754_2675"></a>`VotersRegistered`|0..1|`Integer`|Number of registered voters residing within the boundaries of the geopolitical unit.
+
+
+### <a name="_18_0_2_6340208_1425646217522_163181_4554"></a>*The **RetentionContest** Class*
+
+![Image of RetentionContest](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1425646217525_713812_4555.png)
+
+For judicial retention or other types of retention contests. Retention contests can be treated essentially as ballot measure contests, however this element differs from
+[BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) in that it can include a reference to a candidate or the associated office.
+
+This element uses [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783) as a superclass. Therefore, it inherits the attributes of [Contest](#_17_0_2_4_78e0236_1389366251994_876831_2400) as well as [BallotMeasureContest](#_17_0_2_4_78e0236_1389366932057_929676_2783).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1425646466278_708197_4616"></a>`{Candidate}`|1|`Candidate`|Link to a [Candidate](#_17_0_2_4_78e0236_1389366272694_544359_2440) instance. For associating a candidate with the retention contest.
+<a name="_18_0_2_6340208_1425646257224_14886_4580"></a>`{Office}`|0..1|`Office`|Link to an [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518) instance. For associating an office description with the retention contest.
+
+
+### <a name="_18_0_2_6340208_1427122121448_198970_4547"></a>*The **Schedule** Class*
+
+![Image of Schedule](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1427122121457_980308_4548.png)
+
+For defining a schedule associated with a particular election office or location. [ContactInformation](#_17_0_5_1_43401a7_1400624327407_326048_3637) includes Schedule.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1427122219893_697937_4628"></a>`{Hours}`|0..*|`Hours`|For specifying a range of hours for a schedule.
+<a name="_18_0_2_6340208_1427122382178_611115_4660"></a>`IsOnlyByAppointment`|0..1|`Boolean`|If an appointment is only by appointment; assumed to be “no” if not present.
+<a name="_18_0_2_6340208_1427122372629_379532_4658"></a>`IsOrByAppointment`|0..1|`Boolean`|If an appointment can by appointment presumably as desired; assumed to be “no” if not present.
+<a name="_18_0_2_6340208_1427122390387_8752_4662"></a>`IsSubjectToChange`|0..1|`Boolean`|If an appointment may be subject to change; assumed to be “no” if not present.
+<a name="_17_0_2_4_f71035d_1441362119057_984284_2224"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_18_0_2_6340208_1427122157536_969193_4595"></a>`StartDate`|0..1|`date`|For the starting date of the schedule.
+<a name="_18_0_2_6340208_1427122178673_228183_4597"></a>`EndDate`|0..1|`date`|For the ending date of the schedule.
+
+
+### <a name="_18_0_2_6340208_1499878618645_537953_4560"></a>*The **ShortString** Class*
+
+![Image of ShortString](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1499878618648_579134_4561.png)
+
+For defining a 32-character annotation, used with character strings in [AnnotatedString](#_18_0_2_6340208_1497553224568_429892_4565).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1499878669447_998177_4582"></a>`maxLength`||`Integer`|The maximum allowed length of a ShortString.
+
+
+### <a name="_17_0_2_4_f71035d_1407165065674_39189_2188"></a>*The **SpatialDimension** Class*
+
+![Image of SpatialDimension](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1407165065676_7001_2189.png)
+
+For defining the spatial layout of a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380), e.g., a map or a spatial extent (a polygon that shows the related area) for various purposes, including to visualize election results, to understand the composition of districts, or to determine whether [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instances are properly related. [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) includes SpatialDimension.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1407172954401_413137_2508"></a>`MapUri`|0..*|`AnnotatedUri`|Typically a URI to a map of the [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380).
+<a name="_17_0_2_4_f71035d_1409080509711_839030_2261"></a>`{SpatialExtent}`|0..1|`SpatialExtent`|For associating a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) element’s spatial extent information.
+
+
+### <a name="_17_0_2_4_f71035d_1409080246279_778720_2209"></a>*The **SpatialExtent** Class*
+
+![Image of SpatialExtent](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1409080246298_242462_2210.png)
+
+[SpatialDimension](#_17_0_2_4_f71035d_1407165065674_39189_2188) includes SpatialExtent for defining a [GpUnit](#_17_0_2_4_78e0236_1389366233346_42391_2380) instance’s spatial extent data and the format used for the spatial extent.
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_f71035d_1409080350911_799955_2232"></a>`Coordinates`|1|`RichText`|The data coordinates constituting the spatial extent.
+<a name="_17_0_2_4_f71035d_1409080287789_708966_2228"></a>`Format`|1|`GeoSpatialFormat`|Enumerated type for the format used, e.g., gml, kml, wkt, etc.
+
+
+### <a name="_17_0_2_4_f71035d_1428489072598_282236_2217"></a>*The **Term** Class*
+
+![Image of Term](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_f71035d_1428489072603_236447_2218.png)
+
+For describing information about an office term. [Term](#_17_0_2_4_f71035d_1428489072598_282236_2217) is included by [Office](#_17_0_5_1_43401a7_1400623830572_164081_3518).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1505852448141_524598_4584"></a>`Label`|0..1|`String`|For use as needed and compatibility with the VIP schema.
+<a name="_17_0_2_4_f71035d_1400610432611_11829_2688"></a>`StartDate`|0..1|`date`|Start date for the current term of the office.
+<a name="_17_0_2_4_f71035d_1400610488881_890128_2692"></a>`EndDate`|0..1|`date`|End date for the current term of the office.
+<a name="_17_0_2_4_f71035d_1400610203299_137168_2676"></a>`Type`|0..1|`OfficeTermType`|Enumerated type of term, e.g., full-term, unexpired-term, etc.
+
+
+### <a name="_18_0_2_6340208_1427385616970_86952_4407"></a>*The **TimeWithZone** Class*
+
+![Image of TimeWithZone](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1427385616977_352513_4414.png)
+
+Restricts time to require inclusion of time zone information and excludes fractional seconds
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_18_0_2_6340208_1427385616971_659746_4409"></a>`pattern`||`String`|Pattern used for indicating the time with the accompanying time zone.
+
+
+### <a name="_17_0_2_4_78e0236_1397156604549_15838_2489"></a>*The **VoteCounts** Class*
+
+![Image of VoteCounts](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_78e0236_1397156604556_583070_2490.png)
+
+For reporting on vote counts for contest selections in a contest. VoteCounts includes [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835) as an extension base and therefore inherits the elements from [Counts](#_17_0_2_4_78e0236_1389367291663_284973_2835), but it is included directly by [ContestSelection](#_17_0_2_4_78e0236_1389372124445_11077_2906).
+
+Attribute | Multiplicity | Type | Attribute Description
+--------- | ------------ | ---- | ---------------------
+<a name="_17_0_2_4_78e0236_1389710697333_279003_2167"></a>`Count`|1|`double`|Count of contest votes cast; can include a factional component in special cases.
