@@ -4,6 +4,10 @@ This branch holds the NIST Special Publication 1500-100 Election Results Reporti
 
 https://doi.org/10.6028/NIST.SP.1500-100r2
 
+An HTML version of the UML class documentation is available at:
+
+https://pages.nist.gov/ElectionResultsReporting
+
 Please contact [John Wack](mailto:john.wack@nist.gov) or [John Dziurlaj](mailto:john@hiltonroscoe.com) for questions and more information.
 
 ## Repo Structure
