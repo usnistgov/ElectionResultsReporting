@@ -21,7 +21,14 @@ Sarah Whitt, *Electronic Registration Information Center*
 
 This publication is available free of charge from:
 
+<https://github.com/usnistgov/ElectionResultsReporting>
+
+and
+
 <https://doi.org/10.6028/NIST.SP.1500-100r2>
+
+
+**NOTE: The following is an excerpt from the complete specification available at the above links. It contains the specification's executive summary and class documentation.**
 
 # Executive Summary
 
