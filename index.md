@@ -1,4 +1,4 @@
-# National Institute of Standards and Technology (NIST) Special Publication 1500-100, Revision 2.0
+# National Institute of Standards and Technology (NIST) Special Publication 1500-100, Election Results Reporting Common Data Format Specification Revision 2.0
 
 **March 2020**
 
