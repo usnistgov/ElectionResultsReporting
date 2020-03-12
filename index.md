@@ -10,73 +10,74 @@ The complete publication including JSON and XML schemas is available free of cha
 
 # Table of Contents
 
-- **[Executive Summary](#execsum)**
-- Enumerations
-- *The **[BallotMeasureType](#17_0_2_4_f71035d_1426549604222_56408_2487)** Enumeration*
-- *The **[CandidatePostElectionStatus](#17_0_2_4_78e0236_1389797791548_146399_4136)** Enumeration*
-- *The **[CandidatePreElectionStatus](#17_0_2_4_f71035d_1427223542780_950918_2213)** Enumeration*
-- *The **[CountItemStatus](#17_0_2_4_78e0236_1389797161173_369293_4078)** Enumeration*
-- *The **[CountItemType](#17_0_2_4_78e0236_1389798097477_664878_4228)** Enumeration*
-- *The **[DayType](#18_0_2_6340208_1425647845906_917814_4818)** Enumeration*
-- *The **[DeviceType](#17_0_2_4_78e0236_1389798087342_91702_4210)** Enumeration*
-- *The **[ElectionType](#17_0_2_4_78e0236_1389734457182_720347_3938)** Enumeration*
-- *The **[GeoSpatialFormat](#17_0_2_4_f71035d_1425325534467_889921_2544)** Enumeration*
-- *The **[IdentifierType](#17_0_2_4_f71035d_1425061188508_163854_2613)** Enumeration*
-- *The **[OfficeTermType](#17_0_2_4_f71035d_1425314816880_411605_2504)** Enumeration*
-- *The **[ReportDetailLevel](#17_0_2_4_d420315_1392318380928_311473_2471)** Enumeration*
-- *The **[ReportingUnitType](#17_0_2_4_f71035d_1431607637366_785815_2242)** Enumeration*
-- *The **[ResultsStatus](#17_0_2_4_78e0236_1389734128637_37089_3895)** Enumeration*
-- *The **[VoteVariation](#17_0_2_4_78e0236_1389798224990_11192_4272)** Enumeration*
-- Classes
-- *The **[AnnotatedString](#18_0_2_6340208_1497553224568_429892_4565)** Class*
-- *The **[AnnotatedUri](#18_0_2_6340208_1498658436378_308208_4565)** Class*
-- *The **[BallotCounts](#17_0_2_4_78e0236_1397156576157_466818_2461)** Class*
-- *The **[BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783)** Class*
-- *The **[BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)** Class*
-- *The **[BallotStyle](#17_0_2_4_78e0236_1389366224561_797289_2360)** Class*
-- *The **[Candidate](#17_0_2_4_78e0236_1389366272694_544359_2440)** Class*
-- *The **[CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806)** Class*
-- *The **[CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562)** Class*
-- *The **[Coalition](#18_0_2_6340208_1425647247631_162984_4712)** Class*
-- *The **[ContactInformation](#17_0_5_1_43401a7_1400624327407_326048_3637)** Class*
-- *The **[Contest](#17_0_2_4_78e0236_1389366251994_876831_2400)** Class*
-- *The **[ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906)** Class*
-- *The **[Counts](#17_0_2_4_78e0236_1389367291663_284973_2835)** Class*
-- *The **[CountStatus](#17_0_2_4_f71035d_1430412663878_61362_2269)** Class*
-- *The **[DateTimeWithZone](#18_0_2_6340208_1519999692422_172889_4576)** Class*
-- *The **[DeviceClass](#18_0_2_6340208_1425911626288_420556_4530)** Class*
-- *The **[Election](#17_0_2_4_f71035d_1426101822599_430942_2209)** Class*
-- *The **[ElectionAdministration](#18_0_2_6340208_1441311877439_710008_4433)** Class*
-- *The **[ElectionReport](#17_0_2_4_78e0236_1389366195564_913164_2300)** Class*
-- *The **[ExternalIdentifier](#17_0_2_4_f71035d_1430405712653_451634_2410)** Class*
-- *The **[GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380)** Class*
-- *The **[Header](#18_5_3_43701b0_1527684342703_968085_6144)** Class*
-- *The **[Hours](#18_0_2_6340208_1427122205989_885563_4602)** Class*
-- *The **[HtmlColorString](#17_0_2_4_f71035d_1428586849773_722256_2252)** Class*
-- *The **[InternationalizedText](#17_0_2_4_f71035d_1428953680097_700602_2220)** Class*
-- *The **[LanguageString](#17_0_2_4_f71035d_1428953680095_709464_2219)** Class*
-- *The **[LatLng](#17_0_2_4_f71035d_1443104838926_393729_2222)** Class*
-- *The **[Office](#17_0_5_1_43401a7_1400623830572_164081_3518)** Class*
-- *The **[OfficeGroup](#17_0_2_4_f71035d_1433183615993_866714_2239)** Class*
-- *The **[OrderedContent](#18_5_3_43701b0_1527684342715_643544_6146)** Class*
-- *The **[OrderedContest](#17_0_3_43401a7_1394476416139_808596_3142)** Class*
-- *The **[OrderedHeader](#18_5_3_43701b0_1527684342714_129907_6145)** Class*
-- *The **[OtherCounts](#18_0_2_6340208_1508176198256_527421_4561)** Class*
-- *The **[Party](#17_0_2_4_78e0236_1389366278128_412819_2460)** Class*
-- *The **[PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144)** Class*
-- *The **[PartyRegistration](#17_0_2_4_78e0236_1394566839296_58362_2826)** Class*
-- *The **[PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511)** Class*
-- *The **[Person](#17_0_5_1_43401a7_1400623980732_100904_3567)** Class*
-- *The **[ReportingDevice](#17_0_2_4_78e0236_1389798013459_389380_4178)** Class*
-- *The **[ReportingUnit](#17_0_2_4_f71035d_1400606476166_735297_2593)** Class*
-- *The **[RetentionContest](#18_0_2_6340208_1425646217522_163181_4554)** Class*
-- *The **[Schedule](#18_0_2_6340208_1427122121448_198970_4547)** Class*
-- *The **[ShortString](#18_0_2_6340208_1499878618645_537953_4560)** Class*
-- *The **[SpatialDimension](#17_0_2_4_f71035d_1407165065674_39189_2188)** Class*
-- *The **[SpatialExtent](#17_0_2_4_f71035d_1409080246279_778720_2209)** Class*
-- *The **[Term](#17_0_2_4_f71035d_1428489072598_282236_2217)** Class*
-- *The **[TimeWithZone](#18_0_2_6340208_1427385616970_86952_4407)** Class*
-- *The **[VoteCounts](#17_0_2_4_78e0236_1397156604549_15838_2489)** Class*
+  - **[Executive Summary](#execsum)**
+  - Enumerations
+    - *The **[BallotMeasureType](#17_0_2_4_f71035d_1426549604222_56408_2487)** Enumeration*
+    - *The **[CandidatePostElectionStatus](#17_0_2_4_78e0236_1389797791548_146399_4136)** Enumeration*
+    - *The **[CandidatePreElectionStatus](#17_0_2_4_f71035d_1427223542780_950918_2213)** Enumeration*
+    - *The **[CountItemStatus](#17_0_2_4_78e0236_1389797161173_369293_4078)** Enumeration*
+    - *The **[CountItemType](#17_0_2_4_78e0236_1389798097477_664878_4228)** Enumeration*
+    - *The **[DayType](#18_0_2_6340208_1425647845906_917814_4818)** Enumeration*
+    - *The **[DeviceType](#17_0_2_4_78e0236_1389798087342_91702_4210)** Enumeration*
+    - *The **[ElectionType](#17_0_2_4_78e0236_1389734457182_720347_3938)** Enumeration*
+    - *The **[GeoSpatialFormat](#17_0_2_4_f71035d_1425325534467_889921_2544)** Enumeration*
+    - *The **[IdentifierType](#17_0_2_4_f71035d_1425061188508_163854_2613)** Enumeration*
+    - *The **[OfficeTermType](#17_0_2_4_f71035d_1425314816880_411605_2504)** Enumeration*
+    - *The **[ReportDetailLevel](#17_0_2_4_d420315_1392318380928_311473_2471)** Enumeration*
+    - *The **[ReportingUnitType](#17_0_2_4_f71035d_1431607637366_785815_2242)** Enumeration*
+    - *The **[ResultsStatus](#17_0_2_4_78e0236_1389734128637_37089_3895)** Enumeration*
+    - *The **[VoteVariation](#17_0_2_4_78e0236_1389798224990_11192_4272)** Enumeration*
+  - Classes
+  - Classes
+    - *The **[AnnotatedString](#18_0_2_6340208_1497553224568_429892_4565)** Class*
+    - *The **[AnnotatedUri](#18_0_2_6340208_1498658436378_308208_4565)** Class*
+    - *The **[BallotCounts](#17_0_2_4_78e0236_1397156576157_466818_2461)** Class*
+    - *The **[BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783)** Class*
+    - *The **[BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)** Class*
+    - *The **[BallotStyle](#17_0_2_4_78e0236_1389366224561_797289_2360)** Class*
+    - *The **[Candidate](#17_0_2_4_78e0236_1389366272694_544359_2440)** Class*
+    - *The **[CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806)** Class*
+    - *The **[CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562)** Class*
+    - *The **[Coalition](#18_0_2_6340208_1425647247631_162984_4712)** Class*
+    - *The **[ContactInformation](#17_0_5_1_43401a7_1400624327407_326048_3637)** Class*
+    - *The **[Contest](#17_0_2_4_78e0236_1389366251994_876831_2400)** Class*
+    - *The **[ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906)** Class*
+    - *The **[Counts](#17_0_2_4_78e0236_1389367291663_284973_2835)** Class*
+    - *The **[CountStatus](#17_0_2_4_f71035d_1430412663878_61362_2269)** Class*
+    - *The **[DateTimeWithZone](#18_0_2_6340208_1519999692422_172889_4576)** Class*
+    - *The **[DeviceClass](#18_0_2_6340208_1425911626288_420556_4530)** Class*
+    - *The **[Election](#17_0_2_4_f71035d_1426101822599_430942_2209)** Class*
+    - *The **[ElectionAdministration](#18_0_2_6340208_1441311877439_710008_4433)** Class*
+    - *The **[ElectionReport](#17_0_2_4_78e0236_1389366195564_913164_2300)** Class*
+    - *The **[ExternalIdentifier](#17_0_2_4_f71035d_1430405712653_451634_2410)** Class*
+    - *The **[GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380)** Class*
+    - *The **[Header](#18_5_3_43701b0_1527684342703_968085_6144)** Class*
+    - *The **[Hours](#18_0_2_6340208_1427122205989_885563_4602)** Class*
+    - *The **[HtmlColorString](#17_0_2_4_f71035d_1428586849773_722256_2252)** Class*
+    - *The **[InternationalizedText](#17_0_2_4_f71035d_1428953680097_700602_2220)** Class*
+    - *The **[LanguageString](#17_0_2_4_f71035d_1428953680095_709464_2219)** Class*
+    - *The **[LatLng](#17_0_2_4_f71035d_1443104838926_393729_2222)** Class*
+    - *The **[Office](#17_0_5_1_43401a7_1400623830572_164081_3518)** Class*
+    - *The **[OfficeGroup](#17_0_2_4_f71035d_1433183615993_866714_2239)** Class*
+    - *The **[OrderedContent](#18_5_3_43701b0_1527684342715_643544_6146)** Class*
+    - *The **[OrderedContest](#17_0_3_43401a7_1394476416139_808596_3142)** Class*
+    - *The **[OrderedHeader](#18_5_3_43701b0_1527684342714_129907_6145)** Class*
+    - *The **[OtherCounts](#18_0_2_6340208_1508176198256_527421_4561)** Class*
+    - *The **[Party](#17_0_2_4_78e0236_1389366278128_412819_2460)** Class*
+    - *The **[PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144)** Class*
+    - *The **[PartyRegistration](#17_0_2_4_78e0236_1394566839296_58362_2826)** Class*
+    - *The **[PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511)** Class*
+    - *The **[Person](#17_0_5_1_43401a7_1400623980732_100904_3567)** Class*
+    - *The **[ReportingDevice](#17_0_2_4_78e0236_1389798013459_389380_4178)** Class*
+    - *The **[ReportingUnit](#17_0_2_4_f71035d_1400606476166_735297_2593)** Class*
+    - *The **[RetentionContest](#18_0_2_6340208_1425646217522_163181_4554)** Class*
+    - *The **[Schedule](#18_0_2_6340208_1427122121448_198970_4547)** Class*
+    - *The **[ShortString](#18_0_2_6340208_1499878618645_537953_4560)** Class*
+    - *The **[SpatialDimension](#17_0_2_4_f71035d_1407165065674_39189_2188)** Class*
+    - *The **[SpatialExtent](#17_0_2_4_f71035d_1409080246279_778720_2209)** Class*
+    - *The **[Term](#17_0_2_4_f71035d_1428489072598_282236_2217)** Class*
+    - *The **[TimeWithZone](#18_0_2_6340208_1427385616970_86952_4407)** Class*
+    - *The **[VoteCounts](#17_0_2_4_78e0236_1397156604549_15838_2489)** Class*
 
 ## Executive Summary<a name="execsum"></a>
 
