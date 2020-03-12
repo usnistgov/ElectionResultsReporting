@@ -28,7 +28,6 @@ The complete publication including JSON and XML schemas is available free of cha
     - *The **[ResultsStatus](#17_0_2_4_78e0236_1389734128637_37089_3895)** Enumeration*
     - *The **[VoteVariation](#17_0_2_4_78e0236_1389798224990_11192_4272)** Enumeration*
   - Classes
-  - Classes
     - *The **[AnnotatedString](#18_0_2_6340208_1497553224568_429892_4565)** Class*
     - *The **[AnnotatedUri](#18_0_2_6340208_1498658436378_308208_4565)** Class*
     - *The **[BallotCounts](#17_0_2_4_78e0236_1397156576157_466818_2461)** Class*
