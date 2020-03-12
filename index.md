@@ -1,101 +1,15 @@
-# National Institute of Standards and Technology (NIST) Special Publication 1500-100, Election Results Reporting Common Data Format Specification Revision 2.0
+# National Institute of Standards and Technology (NIST) Special Publication 1500-100, Election Results Reporting Common Data Format Specification Revision 2
 
 **March 2020**
 
-**The following is an excerpt from the SP 1500-100 specification. It contains the specification's executive summary and class documentation.**
+**The following is an excerpt from the SP 1500-100 V2 specification. It contains the specification's executive summary and class documentation.**
 
 The complete publication including JSON and XML schemas is available free of charge from:
 
 <https://github.com/usnistgov/ElectionResultsReporting>
 
-# Executive Summary
-
-This publication presents a common data format (CDF) for pre-election
-setup information and post-election results reporting. The format, known
-as the Election Results Common Data Format Specification Version 2.0, is
-comprehensive and detailed in its coverage of election results-related
-data and at the same time very flexible, able to accommodate election
-scenarios used throughout the United States. This publication describes:
-
-  - a UML (Unified Modeling Language) model,
-
-  - derived XML (eXtensible Markup Language) and JSON (JavaScript Object
-    Notation) schemas,
-
-  - usage information and guidance, and
-
-  - background information.
-
-This specification provides a common data interchange format for
-election data used in voting systems across U.S. jurisdictions. Using
-this specification, pre-election and post-election data can be published
-in a common, well-understood format. The format accommodates highly
-detailed election results data and is sufficiently flexible to
-accommodate many different types of contests and political structures.
-
-This specification provides manufacturers of election management systems
-(EMS) and managers of election jurisdictions with standard methods for
-importing and exporting election data, thereby increasing
-interoperability among election devices and reducing the need to create
-software to translate between proprietary formats. Interoperable data
-will reduce costs to election jurisdictions by reducing the complexity
-in election management and offering jurisdictions more choice in
-election equipment.
-
-This specification is geared towards the following audiences:
-
-  - Election officials
-
-  - Voting equipment manufacturers
-
-  - Election-affiliated organizations and
-
-  - Election analysts and the general public
-
-The format accommodates three different election scenarios:
-
-**Pre-election**. The period prior to an election, for reporting
-pre-election data from a jurisdiction but not yet complete information
-about any election.
-
-**Election**. The period during which an election is being conducted and
-election results reports are produced. The reports include aggregated
-results data or more detailed, precinct-level reporting, depending on
-the capabilities of the reporting jurisdiction.
-
-**Post-election**. The period after the polls close when more detailed
-election results reports are produced with options for precinct
-reporting, type of ballot, and type of device.
-
-The XML and JSON schemas associated with this specification are derived
-from the UML model, which defines the types, structure, and
-interrelationships of geopolitical geography across the United States.
-The model was designed to accommodate multiple types of contests and
-their many variations. It also provides the capability to report on
-these contests from higher aggregate levels down to very fine levels of
-detail, including:
-
-  - reporting by precincts and split precincts;
-
-  - reporting by ballot type, for example, absentee and election day;
-    and
-
-  - reporting by device type and specific voting device.
-
-The UML model can be re-used and modified to meet the needs of other
-planned common data format specifications for voting devices such as
-electronic pollbooks and ballot marking devices.
-
-# Notice of Revision 2.0
-
-This document is a version 2.0 revision to the NIST Special Publication
-1500-100, Election Results Common Data Format Specification, Version 1.
-Changes were made to the version 1 UML model to add additional
-information and make the model easier to implement and use.
-Additionally, the XML schema was updated accordingly and a new JSON
-schema was generated.
-
 # Table of Contents
+  - **[Executive Summary](#execsum)**
   - Enumerations
     - *The **[BallotMeasureType](#17_0_2_4_f71035d_1426549604222_56408_2487)** Enumeration*
     - *The **[CandidatePostElectionStatus](#17_0_2_4_78e0236_1389797791548_146399_4136)** Enumeration*
@@ -162,6 +76,94 @@ schema was generated.
     - *The **[Term](#17_0_2_4_f71035d_1428489072598_282236_2217)** Class*
     - *The **[TimeWithZone](#18_0_2_6340208_1427385616970_86952_4407)** Class*
     - *The **[VoteCounts](#17_0_2_4_78e0236_1397156604549_15838_2489)** Class*
+
+
+  ## Executive Summary<a name="execsum"></a>
+
+    This publication presents a common data format (CDF) for pre-election
+    setup information and post-election results reporting. The format, known
+    as the Election Results Common Data Format Specification Version 2.0, is
+    comprehensive and detailed in its coverage of election results-related
+    data and at the same time very flexible, able to accommodate election
+    scenarios used throughout the United States. This publication describes:
+
+      - a UML (Unified Modeling Language) model,
+
+      - derived XML (eXtensible Markup Language) and JSON (JavaScript Object
+        Notation) schemas,
+
+      - usage information and guidance, and
+
+      - background information.
+
+    This specification provides a common data interchange format for
+    election data used in voting systems across U.S. jurisdictions. Using
+    this specification, pre-election and post-election data can be published
+    in a common, well-understood format. The format accommodates highly
+    detailed election results data and is sufficiently flexible to
+    accommodate many different types of contests and political structures.
+
+    This specification provides manufacturers of election management systems
+    (EMS) and managers of election jurisdictions with standard methods for
+    importing and exporting election data, thereby increasing
+    interoperability among election devices and reducing the need to create
+    software to translate between proprietary formats. Interoperable data
+    will reduce costs to election jurisdictions by reducing the complexity
+    in election management and offering jurisdictions more choice in
+    election equipment.
+
+    This specification is geared towards the following audiences:
+
+      - Election officials
+
+      - Voting equipment manufacturers
+
+      - Election-affiliated organizations and
+
+      - Election analysts and the general public
+
+    The format accommodates three different election scenarios:
+
+    **Pre-election**. The period prior to an election, for reporting
+    pre-election data from a jurisdiction but not yet complete information
+    about any election.
+
+    **Election**. The period during which an election is being conducted and
+    election results reports are produced. The reports include aggregated
+    results data or more detailed, precinct-level reporting, depending on
+    the capabilities of the reporting jurisdiction.
+
+    **Post-election**. The period after the polls close when more detailed
+    election results reports are produced with options for precinct
+    reporting, type of ballot, and type of device.
+
+    The XML and JSON schemas associated with this specification are derived
+    from the UML model, which defines the types, structure, and
+    interrelationships of geopolitical geography across the United States.
+    The model was designed to accommodate multiple types of contests and
+    their many variations. It also provides the capability to report on
+    these contests from higher aggregate levels down to very fine levels of
+    detail, including:
+
+      - reporting by precincts and split precincts;
+
+      - reporting by ballot type, for example, absentee and election day;
+        and
+
+      - reporting by device type and specific voting device.
+
+    The UML model can be re-used and modified to meet the needs of other
+    planned common data format specifications for voting devices such as
+    electronic pollbooks and ballot marking devices.
+
+    # Notice of Revision 2.0
+
+    This document is a version 2.0 revision to the NIST Special Publication
+    1500-100, Election Results Common Data Format Specification, Version 1.
+    Changes were made to the version 1 UML model to add additional
+    information and make the model easier to implement and use.
+    Additionally, the XML schema was updated accordingly and a new JSON
+    schema was generated.
 
 ## Enumerations
 
