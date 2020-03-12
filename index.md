@@ -10,160 +10,159 @@ The complete publication including JSON and XML schemas is available free of cha
 
 # Table of Contents
 
-  - **[Executive Summary](#execsum)**
-  - Enumerations
-    - *The **[BallotMeasureType](#17_0_2_4_f71035d_1426549604222_56408_2487)** Enumeration*
-    - *The **[CandidatePostElectionStatus](#17_0_2_4_78e0236_1389797791548_146399_4136)** Enumeration*
-    - *The **[CandidatePreElectionStatus](#17_0_2_4_f71035d_1427223542780_950918_2213)** Enumeration*
-    - *The **[CountItemStatus](#17_0_2_4_78e0236_1389797161173_369293_4078)** Enumeration*
-    - *The **[CountItemType](#17_0_2_4_78e0236_1389798097477_664878_4228)** Enumeration*
-    - *The **[DayType](#18_0_2_6340208_1425647845906_917814_4818)** Enumeration*
-    - *The **[DeviceType](#17_0_2_4_78e0236_1389798087342_91702_4210)** Enumeration*
-    - *The **[ElectionType](#17_0_2_4_78e0236_1389734457182_720347_3938)** Enumeration*
-    - *The **[GeoSpatialFormat](#17_0_2_4_f71035d_1425325534467_889921_2544)** Enumeration*
-    - *The **[IdentifierType](#17_0_2_4_f71035d_1425061188508_163854_2613)** Enumeration*
-    - *The **[OfficeTermType](#17_0_2_4_f71035d_1425314816880_411605_2504)** Enumeration*
-    - *The **[ReportDetailLevel](#17_0_2_4_d420315_1392318380928_311473_2471)** Enumeration*
-    - *The **[ReportingUnitType](#17_0_2_4_f71035d_1431607637366_785815_2242)** Enumeration*
-    - *The **[ResultsStatus](#17_0_2_4_78e0236_1389734128637_37089_3895)** Enumeration*
-    - *The **[VoteVariation](#17_0_2_4_78e0236_1389798224990_11192_4272)** Enumeration*
-  - Classes
-    - *The **[AnnotatedString](#18_0_2_6340208_1497553224568_429892_4565)** Class*
-    - *The **[AnnotatedUri](#18_0_2_6340208_1498658436378_308208_4565)** Class*
-    - *The **[BallotCounts](#17_0_2_4_78e0236_1397156576157_466818_2461)** Class*
-    - *The **[BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783)** Class*
-    - *The **[BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)** Class*
-    - *The **[BallotStyle](#17_0_2_4_78e0236_1389366224561_797289_2360)** Class*
-    - *The **[Candidate](#17_0_2_4_78e0236_1389366272694_544359_2440)** Class*
-    - *The **[CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806)** Class*
-    - *The **[CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562)** Class*
-    - *The **[Coalition](#18_0_2_6340208_1425647247631_162984_4712)** Class*
-    - *The **[ContactInformation](#17_0_5_1_43401a7_1400624327407_326048_3637)** Class*
-    - *The **[Contest](#17_0_2_4_78e0236_1389366251994_876831_2400)** Class*
-    - *The **[ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906)** Class*
-    - *The **[Counts](#17_0_2_4_78e0236_1389367291663_284973_2835)** Class*
-    - *The **[CountStatus](#17_0_2_4_f71035d_1430412663878_61362_2269)** Class*
-    - *The **[DateTimeWithZone](#18_0_2_6340208_1519999692422_172889_4576)** Class*
-    - *The **[DeviceClass](#18_0_2_6340208_1425911626288_420556_4530)** Class*
-    - *The **[Election](#17_0_2_4_f71035d_1426101822599_430942_2209)** Class*
-    - *The **[ElectionAdministration](#18_0_2_6340208_1441311877439_710008_4433)** Class*
-    - *The **[ElectionReport](#17_0_2_4_78e0236_1389366195564_913164_2300)** Class*
-    - *The **[ExternalIdentifier](#17_0_2_4_f71035d_1430405712653_451634_2410)** Class*
-    - *The **[GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380)** Class*
-    - *The **[Header](#18_5_3_43701b0_1527684342703_968085_6144)** Class*
-    - *The **[Hours](#18_0_2_6340208_1427122205989_885563_4602)** Class*
-    - *The **[HtmlColorString](#17_0_2_4_f71035d_1428586849773_722256_2252)** Class*
-    - *The **[InternationalizedText](#17_0_2_4_f71035d_1428953680097_700602_2220)** Class*
-    - *The **[LanguageString](#17_0_2_4_f71035d_1428953680095_709464_2219)** Class*
-    - *The **[LatLng](#17_0_2_4_f71035d_1443104838926_393729_2222)** Class*
-    - *The **[Office](#17_0_5_1_43401a7_1400623830572_164081_3518)** Class*
-    - *The **[OfficeGroup](#17_0_2_4_f71035d_1433183615993_866714_2239)** Class*
-    - *The **[OrderedContent](#18_5_3_43701b0_1527684342715_643544_6146)** Class*
-    - *The **[OrderedContest](#17_0_3_43401a7_1394476416139_808596_3142)** Class*
-    - *The **[OrderedHeader](#18_5_3_43701b0_1527684342714_129907_6145)** Class*
-    - *The **[OtherCounts](#18_0_2_6340208_1508176198256_527421_4561)** Class*
-    - *The **[Party](#17_0_2_4_78e0236_1389366278128_412819_2460)** Class*
-    - *The **[PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144)** Class*
-    - *The **[PartyRegistration](#17_0_2_4_78e0236_1394566839296_58362_2826)** Class*
-    - *The **[PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511)** Class*
-    - *The **[Person](#17_0_5_1_43401a7_1400623980732_100904_3567)** Class*
-    - *The **[ReportingDevice](#17_0_2_4_78e0236_1389798013459_389380_4178)** Class*
-    - *The **[ReportingUnit](#17_0_2_4_f71035d_1400606476166_735297_2593)** Class*
-    - *The **[RetentionContest](#18_0_2_6340208_1425646217522_163181_4554)** Class*
-    - *The **[Schedule](#18_0_2_6340208_1427122121448_198970_4547)** Class*
-    - *The **[ShortString](#18_0_2_6340208_1499878618645_537953_4560)** Class*
-    - *The **[SpatialDimension](#17_0_2_4_f71035d_1407165065674_39189_2188)** Class*
-    - *The **[SpatialExtent](#17_0_2_4_f71035d_1409080246279_778720_2209)** Class*
-    - *The **[Term](#17_0_2_4_f71035d_1428489072598_282236_2217)** Class*
-    - *The **[TimeWithZone](#18_0_2_6340208_1427385616970_86952_4407)** Class*
-    - *The **[VoteCounts](#17_0_2_4_78e0236_1397156604549_15838_2489)** Class*
+- **[Executive Summary](#execsum)**
+- Enumerations
+- *The **[BallotMeasureType](#17_0_2_4_f71035d_1426549604222_56408_2487)** Enumeration*
+- *The **[CandidatePostElectionStatus](#17_0_2_4_78e0236_1389797791548_146399_4136)** Enumeration*
+- *The **[CandidatePreElectionStatus](#17_0_2_4_f71035d_1427223542780_950918_2213)** Enumeration*
+- *The **[CountItemStatus](#17_0_2_4_78e0236_1389797161173_369293_4078)** Enumeration*
+- *The **[CountItemType](#17_0_2_4_78e0236_1389798097477_664878_4228)** Enumeration*
+- *The **[DayType](#18_0_2_6340208_1425647845906_917814_4818)** Enumeration*
+- *The **[DeviceType](#17_0_2_4_78e0236_1389798087342_91702_4210)** Enumeration*
+- *The **[ElectionType](#17_0_2_4_78e0236_1389734457182_720347_3938)** Enumeration*
+- *The **[GeoSpatialFormat](#17_0_2_4_f71035d_1425325534467_889921_2544)** Enumeration*
+- *The **[IdentifierType](#17_0_2_4_f71035d_1425061188508_163854_2613)** Enumeration*
+- *The **[OfficeTermType](#17_0_2_4_f71035d_1425314816880_411605_2504)** Enumeration*
+- *The **[ReportDetailLevel](#17_0_2_4_d420315_1392318380928_311473_2471)** Enumeration*
+- *The **[ReportingUnitType](#17_0_2_4_f71035d_1431607637366_785815_2242)** Enumeration*
+- *The **[ResultsStatus](#17_0_2_4_78e0236_1389734128637_37089_3895)** Enumeration*
+- *The **[VoteVariation](#17_0_2_4_78e0236_1389798224990_11192_4272)** Enumeration*
+- Classes
+- *The **[AnnotatedString](#18_0_2_6340208_1497553224568_429892_4565)** Class*
+- *The **[AnnotatedUri](#18_0_2_6340208_1498658436378_308208_4565)** Class*
+- *The **[BallotCounts](#17_0_2_4_78e0236_1397156576157_466818_2461)** Class*
+- *The **[BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783)** Class*
+- *The **[BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)** Class*
+- *The **[BallotStyle](#17_0_2_4_78e0236_1389366224561_797289_2360)** Class*
+- *The **[Candidate](#17_0_2_4_78e0236_1389366272694_544359_2440)** Class*
+- *The **[CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806)** Class*
+- *The **[CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562)** Class*
+- *The **[Coalition](#18_0_2_6340208_1425647247631_162984_4712)** Class*
+- *The **[ContactInformation](#17_0_5_1_43401a7_1400624327407_326048_3637)** Class*
+- *The **[Contest](#17_0_2_4_78e0236_1389366251994_876831_2400)** Class*
+- *The **[ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906)** Class*
+- *The **[Counts](#17_0_2_4_78e0236_1389367291663_284973_2835)** Class*
+- *The **[CountStatus](#17_0_2_4_f71035d_1430412663878_61362_2269)** Class*
+- *The **[DateTimeWithZone](#18_0_2_6340208_1519999692422_172889_4576)** Class*
+- *The **[DeviceClass](#18_0_2_6340208_1425911626288_420556_4530)** Class*
+- *The **[Election](#17_0_2_4_f71035d_1426101822599_430942_2209)** Class*
+- *The **[ElectionAdministration](#18_0_2_6340208_1441311877439_710008_4433)** Class*
+- *The **[ElectionReport](#17_0_2_4_78e0236_1389366195564_913164_2300)** Class*
+- *The **[ExternalIdentifier](#17_0_2_4_f71035d_1430405712653_451634_2410)** Class*
+- *The **[GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380)** Class*
+- *The **[Header](#18_5_3_43701b0_1527684342703_968085_6144)** Class*
+- *The **[Hours](#18_0_2_6340208_1427122205989_885563_4602)** Class*
+- *The **[HtmlColorString](#17_0_2_4_f71035d_1428586849773_722256_2252)** Class*
+- *The **[InternationalizedText](#17_0_2_4_f71035d_1428953680097_700602_2220)** Class*
+- *The **[LanguageString](#17_0_2_4_f71035d_1428953680095_709464_2219)** Class*
+- *The **[LatLng](#17_0_2_4_f71035d_1443104838926_393729_2222)** Class*
+- *The **[Office](#17_0_5_1_43401a7_1400623830572_164081_3518)** Class*
+- *The **[OfficeGroup](#17_0_2_4_f71035d_1433183615993_866714_2239)** Class*
+- *The **[OrderedContent](#18_5_3_43701b0_1527684342715_643544_6146)** Class*
+- *The **[OrderedContest](#17_0_3_43401a7_1394476416139_808596_3142)** Class*
+- *The **[OrderedHeader](#18_5_3_43701b0_1527684342714_129907_6145)** Class*
+- *The **[OtherCounts](#18_0_2_6340208_1508176198256_527421_4561)** Class*
+- *The **[Party](#17_0_2_4_78e0236_1389366278128_412819_2460)** Class*
+- *The **[PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144)** Class*
+- *The **[PartyRegistration](#17_0_2_4_78e0236_1394566839296_58362_2826)** Class*
+- *The **[PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511)** Class*
+- *The **[Person](#17_0_5_1_43401a7_1400623980732_100904_3567)** Class*
+- *The **[ReportingDevice](#17_0_2_4_78e0236_1389798013459_389380_4178)** Class*
+- *The **[ReportingUnit](#17_0_2_4_f71035d_1400606476166_735297_2593)** Class*
+- *The **[RetentionContest](#18_0_2_6340208_1425646217522_163181_4554)** Class*
+- *The **[Schedule](#18_0_2_6340208_1427122121448_198970_4547)** Class*
+- *The **[ShortString](#18_0_2_6340208_1499878618645_537953_4560)** Class*
+- *The **[SpatialDimension](#17_0_2_4_f71035d_1407165065674_39189_2188)** Class*
+- *The **[SpatialExtent](#17_0_2_4_f71035d_1409080246279_778720_2209)** Class*
+- *The **[Term](#17_0_2_4_f71035d_1428489072598_282236_2217)** Class*
+- *The **[TimeWithZone](#18_0_2_6340208_1427385616970_86952_4407)** Class*
+- *The **[VoteCounts](#17_0_2_4_78e0236_1397156604549_15838_2489)** Class*
 
 ## Executive Summary<a name="execsum"></a>
 
-    This publication presents a common data format (CDF) for pre-election
-    setup information and post-election results reporting. The format, known
-    as the Election Results Common Data Format Specification Version 2.0, is
-    comprehensive and detailed in its coverage of election results-related
-    data and at the same time very flexible, able to accommodate election
-    scenarios used throughout the United States. This publication describes:
+This publication presents a common data format (CDF) for pre-election
+setup information and post-election results reporting. The format, known
+as the Election Results Common Data Format Specification Version 2.0, is
+comprehensive and detailed in its coverage of election results-related
+data and at the same time very flexible, able to accommodate election
+scenarios used throughout the United States. This publication describes:
 
-      - a UML (Unified Modeling Language) model,
+- a UML (Unified Modeling Language) model,
 
-      - derived XML (eXtensible Markup Language) and JSON (JavaScript Object
-        Notation) schemas,
+- derived XML (eXtensible Markup Language) and JSON (JavaScript Object Notation) schemas,
 
-      - usage information and guidance, and
+- usage information and guidance, and
 
-      - background information.
+- background information.
 
-    This specification provides a common data interchange format for
-    election data used in voting systems across U.S. jurisdictions. Using
-    this specification, pre-election and post-election data can be published
-    in a common, well-understood format. The format accommodates highly
-    detailed election results data and is sufficiently flexible to
-    accommodate many different types of contests and political structures.
+This specification provides a common data interchange format for
+election data used in voting systems across U.S. jurisdictions. Using
+this specification, pre-election and post-election data can be published
+in a common, well-understood format. The format accommodates highly
+detailed election results data and is sufficiently flexible to
+accommodate many different types of contests and political structures.
 
-    This specification provides manufacturers of election management systems
-    (EMS) and managers of election jurisdictions with standard methods for
-    importing and exporting election data, thereby increasing
-    interoperability among election devices and reducing the need to create
-    software to translate between proprietary formats. Interoperable data
-    will reduce costs to election jurisdictions by reducing the complexity
-    in election management and offering jurisdictions more choice in
-    election equipment.
+This specification provides manufacturers of election management systems
+(EMS) and managers of election jurisdictions with standard methods for
+importing and exporting election data, thereby increasing
+interoperability among election devices and reducing the need to create
+software to translate between proprietary formats. Interoperable data
+will reduce costs to election jurisdictions by reducing the complexity
+in election management and offering jurisdictions more choice in
+election equipment.
 
-    This specification is geared towards the following audiences:
+This specification is geared towards the following audiences:
 
-      - Election officials
+- Election officials
 
-      - Voting equipment manufacturers
+- Voting equipment manufacturers
 
-      - Election-affiliated organizations and
+- Election-affiliated organizations and
 
-      - Election analysts and the general public
+- Election analysts and the general public
 
-    The format accommodates three different election scenarios:
+The format accommodates three different election scenarios:
 
-    **Pre-election**. The period prior to an election, for reporting
-    pre-election data from a jurisdiction but not yet complete information
-    about any election.
+**Pre-election**. The period prior to an election, for reporting
+pre-election data from a jurisdiction but not yet complete information
+about any election.
 
-    **Election**. The period during which an election is being conducted and
-    election results reports are produced. The reports include aggregated
-    results data or more detailed, precinct-level reporting, depending on
-    the capabilities of the reporting jurisdiction.
+**Election**. The period during which an election is being conducted and
+election results reports are produced. The reports include aggregated
+results data or more detailed, precinct-level reporting, depending on
+the capabilities of the reporting jurisdiction.
 
-    **Post-election**. The period after the polls close when more detailed
-    election results reports are produced with options for precinct
-    reporting, type of ballot, and type of device.
+**Post-election**. The period after the polls close when more detailed
+election results reports are produced with options for precinct
+reporting, type of ballot, and type of device.
 
-    The XML and JSON schemas associated with this specification are derived
-    from the UML model, which defines the types, structure, and
-    interrelationships of geopolitical geography across the United States.
-    The model was designed to accommodate multiple types of contests and
-    their many variations. It also provides the capability to report on
-    these contests from higher aggregate levels down to very fine levels of
-    detail, including:
+The XML and JSON schemas associated with this specification are derived
+from the UML model, which defines the types, structure, and
+interrelationships of geopolitical geography across the United States.
+The model was designed to accommodate multiple types of contests and
+their many variations. It also provides the capability to report on
+these contests from higher aggregate levels down to very fine levels of
+detail, including:
 
-      - reporting by precincts and split precincts;
+- reporting by precincts and split precincts;
 
-      - reporting by ballot type, for example, absentee and election day;
-        and
+- reporting by ballot type, for example, absentee and election day;
+and
 
-      - reporting by device type and specific voting device.
+- reporting by device type and specific voting device.
 
-    The UML model can be re-used and modified to meet the needs of other
-    planned common data format specifications for voting devices such as
-    electronic pollbooks and ballot marking devices.
+The UML model can be re-used and modified to meet the needs of other
+planned common data format specifications for voting devices such as
+electronic pollbooks and ballot marking devices.
 
-    # Notice of Revision 2.0
+# Notice of Revision 2.0
 
-    This document is a version 2.0 revision to the NIST Special Publication
-    1500-100, Election Results Common Data Format Specification, Version 1.
-    Changes were made to the version 1 UML model to add additional
-    information and make the model easier to implement and use.
-    Additionally, the XML schema was updated accordingly and a new JSON
-    schema was generated.
+This document is a version 2.0 revision to the NIST Special Publication
+1500-100, Election Results Common Data Format Specification, Version 1.
+Changes were made to the version 1 UML model to add additional
+information and make the model easier to implement and use.
+Additionally, the XML schema was updated accordingly and a new JSON
+schema was generated.
 
 ## Enumerations
 
@@ -616,17 +615,17 @@ For defining a contest and linking the contest to the associated candidates, bal
 
 Contest is an abstract class with four subclasses that get used according to the type of contest:
 
- *  [BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783), used for a contest involving a ballot measure
- *  [CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806), used for a contest involving one or more candidates for an office
- *  [PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144), used for a contest for a straight party selection on the ballot
- *  [RetentionContest](#18_0_2_6340208_1425646217522_163181_4554), used for a judicial or other type of retention contest 
+ *[BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783), used for a contest involving a ballot measure
+ *[CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806), used for a contest involving one or more candidates for an office
+ *[PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144), used for a contest for a straight party selection on the ballot
+ *[RetentionContest](#18_0_2_6340208_1425646217522_163181_4554), used for a judicial or other type of retention contest 
 
 Contest includes [ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906) to link the selections on the ballot to the contest, e.g., to link one or more candidates to a candidate contest. Like Contest, [ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906) is also an abstract class and has subclasses that correspond to those of Contest, as follows: 
 
- *  [BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783) includes [BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)
- *  [CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806) includes [CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562)
- *  [PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144) includes [PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511)
- *  [RetentionContest](#18_0_2_6340208_1425646217522_163181_4554) includes [BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)
+ *[BallotMeasureContest](#17_0_2_4_78e0236_1389366932057_929676_2783) includes [BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)
+ *[CandidateContest](#17_0_2_4_78e0236_1389366970084_183781_2806) includes [CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562)
+ *[PartyContest](#17_0_2_4_d420315_1393514218965_55008_3144) includes [PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511)
+ *[RetentionContest](#18_0_2_6340208_1425646217522_163181_4554) includes [BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926)
 
 [Contest](#17_0_2_4_78e0236_1389366251994_876831_2400) includes a required [ElectionDistrict](#17_0_2_4_78e0236_1389366667508_703141_2753) reference to a [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) defined for the geographical scope of the contest. For example, in a state senate contest, [ElectionDistrict](#17_0_2_4_78e0236_1389366667508_703141_2753) would reference a [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) of type [ReportingUnit](#17_0_2_4_f71035d_1400606476166_735297_2593) element defined for the district associated with the contest. [Office](#17_0_5_1_43401a7_1400623830572_164081_3518) also includes an optional reference that serves the same purpose. Note that for contests that are state-wide or county-wide and so forth, the same [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) defined for the state or county, etc., can be re-used.
 [Contest](#17_0_2_4_78e0236_1389366251994_876831_2400) includes [OtherCounts](#18_0_2_6340208_1508176198256_527421_4561) for providing a summary of miscellaneous counts associated with the contest, including total number of ballots cast containing the contest, total number of overvotes, undervotes, or write-ins. The summary counts can be associated with the contest as a whole, or with precincts or other lower-level reporting units by using multiple occurrences of [OtherCounts](#18_0_2_6340208_1508176198256_527421_4561).
@@ -661,10 +660,10 @@ Used for the contest selections in a contest (e.g., for candidates, for ballot m
 
 [ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906) is an abstract class with three subclasses that get used according to the type of contest:
 
- *  [BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926), used if the contest type is for a ballot measure, including for retentions
- *  [CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562), used if the contest type is for one or more candidates, to link the contest selection to the candidate instances and endorsement parties; and
- *  [PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511), used if the contest type is for a party, e.g., for a straight party contest. [ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906) includes [VoteCounts](#17_0_2_4_78e0236_1389372026000_187007_2862) for associating vote counts with the contest selection.
- *  [SequenceOrder](#17_0_2_4_f71035d_1426296042287_22607_2200) is included to specify an ordering for the contest selections for purposes of display only. The original ballot ordering can be preserved, however, by using the [BallotStyle](#17_0_2_4_78e0236_1389366224561_797289_2360) class.
+ *[BallotMeasureSelection](#17_0_2_4_78e0236_1389372163799_981952_2926), used if the contest type is for a ballot measure, including for retentions
+ *[CandidateSelection](#17_0_2_4_d420315_1392145640524_831493_2562), used if the contest type is for one or more candidates, to link the contest selection to the candidate instances and endorsement parties; and
+ *[PartySelection](#17_0_2_4_f71035d_1426519980658_594892_2511), used if the contest type is for a party, e.g., for a straight party contest. [ContestSelection](#17_0_2_4_78e0236_1389372124445_11077_2906) includes [VoteCounts](#17_0_2_4_78e0236_1389372026000_187007_2862) for associating vote counts with the contest selection.
+ *[SequenceOrder](#17_0_2_4_f71035d_1426296042287_22607_2200) is included to specify an ordering for the contest selections for purposes of display only. The original ballot ordering can be preserved, however, by using the [BallotStyle](#17_0_2_4_78e0236_1389366224561_797289_2360) class.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -794,7 +793,7 @@ Attribute | Multiplicity | Type | Attribute Description
 <a name="17_0_2_4_f71035d_1433183761792_828366_2293"></a>`{OfficeGroup}`|0..*|`OfficeGroup`|For associating a name for a grouping of offices with the report.
 <a name="17_0_2_4_f71035d_1426788475880_621446_2579"></a>`{Party}`|0..*|`Party`|For associating parties with the report.
 <a name="17_0_2_4_f71035d_1426788901070_281905_2692"></a>`{Person}`|0..*|`Person`|For associating persons with the report.
-<a name="17_0_2_4_78e0236_1389734122703_834255_3892"></a>`SequenceStart`|1|`Integer`|The report’s number as part of a sequence of reports, used with  so as to be read as, e.g., 1 of 1, 1 of 2, 2 of 2, etc. Starts with “1”.
+<a name="17_0_2_4_78e0236_1389734122703_834255_3892"></a>`SequenceStart`|1|`Integer`|The report’s number as part of a sequence of reports, used withso as to be read as, e.g., 1 of 1, 1 of 2, 2 of 2, etc. Starts with “1”.
 <a name="17_0_3_43401a7_1390917636239_792774_2880"></a>`SequenceEnd`|1|`Integer`|The upper bound of the sequence; e.g., “1” if there is only 1 report, “2” if there are two reports in the sequence, etc.
 <a name="17_0_2_4_78e0236_1389734118887_523907_3888"></a>`Status`|1|`ResultsStatus`|Status of the election report, e.g., test mode, unofficial, etc.
 <a name="17_0_2_4_f71035d_1428427515312_561619_2215"></a>`TestType`|0..1|`String`|A description of the type of test, e.g., pre-election, logic and accuracy, etc.
@@ -825,8 +824,8 @@ Class for describing a geo-politically bounded area of geography such as a city,
 
 [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) is an abstract class with two subclasses that get used according to the type of unit:
 
- *  [ReportingDevice](#17_0_2_4_78e0236_1389798013459_389380_4178), used for associating vote counts with a specific vote-capture device
- *  [ReportingUnit](#17_0_2_4_f71035d_1400606476166_735297_2593), for associating vote counts with geopolitical units such as cities, districts, counties, precincts, etc.
+ *[ReportingDevice](#17_0_2_4_78e0236_1389798013459_389380_4178), used for associating vote counts with a specific vote-capture device
+ *[ReportingUnit](#17_0_2_4_f71035d_1400606476166_735297_2593), for associating vote counts with geopolitical units such as cities, districts, counties, precincts, etc.
 
 [Election](#17_0_2_4_f71035d_1426101822599_430942_2209) and [Contest](#17_0_2_4_78e0236_1389366251994_876831_2400) contain a required reference to [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) representing the jurisdiction of the election or contest respectively; [Office](#17_0_5_1_43401a7_1400623830572_164081_3518) contains a similar reference that is optional.  OtherCounts and VoteCounts reference [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) to link vote or summary counts to [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) instances defined for precincts or other types of geopolitical units.  [BallotStyle](#17_0_2_4_78e0236_1389366224561_797289_2360) references [GpUnit](#17_0_2_4_78e0236_1389366233346_42391_2380) to link a ballot style to its corresponding geopolitical unit.
 
@@ -885,14 +884,14 @@ For strings that can contain multi-national text, for use with text as shown on 
 
 Values for language are from ISO 639 \[12\] and include:
 
- *  en – English
- *  en-US – U.S. English
- *  en-GB – U.K. English
- *  fr – French
- *  es – Spanish
- *  zh – Chinese
- *  ja – Japanese
- *  ko – Korean
+ *en – English
+ *en-US – U.S. English
+ *en-GB – U.K. English
+ *fr – French
+ *es – Spanish
+ *zh – Chinese
+ *ja – Japanese
+ *ko – Korean
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
@@ -971,8 +970,8 @@ An abstract base class for content that can appear under a particular ballot sty
 
 OrderedContent is an abstract class with two subclasses that get used according to the type of content:
 
- *  OrderedContest, used for the appearance of a contest.
- *  OrderedHeader, used for the appearance of a header, optionally with the inclusion of contests.
+ *OrderedContest, used for the appearance of a contest.
+ *OrderedHeader, used for the appearance of a header, optionally with the inclusion of contests.
 
 
 ### <a name="17_0_3_43401a7_1394476416139_808596_3142"></a>*The **OrderedContest** Class*
