@@ -9,6 +9,7 @@ The complete publication including JSON and XML schemas is available free of cha
 <https://github.com/usnistgov/ElectionResultsReporting>
 
 # Table of Contents
+
   - **[Executive Summary](#execsum)**
   - Enumerations
     - *The **[BallotMeasureType](#17_0_2_4_f71035d_1426549604222_56408_2487)** Enumeration*
@@ -77,8 +78,7 @@ The complete publication including JSON and XML schemas is available free of cha
     - *The **[TimeWithZone](#18_0_2_6340208_1427385616970_86952_4407)** Class*
     - *The **[VoteCounts](#17_0_2_4_78e0236_1397156604549_15838_2489)** Class*
 
-
-  ## Executive Summary<a name="execsum"></a>
+## Executive Summary<a name="execsum"></a>
 
     This publication presents a common data format (CDF) for pre-election
     setup information and post-election results reporting. The format, known
