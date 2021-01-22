@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version 2.0, NIST Election Results CDF Specification, National Institute of Standards and Technology -->
-<xsd:schema elementFormDefault="qualified" targetNamespace="NIST_V2_election_results_reporting.xsd" version="2.0" xmlns="NIST_V2_election_results_reporting.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://itl.nist.gov/ns/voting/1500-100/v2" version="2.0.3" xmlns="http://itl.nist.gov/ns/voting/1500-100/v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- ========== Roots ========== -->
   <xsd:element name="ElectionReport" type="ElectionReport"/>
   <!-- ========== Primitives ========== -->
