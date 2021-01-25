@@ -239,7 +239,7 @@ Name | Value
 
 ![Image of ReportDetailLevel](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_d420315_1392318381019_76514_2472.png)
 
-Enumeration for the detail level of the election results report in the [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) class.
+Enumeration for the detail level of the election results report in the [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) class.
 
 Name | Value
 ---- | -----
@@ -325,11 +325,11 @@ Name | Value
 
 ![Image of AnnotatedString](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1497553224573_140163_4566.png)
 
-Used as a type for character strings; it adds a 16-character annotation to a character string.
+Used as a type for character strings; it adds a 32-character annotation to a character string.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1497553268113_377804_4591"></a>`Annotation`|0..1|`ShortString`|An annotation of up to 16 characters associated with a character string.
+<a name="_18_0_2_6340208_1497553268113_377804_4591"></a>`Annotation`|0..1|`ShortString`|An annotation of up to 32 characters associated with a character string.
 <a name="_18_0_2_6340208_1497553239224_304629_4586"></a>`Content`|1|`String`|The string to be annotated.
 
 
@@ -337,11 +337,11 @@ Attribute | Multiplicity | Type | Attribute Description
 
 ![Image of AnnotatedUri](Election_Results_Reporting_UML_documentation_files/_18_0_2_6340208_1498658436383_253730_4566.png)
 
-Used as a type for character strings that represent Uniform Resource Identifiers (URI); it adds a 16-character annotation to a character string.
+Used as a type for character strings that represent Uniform Resource Identifiers (URI); it adds a 32-character annotation to a character string.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_18_0_2_6340208_1498658485557_944083_4589"></a>`Annotation`|0..1|`ShortString`|An annotation of up to 16 characters associated with a character string.
+<a name="_18_0_2_6340208_1498658485557_944083_4589"></a>`Annotation`|0..1|`ShortString`|An annotation of up to 32 characters associated with a character string.
 <a name="_18_0_2_6340208_1498658457673_356828_4586"></a>`Content`|1|`anyURI`|The URI to be annotated.
 
 
@@ -1143,6 +1143,6 @@ For reporting on vote counts for contest selections in a contest. VoteCounts inc
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
-<a name="_17_0_2_4_78e0236_1389710697333_279003_2167"></a>`Count`|1|`double`|Count of contest votes cast; can include a factional component in special cases.
+<a name="_17_0_2_4_78e0236_1389710697333_279003_2167"></a>`Count`|1|`double`|Count of contest votes cast; can include a fractional component in special cases.
 
 
