@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version 2.0, NIST Election Results CDF Specification, National Institute of Standards and Technology -->
-<xsd:schema elementFormDefault="qualified" targetNamespace="NIST_V2_election_results_reporting.xsd" version="2.0" xmlns="NIST_V2_election_results_reporting.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://itl.nist.gov/ns/voting/1500-100/v2" version="2.0.3" xmlns="http://itl.nist.gov/ns/voting/1500-100/v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- ========== Roots ========== -->
   <xsd:element name="ElectionReport" type="ElectionReport"/>
   <!-- ========== Primitives ========== -->
@@ -733,13 +733,13 @@
   <!-- ========== Classes ========== -->
   <xsd:complexType name="AnnotatedString">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Used as a type for character strings; it adds a 16-character annotation to a character string.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Used as a type for character strings; it adds a 32-character annotation to a character string.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="xsd:string">
         <xsd:attribute name="Annotation" type="ShortString">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An annotation of up to 16 characters associated with a character string.</xsd:documentation>
+            <xsd:documentation xml:lang="en">An annotation of up to 32 characters associated with a character string.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
       </xsd:extension>
@@ -747,13 +747,13 @@
   </xsd:complexType>
   <xsd:complexType name="AnnotatedUri">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Used as a type for character strings that represent Uniform Resource Identifiers (URI); it adds a 16-character annotation to a character string.</xsd:documentation>
+      <xsd:documentation xml:lang="en">Used as a type for character strings that represent Uniform Resource Identifiers (URI); it adds a 32-character annotation to a character string.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="xsd:anyURI">
         <xsd:attribute name="Annotation" type="ShortString">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An annotation of up to 16 characters associated with a character string.</xsd:documentation>
+            <xsd:documentation xml:lang="en">An annotation of up to 32 characters associated with a character string.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
       </xsd:extension>
@@ -1066,7 +1066,7 @@ To include an address for the contact, use multiple occurrences of AddressLine. 
 
 ContactInformation includes LatLng so as to associate latitude/longitude with the contact address.
 
-Email, Fax, and Phone are of type AnnotatedString, which permits up to a 16-character annotation to be associated with the data.</xsd:documentation>
+Email, Fax, and Phone are of type AnnotatedString, which permits up to a 32-character annotation to be associated with the data.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="AddressLine" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
@@ -2338,7 +2338,7 @@ This element uses BallotMeasureContest as a superclass. Therefore, it inherits t
         <xsd:sequence>
           <xsd:element name="Count" type="xsd:double">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Count of contest votes cast; can include a factional component in special cases.</xsd:documentation>
+              <xsd:documentation xml:lang="en">Count of contest votes cast; can include a fractional component in special cases.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
