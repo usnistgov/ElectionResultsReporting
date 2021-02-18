@@ -239,7 +239,7 @@ Name | Value
 
 ![Image of ReportDetailLevel](Election_Results_Reporting_UML_documentation_files/_17_0_2_4_d420315_1392318381019_76514_2472.png)
 
-Enumeration for the detail level of the election results report in the [ElectionReport](#_17_0_2_4_78e0236_1389366195564_913164_2300) class.
+Enumeration for the detail level of the election results report in the [Election](#_17_0_2_4_f71035d_1426101822599_430942_2209) class.
 
 Name | Value
 ---- | -----
@@ -495,7 +495,7 @@ To include an address for the contact, use multiple occurrences of [AddressLine]
 
 ContactInformation includes [LatLng](#_17_0_2_4_f71035d_1443104838926_393729_2222) so as to associate latitude/longitude with the contact address.
 
-[Email](#_17_0_5_1_43401a7_1400668036651_743620_3650), [Fax](#_17_0_5_1_43401a7_1400668021448_721992_3646), and [Phone](#_17_0_5_1_43401a7_1400667951215_637516_3638) are of type [AnnotatedString](#_18_0_2_6340208_1497553224568_429892_4565), which permits up to a 16-character annotation to be associated with the data.
+[Email](#_17_0_5_1_43401a7_1400668036651_743620_3650), [Fax](#_17_0_5_1_43401a7_1400668021448_721992_3646), and [Phone](#_17_0_5_1_43401a7_1400667951215_637516_3638) are of type [AnnotatedString](#_18_0_2_6340208_1497553224568_429892_4565), which permits up to a 32-character annotation to be associated with the data.
 
 Attribute | Multiplicity | Type | Attribute Description
 --------- | ------------ | ---- | ---------------------
