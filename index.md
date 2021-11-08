@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+<script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script>
+<script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
+
 # National Institute of Standards and Technology (NIST) Special Publication 1500-100, Election Results Reporting Common Data Format Specification Revision 2
 
 **March 2020**
