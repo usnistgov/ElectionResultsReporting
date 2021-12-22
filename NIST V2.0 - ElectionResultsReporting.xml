@@ -1566,7 +1566,7 @@
 							<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
 						</xmi:Extension>
 					</type>
-					<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1439918553700_755815_4496' body='Orderering for listing the contest for purposes of results display.  If not present, no order is assumed.'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_18_0_2_6340208_1439918553700_755815_4496' body='Ordering for listing the contest for purposes of results display.  If not present, no order is assumed.'>
 						<annotatedElement xmi:idref='_17_0_2_4_f71035d_1426083547931_912709_2690'/>
 					</ownedComment>
 					<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_2_4_f71035d_1426083572780_425785_2692'/>
