@@ -6,7 +6,7 @@ description: "Guide on providing feedback"
 
 # Providing Feedback
 
-**Review the documentation.** No account is needed to review the draft version of this NIST CDF Specification. Simply follow [this link](https://github.com/usnistgov/VoterRecordsInterchange) and enjoy at your leisure. However, if you wish to comment you must…
+**Review the documentation.** No account is needed to review the draft version of this NIST CDF Specification. Simply follow [this link](https://github.com/usnistgov/ElectionResultsReporting) and enjoy at your leisure. However, if you wish to comment you must…
 
 1. **Establish a GitHub account.** In order to submit a comment through the GitHub “Issues” feature, you will need to create a GitHub account. This can be done by proceeding to https://github.com/join. If this is a personal account, GitHub allows you to remain pseudonymous if you would like, just make sure you select the options that suit you on the “Profile” and “Emails” pages of your “Personal Settings”.  We also highly encourage you to turn on two-factor authentication in the “Security” page, also part of “Personal Settings”. **For issues submitted on behalf of an organization, we prefer a generic account named for the organization, rather than a personal account from someone within the organization.**
   ![How to create account](assets/create_github_account.png)
@@ -29,7 +29,7 @@ description: "Guide on providing feedback"
 
             **Organization Type**:
 
-            **Document (e.g., VoterRecordsInterchange)**:
+            **Document (e.g., ElectionResultsReporting)**:
 
             **Reference (Include section and paragraph number)**:
 
@@ -49,9 +49,9 @@ description: "Guide on providing feedback"
 
 If you are familiar with GitHub you are also welcome to provide suggestions to concrete changes as a pull request (PR). We prefer PRs as follows:
 
-1. Fork a copy of USNISTGOV/VoterRecordsInterchange to your own organization/personal space.
+1. Fork a copy of USNISTGOV/ElectionResultsReporting to your own organization/personal space.
 2. Create a branch in your fork, named specifically for the edit you propose.  We prefer focused PR's rather than broad-sweeping updates.
-3. Issue a PR from your branch to the `post-public-comment` branch in USNISTGOV/VoterRecordsInterchange.
+3. Issue a PR from your branch to the `post-public-comment` branch in USNISTGOV/ElectionResultsReporting.
 4. If we intend to merge the PR, we may engage via PR reviews and request changes before completing the merge.
 
 Please provide information about your organization and rationale for the suggested change.
